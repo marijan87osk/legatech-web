@@ -7,6 +7,7 @@ release_id="${3:?Nedostaje identifikator izdanja}"
 deploy_root="$HOME/legatech-deploy"
 release_dir="$deploy_root/releases/$release_id"
 backup_dir="$deploy_root/backups/$release_id"
+backup_content_dir="$backup_dir/content"
 previous_manifest="$target/.legatech-manifest"
 new_manifest="$release_dir/.legatech-new-manifest"
 
@@ -15,7 +16,7 @@ if [[ "$target" != /* || "$target" == "/" ]]; then
   exit 1
 fi
 
-mkdir -p "$release_dir" "$backup_dir" "$target"
+mkdir -p "$release_dir" "$backup_content_dir" "$target"
 
 while IFS= read -r entry; do
   case "$entry" in
@@ -35,11 +36,14 @@ if [[ -f "$previous_manifest" ]]; then
   while IFS= read -r relative; do
     validate_relative_path "$relative" || { echo "Nesigurna putanja u starom manifestu" >&2; exit 1; }
     if [[ -f "$target/$relative" ]]; then
-      mkdir -p "$backup_dir/$(dirname "$relative")"
-      cp -p "$target/$relative" "$backup_dir/$relative"
+      mkdir -p "$backup_content_dir/$(dirname "$relative")"
+      cp -p "$target/$relative" "$backup_content_dir/$relative"
     fi
   done < "$previous_manifest"
-  cp -p "$previous_manifest" "$backup_dir/.legatech-manifest"
+  cp -p "$previous_manifest" "$backup_dir/previous-manifest"
+elif find "$target" -mindepth 1 -print -quit | grep -q .; then
+  echo "Prvi deploy: izrađujem potpunu sigurnosnu kopiju postojećeg public_html sadržaja."
+  rsync -a "$target/" "$backup_content_dir/"
 fi
 
 rollback() {
@@ -49,8 +53,13 @@ rollback() {
   while IFS= read -r relative; do
     validate_relative_path "$relative" && rm -f "$target/$relative"
   done < "$new_manifest"
-  if [[ -d "$backup_dir" ]]; then
-    cp -a "$backup_dir/." "$target/"
+  if [[ -d "$backup_content_dir" ]]; then
+    rsync -a "$backup_content_dir/" "$target/"
+  fi
+  if [[ -f "$backup_dir/previous-manifest" ]]; then
+    cp -p "$backup_dir/previous-manifest" "$previous_manifest"
+  else
+    rm -f "$previous_manifest"
   fi
   exit "$exit_code"
 }
