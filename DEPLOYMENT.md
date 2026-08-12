@@ -38,3 +38,5 @@ define('LEGATECH_GITHUB_TOKEN', 'github_pat_...');
 ```
 
 Publishing, updating, unpublishing, scheduling or deleting a post then starts one production build. The public website changes only after the workflow completes successfully.
+
+GitHub Actions stores the last successful WordPress snapshot. Code deployments may use that snapshot when SiteGround temporarily blocks the REST request, while a WordPress content-change deployment fails safely unless fresh content was downloaded.

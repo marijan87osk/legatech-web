@@ -1,5 +1,6 @@
 import { createHash } from "node:crypto";
-import { mkdir, readdir, rm, writeFile } from "node:fs/promises";
+import { access, mkdir, mkdtemp, rename, rm, writeFile } from "node:fs/promises";
+import { tmpdir } from "node:os";
 import path from "node:path";
 import { load } from "cheerio";
 import sanitizeHtml from "sanitize-html";
@@ -10,6 +11,8 @@ const outputFile = path.join(projectRoot, "src", "generated", "blog-posts.json")
 const mediaDirectory = path.join(projectRoot, "public", "blog-media");
 const mediaPublicPath = "/blog-media";
 const timeoutMs = 20_000;
+const maxFetchAttempts = 4;
+const retryBaseMs = Number(process.env.WORDPRESS_RETRY_BASE_MS ?? "1500");
 const maxImageBytes = 12 * 1024 * 1024;
 const wordpressHost = new URL(apiRoot).hostname.toLowerCase();
 const allowedMediaHosts = new Set((process.env.WORDPRESS_MEDIA_HOSTS ?? wordpressHost).split(",").map((host) => host.trim().toLowerCase()).filter(Boolean));
@@ -45,9 +48,7 @@ function sanitizeArticleHtml(html) {
     allowProtocolRelative: false,
     transformTags: {
       a: (tagName, attribs) => {
-        if (attribs.target === "_blank") {
-          attribs.rel = "noopener noreferrer";
-        }
+        if (attribs.target === "_blank") attribs.rel = "noopener noreferrer";
         return { tagName, attribs };
       },
       img: (tagName, attribs) => ({
@@ -64,7 +65,12 @@ async function fetchWithTimeout(url, options = {}) {
   try {
     const response = await fetch(url, {
       ...options,
-      headers: { "User-Agent": "Legatech static blog sync", ...(options.headers ?? {}) },
+      headers: {
+        Accept: "application/json",
+        "Cache-Control": "no-cache",
+        "User-Agent": "Mozilla/5.0 (compatible; LegatechStaticSync/1.0; +https://legatech.hr)",
+        ...(options.headers ?? {}),
+      },
       signal: controller.signal,
     });
     if (!response.ok) throw new Error(`${response.status} ${response.statusText} za ${url}`);
@@ -72,6 +78,38 @@ async function fetchWithTimeout(url, options = {}) {
   } finally {
     clearTimeout(timeout);
   }
+}
+
+function wait(milliseconds) {
+  return new Promise((resolve) => setTimeout(resolve, milliseconds));
+}
+
+async function fetchWordPressJson(sourceUrl) {
+  let lastError;
+
+  for (let attempt = 1; attempt <= maxFetchAttempts; attempt += 1) {
+    try {
+      const url = new URL(sourceUrl);
+      url.searchParams.set("sync_nonce", `${Date.now()}-${attempt}`);
+      const response = await fetchWithTimeout(url);
+      const contentType = response.headers.get("content-type") ?? "";
+
+      if (!contentType.toLowerCase().includes("application/json")) {
+        const preview = (await response.text()).replace(/\s+/g, " ").slice(0, 160);
+        throw new Error(`WordPress REST nije vratio JSON (${contentType || "bez Content-Type"}): ${preview}`);
+      }
+
+      return { response, data: await response.json() };
+    } catch (error) {
+      lastError = error;
+      if (attempt === maxFetchAttempts) break;
+      const delay = retryBaseMs * (2 ** (attempt - 1));
+      console.warn(`WordPress REST pokušaj ${attempt} nije uspio. Novi pokušaj za ${delay / 1000} s.`);
+      await wait(delay);
+    }
+  }
+
+  throw lastError;
 }
 
 async function fetchAllPosts() {
@@ -85,13 +123,7 @@ async function fetchAllPosts() {
     url.searchParams.set("orderby", "date");
     url.searchParams.set("order", "desc");
     url.searchParams.set("_embed", "wp:featuredmedia,wp:term,author");
-    const response = await fetchWithTimeout(url);
-    const contentType = response.headers.get("content-type") ?? "";
-    if (!contentType.toLowerCase().includes("application/json")) {
-      const preview = (await response.text()).replace(/\s+/g, " ").slice(0, 160);
-      throw new Error(`WordPress REST nije vratio JSON (${contentType || "bez Content-Type"}): ${preview}`);
-    }
-    const batch = await response.json();
+    const { response, data: batch } = await fetchWordPressJson(url);
     if (!Array.isArray(batch)) throw new Error("WordPress REST odgovor nije popis članaka.");
     posts.push(...batch);
     const totalPages = Number(response.headers.get("x-wp-totalpages") ?? "1");
@@ -101,14 +133,14 @@ async function fetchAllPosts() {
   return posts;
 }
 
-async function downloadImage(sourceUrl) {
+async function downloadImage(sourceUrl, destinationDirectory) {
   let url;
   try {
     url = new URL(sourceUrl);
   } catch {
     return null;
   }
-  if (!['http:', 'https:'].includes(url.protocol)) return null;
+  if (!["http:", "https:"].includes(url.protocol)) return null;
   if (!allowedMediaHosts.has(url.hostname.toLowerCase())) return null;
   const response = await fetchWithTimeout(url);
   const contentType = (response.headers.get("content-type") ?? "").split(";")[0].toLowerCase();
@@ -119,17 +151,17 @@ async function downloadImage(sourceUrl) {
   const buffer = Buffer.from(await response.arrayBuffer());
   if (buffer.byteLength > maxImageBytes) throw new Error(`Slika je veća od 12 MB: ${sourceUrl}`);
   const fileName = `${createHash("sha256").update(sourceUrl).digest("hex").slice(0, 24)}${extension}`;
-  await writeFile(path.join(mediaDirectory, fileName), buffer);
+  await writeFile(path.join(destinationDirectory, fileName), buffer);
   return `${mediaPublicPath}/${fileName}`;
 }
 
-async function localizeContentImages(contentHtml) {
+async function localizeContentImages(contentHtml, destinationDirectory) {
   const $ = load(contentHtml, null, false);
   for (const image of $("img").toArray()) {
     const element = $(image);
     const source = element.attr("src");
     if (!source) continue;
-    const localSource = await downloadImage(source);
+    const localSource = await downloadImage(source, destinationDirectory);
     if (localSource) element.attr("src", localSource);
   }
   return $.root().html() ?? "";
@@ -140,11 +172,11 @@ function embeddedCategories(post) {
   return terms.flat().filter((term) => term?.taxonomy === "category").map((term) => safeText(term.name));
 }
 
-async function normalizePost(post) {
+async function normalizePost(post, destinationDirectory) {
   const sanitized = sanitizeArticleHtml(post?.content?.rendered ?? "");
-  const contentHtml = await localizeContentImages(sanitized);
+  const contentHtml = await localizeContentImages(sanitized, destinationDirectory);
   const featured = post?._embedded?.["wp:featuredmedia"]?.[0] ?? null;
-  const featuredSource = featured?.source_url ? await downloadImage(featured.source_url) : null;
+  const featuredSource = featured?.source_url ? await downloadImage(featured.source_url, destinationDirectory) : null;
   const text = safeText(contentHtml);
   const excerpt = safeText(post?.excerpt?.rendered) || `${text.slice(0, 180).trim()}${text.length > 180 ? "…" : ""}`;
   return {
@@ -167,17 +199,62 @@ async function normalizePost(post) {
   };
 }
 
-async function main() {
-  await mkdir(path.dirname(outputFile), { recursive: true });
-  await mkdir(mediaDirectory, { recursive: true });
-  for (const entry of await readdir(mediaDirectory)) {
-    await rm(path.join(mediaDirectory, entry), { force: true, recursive: true });
+async function pathExists(targetPath) {
+  try {
+    await access(targetPath);
+    return true;
+  } catch {
+    return false;
   }
+}
+
+async function activateSnapshot(stagingOutput, stagingMediaDirectory) {
+  const outputBackup = `${outputFile}.previous-${process.pid}`;
+  const mediaBackup = `${mediaDirectory}.previous-${process.pid}`;
+  const hadOutput = await pathExists(outputFile);
+  const hadMedia = await pathExists(mediaDirectory);
+  let movedOutput = false;
+  let movedMedia = false;
+
+  try {
+    if (hadOutput) {
+      await rename(outputFile, outputBackup);
+      movedOutput = true;
+    }
+    if (hadMedia) {
+      await rename(mediaDirectory, mediaBackup);
+      movedMedia = true;
+    }
+    await mkdir(path.dirname(outputFile), { recursive: true });
+    await rename(stagingOutput, outputFile);
+    await rename(stagingMediaDirectory, mediaDirectory);
+    await rm(outputBackup, { force: true });
+    await rm(mediaBackup, { force: true, recursive: true });
+  } catch (error) {
+    await rm(outputFile, { force: true });
+    await rm(mediaDirectory, { force: true, recursive: true });
+    if (movedOutput && await pathExists(outputBackup)) await rename(outputBackup, outputFile);
+    if (movedMedia && await pathExists(mediaBackup)) await rename(mediaBackup, mediaDirectory);
+    throw error;
+  }
+}
+
+async function main() {
   const posts = await fetchAllPosts();
-  const normalized = [];
-  for (const post of posts) normalized.push(await normalizePost(post));
-  await writeFile(outputFile, `${JSON.stringify(normalized, null, 2)}\n`, "utf8");
-  console.log(`Sinkronizirano WordPress članaka: ${normalized.length}`);
+  const stagingRoot = await mkdtemp(path.join(tmpdir(), "legatech-blog-"));
+  const stagingOutput = path.join(stagingRoot, "blog-posts.json");
+  const stagingMediaDirectory = path.join(stagingRoot, "blog-media");
+
+  try {
+    await mkdir(stagingMediaDirectory, { recursive: true });
+    const normalized = [];
+    for (const post of posts) normalized.push(await normalizePost(post, stagingMediaDirectory));
+    await writeFile(stagingOutput, `${JSON.stringify(normalized, null, 2)}\n`, "utf8");
+    await activateSnapshot(stagingOutput, stagingMediaDirectory);
+    console.log(`Sinkronizirano WordPress članaka: ${normalized.length}`);
+  } finally {
+    await rm(stagingRoot, { force: true, recursive: true });
+  }
 }
 
 main().catch((error) => {
