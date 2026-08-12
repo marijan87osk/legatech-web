@@ -1,0 +1,78 @@
+name: Build and deploy Legatech
+
+on:
+  push:
+    branches: [main]
+  repository_dispatch:
+    types: [wordpress_content_changed]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: legatech-production
+  cancel-in-progress: true
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    env:
+      WORDPRESS_API_URL: https://staging2.legatech.hr/wp-json/wp/v2
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+
+      - name: Install JavaScript dependencies
+        run: npm ci
+
+      - name: Install PHP mail dependencies
+        run: |
+          composer install --working-dir=server/contact --no-dev --no-interaction --prefer-dist --optimize-autoloader
+          mkdir -p public/api/vendor
+          cp -R server/contact/vendor/. public/api/vendor/
+
+      - name: Verify source
+        run: npm run lint
+
+      - name: Build static website
+        run: npm run build
+
+      - name: Prepare SSH
+        env:
+          SSH_PRIVATE_KEY: ${{ secrets.SITEGROUND_SSH_PRIVATE_KEY }}
+          SSH_KNOWN_HOSTS: ${{ secrets.SITEGROUND_KNOWN_HOSTS }}
+        run: |
+          install -m 700 -d ~/.ssh
+          printf '%s\n' "$SSH_PRIVATE_KEY" > ~/.ssh/id_ed25519
+          chmod 600 ~/.ssh/id_ed25519
+          printf '%s\n' "$SSH_KNOWN_HOSTS" > ~/.ssh/known_hosts
+          chmod 600 ~/.ssh/known_hosts
+
+      - name: Package and upload release
+        env:
+          SSH_HOST: ${{ secrets.SITEGROUND_SSH_HOST }}
+          SSH_PORT: ${{ secrets.SITEGROUND_SSH_PORT }}
+          SSH_USER: ${{ secrets.SITEGROUND_SSH_USER }}
+        run: |
+          tar -czf legatech-site.tar.gz -C out .
+          ssh -p "$SSH_PORT" "$SSH_USER@$SSH_HOST" 'mkdir -p ~/legatech-deploy/incoming'
+          scp -P "$SSH_PORT" legatech-site.tar.gz scripts/deploy-siteground.sh "$SSH_USER@$SSH_HOST:~/legatech-deploy/incoming/"
+
+      - name: Activate release
+        env:
+          DEPLOY_PATH: ${{ secrets.SITEGROUND_DEPLOY_PATH }}
+          SSH_HOST: ${{ secrets.SITEGROUND_SSH_HOST }}
+          SSH_PORT: ${{ secrets.SITEGROUND_SSH_PORT }}
+          SSH_USER: ${{ secrets.SITEGROUND_SSH_USER }}
+        run: |
+          [[ "$DEPLOY_PATH" == /* && "$DEPLOY_PATH" != "/" ]]
+          printf -v quoted_path '%q' "$DEPLOY_PATH"
+          ssh -p "$SSH_PORT" "$SSH_USER@$SSH_HOST" "bash ~/legatech-deploy/incoming/deploy-siteground.sh ~/legatech-deploy/incoming/legatech-site.tar.gz $quoted_path $GITHUB_SHA"
