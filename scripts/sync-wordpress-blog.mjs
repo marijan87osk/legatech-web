@@ -5,7 +5,7 @@ import { load } from "cheerio";
 import sanitizeHtml from "sanitize-html";
 
 const projectRoot = process.cwd();
-const apiRoot = (process.env.WORDPRESS_API_URL ?? "https://staging2.legatech.hr/wp-json/wp/v2").replace(/\/$/, "");
+const apiRoot = (process.env.WORDPRESS_API_URL ?? "https://staging2.legatech.hr/?rest_route=/wp/v2").replace(/\/$/, "");
 const outputFile = path.join(projectRoot, "src", "generated", "blog-posts.json");
 const mediaDirectory = path.join(projectRoot, "public", "blog-media");
 const mediaPublicPath = "/blog-media";
@@ -86,6 +86,11 @@ async function fetchAllPosts() {
     url.searchParams.set("order", "desc");
     url.searchParams.set("_embed", "wp:featuredmedia,wp:term,author");
     const response = await fetchWithTimeout(url);
+    const contentType = response.headers.get("content-type") ?? "";
+    if (!contentType.toLowerCase().includes("application/json")) {
+      const preview = (await response.text()).replace(/\s+/g, " ").slice(0, 160);
+      throw new Error(`WordPress REST nije vratio JSON (${contentType || "bez Content-Type"}): ${preview}`);
+    }
     const batch = await response.json();
     if (!Array.isArray(batch)) throw new Error("WordPress REST odgovor nije popis članaka.");
     posts.push(...batch);

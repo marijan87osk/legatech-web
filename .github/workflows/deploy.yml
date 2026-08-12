@@ -19,7 +19,7 @@ jobs:
     runs-on: ubuntu-latest
     timeout-minutes: 20
     env:
-      WORDPRESS_API_URL: https://staging2.legatech.hr/wp-json/wp/v2
+      WORDPRESS_API_URL: https://staging2.legatech.hr/?rest_route=/wp/v2
     steps:
       - name: Checkout
         uses: actions/checkout@v4
