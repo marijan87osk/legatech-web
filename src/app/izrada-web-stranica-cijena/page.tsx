@@ -35,9 +35,19 @@ import {
 } from "@/src/data/website-development";
 
 export const metadata: Metadata = {
-  title: "Izrada web stranica za poslovanje | Legatech",
+  title: "Izrada Web Stranica – Cijena I Paketi - Legatech",
   description:
-    "Izrada brzih, responzivnih i SEO-spremnih web stranica za hrvatske obrte i tvrtke. Paketi od 500 € uz jasan proces i podršku.",
+    "Profesionalna izrada web stranica za obrte i tvrtke. Paketi od 500 €, responzivan dizajn, SEO temelji, analitika i podrška nakon objave.",
+  alternates: {
+    canonical: "https://legatech.hr/izrada-web-stranica-cijena/",
+  },
+  openGraph: {
+    title: "Izrada Web Stranica – Cijena I Paketi - Legatech",
+    description:
+      "Profesionalna izrada web stranica za obrte i tvrtke. Paketi od 500 €, responzivan dizajn, SEO temelji, analitika i podrška nakon objave.",
+    url: "https://legatech.hr/izrada-web-stranica-cijena/",
+    type: "website",
+  },
 };
 
 const relatedServices = [
@@ -69,7 +79,7 @@ export default function WebsiteDevelopmentPage() {
           <div className="container webdev-hero-grid">
             <div className="webdev-hero-copy">
               <p className="mono-label">Izrada web stranica</p>
-              <h1>Izrada web stranica koje rade za vaše poslovanje.</h1>
+              <h1>Izrada web stranica – cijena i paketi</h1>
               <p className="webdev-hero-lead">
                 Planiramo, dizajniramo i razvijamo brz web koji jasno predstavlja ponudu i vodi prave posjetitelje prema upitu.
               </p>

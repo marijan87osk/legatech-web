@@ -37,9 +37,19 @@ import {
 } from "@/src/data/seo-optimization";
 
 export const metadata: Metadata = {
-  title: "SEO optimizacija za veću Google vidljivost | Legatech",
+  title: "SEO Optimizacija – Cijena I Paketi - Legatech",
   description:
-    "SEO optimizacija za hrvatske tvrtke koje žele relevantniji organski promet i više kvalitetnih upita. Paketi od 290 € mjesečno.",
+    "SEO optimizacija za tvrtke i obrte - tehnički SEO, sadržaj, lokalni SEO, ključne riječi i mjerenje rezultata. Paketi od 290 € mjesečno.",
+  alternates: {
+    canonical: "https://legatech.hr/seo-optimizacija-cijena/",
+  },
+  openGraph: {
+    title: "SEO Optimizacija – Cijena I Paketi - Legatech",
+    description:
+      "SEO optimizacija za tvrtke i obrte - tehnički SEO, sadržaj, lokalni SEO, ključne riječi i mjerenje rezultata. Paketi od 290 € mjesečno.",
+    url: "https://legatech.hr/seo-optimizacija-cijena/",
+    type: "website",
+  },
 };
 
 const relatedServices = [
@@ -71,7 +81,7 @@ export default function SeoOptimizationPage() {
           <div className="container seo-hero-grid">
             <div className="seo-hero-copy">
               <p className="mono-label">SEO optimizacija</p>
-              <h1 id="seo-title">SEO optimizacija za veću vidljivost i više pravih upita.</h1>
+              <h1 id="seo-title">SEO optimizacija – cijena i paketi</h1>
               <p className="seo-hero-lead">
                 Gradimo organsku vidljivost kroz tehničke dorade, koristan sadržaj i lokalni SEO koji dovodi relevantne posjetitelje.
               </p>

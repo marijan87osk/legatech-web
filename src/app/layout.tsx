@@ -6,13 +6,17 @@ import "./globals.css";
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://legatech.hr"),
-  title: "Legatech | Izrada web stranica, SEO i web trgovina",
+  title: "Legatech - Izrada Weba, Shopa i SEO - Legatech",
   description:
-    "Legatech pomaže hrvatskim tvrtkama izgraditi brze web stranice, web trgovine i SEO temelje koji podržavaju rast poslovanja.",
+    "Legatech pomaže tvrtkama i obrtima izgraditi brze web stranice, WooCommerce trgovine i organsku vidljivost kroz SEO. Zatražite ponudu.",
+  alternates: {
+    canonical: "https://legatech.hr/",
+  },
   openGraph: {
-    title: "Legatech | Web koji radi za vaše poslovanje",
+    title: "Legatech - Izrada Weba, Shopa i SEO - Legatech",
     description:
-      "Izrada web stranica, web trgovina, SEO optimizacija i održavanje uz jasan proces i osoban pristup.",
+      "Legatech pomaže tvrtkama i obrtima izgraditi brze web stranice, WooCommerce trgovine i organsku vidljivost kroz SEO. Zatražite ponudu.",
+    url: "https://legatech.hr/",
     locale: "hr_HR",
     type: "website",
   },

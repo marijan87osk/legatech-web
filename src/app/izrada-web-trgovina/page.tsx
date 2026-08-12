@@ -38,9 +38,19 @@ import {
 } from "@/src/data/ecommerce-development";
 
 export const metadata: Metadata = {
-  title: "Izrada web trgovina za jednostavniju online prodaju | Legatech",
+  title: "Izrada Web Trgovina – WooCommerce Webshop - Legatech",
   description:
-    "Izrada WooCommerce web trgovina s preglednim katalogom, mobilnom kupnjom, plaćanjem i dostavom. Paketi od 1.500 €.",
+    "Izrada WooCommerce web trgovina s preglednim katalogom, jednostavnom kupnjom, sigurnim plaćanjem i SEO temeljima. Projekti od 1.500 €.",
+  alternates: {
+    canonical: "https://legatech.hr/izrada-web-trgovina/",
+  },
+  openGraph: {
+    title: "Izrada Web Trgovina – WooCommerce Webshop - Legatech",
+    description:
+      "Izrada WooCommerce web trgovina s preglednim katalogom, jednostavnom kupnjom, sigurnim plaćanjem i SEO temeljima. Projekti od 1.500 €.",
+    url: "https://legatech.hr/izrada-web-trgovina/",
+    type: "website",
+  },
 };
 
 const relatedServices = [

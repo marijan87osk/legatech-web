@@ -38,9 +38,19 @@ import {
 } from "@/src/data/website-maintenance";
 
 export const metadata: Metadata = {
-  title: "Održavanje web stranica i WordPress podrška | Legatech",
+  title: "Održavanje Web Stranica I WordPress Podrška - Legatech",
   description:
-    "WordPress i WooCommerce održavanje, sigurnosne kopije, ažuriranja i tehnička podrška za hrvatska poslovanja. Paketi od 35 € mjesečno.",
+    "Redovito WordPress održavanje, backup, sigurnosne provjere, ažuriranja i tehnička podrška. Paketi održavanja od 35 € mjesečno.",
+  alternates: {
+    canonical: "https://legatech.hr/odrzavanje-web-stranica/",
+  },
+  openGraph: {
+    title: "Održavanje Web Stranica I WordPress Podrška - Legatech",
+    description:
+      "Redovito WordPress održavanje, backup, sigurnosne provjere, ažuriranja i tehnička podrška. Paketi održavanja od 35 € mjesečno.",
+    url: "https://legatech.hr/odrzavanje-web-stranica/",
+    type: "website",
+  },
 };
 
 const relatedServices = [
