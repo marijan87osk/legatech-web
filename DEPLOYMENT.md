@@ -30,7 +30,7 @@ The deploy workflow backs up only files from its previous manifest and never del
 
 The file `wordpress/mu-plugins/legatech-static-deploy.php` belongs in `wp-content/mu-plugins/` on `staging2.legatech.hr`.
 
-Create a fine-grained GitHub token limited to `legatech-web` with permission to create repository dispatch events. Store it in `wp-config.php`, not in WordPress options:
+Create a fine-grained GitHub token limited to `legatech-web` with repository permission `Contents: Read and write`, which GitHub requires for repository dispatch events. Store it in `wp-config.php`, not in WordPress options:
 
 ```php
 define('LEGATECH_GITHUB_REPOSITORY', 'GITHUB_KORISNIK/legatech-web');
