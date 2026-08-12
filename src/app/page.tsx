@@ -107,13 +107,13 @@ export default function HomePage() {
               </div>
             </div>
 
-            <Reveal className="hero-visual" delay={0.08}>
+            <div className="hero-visual">
               <div className="hero-image-wrap">
                 <Image
-                  src={ducijaProject.image}
+                  src="/projects/ducija/cover-hero.webp"
                   alt={ducijaProject.imageAlt}
                   fill
-                  priority
+                  preload
                   sizes="(max-width: 767px) 100vw, 42vw"
                 />
               </div>
@@ -122,7 +122,7 @@ export default function HomePage() {
                 <strong>{ducijaProject.client}</strong>
                 <span>{ducijaProject.serviceLabel}</span>
               </div>
-            </Reveal>
+            </div>
           </div>
         </section>
 
