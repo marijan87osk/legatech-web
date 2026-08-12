@@ -18,11 +18,18 @@ fi
 
 mkdir -p "$release_dir" "$backup_content_dir" "$target"
 
+archive_listing="$(mktemp "$deploy_root/incoming/archive-list.XXXXXX")"
+trap 'rm -f "$archive_listing"' EXIT
+tar -tzf "$archive" > "$archive_listing"
+
 while IFS= read -r entry; do
   case "$entry" in
     /*|../*|*/../*|*/..) echo "Nesigurna putanja u arhivi: $entry" >&2; exit 1 ;;
   esac
-done < <(tar -tzf "$archive")
+done < "$archive_listing"
+
+rm -f "$archive_listing"
+trap - EXIT
 
 tar -xzf "$archive" -C "$release_dir"
 find "$release_dir" -type f ! -name '.legatech-new-manifest' -printf '%P\n' | LC_ALL=C sort > "$new_manifest"
