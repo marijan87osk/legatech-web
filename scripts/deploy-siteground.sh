@@ -78,6 +78,15 @@ if [[ -f "$previous_manifest" ]]; then
   comm -23 "$previous_manifest" "$new_manifest" | while IFS= read -r relative; do
     validate_relative_path "$relative" || continue
     rm -f "$target/$relative"
+
+    candidate_dir="$(dirname "$target/$relative")"
+    while [[ "$candidate_dir" != "$target" && "$candidate_dir" == "$target/"* ]]; do
+      if rmdir "$candidate_dir" 2>/dev/null; then
+        candidate_dir="$(dirname "$candidate_dir")"
+      else
+        break
+      fi
+    done
   done
 fi
 
