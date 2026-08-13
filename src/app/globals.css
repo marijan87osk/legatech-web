@@ -8864,7 +8864,7 @@ img {
     width: min(calc(100% - 1.5rem), 540px);
     max-height: calc(100dvh - 1.5rem - env(safe-area-inset-bottom));
     overflow-y: auto;
-    padding: 1.15rem;
+    padding: 1.15rem 1.15rem 5.75rem;
   }
 
   .cookie-consent-copy {
@@ -8880,9 +8880,9 @@ img {
     min-width: 0;
   }
 
-  [data-cookie-banner="closed"] .mobile-contact-actions {
+  .mobile-contact-actions {
     position: fixed;
-    z-index: 60;
+    z-index: 110;
     right: max(1rem, env(safe-area-inset-right));
     bottom: max(1rem, env(safe-area-inset-bottom));
     display: flex;
