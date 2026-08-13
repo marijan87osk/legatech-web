@@ -140,7 +140,7 @@ function legatech_publish_blog_snapshot(string $snapshotPath, string $reason, in
     }
 
     $body = [
-        'message' => 'content: sync WordPress blog',
+        'message' => 'content sync WordPress blog',
         'content' => base64_encode($snapshot),
         'branch' => $branch,
     ];

@@ -69,13 +69,13 @@ jobs:
           key: wordpress-blog-${{ github.run_id }}
 
       - name: Require fresh content for WordPress publishing
-        if: steps.wordpress_sync.outcome != 'success' && (github.event_name == 'repository_dispatch' || startsWith(github.event.head_commit.message, 'content: sync WordPress blog'))
+        if: ${{ steps.wordpress_sync.outcome != 'success' && (github.event_name == 'repository_dispatch' || startsWith(github.event.head_commit.message, 'content sync WordPress blog')) }}
         run: |
           echo "WordPress content changed, but a fresh snapshot could not be downloaded. Keeping the current site online." >&2
           exit 1
 
       - name: Use last valid snapshot for code deployment
-        if: steps.wordpress_sync.outcome != 'success' && github.event_name != 'repository_dispatch' && !startsWith(github.event.head_commit.message, 'content: sync WordPress blog')
+        if: ${{ steps.wordpress_sync.outcome != 'success' && github.event_name != 'repository_dispatch' && !startsWith(github.event.head_commit.message, 'content sync WordPress blog') }}
         run: echo "::warning::WordPress REST is temporarily unavailable. Building with the last valid blog snapshot."
 
       - name: Build static website
