@@ -2,7 +2,7 @@
 /**
  * Plugin Name: Legatech Static Blog Deploy
  * Description: Stvara javni read-only snapshot objavljenih članaka i pokreće GitHub Actions deploy.
- * Version: 1.2.0
+ * Version: 1.3.0
  */
 
 declare(strict_types=1);
@@ -132,42 +132,78 @@ function legatech_publish_blog_snapshot(string $snapshotPath, string $reason, in
         return;
     }
 
+    $contentUnchanged = false;
     if ($currentStatus === 200 && isset($currentBody['content'])) {
         $remoteSnapshot = base64_decode(str_replace(["\r", "\n"], '', (string) $currentBody['content']), true);
         if (is_string($remoteSnapshot) && hash_equals(hash('sha256', $remoteSnapshot), hash('sha256', $snapshot))) {
-            return;
+            $contentUnchanged = true;
         }
     }
 
-    $body = [
-        'message' => 'content sync WordPress blog',
-        'content' => base64_encode($snapshot),
-        'branch' => $branch,
-    ];
-    if ($currentStatus === 200 && isset($currentBody['sha'])) $body['sha'] = (string) $currentBody['sha'];
+    $contentStatus = 200;
+    $contentSuccess = true;
+    $contentDetail = '';
 
-    $response = wp_remote_request($apiUrl, [
-        'method' => 'PUT',
-        'timeout' => 20,
+    if (!$contentUnchanged) {
+        $body = [
+            'message' => 'content sync WordPress blog',
+            'content' => base64_encode($snapshot),
+            'branch' => $branch,
+        ];
+        if ($currentStatus === 200 && isset($currentBody['sha'])) $body['sha'] = (string) $currentBody['sha'];
+
+        $response = wp_remote_request($apiUrl, [
+            'method' => 'PUT',
+            'timeout' => 20,
+            'redirection' => 0,
+            'headers' => $headers,
+            'body' => wp_json_encode($body),
+        ]);
+
+        $contentStatus = is_wp_error($response) ? 0 : wp_remote_retrieve_response_code($response);
+        $contentSuccess = !is_wp_error($response) && in_array($contentStatus, [200, 201], true);
+        $contentDetail = is_wp_error($response) ? $response->get_error_message() : 'HTTP ' . $contentStatus;
+    }
+
+    if (!$contentSuccess) {
+        update_option('legatech_static_deploy_last_dispatch', [
+            'requested_at' => gmdate(DATE_ATOM),
+            'reason' => sanitize_key($reason),
+            'post_id' => $postId,
+            'status' => $contentStatus,
+            'dispatch_status' => null,
+            'ok' => false,
+            'mode' => 'contents_and_dispatch',
+        ], false);
+        error_log('Legatech blog snapshot nije objavljen na GitHubu: ' . $contentDetail);
+        return;
+    }
+
+    $dispatchResponse = wp_remote_post('https://api.github.com/repos/' . $repository . '/dispatches', [
+        'timeout' => 15,
         'redirection' => 0,
         'headers' => $headers,
-        'body' => wp_json_encode($body),
+        'body' => wp_json_encode([
+            'event_type' => 'wordpress_content_changed',
+            'client_payload' => ['reason' => $reason, 'post_id' => $postId],
+        ]),
     ]);
+    $dispatchStatus = is_wp_error($dispatchResponse) ? 0 : wp_remote_retrieve_response_code($dispatchResponse);
+    $dispatchSuccess = !is_wp_error($dispatchResponse) && $dispatchStatus === 204;
 
-    $statusCode = is_wp_error($response) ? 0 : wp_remote_retrieve_response_code($response);
-    $success = !is_wp_error($response) && in_array($statusCode, [200, 201], true);
     update_option('legatech_static_deploy_last_dispatch', [
         'requested_at' => gmdate(DATE_ATOM),
         'reason' => sanitize_key($reason),
         'post_id' => $postId,
-        'status' => $statusCode,
-        'ok' => $success,
-        'mode' => 'contents',
+        'status' => $contentStatus,
+        'dispatch_status' => $dispatchStatus,
+        'ok' => $dispatchSuccess,
+        'mode' => 'contents_and_dispatch',
     ], false);
 
-    if (!$success) {
-        $detail = is_wp_error($response) ? $response->get_error_message() : 'HTTP ' . $statusCode;
-        error_log('Legatech blog snapshot nije objavljen na GitHubu: ' . $detail);
+    if (!$dispatchSuccess) {
+        $detail = is_wp_error($dispatchResponse) ? $dispatchResponse->get_error_message() : 'HTTP ' . $dispatchStatus;
+        error_log('Legatech blog deploy nije pokrenut na GitHubu: ' . $detail);
     }
 }
 
