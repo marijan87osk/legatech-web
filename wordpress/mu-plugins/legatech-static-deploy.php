@@ -2,7 +2,7 @@
 /**
  * Plugin Name: Legatech Static Blog Deploy
  * Description: Stvara javni read-only snapshot objavljenih članaka i pokreće GitHub Actions deploy.
- * Version: 1.1.0
+ * Version: 1.2.0
  */
 
 declare(strict_types=1);
@@ -10,7 +10,7 @@ declare(strict_types=1);
 if (!defined('ABSPATH')) exit;
 
 /**
- * @return string|null Public URL of the generated snapshot, or null on failure.
+ * @return string|null Absolute path of the generated snapshot, or null on failure.
  */
 function legatech_write_blog_snapshot(): ?string
 {
@@ -85,50 +85,89 @@ function legatech_write_blog_snapshot(): ?string
     }
 
     @chmod($target, 0644);
-    return trailingslashit((string) $uploads['baseurl']) . 'legatech-blog/feed.json';
+    return $target;
 }
 
-function legatech_trigger_static_deploy(string $reason, int $postId): void
+function legatech_publish_blog_snapshot(string $snapshotPath, string $reason, int $postId): void
 {
     if (!defined('LEGATECH_GITHUB_REPOSITORY') || !defined('LEGATECH_GITHUB_TOKEN')) return;
-    if (get_transient('legatech_static_deploy_pending')) return;
-    set_transient('legatech_static_deploy_pending', '1', 20);
 
     $repository = trim((string) LEGATECH_GITHUB_REPOSITORY, '/');
     if (!preg_match('#^[A-Za-z0-9_.-]+/[A-Za-z0-9_.-]+$#', $repository)) {
-        delete_transient('legatech_static_deploy_pending');
         error_log('Legatech deploy: neispravan LEGATECH_GITHUB_REPOSITORY.');
         return;
     }
 
-    $response = wp_remote_post('https://api.github.com/repos/' . $repository . '/dispatches', [
+    $snapshot = file_get_contents($snapshotPath);
+    if ($snapshot === false) {
+        error_log('Legatech deploy: snapshot nije moguće pročitati.');
+        return;
+    }
+
+    $branch = defined('LEGATECH_GITHUB_BRANCH') ? sanitize_key((string) LEGATECH_GITHUB_BRANCH) : 'main';
+    $repositoryPath = 'wordpress-content/blog-snapshot.json';
+    $apiUrl = 'https://api.github.com/repos/' . $repository . '/contents/' . $repositoryPath;
+    $headers = [
+        'Accept' => 'application/vnd.github+json',
+        'Authorization' => 'Bearer ' . (string) LEGATECH_GITHUB_TOKEN,
+        'X-GitHub-Api-Version' => '2022-11-28',
+        'User-Agent' => 'Legatech-WordPress-Deploy',
+    ];
+
+    $current = wp_remote_get(add_query_arg('ref', $branch, $apiUrl), [
         'timeout' => 15,
         'redirection' => 0,
-        'headers' => [
-            'Accept' => 'application/vnd.github+json',
-            'Authorization' => 'Bearer ' . (string) LEGATECH_GITHUB_TOKEN,
-            'X-GitHub-Api-Version' => '2022-11-28',
-            'User-Agent' => 'Legatech-WordPress-Deploy',
-        ],
-        'body' => wp_json_encode([
-            'event_type' => 'wordpress_content_changed',
-            'client_payload' => ['reason' => $reason, 'post_id' => $postId],
-        ]),
+        'headers' => $headers,
+    ]);
+
+    if (is_wp_error($current)) {
+        error_log('Legatech deploy: GitHub sadržaj nije moguće pročitati: ' . $current->get_error_message());
+        return;
+    }
+
+    $currentStatus = wp_remote_retrieve_response_code($current);
+    $currentBody = json_decode(wp_remote_retrieve_body($current), true);
+    if (!in_array($currentStatus, [200, 404], true)) {
+        error_log('Legatech deploy: GitHub sadržaj nije moguće pročitati, HTTP ' . $currentStatus . '.');
+        return;
+    }
+
+    if ($currentStatus === 200 && isset($currentBody['content'])) {
+        $remoteSnapshot = base64_decode(str_replace(["\r", "\n"], '', (string) $currentBody['content']), true);
+        if (is_string($remoteSnapshot) && hash_equals(hash('sha256', $remoteSnapshot), hash('sha256', $snapshot))) {
+            return;
+        }
+    }
+
+    $body = [
+        'message' => 'content: sync WordPress blog',
+        'content' => base64_encode($snapshot),
+        'branch' => $branch,
+    ];
+    if ($currentStatus === 200 && isset($currentBody['sha'])) $body['sha'] = (string) $currentBody['sha'];
+
+    $response = wp_remote_request($apiUrl, [
+        'method' => 'PUT',
+        'timeout' => 20,
+        'redirection' => 0,
+        'headers' => $headers,
+        'body' => wp_json_encode($body),
     ]);
 
     $statusCode = is_wp_error($response) ? 0 : wp_remote_retrieve_response_code($response);
+    $success = !is_wp_error($response) && in_array($statusCode, [200, 201], true);
     update_option('legatech_static_deploy_last_dispatch', [
         'requested_at' => gmdate(DATE_ATOM),
         'reason' => sanitize_key($reason),
         'post_id' => $postId,
         'status' => $statusCode,
-        'ok' => !is_wp_error($response) && $statusCode === 204,
+        'ok' => $success,
+        'mode' => 'contents',
     ], false);
 
-    if (is_wp_error($response) || $statusCode !== 204) {
-        delete_transient('legatech_static_deploy_pending');
+    if (!$success) {
         $detail = is_wp_error($response) ? $response->get_error_message() : 'HTTP ' . $statusCode;
-        error_log('Legatech deploy nije pokrenut: ' . $detail);
+        error_log('Legatech blog snapshot nije objavljen na GitHubu: ' . $detail);
     }
 }
 
@@ -144,9 +183,11 @@ function legatech_queue_blog_refresh(string $reason, int $postId): void
 function legatech_refresh_blog_and_deploy(): void
 {
     $request = $GLOBALS['legatech_blog_refresh'] ?? null;
-    if (!is_array($request) || legatech_write_blog_snapshot() === null) return;
+    if (!is_array($request)) return;
+    $snapshotPath = legatech_write_blog_snapshot();
+    if ($snapshotPath === null) return;
 
-    legatech_trigger_static_deploy((string) $request['reason'], (int) $request['post_id']);
+    legatech_publish_blog_snapshot($snapshotPath, (string) $request['reason'], (int) $request['post_id']);
     unset($GLOBALS['legatech_blog_refresh']);
 }
 

@@ -1,5 +1,5 @@
 import { createHash } from "node:crypto";
-import { access, mkdir, mkdtemp, rename, rm, writeFile } from "node:fs/promises";
+import { access, copyFile, mkdir, mkdtemp, readFile, rename, rm, writeFile } from "node:fs/promises";
 import { tmpdir } from "node:os";
 import path from "node:path";
 import { load } from "cheerio";
@@ -8,6 +8,7 @@ import sanitizeHtml from "sanitize-html";
 const projectRoot = process.cwd();
 const apiRoot = (process.env.WORDPRESS_API_URL ?? "https://staging2.legatech.hr/?rest_route=/wp/v2").replace(/\/$/, "");
 const snapshotUrl = process.env.WORDPRESS_SNAPSHOT_URL?.trim() || null;
+const snapshotFile = process.env.WORDPRESS_SNAPSHOT_FILE?.trim() || null;
 const outputFile = path.join(projectRoot, "src", "generated", "blog-posts.json");
 const mediaDirectory = path.join(projectRoot, "public", "blog-media");
 const mediaPublicPath = "/blog-media";
@@ -135,8 +136,9 @@ async function fetchAllPosts() {
 }
 
 async function fetchSnapshotPosts() {
-  const url = new URL(snapshotUrl);
-  const { data: snapshot } = await fetchWordPressJson(url);
+  const snapshot = snapshotFile
+    ? JSON.parse(await readFile(path.resolve(projectRoot, snapshotFile), "utf8"))
+    : (await fetchWordPressJson(new URL(snapshotUrl))).data;
   if (!snapshot || snapshot.version !== 1 || !Array.isArray(snapshot.posts)) {
     throw new Error("WordPress snapshot nema očekivani format.");
   }
@@ -152,6 +154,15 @@ async function downloadImage(sourceUrl, destinationDirectory) {
   }
   if (!["http:", "https:"].includes(url.protocol)) return null;
   if (!allowedMediaHosts.has(url.hostname.toLowerCase())) return null;
+  const sourceHash = createHash("sha256").update(sourceUrl).digest("hex").slice(0, 24);
+  for (const extension of imageTypes.values()) {
+    const fileName = `${sourceHash}${extension}`;
+    const cachedPath = path.join(mediaDirectory, fileName);
+    if (await pathExists(cachedPath)) {
+      await copyFile(cachedPath, path.join(destinationDirectory, fileName));
+      return `${mediaPublicPath}/${fileName}`;
+    }
+  }
   const response = await fetchWithTimeout(url);
   const contentType = (response.headers.get("content-type") ?? "").split(";")[0].toLowerCase();
   const extension = imageTypes.get(contentType);
@@ -160,7 +171,7 @@ async function downloadImage(sourceUrl, destinationDirectory) {
   if (contentLength > maxImageBytes) throw new Error(`Slika je veća od 12 MB: ${sourceUrl}`);
   const buffer = Buffer.from(await response.arrayBuffer());
   if (buffer.byteLength > maxImageBytes) throw new Error(`Slika je veća od 12 MB: ${sourceUrl}`);
-  const fileName = `${createHash("sha256").update(sourceUrl).digest("hex").slice(0, 24)}${extension}`;
+  const fileName = `${sourceHash}${extension}`;
   await writeFile(path.join(destinationDirectory, fileName), buffer);
   return `${mediaPublicPath}/${fileName}`;
 }
@@ -278,7 +289,8 @@ async function activateSnapshot(stagingOutput, stagingMediaDirectory) {
 }
 
 async function main() {
-  const posts = snapshotUrl ? await fetchSnapshotPosts() : await fetchAllPosts();
+  const usesSnapshot = Boolean(snapshotFile || snapshotUrl);
+  const posts = usesSnapshot ? await fetchSnapshotPosts() : await fetchAllPosts();
   const stagingRoot = await mkdtemp(path.join(tmpdir(), "legatech-blog-"));
   const stagingOutput = path.join(stagingRoot, "blog-posts.json");
   const stagingMediaDirectory = path.join(stagingRoot, "blog-media");
@@ -287,7 +299,7 @@ async function main() {
     await mkdir(stagingMediaDirectory, { recursive: true });
     const normalized = [];
     for (const post of posts) {
-      normalized.push(snapshotUrl
+      normalized.push(usesSnapshot
         ? await normalizeSnapshotPost(post, stagingMediaDirectory)
         : await normalizePost(post, stagingMediaDirectory));
     }
