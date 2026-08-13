@@ -116,9 +116,18 @@ function legatech_trigger_static_deploy(string $reason, int $postId): void
         ]),
     ]);
 
-    if (is_wp_error($response) || wp_remote_retrieve_response_code($response) !== 204) {
+    $statusCode = is_wp_error($response) ? 0 : wp_remote_retrieve_response_code($response);
+    update_option('legatech_static_deploy_last_dispatch', [
+        'requested_at' => gmdate(DATE_ATOM),
+        'reason' => sanitize_key($reason),
+        'post_id' => $postId,
+        'status' => $statusCode,
+        'ok' => !is_wp_error($response) && $statusCode === 204,
+    ], false);
+
+    if (is_wp_error($response) || $statusCode !== 204) {
         delete_transient('legatech_static_deploy_pending');
-        $detail = is_wp_error($response) ? $response->get_error_message() : 'HTTP ' . wp_remote_retrieve_response_code($response);
+        $detail = is_wp_error($response) ? $response->get_error_message() : 'HTTP ' . $statusCode;
         error_log('Legatech deploy nije pokrenut: ' . $detail);
     }
 }
