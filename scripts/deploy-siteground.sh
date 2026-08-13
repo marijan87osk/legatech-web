@@ -4,19 +4,21 @@ set -Eeuo pipefail
 archive="${1:?Nedostaje arhiva}"
 target="${2:?Nedostaje ciljni direktorij}"
 release_id="${3:?Nedostaje identifikator izdanja}"
-deploy_root="$HOME/legatech-deploy"
+deploy_root="${LEGATECH_DEPLOY_ROOT:-$HOME/legatech-deploy}"
 release_dir="$deploy_root/releases/$release_id"
 backup_dir="$deploy_root/backups/$release_id"
 backup_content_dir="$backup_dir/content"
 previous_manifest="$target/.legatech-manifest"
 new_manifest="$release_dir/.legatech-new-manifest"
 
-if [[ "$target" != /* || "$target" == "/" ]]; then
+if [[ "$target" != /* || "$target" == "/" || ! "$release_id" =~ ^[a-f0-9]{40}$ ]]; then
   echo "Nesiguran ciljni direktorij: $target" >&2
   exit 1
 fi
 
-mkdir -p "$release_dir" "$backup_content_dir" "$target"
+mkdir -p "$deploy_root/incoming" "$(dirname "$release_dir")" "$(dirname "$backup_dir")" "$target"
+rm -rf -- "$release_dir" "$backup_dir"
+mkdir -p "$release_dir" "$backup_content_dir"
 
 archive_listing="$(mktemp "$deploy_root/incoming/archive-list.XXXXXX")"
 trap 'rm -f "$archive_listing"' EXIT
