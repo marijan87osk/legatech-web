@@ -105,7 +105,27 @@ jobs:
           SSH_USER: ${{ secrets.SITEGROUND_SSH_USER }}
         run: |
           [[ "$DEPLOY_PATH" == /* && "$DEPLOY_PATH" != "/" ]]
+          retry_remote() {
+            local attempt=1
+            local max_attempts=4
+            local delay=10
+
+            until "$@"; do
+              if (( attempt >= max_attempts )); then
+                echo "Remote command failed after $attempt attempts." >&2
+                return 1
+              fi
+
+              echo "Remote command failed (attempt $attempt/$max_attempts). Retrying in ${delay}s..." >&2
+              sleep "$delay"
+              attempt=$((attempt + 1))
+              delay=$((delay * 2))
+            done
+          }
+          ssh_options=(-o BatchMode=yes -o ConnectTimeout=20 -o ConnectionAttempts=1 -o ServerAliveInterval=15 -o ServerAliveCountMax=3 -p "$SSH_PORT")
+          scp_options=(-o BatchMode=yes -o ConnectTimeout=20 -o ConnectionAttempts=1 -o ServerAliveInterval=15 -o ServerAliveCountMax=3 -P "$SSH_PORT")
           config_file="$RUNNER_TEMP/legatech-contact.php"
+          trap 'rm -f "$config_file"' EXIT
           umask 077
           SMTP_PASSWORD="$SMTP_PASSWORD" CONTACT_RATE_LIMIT_SALT="$CONTACT_RATE_LIMIT_SALT" php -r '
             $config = [
@@ -124,10 +144,11 @@ jobs:
           ' > "$config_file"
           private_dir="$(dirname "$DEPLOY_PATH")/private"
           printf -v quoted_private_dir '%q' "$private_dir"
-          ssh -p "$SSH_PORT" "$SSH_USER@$SSH_HOST" "umask 077; mkdir -p $quoted_private_dir; chmod 700 $quoted_private_dir"
-          scp -P "$SSH_PORT" "$config_file" "$SSH_USER@$SSH_HOST:$private_dir/legatech-contact.php"
-          ssh -p "$SSH_PORT" "$SSH_USER@$SSH_HOST" "chmod 600 $quoted_private_dir/legatech-contact.php"
+          retry_remote ssh "${ssh_options[@]}" "$SSH_USER@$SSH_HOST" "umask 077; mkdir -p $quoted_private_dir; chmod 700 $quoted_private_dir"
+          retry_remote scp "${scp_options[@]}" "$config_file" "$SSH_USER@$SSH_HOST:$private_dir/legatech-contact.php"
+          retry_remote ssh "${ssh_options[@]}" "$SSH_USER@$SSH_HOST" "chmod 600 $quoted_private_dir/legatech-contact.php"
           rm -f "$config_file"
+          trap - EXIT
 
       - name: Package and upload release
         env:
@@ -135,9 +156,28 @@ jobs:
           SSH_PORT: ${{ secrets.SITEGROUND_SSH_PORT }}
           SSH_USER: ${{ secrets.SITEGROUND_SSH_USER }}
         run: |
+          retry_remote() {
+            local attempt=1
+            local max_attempts=4
+            local delay=10
+
+            until "$@"; do
+              if (( attempt >= max_attempts )); then
+                echo "Remote command failed after $attempt attempts." >&2
+                return 1
+              fi
+
+              echo "Remote command failed (attempt $attempt/$max_attempts). Retrying in ${delay}s..." >&2
+              sleep "$delay"
+              attempt=$((attempt + 1))
+              delay=$((delay * 2))
+            done
+          }
+          ssh_options=(-o BatchMode=yes -o ConnectTimeout=20 -o ConnectionAttempts=1 -o ServerAliveInterval=15 -o ServerAliveCountMax=3 -p "$SSH_PORT")
+          scp_options=(-o BatchMode=yes -o ConnectTimeout=20 -o ConnectionAttempts=1 -o ServerAliveInterval=15 -o ServerAliveCountMax=3 -P "$SSH_PORT")
           tar -czf legatech-site.tar.gz -C out .
-          ssh -p "$SSH_PORT" "$SSH_USER@$SSH_HOST" 'mkdir -p ~/legatech-deploy/incoming'
-          scp -P "$SSH_PORT" legatech-site.tar.gz scripts/deploy-siteground.sh "$SSH_USER@$SSH_HOST:~/legatech-deploy/incoming/"
+          retry_remote ssh "${ssh_options[@]}" "$SSH_USER@$SSH_HOST" 'mkdir -p ~/legatech-deploy/incoming'
+          retry_remote scp "${scp_options[@]}" legatech-site.tar.gz scripts/deploy-siteground.sh "$SSH_USER@$SSH_HOST:~/legatech-deploy/incoming/"
 
       - name: Activate release
         env:
@@ -147,5 +187,23 @@ jobs:
           SSH_USER: ${{ secrets.SITEGROUND_SSH_USER }}
         run: |
           [[ "$DEPLOY_PATH" == /* && "$DEPLOY_PATH" != "/" ]]
+          retry_remote() {
+            local attempt=1
+            local max_attempts=4
+            local delay=10
+
+            until "$@"; do
+              if (( attempt >= max_attempts )); then
+                echo "Remote command failed after $attempt attempts." >&2
+                return 1
+              fi
+
+              echo "Remote command failed (attempt $attempt/$max_attempts). Retrying in ${delay}s..." >&2
+              sleep "$delay"
+              attempt=$((attempt + 1))
+              delay=$((delay * 2))
+            done
+          }
+          ssh_options=(-o BatchMode=yes -o ConnectTimeout=20 -o ConnectionAttempts=1 -o ServerAliveInterval=15 -o ServerAliveCountMax=3 -p "$SSH_PORT")
           printf -v quoted_path '%q' "$DEPLOY_PATH"
-          ssh -p "$SSH_PORT" "$SSH_USER@$SSH_HOST" "bash ~/legatech-deploy/incoming/deploy-siteground.sh ~/legatech-deploy/incoming/legatech-site.tar.gz $quoted_path $GITHUB_SHA"
+          retry_remote ssh "${ssh_options[@]}" "$SSH_USER@$SSH_HOST" "bash ~/legatech-deploy/incoming/deploy-siteground.sh ~/legatech-deploy/incoming/legatech-site.tar.gz $quoted_path $GITHUB_SHA"
