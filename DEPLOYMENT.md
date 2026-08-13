@@ -47,6 +47,12 @@ Search Console requires an account-level action and a Google-generated DNS value
 
 Search Console does not require any browser script or cookie on the public website.
 
+## SiteGround CDN after a release
+
+Static HTML responses send `Cache-Control: no-cache, no-store, must-revalidate` so a new deploy cannot remain hidden behind an old CDN copy. Hashed CSS, JavaScript, fonts and images remain cacheable.
+
+After introducing these headers for the first time, clear the already stored CDN copy once in **Site Tools > Speed > SiteGround CDN > Purge Cache**. SiteGround notes that worldwide invalidation can take up to 180 seconds. Future HTML releases should then become visible without waiting for the previous static HTML TTL.
+
 ## WordPress publish trigger
 
 The file `wordpress/mu-plugins/legatech-static-deploy.php` belongs in `wp-content/mu-plugins/` on `staging2.legatech.hr`.

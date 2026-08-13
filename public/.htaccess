@@ -15,6 +15,12 @@ ErrorDocument 404 /404.html
   Header always set Referrer-Policy "strict-origin-when-cross-origin"
   Header always set Permissions-Policy "camera=(), microphone=(), geolocation=(), payment=()"
   Header always set Strict-Transport-Security "max-age=31536000; includeSubDomains"
+
+  # HTML changes on every static deploy. Do not let the CDN keep an old page
+  # while hashed CSS, JavaScript, fonts and images remain cacheable.
+  Header always set Cache-Control "no-cache, no-store, must-revalidate, max-age=0" "expr=%{REQUEST_URI} =~ m#(?:/|\.html)$#"
+  Header always set Pragma "no-cache" "expr=%{REQUEST_URI} =~ m#(?:/|\.html)$#"
+  Header always set Expires "0" "expr=%{REQUEST_URI} =~ m#(?:/|\.html)$#"
 </IfModule>
 
 <FilesMatch "^\.">
