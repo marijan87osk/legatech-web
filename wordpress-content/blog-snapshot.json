@@ -1,5 +1,1 @@
-{
-  "version": 1,
-  "generatedAt": "2026-08-13T00:00:00+00:00",
-  "posts": []
-}
+{"version":1,"generatedAt":"2026-08-13T11:07:48+00:00","posts":[{"id":3044,"slug":"test-automatizacije-objave-bloga","titleHtml":"Test automatizacije objave bloga","excerptHtml":"<p>Druga testna izmjena potvrđuje automatski WordPress hook i GitHub repository dispatch.</p>\n","contentHtml":"<p class=\"wp-block-paragraph\">Ovo je privremeni članak za provjeru automatskog procesa objave između WordPressa, GitHub Actionsa i javnog Legatech weba.</p><h2 class=\"wp-block-heading\">Provjera sadržaja</h2><ul class=\"wp-block-list\"><li>kategorija i sažetak</li><li>istaknuta slika</li><li>pojedinačna ruta članka</li><li>automatsko ažuriranje bloga</li></ul>","publishedAt":"2026-08-13T09:27:08+00:00","modifiedAt":"2026-08-13T11:07:47+00:00","categoryLabels":["Izrada web stranica"],"featuredImage":{"sourceUrl":"https://staging2.legatech.hr/wp-content/uploads/2026/08/cover.webp","alt":"Testna istaknuta slika automatizacije bloga","width":1560,"height":900},"authorName":"Legatech"}]}
