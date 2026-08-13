@@ -2,7 +2,7 @@
 /**
  * Plugin Name: Legatech Artifact Deployer
  * Description: Preuzima provjereni GitHub Actions artifact i lokalno aktivira statični Legatech web.
- * Version: 1.0.0
+ * Version: 1.0.1
  */
 
 declare(strict_types=1);
@@ -38,6 +38,41 @@ function legatech_deployer_api_json(string $url): array
     $data = json_decode(wp_remote_retrieve_body($response), true);
     if (!is_array($data)) throw new RuntimeException('GitHub API nije vratio valjan JSON.');
     return $data;
+}
+
+function legatech_deployer_download_artifact(string $apiUrl, string $destination): void
+{
+    $redirect = wp_remote_get($apiUrl, [
+        'timeout' => 20,
+        'redirection' => 0,
+        'headers' => legatech_deployer_headers(),
+    ]);
+    if (is_wp_error($redirect)) throw new RuntimeException('URL artifacta nije moguće dohvatiti: ' . $redirect->get_error_message());
+
+    $status = wp_remote_retrieve_response_code($redirect);
+    $downloadUrl = (string) wp_remote_retrieve_header($redirect, 'location');
+    if (!in_array($status, [302, 303, 307], true) || $downloadUrl === '') throw new RuntimeException('GitHub nije vratio potpisani URL artifacta.');
+
+    $parts = wp_parse_url($downloadUrl);
+    $host = strtolower((string) ($parts['host'] ?? ''));
+    $allowedHost = ($parts['scheme'] ?? '') === 'https'
+        && ($host === 'objects.githubusercontent.com'
+            || str_ends_with($host, '.actions.githubusercontent.com')
+            || str_ends_with($host, '.blob.core.windows.net'));
+    if (!$allowedHost) throw new RuntimeException('GitHub je vratio nedopuštenu lokaciju artifacta.');
+
+    $download = wp_remote_get($downloadUrl, [
+        'timeout' => 90,
+        'redirection' => 2,
+        'headers' => ['User-Agent' => 'Legatech-SiteGround-Artifact-Deployer'],
+        'stream' => true,
+        'filename' => $destination,
+        'limit_response_size' => 200 * 1024 * 1024,
+    ]);
+    if (is_wp_error($download)) throw new RuntimeException('Artifact nije moguće preuzeti: ' . $download->get_error_message());
+    if (wp_remote_retrieve_response_code($download) !== 200 || !is_file($destination) || filesize($destination) === 0) {
+        throw new RuntimeException('Preuzeti artifact nije valjan.');
+    }
 }
 
 function legatech_deployer_remove_tree(string $path, string $allowedRoot): void
@@ -238,16 +273,7 @@ function legatech_poll_and_deploy_artifact(): array
         if (!wp_mkdir_p($workingDirectory)) throw new RuntimeException('Privremeni deploy direktorij nije moguće izraditi.');
         @chmod($workingDirectory, 0700);
         $zipPath = $workingDirectory . '/artifact.zip';
-        $download = wp_remote_get((string) $artifact['archive_download_url'], [
-            'timeout' => 90,
-            'redirection' => 5,
-            'headers' => legatech_deployer_headers(),
-            'stream' => true,
-            'filename' => $zipPath,
-            'limit_response_size' => 200 * 1024 * 1024,
-        ]);
-        if (is_wp_error($download)) throw new RuntimeException('Artifact nije moguće preuzeti: ' . $download->get_error_message());
-        if (wp_remote_retrieve_response_code($download) !== 200 || !is_file($zipPath) || filesize($zipPath) === 0) throw new RuntimeException('Preuzeti artifact nije valjan.');
+        legatech_deployer_download_artifact((string) $artifact['archive_download_url'], $zipPath);
 
         $releaseDirectory = $workingDirectory . '/release';
         if (!wp_mkdir_p($releaseDirectory)) throw new RuntimeException('Release direktorij nije moguće izraditi.');
