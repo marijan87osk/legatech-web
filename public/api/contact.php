@@ -89,6 +89,17 @@ if (string_length($rateSalt) < 24) {
 $rateKey = hash_hmac('sha256', $clientIp, $rateSalt);
 $rateFile = rtrim(sys_get_temp_dir(), DIRECTORY_SEPARATOR) . DIRECTORY_SEPARATOR . 'legatech-contact-' . $rateKey . '.json';
 $now = time();
+
+// Remove abandoned rate-limit records without touching unrelated temporary files.
+$staleRateFiles = glob(rtrim(sys_get_temp_dir(), DIRECTORY_SEPARATOR) . DIRECTORY_SEPARATOR . 'legatech-contact-*.json') ?: [];
+foreach ($staleRateFiles as $staleRateFile) {
+    $basename = basename($staleRateFile);
+    $modifiedAt = is_file($staleRateFile) ? filemtime($staleRateFile) : false;
+    if (preg_match('/^legatech-contact-[a-f0-9]{64}\.json$/', $basename) === 1 && $modifiedAt !== false && $modifiedAt < $now - 86400) {
+        @unlink($staleRateFile);
+    }
+}
+
 $handle = fopen($rateFile, 'c+');
 if ($handle === false || !flock($handle, LOCK_EX)) {
     if (is_resource($handle)) fclose($handle);

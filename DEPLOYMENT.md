@@ -26,6 +26,27 @@ Create the private repository `legatech-web`, push the `main` branch, and config
 
 The deploy workflow backs up only files from its previous manifest and never deletes unmanaged hosting files.
 
+## Analytics and Search Console
+
+Create the repository variable `NEXT_PUBLIC_GA_MEASUREMENT_ID` with value `G-956PBX0RC6`. The build has the same value as a safe fallback, but the repository variable keeps the deployment configuration explicit. Google Analytics is loaded only after affirmative cookie consent.
+
+In the GA4 property settings:
+
+- set event data retention to two months;
+- keep Google Signals disabled;
+- keep ads personalization and Google Ads linking disabled;
+- mark `generate_lead` as a key event if contact submissions should appear as conversions.
+
+Search Console requires an account-level action and a Google-generated DNS value:
+
+1. Create a Domain property named `legatech.hr` in Google Search Console.
+2. Copy the generated `google-site-verification=...` TXT value.
+3. Add it to the DNS zone for `legatech.hr` in SiteGround, at the root host.
+4. Return to Search Console and select **Verify** after DNS propagation.
+5. Submit `https://legatech.hr/sitemap.xml` and inspect the homepage plus the four primary service URLs.
+
+Search Console does not require any browser script or cookie on the public website.
+
 ## WordPress publish trigger
 
 The file `wordpress/mu-plugins/legatech-static-deploy.php` belongs in `wp-content/mu-plugins/` on `staging2.legatech.hr`.

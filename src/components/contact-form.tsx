@@ -1,7 +1,9 @@
 "use client";
 
 import { CheckCircle, WarningCircle } from "@phosphor-icons/react";
+import Link from "next/link";
 import { FormEvent, useId, useRef, useState } from "react";
+import { trackAnalyticsEvent } from "@/src/lib/analytics";
 
 type FormStatus = "idle" | "submitting" | "success" | "error";
 type FieldErrors = Partial<Record<"name" | "email" | "company" | "service" | "budget" | "description", string>>;
@@ -49,6 +51,7 @@ export function ContactForm() {
         return;
       }
       form.reset();
+      trackAnalyticsEvent("generate_lead", { method: "contact_form" });
       setStatus("success");
     } catch {
       setMessage("Nije moguće povezati se sa servisom za slanje. Provjerite vezu ili nam pišite na info@legatech.hr.");
@@ -115,7 +118,10 @@ export function ContactForm() {
         </div>
       </div>
       <div className="form-footer">
-        <p>Slanjem upita pristajete da navedene podatke koristimo isključivo za odgovor na vaš upit.</p>
+        <p>
+          Podatke koristimo za odgovor i pripremu ponude. Više informacija nalazi se u{" "}
+          <Link href="/politika-privatnosti">Politici privatnosti</Link>.
+        </p>
         <button className="button button-primary" type="submit" disabled={status === "submitting"}>
           {status === "submitting" ? "Šaljemo…" : "Pošaljite upit"}
         </button>

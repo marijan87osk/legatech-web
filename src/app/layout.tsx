@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 import "@fontsource-variable/manrope";
 import "@fontsource/ibm-plex-mono/latin-500.css";
 import "@fontsource/ibm-plex-mono/latin-ext-500.css";
+import { MobileContactActions } from "@/src/components/mobile-contact-actions";
+import { PrivacyTools } from "@/src/components/privacy-tools";
 import "./globals.css";
 
 export const metadata: Metadata = {
@@ -25,7 +27,11 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
   return (
     <html lang="hr">
-      <body>{children}</body>
+      <body>
+        {children}
+        <MobileContactActions />
+        <PrivacyTools />
+      </body>
     </html>
   );
 }
