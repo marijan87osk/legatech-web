@@ -7,6 +7,7 @@ import sanitizeHtml from "sanitize-html";
 
 const projectRoot = process.cwd();
 const apiRoot = (process.env.WORDPRESS_API_URL ?? "https://staging2.legatech.hr/?rest_route=/wp/v2").replace(/\/$/, "");
+const snapshotUrl = process.env.WORDPRESS_SNAPSHOT_URL?.trim() || null;
 const outputFile = path.join(projectRoot, "src", "generated", "blog-posts.json");
 const mediaDirectory = path.join(projectRoot, "public", "blog-media");
 const mediaPublicPath = "/blog-media";
@@ -14,7 +15,7 @@ const timeoutMs = 20_000;
 const maxFetchAttempts = 4;
 const retryBaseMs = Number(process.env.WORDPRESS_RETRY_BASE_MS ?? "1500");
 const maxImageBytes = 12 * 1024 * 1024;
-const wordpressHost = new URL(apiRoot).hostname.toLowerCase();
+const wordpressHost = new URL(snapshotUrl ?? apiRoot).hostname.toLowerCase();
 const allowedMediaHosts = new Set((process.env.WORDPRESS_MEDIA_HOSTS ?? wordpressHost).split(",").map((host) => host.trim().toLowerCase()).filter(Boolean));
 
 const imageTypes = new Map([
@@ -68,7 +69,7 @@ async function fetchWithTimeout(url, options = {}) {
       headers: {
         Accept: "application/json",
         "Cache-Control": "no-cache",
-        "User-Agent": "Mozilla/5.0 (compatible; LegatechStaticSync/1.0; +https://legatech.hr)",
+        "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0.0.0 Safari/537.36",
         ...(options.headers ?? {}),
       },
       signal: controller.signal,
@@ -131,6 +132,15 @@ async function fetchAllPosts() {
     page += 1;
   }
   return posts;
+}
+
+async function fetchSnapshotPosts() {
+  const url = new URL(snapshotUrl);
+  const { data: snapshot } = await fetchWordPressJson(url);
+  if (!snapshot || snapshot.version !== 1 || !Array.isArray(snapshot.posts)) {
+    throw new Error("WordPress snapshot nema očekivani format.");
+  }
+  return snapshot.posts;
 }
 
 async function downloadImage(sourceUrl, destinationDirectory) {
@@ -199,6 +209,34 @@ async function normalizePost(post, destinationDirectory) {
   };
 }
 
+async function normalizeSnapshotPost(post, destinationDirectory) {
+  const sanitized = sanitizeArticleHtml(post?.contentHtml ?? "");
+  const contentHtml = await localizeContentImages(sanitized, destinationDirectory);
+  const featured = post?.featuredImage ?? null;
+  const featuredSource = featured?.sourceUrl ? await downloadImage(featured.sourceUrl, destinationDirectory) : null;
+  const text = safeText(contentHtml);
+  const excerpt = safeText(post?.excerptHtml) || `${text.slice(0, 180).trim()}${text.length > 180 ? "…" : ""}`;
+
+  return {
+    id: Number(post.id),
+    slug: String(post.slug),
+    title: safeText(post?.titleHtml),
+    excerpt,
+    contentHtml,
+    publishedAt: String(post.publishedAt),
+    modifiedAt: String(post.modifiedAt),
+    categoryLabels: Array.isArray(post.categoryLabels) ? post.categoryLabels.map((label) => safeText(label)).filter(Boolean) : [],
+    featuredImage: featuredSource ? {
+      src: featuredSource,
+      alt: safeText(featured?.alt) || safeText(post?.titleHtml),
+      width: Number(featured?.width) || null,
+      height: Number(featured?.height) || null,
+    } : null,
+    authorName: safeText(post?.authorName) || "Legatech",
+    readingMinutes: Math.max(1, Math.ceil(text.split(/\s+/).filter(Boolean).length / 200)),
+  };
+}
+
 async function pathExists(targetPath) {
   try {
     await access(targetPath);
@@ -240,7 +278,7 @@ async function activateSnapshot(stagingOutput, stagingMediaDirectory) {
 }
 
 async function main() {
-  const posts = await fetchAllPosts();
+  const posts = snapshotUrl ? await fetchSnapshotPosts() : await fetchAllPosts();
   const stagingRoot = await mkdtemp(path.join(tmpdir(), "legatech-blog-"));
   const stagingOutput = path.join(stagingRoot, "blog-posts.json");
   const stagingMediaDirectory = path.join(stagingRoot, "blog-media");
@@ -248,7 +286,11 @@ async function main() {
   try {
     await mkdir(stagingMediaDirectory, { recursive: true });
     const normalized = [];
-    for (const post of posts) normalized.push(await normalizePost(post, stagingMediaDirectory));
+    for (const post of posts) {
+      normalized.push(snapshotUrl
+        ? await normalizeSnapshotPost(post, stagingMediaDirectory)
+        : await normalizePost(post, stagingMediaDirectory));
+    }
     await writeFile(stagingOutput, `${JSON.stringify(normalized, null, 2)}\n`, "utf8");
     await activateSnapshot(stagingOutput, stagingMediaDirectory);
     console.log(`Sinkronizirano WordPress članaka: ${normalized.length}`);
