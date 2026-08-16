@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import { JsonLd } from "@/src/components/json-ld";
 import { LegalPageShell } from "@/src/components/legal-page-shell";
+import { breadcrumbJsonLd } from "@/src/lib/seo";
 
 export const metadata: Metadata = {
   title: "Politika privatnosti | Legatech",
@@ -27,7 +29,9 @@ const links = [
 
 export default function PrivacyPolicyPage() {
   return (
-    <LegalPageShell
+    <>
+      <JsonLd data={breadcrumbJsonLd([{ name: "Naslovna", path: "/" }, { name: "Politika privatnosti", path: "/politika-privatnosti/" }])} />
+      <LegalPageShell
       eyebrow="Privatnost i osobni podaci"
       title="Politika privatnosti"
       intro="Ovdje jasno objašnjavamo koje podatke obrađujemo kada koristite web, pošaljete upit ili odaberete analitičke kolačiće."
@@ -97,6 +101,7 @@ export default function PrivacyPolicyPage() {
         <p>Primjenjujemo razmjerne tehničke i organizacijske mjere, uključujući šifrirani prijenos, ograničenje pristupa, validaciju obrasca, zaštitu od automatizirane neželjene pošte i sigurnosne kopije gdje su primjerene.</p>
         <p>Politiku možemo ažurirati kada se promijeni način obrade, pružatelj usluge ili propis. Datum posljednje izmjene uvijek je naveden na ovoj stranici. O kolačićima pročitajte više u <Link href="/politika-kolacica">Politici kolačića</Link>.</p>
       </section>
-    </LegalPageShell>
+      </LegalPageShell>
+    </>
   );
 }

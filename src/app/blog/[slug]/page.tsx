@@ -3,9 +3,11 @@ import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { ArrowLeft } from "@phosphor-icons/react/dist/ssr";
+import { JsonLd } from "@/src/components/json-ld";
 import { SiteFooter } from "@/src/components/site-footer";
 import { SiteHeader } from "@/src/components/site-header";
 import { blogPosts, formatBlogDate, getBlogPost } from "@/src/lib/blog";
+import { absoluteUrl, articleJsonLd, breadcrumbJsonLd, siteName } from "@/src/lib/seo";
 
 export const dynamicParams = false;
 
@@ -17,13 +19,18 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   const { slug } = await params;
   const article = getBlogPost(slug);
   if (!article) return {};
+  const path = `/blog/${article.slug}/`;
+  const url = absoluteUrl(path);
   return {
     title: `${article.title} | Legatech`,
     description: article.excerpt,
-    alternates: { canonical: `/blog/${article.slug}/` },
+    alternates: { canonical: url },
     openGraph: {
       title: article.title,
       description: article.excerpt,
+      url,
+      siteName,
+      locale: "hr_HR",
       type: "article",
       publishedTime: article.publishedAt,
       modifiedTime: article.modifiedAt,
@@ -38,6 +45,24 @@ export default async function ArticlePage({ params }: { params: Promise<{ slug: 
   if (!article) notFound();
   return (
     <>
+      <JsonLd
+        data={[
+          articleJsonLd({
+            title: article.title,
+            description: article.excerpt,
+            path: `/blog/${article.slug}/`,
+            publishedAt: article.publishedAt,
+            modifiedAt: article.modifiedAt,
+            authorName: article.authorName,
+            image: article.featuredImage?.src,
+          }),
+          breadcrumbJsonLd([
+            { name: "Naslovna", path: "/" },
+            { name: "Blog", path: "/blog/" },
+            { name: article.title, path: `/blog/${article.slug}/` },
+          ]),
+        ]}
+      />
       <a className="skip-link" href="#sadrzaj">Preskočite na sadržaj</a>
       <SiteHeader />
       <main id="sadrzaj" className="inner-page article-page">

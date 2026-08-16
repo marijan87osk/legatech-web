@@ -1,3 +1,4 @@
+import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import {
@@ -12,6 +13,7 @@ import {
 import { ContactForm } from "@/src/components/contact-form";
 import { ClientLogoWall } from "@/src/components/client-logo-wall";
 import { Faq } from "@/src/components/faq";
+import { JsonLd } from "@/src/components/json-ld";
 import { ProblemSolver } from "@/src/components/problem-solver";
 import { Reveal } from "@/src/components/reveal";
 import { SiteHeader } from "@/src/components/site-header";
@@ -21,6 +23,17 @@ import { testimonials } from "@/src/data/client-testimonials";
 import { faqItems } from "@/src/data/mock-content";
 import { ducijaProject, projects } from "@/src/data/projects";
 import { blogPosts } from "@/src/lib/blog";
+import { createPageMetadata, organizationJsonLd, websiteJsonLd } from "@/src/lib/seo";
+
+const homeTitle = "Legatech - Izrada Weba, Shopa i SEO - Legatech";
+const homeDescription =
+  "Legatech pomaže tvrtkama i obrtima izgraditi brze web stranice, WooCommerce trgovine i organsku vidljivost kroz SEO. Zatražite ponudu.";
+
+export const metadata: Metadata = createPageMetadata({
+  title: homeTitle,
+  description: homeDescription,
+  path: "/",
+});
 
 const services = [
   {
@@ -83,6 +96,7 @@ const prices = [
 export default function HomePage() {
   return (
     <>
+      <JsonLd data={[organizationJsonLd, websiteJsonLd]} />
       <a className="skip-link" href="#sadrzaj">
         Preskočite na sadržaj
       </a>
@@ -114,6 +128,7 @@ export default function HomePage() {
                   alt={ducijaProject.imageAlt}
                   fill
                   preload
+                  fetchPriority="high"
                   sizes="(max-width: 767px) 100vw, 42vw"
                 />
               </div>

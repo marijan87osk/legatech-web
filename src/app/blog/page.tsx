@@ -2,18 +2,22 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import { ArrowRight, ArrowUpRight } from "@phosphor-icons/react/dist/ssr";
+import { JsonLd } from "@/src/components/json-ld";
 import { SiteFooter } from "@/src/components/site-footer";
 import { SiteHeader } from "@/src/components/site-header";
 import { blogPosts, formatBlogDate } from "@/src/lib/blog";
+import { breadcrumbJsonLd, createPageMetadata } from "@/src/lib/seo";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = createPageMetadata({
   title: "Blog o web stranicama i SEO-u | Legatech",
   description: "Praktični vodiči o izradi web stranica, SEO optimizaciji, web trgovinama i održavanju.",
-};
+  path: "/blog/",
+});
 
 export default function BlogPage() {
   return (
     <>
+      <JsonLd data={breadcrumbJsonLd([{ name: "Naslovna", path: "/" }, { name: "Blog", path: "/blog/" }])} />
       <a className="skip-link" href="#sadrzaj">Preskočite na sadržaj</a>
       <SiteHeader />
       <main id="sadrzaj" className="inner-page">

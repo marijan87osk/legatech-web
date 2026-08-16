@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import { CookieSettingsButton } from "@/src/components/cookie-settings-button";
+import { JsonLd } from "@/src/components/json-ld";
 import { LegalPageShell } from "@/src/components/legal-page-shell";
+import { breadcrumbJsonLd } from "@/src/lib/seo";
 
 export const metadata: Metadata = {
   title: "Politika kolačića | Legatech",
@@ -25,7 +27,9 @@ const links = [
 
 export default function CookiePolicyPage() {
   return (
-    <LegalPageShell
+    <>
+      <JsonLd data={breadcrumbJsonLd([{ name: "Naslovna", path: "/" }, { name: "Politika kolačića", path: "/politika-kolacica/" }])} />
+      <LegalPageShell
       eyebrow="Privola i postavke"
       title="Politika kolačića"
       intro="Web radi bez analitičkih kolačića. Google Analytics učitava se tek kada ga izričito prihvatite."
@@ -77,6 +81,7 @@ export default function CookiePolicyPage() {
         <p>Google Analytics pruža Google Ireland Limited. Googleova infrastruktura može uključivati obradu izvan Europskog gospodarskog prostora uz zaštitne mehanizme koje navodi Google. Više informacija nalazi se u <a href="https://policies.google.com/privacy" target="_blank" rel="noreferrer">Googleovim pravilima privatnosti</a>.</p>
         <p>Za pitanja o kolačićima javite se na <a href="mailto:info@legatech.hr">info@legatech.hr</a>.</p>
       </section>
-    </LegalPageShell>
+      </LegalPageShell>
+    </>
   );
 }

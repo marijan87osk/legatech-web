@@ -13,6 +13,7 @@ import {
 import { ServiceClientLogos } from "@/src/components/client-logo-wall";
 import { EcommerceProblemDiagnosis } from "@/src/components/ecommerce-problem-diagnosis";
 import { Faq } from "@/src/components/faq";
+import { JsonLd } from "@/src/components/json-ld";
 import { Reveal } from "@/src/components/reveal";
 import { ServiceExpectations } from "@/src/components/service-expectations";
 import { ServiceFinalCta } from "@/src/components/service-final-cta";
@@ -36,22 +37,16 @@ import {
   integrationGroups,
   shoppingJourney,
 } from "@/src/data/ecommerce-development";
+import { breadcrumbJsonLd, createPageMetadata, serviceJsonLd } from "@/src/lib/seo";
 
-export const metadata: Metadata = {
+const serviceDescription =
+  "Izrada WooCommerce web trgovina s preglednim katalogom, jednostavnom kupnjom, sigurnim plaćanjem i SEO temeljima. Projekti od 1.500 €.";
+
+export const metadata: Metadata = createPageMetadata({
   title: "Izrada Web Trgovina – WooCommerce Webshop - Legatech",
-  description:
-    "Izrada WooCommerce web trgovina s preglednim katalogom, jednostavnom kupnjom, sigurnim plaćanjem i SEO temeljima. Projekti od 1.500 €.",
-  alternates: {
-    canonical: "https://legatech.hr/izrada-web-trgovina/",
-  },
-  openGraph: {
-    title: "Izrada Web Trgovina – WooCommerce Webshop - Legatech",
-    description:
-      "Izrada WooCommerce web trgovina s preglednim katalogom, jednostavnom kupnjom, sigurnim plaćanjem i SEO temeljima. Projekti od 1.500 €.",
-    url: "https://legatech.hr/izrada-web-trgovina/",
-    type: "website",
-  },
-};
+  description: serviceDescription,
+  path: "/izrada-web-trgovina/",
+});
 
 const relatedServices = [
   {
@@ -74,6 +69,20 @@ const relatedServices = [
 export default function EcommerceDevelopmentPage() {
   return (
     <>
+      <JsonLd
+        data={[
+          serviceJsonLd({
+            name: "Izrada web trgovina",
+            description: serviceDescription,
+            path: "/izrada-web-trgovina/",
+            startingPrice: 1500,
+          }),
+          breadcrumbJsonLd([
+            { name: "Naslovna", path: "/" },
+            { name: "Izrada web trgovina", path: "/izrada-web-trgovina/" },
+          ]),
+        ]}
+      />
       <a className="skip-link" href="#sadrzaj">Preskočite na sadržaj</a>
       <SiteHeader />
 

@@ -1,18 +1,22 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { ArrowRight, Check, Plus } from "@phosphor-icons/react/dist/ssr";
+import { JsonLd } from "@/src/components/json-ld";
 import { SiteFooter } from "@/src/components/site-footer";
 import { SiteHeader } from "@/src/components/site-header";
 import { cooperationTerms, hostingItems, pricingServices } from "@/src/data/pricing";
+import { breadcrumbJsonLd, createPageMetadata } from "@/src/lib/seo";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = createPageMetadata({
   title: "Cjenik izrade web stranica, SEO-a i održavanja | Legatech",
   description: "Početne cijene Legatech usluga: web stranice od 500 €, web trgovine od 1.500 €, SEO od 290 € mjesečno i održavanje od 35 € mjesečno.",
-};
+  path: "/cjenik/",
+});
 
 export default function PricingPage() {
   return (
     <>
+      <JsonLd data={breadcrumbJsonLd([{ name: "Naslovna", path: "/" }, { name: "Cjenik", path: "/cjenik/" }])} />
       <a className="skip-link" href="#sadrzaj">Preskočite na sadržaj</a>
       <SiteHeader />
       <main id="sadrzaj" className="inner-page">

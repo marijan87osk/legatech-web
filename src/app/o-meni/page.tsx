@@ -1,2 +1,10 @@
+import type { Metadata } from "next";
 import { redirect } from "next/navigation";
-export default function LegacyAboutPage() { redirect("/o-nama"); }
+
+export const metadata: Metadata = {
+  robots: { index: false, follow: true },
+};
+
+export default function LegacyAboutPage() {
+  redirect("/o-nama");
+}

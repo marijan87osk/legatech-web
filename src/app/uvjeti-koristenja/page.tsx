@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import { JsonLd } from "@/src/components/json-ld";
 import { LegalPageShell } from "@/src/components/legal-page-shell";
+import { breadcrumbJsonLd } from "@/src/lib/seo";
 
 export const metadata: Metadata = {
   title: "Uvjeti korištenja | Legatech",
@@ -26,7 +28,9 @@ const links = [
 
 export default function TermsPage() {
   return (
-    <LegalPageShell
+    <>
+      <JsonLd data={breadcrumbJsonLd([{ name: "Naslovna", path: "/" }, { name: "Uvjeti korištenja", path: "/uvjeti-koristenja/" }])} />
+      <LegalPageShell
       eyebrow="Pravila korištenja weba"
       title="Uvjeti korištenja"
       intro="Ovi uvjeti uređuju korištenje web stranice legatech.hr. Posebna ponuda ili ugovor uređuju svaku konkretnu poslovnu suradnju."
@@ -69,6 +73,7 @@ export default function TermsPage() {
         <p>Obrada osobnih podataka uređena je <Link href="/politika-privatnosti">Politikom privatnosti</Link>, a kolačići <Link href="/politika-kolacica">Politikom kolačića</Link>.</p>
         <p>Uvjeti se mogu ažurirati radi promjena usluge, prakse ili propisa. Na korištenje weba primjenjuje se pravo Republike Hrvatske. Za sporove je nadležan stvarno i mjesno nadležan sud prema primjenjivim propisima.</p>
       </section>
-    </LegalPageShell>
+      </LegalPageShell>
+    </>
   );
 }

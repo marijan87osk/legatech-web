@@ -13,6 +13,7 @@ import {
 } from "@phosphor-icons/react/dist/ssr";
 import { ServiceClientLogos } from "@/src/components/client-logo-wall";
 import { Faq } from "@/src/components/faq";
+import { JsonLd } from "@/src/components/json-ld";
 import { MaintenanceRiskDiagnosis } from "@/src/components/maintenance-risk-diagnosis";
 import { Reveal } from "@/src/components/reveal";
 import { ServiceExpectations } from "@/src/components/service-expectations";
@@ -36,22 +37,16 @@ import {
   oneOffGroups,
   supportProcess,
 } from "@/src/data/website-maintenance";
+import { breadcrumbJsonLd, createPageMetadata, serviceJsonLd } from "@/src/lib/seo";
 
-export const metadata: Metadata = {
+const serviceDescription =
+  "Redovito WordPress održavanje, backup, sigurnosne provjere, ažuriranja i tehnička podrška. Paketi održavanja od 35 € mjesečno.";
+
+export const metadata: Metadata = createPageMetadata({
   title: "Održavanje Web Stranica I WordPress Podrška - Legatech",
-  description:
-    "Redovito WordPress održavanje, backup, sigurnosne provjere, ažuriranja i tehnička podrška. Paketi održavanja od 35 € mjesečno.",
-  alternates: {
-    canonical: "https://legatech.hr/odrzavanje-web-stranica/",
-  },
-  openGraph: {
-    title: "Održavanje Web Stranica I WordPress Podrška - Legatech",
-    description:
-      "Redovito WordPress održavanje, backup, sigurnosne provjere, ažuriranja i tehnička podrška. Paketi održavanja od 35 € mjesečno.",
-    url: "https://legatech.hr/odrzavanje-web-stranica/",
-    type: "website",
-  },
-};
+  description: serviceDescription,
+  path: "/odrzavanje-web-stranica/",
+});
 
 const relatedServices = [
   {
@@ -74,6 +69,21 @@ const relatedServices = [
 export default function WebsiteMaintenancePage() {
   return (
     <>
+      <JsonLd
+        data={[
+          serviceJsonLd({
+            name: "Održavanje web stranica",
+            description: serviceDescription,
+            path: "/odrzavanje-web-stranica/",
+            startingPrice: 35,
+            billingPeriod: "MONTH",
+          }),
+          breadcrumbJsonLd([
+            { name: "Naslovna", path: "/" },
+            { name: "Održavanje web stranica", path: "/odrzavanje-web-stranica/" },
+          ]),
+        ]}
+      />
       <a className="skip-link" href="#sadrzaj">Preskočite na sadržaj</a>
       <SiteHeader />
 

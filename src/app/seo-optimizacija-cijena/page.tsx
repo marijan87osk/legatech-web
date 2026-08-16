@@ -13,6 +13,7 @@ import {
 } from "@phosphor-icons/react/dist/ssr";
 import { ServiceClientLogos } from "@/src/components/client-logo-wall";
 import { Faq } from "@/src/components/faq";
+import { JsonLd } from "@/src/components/json-ld";
 import { Reveal } from "@/src/components/reveal";
 import { SeoProblemDiagnosis } from "@/src/components/seo-problem-diagnosis";
 import { ServiceExpectations } from "@/src/components/service-expectations";
@@ -35,22 +36,16 @@ import {
   seoTestimonials,
   seoTimeline,
 } from "@/src/data/seo-optimization";
+import { breadcrumbJsonLd, createPageMetadata, serviceJsonLd } from "@/src/lib/seo";
 
-export const metadata: Metadata = {
+const serviceDescription =
+  "SEO optimizacija za tvrtke i obrte - tehnički SEO, sadržaj, lokalni SEO, ključne riječi i mjerenje rezultata. Paketi od 290 € mjesečno.";
+
+export const metadata: Metadata = createPageMetadata({
   title: "SEO Optimizacija – Cijena I Paketi - Legatech",
-  description:
-    "SEO optimizacija za tvrtke i obrte - tehnički SEO, sadržaj, lokalni SEO, ključne riječi i mjerenje rezultata. Paketi od 290 € mjesečno.",
-  alternates: {
-    canonical: "https://legatech.hr/seo-optimizacija-cijena/",
-  },
-  openGraph: {
-    title: "SEO Optimizacija – Cijena I Paketi - Legatech",
-    description:
-      "SEO optimizacija za tvrtke i obrte - tehnički SEO, sadržaj, lokalni SEO, ključne riječi i mjerenje rezultata. Paketi od 290 € mjesečno.",
-    url: "https://legatech.hr/seo-optimizacija-cijena/",
-    type: "website",
-  },
-};
+  description: serviceDescription,
+  path: "/seo-optimizacija-cijena/",
+});
 
 const relatedServices = [
   {
@@ -73,6 +68,21 @@ const relatedServices = [
 export default function SeoOptimizationPage() {
   return (
     <>
+      <JsonLd
+        data={[
+          serviceJsonLd({
+            name: "SEO optimizacija",
+            description: serviceDescription,
+            path: "/seo-optimizacija-cijena/",
+            startingPrice: 290,
+            billingPeriod: "MONTH",
+          }),
+          breadcrumbJsonLd([
+            { name: "Naslovna", path: "/" },
+            { name: "SEO optimizacija", path: "/seo-optimizacija-cijena/" },
+          ]),
+        ]}
+      />
       <a className="skip-link" href="#sadrzaj">Preskočite na sadržaj</a>
       <SiteHeader />
 

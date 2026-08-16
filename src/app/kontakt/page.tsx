@@ -7,14 +7,17 @@ import {
   Phone,
 } from "@phosphor-icons/react/dist/ssr";
 import { ContactForm } from "@/src/components/contact-form";
+import { JsonLd } from "@/src/components/json-ld";
 import { SiteFooter } from "@/src/components/site-footer";
 import { SiteHeader } from "@/src/components/site-header";
+import { breadcrumbJsonLd, createPageMetadata } from "@/src/lib/seo";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = createPageMetadata({
   title: "Kontakt | Zatražite ponudu od Legatecha",
   description:
     "Kontaktirajte Legatech za izradu web stranice, SEO optimizaciju, web trgovinu ili održavanje. Odgovaramo u jednom radnom danu.",
-};
+  path: "/kontakt/",
+});
 
 const contactDetails = [
   {
@@ -50,6 +53,7 @@ const nextSteps = [
 export default function ContactPage() {
   return (
     <>
+      <JsonLd data={breadcrumbJsonLd([{ name: "Naslovna", path: "/" }, { name: "Kontakt", path: "/kontakt/" }])} />
       <a className="skip-link" href="#sadrzaj">Preskočite na sadržaj</a>
       <SiteHeader />
       <main id="sadrzaj" className="inner-page contact-page">

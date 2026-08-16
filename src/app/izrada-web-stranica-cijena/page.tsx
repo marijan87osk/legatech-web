@@ -12,6 +12,7 @@ import {
 } from "@phosphor-icons/react/dist/ssr";
 import { ServiceClientLogos } from "@/src/components/client-logo-wall";
 import { Faq } from "@/src/components/faq";
+import { JsonLd } from "@/src/components/json-ld";
 import { Reveal } from "@/src/components/reveal";
 import { ServiceExpectations } from "@/src/components/service-expectations";
 import { ServiceFinalCta } from "@/src/components/service-final-cta";
@@ -33,22 +34,16 @@ import {
   websiteTestimonials,
   websiteTypes,
 } from "@/src/data/website-development";
+import { breadcrumbJsonLd, createPageMetadata, serviceJsonLd } from "@/src/lib/seo";
 
-export const metadata: Metadata = {
+const serviceDescription =
+  "Profesionalna izrada web stranica za obrte i tvrtke. Paketi od 500 €, responzivan dizajn, SEO temelji, analitika i podrška nakon objave.";
+
+export const metadata: Metadata = createPageMetadata({
   title: "Izrada Web Stranica – Cijena I Paketi - Legatech",
-  description:
-    "Profesionalna izrada web stranica za obrte i tvrtke. Paketi od 500 €, responzivan dizajn, SEO temelji, analitika i podrška nakon objave.",
-  alternates: {
-    canonical: "https://legatech.hr/izrada-web-stranica-cijena/",
-  },
-  openGraph: {
-    title: "Izrada Web Stranica – Cijena I Paketi - Legatech",
-    description:
-      "Profesionalna izrada web stranica za obrte i tvrtke. Paketi od 500 €, responzivan dizajn, SEO temelji, analitika i podrška nakon objave.",
-    url: "https://legatech.hr/izrada-web-stranica-cijena/",
-    type: "website",
-  },
-};
+  description: serviceDescription,
+  path: "/izrada-web-stranica-cijena/",
+});
 
 const relatedServices = [
   {
@@ -71,6 +66,20 @@ const relatedServices = [
 export default function WebsiteDevelopmentPage() {
   return (
     <>
+      <JsonLd
+        data={[
+          serviceJsonLd({
+            name: "Izrada web stranica",
+            description: serviceDescription,
+            path: "/izrada-web-stranica-cijena/",
+            startingPrice: 500,
+          }),
+          breadcrumbJsonLd([
+            { name: "Naslovna", path: "/" },
+            { name: "Izrada web stranica", path: "/izrada-web-stranica-cijena/" },
+          ]),
+        ]}
+      />
       <a className="skip-link" href="#sadrzaj">Preskočite na sadržaj</a>
       <SiteHeader />
 

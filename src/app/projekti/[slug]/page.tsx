@@ -3,10 +3,12 @@ import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { ArrowLeft, ArrowRight, ArrowUpRight, Check } from "@phosphor-icons/react/dist/ssr";
+import { JsonLd } from "@/src/components/json-ld";
 import { ServiceFinalCta } from "@/src/components/service-final-cta";
 import { SiteFooter } from "@/src/components/site-footer";
 import { SiteHeader } from "@/src/components/site-header";
 import { getProjectBySlug, projectDetails } from "@/src/data/projects";
+import { breadcrumbJsonLd, createPageMetadata } from "@/src/lib/seo";
 
 type ProjectPageProps = {
   params: Promise<{ slug: string }>;
@@ -22,10 +24,11 @@ export async function generateMetadata({ params }: ProjectPageProps): Promise<Me
 
   if (!project) return {};
 
-  return {
+  return createPageMetadata({
     title: `${project.client}: ${project.serviceLabel} | Legatech`,
     description: project.lead,
-  };
+    path: project.href,
+  });
 }
 
 export default async function ProjectPage({ params }: ProjectPageProps) {
@@ -36,6 +39,13 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
 
   return (
     <>
+      <JsonLd
+        data={breadcrumbJsonLd([
+          { name: "Naslovna", path: "/" },
+          { name: "Projekti", path: "/projekti/" },
+          { name: project.client, path: project.href },
+        ])}
+      />
       <a className="skip-link" href="#sadrzaj">Preskočite na sadržaj</a>
       <SiteHeader />
       <main id="sadrzaj" className={`inner-page case-study-page case-study-page-${project.variant}`}>
