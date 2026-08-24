@@ -22,7 +22,7 @@ import { TestimonialSlider } from "@/src/components/testimonial-slider";
 import { testimonials } from "@/src/data/client-testimonials";
 import { faqItems } from "@/src/data/mock-content";
 import { ducijaProject, projects } from "@/src/data/projects";
-import { blogPosts } from "@/src/lib/blog";
+import { blogPosts, formatBlogDate, summarizeBlogExcerpt } from "@/src/lib/blog";
 import { createPageMetadata, organizationJsonLd, websiteJsonLd } from "@/src/lib/seo";
 
 const homeTitle = "Legatech - Izrada Weba, Shopa i SEO - Legatech";
@@ -364,17 +364,18 @@ export default function HomePage() {
             {blogPosts.length ? <div className="articles-grid">
               {blogPosts.slice(0, 3).map((article, index) => (
                 <Reveal key={article.slug} className={`article-card article-card-${index + 1}`} delay={index * 0.05}>
-                  <a href={`/blog/${article.slug}`}>
+                  <Link href={`/blog/${article.slug}`}>
                     <div className="article-meta">
                       <span>{article.categoryLabels[0] ?? "Web i poslovanje"}</span>
+                      <time dateTime={article.publishedAt}>{formatBlogDate(article.publishedAt)}</time>
                     </div>
                     <h3>{article.title}</h3>
-                    <p>{article.excerpt}</p>
+                    <p>{summarizeBlogExcerpt(article.excerpt)}</p>
                     <div className="article-footer">
                       <span>{article.readingMinutes} min čitanja</span>
                       <ArrowUpRight size={21} aria-hidden="true" />
                     </div>
-                  </a>
+                  </Link>
                 </Reveal>
               ))}
             </div> : <div className="insights-empty"><p>Prvi stručni vodiči su u pripremi. Ako već sada imate pitanje, pošaljite ga i dobit ćete konkretan odgovor.</p><Link className="text-link" href="/kontakt">Postavite pitanje <ArrowRight size={19} aria-hidden="true" /></Link></div>}

@@ -61,6 +61,40 @@ function sanitizeArticleHtml(html) {
   });
 }
 
+function enhanceArticleStructure(html) {
+  const $ = load(html, null, false);
+  const paragraphs = $("p").toArray();
+
+  for (let index = 0; index < paragraphs.length; index += 1) {
+    const firstLine = $(paragraphs[index]).text().replace(/\s+/g, " ").trim();
+    const nextLine = paragraphs[index + 1]
+      ? $(paragraphs[index + 1]).text().replace(/\s+/g, " ").trim()
+      : "";
+
+    if (firstLine !== "Naslovna" || !/^[│├└]/u.test(nextLine)) continue;
+
+    const group = [paragraphs[index]];
+    const lines = [firstLine];
+    let cursor = index + 1;
+
+    while (cursor < paragraphs.length) {
+      const line = $(paragraphs[cursor]).text().replace(/\u00a0/g, " ").trimEnd();
+      if (!/^[│├└]/u.test(line.trimStart())) break;
+      group.push(paragraphs[cursor]);
+      lines.push(line);
+      cursor += 1;
+    }
+
+    const code = $("<code></code>").text(lines.join("\n"));
+    const siteMap = $("<pre></pre>").addClass("article-site-map").append(code);
+    $(group[0]).before(siteMap);
+    group.forEach((paragraph) => $(paragraph).remove());
+    index = cursor - 1;
+  }
+
+  return $.root().html() ?? "";
+}
+
 async function fetchWithTimeout(url, options = {}) {
   const controller = new AbortController();
   const timeout = setTimeout(() => controller.abort(), timeoutMs);
@@ -195,7 +229,8 @@ function embeddedCategories(post) {
 
 async function normalizePost(post, destinationDirectory) {
   const sanitized = sanitizeArticleHtml(post?.content?.rendered ?? "");
-  const contentHtml = await localizeContentImages(sanitized, destinationDirectory);
+  const enhanced = enhanceArticleStructure(sanitized);
+  const contentHtml = await localizeContentImages(enhanced, destinationDirectory);
   const featured = post?._embedded?.["wp:featuredmedia"]?.[0] ?? null;
   const featuredSource = featured?.source_url ? await downloadImage(featured.source_url, destinationDirectory) : null;
   const text = safeText(contentHtml);
@@ -222,7 +257,8 @@ async function normalizePost(post, destinationDirectory) {
 
 async function normalizeSnapshotPost(post, destinationDirectory) {
   const sanitized = sanitizeArticleHtml(post?.contentHtml ?? "");
-  const contentHtml = await localizeContentImages(sanitized, destinationDirectory);
+  const enhanced = enhanceArticleStructure(sanitized);
+  const contentHtml = await localizeContentImages(enhanced, destinationDirectory);
   const featured = post?.featuredImage ?? null;
   const featuredSource = featured?.sourceUrl ? await downloadImage(featured.sourceUrl, destinationDirectory) : null;
   const text = safeText(contentHtml);

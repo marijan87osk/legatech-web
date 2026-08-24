@@ -34,3 +34,18 @@ export function formatBlogDate(value: string) {
     year: "numeric",
   }).format(new Date(value));
 }
+
+export function summarizeBlogExcerpt(value: string, maxLength = 170) {
+  const normalized = value
+    .replace(/\s+/g, " ")
+    .replace(/\s*\[…\]\s*$/, "")
+    .trim();
+
+  if (normalized.length <= maxLength) return normalized;
+
+  const candidate = normalized.slice(0, maxLength + 1);
+  const lastSpace = candidate.lastIndexOf(" ");
+  const cutAt = lastSpace >= Math.floor(maxLength * 0.7) ? lastSpace : maxLength;
+
+  return `${candidate.slice(0, cutAt).replace(/[,:;.!?-]+$/, "")}…`;
+}

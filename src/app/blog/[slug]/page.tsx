@@ -6,7 +6,7 @@ import { ArrowLeft } from "@phosphor-icons/react/dist/ssr";
 import { JsonLd } from "@/src/components/json-ld";
 import { SiteFooter } from "@/src/components/site-footer";
 import { SiteHeader } from "@/src/components/site-header";
-import { blogPosts, formatBlogDate, getBlogPost } from "@/src/lib/blog";
+import { blogPosts, formatBlogDate, getBlogPost, summarizeBlogExcerpt } from "@/src/lib/blog";
 import { absoluteUrl, articleJsonLd, breadcrumbJsonLd, siteName } from "@/src/lib/seo";
 
 export const dynamicParams = false;
@@ -21,13 +21,14 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   if (!article) return {};
   const path = `/blog/${article.slug}/`;
   const url = absoluteUrl(path);
+  const description = summarizeBlogExcerpt(article.excerpt, 160);
   return {
     title: `${article.title} | Legatech`,
-    description: article.excerpt,
+    description,
     alternates: { canonical: url },
     openGraph: {
       title: article.title,
-      description: article.excerpt,
+      description,
       url,
       siteName,
       locale: "hr_HR",
@@ -43,13 +44,14 @@ export default async function ArticlePage({ params }: { params: Promise<{ slug: 
   const { slug } = await params;
   const article = getBlogPost(slug);
   if (!article) notFound();
+  const deck = summarizeBlogExcerpt(article.excerpt, 230);
   return (
     <>
       <JsonLd
         data={[
           articleJsonLd({
             title: article.title,
-            description: article.excerpt,
+            description: summarizeBlogExcerpt(article.excerpt, 200),
             path: `/blog/${article.slug}/`,
             publishedAt: article.publishedAt,
             modifiedAt: article.modifiedAt,
@@ -68,14 +70,22 @@ export default async function ArticlePage({ params }: { params: Promise<{ slug: 
       <main id="sadrzaj" className="inner-page article-page">
         <article className="section">
           <div className="container article-layout">
-            <header>
-              <Link className="article-back-link" href="/blog"><ArrowLeft size={18} aria-hidden="true" /> Svi članci</Link>
-              <p className="mono-label">{article.categoryLabels[0] ?? "Web i poslovanje"}</p>
-              <h1>{article.title}</h1>
-              <p className="article-deck">{article.excerpt}</p>
-              <div className="article-byline"><span>{article.authorName}</span><span>{formatBlogDate(article.publishedAt)}</span><span>{article.readingMinutes} min čitanja</span></div>
+            <header className="article-header">
+              <div className="article-header-rail">
+                <Link className="article-back-link" href="/blog"><ArrowLeft size={18} aria-hidden="true" /> Svi članci</Link>
+                <p className="mono-label">{article.categoryLabels[0] ?? "Web i poslovanje"}</p>
+                <div className="article-byline">
+                  <span>{article.authorName}</span>
+                  <time dateTime={article.publishedAt}>{formatBlogDate(article.publishedAt)}</time>
+                  <span>{article.readingMinutes} min čitanja</span>
+                </div>
+              </div>
+              <div className="article-header-copy">
+                <h1>{article.title}</h1>
+                <p className="article-deck">{deck}</p>
+              </div>
             </header>
-            <div>
+            <div className="article-content">
               {article.featuredImage && (
                 <div className="article-featured-image">
                   <Image src={article.featuredImage.src} alt={article.featuredImage.alt} fill priority sizes="(max-width: 767px) 100vw, 58vw" />

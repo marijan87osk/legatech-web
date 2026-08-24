@@ -5,7 +5,7 @@ import { ArrowRight, ArrowUpRight } from "@phosphor-icons/react/dist/ssr";
 import { JsonLd } from "@/src/components/json-ld";
 import { SiteFooter } from "@/src/components/site-footer";
 import { SiteHeader } from "@/src/components/site-header";
-import { blogPosts, formatBlogDate } from "@/src/lib/blog";
+import { blogPosts, formatBlogDate, summarizeBlogExcerpt } from "@/src/lib/blog";
 import { breadcrumbJsonLd, createPageMetadata } from "@/src/lib/seo";
 
 export const metadata: Metadata = createPageMetadata({
@@ -41,10 +41,10 @@ export default function BlogPage() {
                       )}
                       <div className="article-meta">
                         <span>{article.categoryLabels[0] ?? "Web i poslovanje"}</span>
-                        <span>{formatBlogDate(article.publishedAt)}</span>
+                        <time dateTime={article.publishedAt}>{formatBlogDate(article.publishedAt)}</time>
                       </div>
                       <h2>{article.title}</h2>
-                      <p>{article.excerpt}</p>
+                      <p>{summarizeBlogExcerpt(article.excerpt)}</p>
                       <div className="article-footer"><span>{article.readingMinutes} min čitanja</span><ArrowUpRight size={21} aria-hidden="true" /></div>
                     </Link>
                   </article>
