@@ -254,12 +254,27 @@ jobs:
             sleep 10
           done
           test "$released" = true
-          test "$(curl --silent --show-error --location --max-time 30 --output /dev/null --write-out '%{http_code}' "$SITEGROUND_SITE_URL/")" = 200
+          homepage_status=000
+          for attempt in $(seq 1 8); do
+            homepage_status=$(curl --silent --show-error --location --max-time 30 --output /dev/null --write-out '%{http_code}' "$SITEGROUND_SITE_URL/?probe=$attempt" || true)
+            if [[ "$homepage_status" == 200 ]]; then
+              break
+            fi
+            sleep 5
+          done
+          test "$homepage_status" = 200
           response_file=$(mktemp)
           trap 'rm -f "$response_file"' EXIT
-          status=$(curl --silent --show-error --location --max-time 30 --output "$response_file" --write-out '%{http_code}' "$SITEGROUND_SITE_URL/api/contact.php")
-          test "$status" = 405
-          jq -e '.ok == false' "$response_file" >/dev/null
+          contact_verified=false
+          for attempt in $(seq 1 8); do
+            status=$(curl --silent --show-error --location --max-time 30 --output "$response_file" --write-out '%{http_code}' "$SITEGROUND_SITE_URL/api/contact.php?probe=$attempt" || true)
+            if [[ "$status" == 405 ]] && jq -e '.ok == false' "$response_file" >/dev/null 2>&1; then
+              contact_verified=true
+              break
+            fi
+            sleep 5
+          done
+          test "$contact_verified" = true
 
       - name: Restore previous site if smoke test fails
         if: ${{ failure() && steps.site_deploy.outcome == 'success' }}
