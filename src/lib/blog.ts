@@ -49,3 +49,15 @@ export function summarizeBlogExcerpt(value: string, maxLength = 170) {
 
   return `${candidate.slice(0, cutAt).replace(/[,:;.!?-]+$/, "")}…`;
 }
+
+export function summarizeBlogDeck(value: string, maxLength = 230) {
+  const normalized = value.replace(/\s+/g, " ").replace(/\s*\[…\]\s*$/, "").trim();
+  const sentenceEnds = [...normalized.matchAll(/[.!?](?=\s|$)/g)]
+    .map((match) => (match.index ?? 0) + 1)
+    .filter((end) => end <= maxLength);
+  const cutAt = sentenceEnds.at(-1);
+
+  return cutAt && cutAt >= Math.min(80, maxLength * 0.35)
+    ? normalized.slice(0, cutAt)
+    : summarizeBlogExcerpt(value, maxLength);
+}

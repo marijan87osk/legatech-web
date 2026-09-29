@@ -5,11 +5,11 @@ import { LegalPageShell } from "@/src/components/legal-page-shell";
 import { breadcrumbJsonLd } from "@/src/lib/seo";
 
 export const metadata: Metadata = {
-  title: "Uvjeti korištenja | Legatech",
+  title: "Uvjeti korištenja - Legatech",
   description: "Uvjeti korištenja web stranice Legatech, informacije o ponudama, cijenama, autorskim pravima i odgovornosti.",
   alternates: { canonical: "https://legatech.hr/uvjeti-koristenja/" },
   openGraph: {
-    title: "Uvjeti korištenja | Legatech",
+    title: "Uvjeti korištenja - Legatech",
     description: "Pravila i uvjeti korištenja web stranice Legatech.",
     url: "https://legatech.hr/uvjeti-koristenja/",
     locale: "hr_HR",

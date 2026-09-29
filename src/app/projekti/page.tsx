@@ -1,90 +1,42 @@
 import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
-import { ArrowRight } from "@phosphor-icons/react/dist/ssr";
+import { EditorialShell } from "@/src/components/editorial-shell";
 import { JsonLd } from "@/src/components/json-ld";
-import { SiteFooter } from "@/src/components/site-footer";
-import { SiteHeader } from "@/src/components/site-header";
-import { projects } from "@/src/data/projects";
+import { projects, type ProjectSummary } from "@/src/data/projects";
 import { breadcrumbJsonLd, createPageMetadata } from "@/src/lib/seo";
 
 export const metadata: Metadata = createPageMetadata({
-  title: "Projekti web stranica, trgovina i SEO-a | Legatech",
-  description: "Pregled stvarnih i jasno označenih demo Legatech projekata izrade web stranica, trgovina, SEO-a i održavanja.",
+  title: "Projekti web stranica, trgovina i SEO-a - Legatech",
+  description: "Pregled stvarnih Legatech projekata izrade web stranica, trgovina, SEO-a i održavanja.",
   path: "/projekti/",
 });
+
+function ProjectCard({ project, index }: { project: ProjectSummary; index: number }) {
+  const picture = <Image src={project.image} alt={project.imageAlt} width={960} height={600} sizes="(max-width: 700px) 100vw, 50vw" />;
+  return (
+    <article className="epr-card">
+      {project.href ? <Link className="epr-image" href={project.href}>{picture}</Link> : <div className="epr-image">{picture}</div>}
+      <div className="epr-copy">
+        <p className="epr-meta">{String(index + 1).padStart(2, "0")} / {project.industry}{project.year ? ` / ${project.year}` : ""}</p>
+        <h3>{project.client}</h3><p className="epr-service">{project.serviceLabel}</p>
+        <p>{project.challenge}</p>
+        <dl><div><dt>Rješenje</dt><dd>{project.solution}</dd></div><div><dt>Rezultat</dt><dd>{project.result.value} {project.result.label}</dd></div></dl>
+        {project.href && <Link className="epr-link" href={project.href}>Pogledajte studiju slučaja <span aria-hidden="true">↗</span></Link>}
+      </div>
+    </article>
+  );
+}
 
 export default function ProjectsPage() {
   return (
     <>
       <JsonLd data={breadcrumbJsonLd([{ name: "Naslovna", path: "/" }, { name: "Projekti", path: "/projekti/" }])} />
-      <a className="skip-link" href="#sadrzaj">Preskočite na sadržaj</a>
-      <SiteHeader />
-      <main id="sadrzaj" className="inner-page">
-        <section className="page-hero">
-          <div className="container page-hero-grid">
-            <div>
-              <p className="mono-label">Odabrani radovi</p>
-              <h1>Projekt počinje problemom, ne stilom.</h1>
-            </div>
-            <div className="page-hero-aside">
-              <p>Stvarni projekti prikazuju potvrđen opseg rada. Privremeni primjeri ostaju jasno označeni dok ih ne zamijenimo novim referencama.</p>
-            </div>
-          </div>
-        </section>
-
-        <section className="section projects-list-section" aria-label="Popis projekata">
-          <div className="container projects-list">
-            {projects.map((project, index) => (
-              <article className="project-list-row" key={project.slug}>
-                <div className="project-list-image">
-                  {project.href ? (
-                    <Link className="project-list-image-link" href={project.href} aria-label={`Pogledajte projekt ${project.client}`}>
-                      <Image src={project.image} alt={project.imageAlt} fill sizes="(max-width: 767px) 100vw, 58vw" />
-                    </Link>
-                  ) : (
-                    <Image src={project.image} alt={project.imageAlt} fill sizes="(max-width: 767px) 100vw, 58vw" />
-                  )}
-                </div>
-                <div className="project-list-copy">
-                  <div className="article-meta">
-                    <span className={project.mock ? "demo-label" : "project-real-label"}>
-                      {project.mock ? "Demo projekt" : project.industry}
-                    </span>
-                    <span>{project.serviceLabel}</span>
-                    {project.year && <span>{project.year}</span>}
-                  </div>
-                  <h2>{project.client}</h2>
-                  <p>{project.challenge}</p>
-                  <dl>
-                    <div><dt>Rješenje</dt><dd>{project.solution}</dd></div>
-                    <div><dt>{project.mock ? "Demo rezultat" : "Rezultat"}</dt><dd>{project.result.value} {project.result.label}</dd></div>
-                  </dl>
-                  {project.href && (
-                    <Link className="text-link project-detail-link" href={project.href}>
-                      Pogledajte studiju slučaja <ArrowRight size={18} aria-hidden="true" />
-                    </Link>
-                  )}
-                  <span className="project-position">{String(index + 1).padStart(2, "0")}</span>
-                </div>
-              </article>
-            ))}
-          </div>
-        </section>
-
-        <section className="section compact-cta-section">
-          <div className="container compact-cta">
-            <div>
-              <h2>Želite projekt s jasnim poslovnim ciljem?</h2>
-              <p>Opišite trenutni problem i rezultat koji želite postići.</p>
-            </div>
-            <Link className="button button-primary" href="/kontakt">
-              Zatražite ponudu <ArrowRight size={18} aria-hidden="true" />
-            </Link>
-          </div>
-        </section>
-      </main>
-      <SiteFooter />
+      <EditorialShell variant="project-v0-page">
+        <section className="epr-hero" aria-labelledby="projects-title"><div className="container epr-hero-grid"><div><p className="epr-eyebrow">Odabrani radovi</p><h1 id="projects-title">Projekt počinje problemom, ne stilom.</h1></div><p>Ovdje su projekti na kojima smo radili — od početnog izazova do rješenja s jasnom poslovnom ulogom.</p></div></section>
+        <section className="epr-work" aria-labelledby="real-projects-title"><div className="container"><div className="epr-section-heading"><h2 id="real-projects-title">Stvarni projekti.</h2><p>Od prvog izazova do rješenja koje ima jasnu poslovnu ulogu.</p></div><div className="epr-grid">{projects.map((project, index) => <ProjectCard project={project} index={index} key={project.slug} />)}</div></div></section>
+        <section className="editorial-final-cta" aria-labelledby="projects-cta-title"><div className="container editorial-final-cta-grid"><h2 id="projects-cta-title">Želite projekt s jasnim poslovnim ciljem?</h2><div><p>Opišite trenutni problem i rezultat koji želite postići.</p><Link className="ep-button" href="/kontakt/">Zatražite ponudu <span aria-hidden="true">↗</span></Link></div></div></section>
+      </EditorialShell>
     </>
   );
 }

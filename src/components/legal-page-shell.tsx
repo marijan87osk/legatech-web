@@ -1,6 +1,5 @@
 import type { ReactNode } from "react";
-import { SiteFooter } from "./site-footer";
-import { SiteHeader } from "./site-header";
+import { EditorialShell } from "./editorial-shell";
 
 interface LegalSectionLink {
   href: string;
@@ -18,10 +17,8 @@ interface LegalPageShellProps {
 
 export function LegalPageShell({ eyebrow, title, intro, updatedAt, links, children }: LegalPageShellProps) {
   return (
-    <>
-      <a className="skip-link" href="#sadrzaj">Preskočite na sadržaj</a>
-      <SiteHeader />
-      <main id="sadrzaj" className="legal-page">
+    <EditorialShell variant="legal-v0-page">
+      <div className="legal-page">
         <header className="legal-hero">
           <div className="container legal-hero-grid">
             <div>
@@ -53,8 +50,7 @@ export function LegalPageShell({ eyebrow, title, intro, updatedAt, links, childr
             <article className="legal-article">{children}</article>
           </div>
         </section>
-      </main>
-      <SiteFooter />
-    </>
+      </div>
+    </EditorialShell>
   );
 }

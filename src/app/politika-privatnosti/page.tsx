@@ -5,11 +5,11 @@ import { LegalPageShell } from "@/src/components/legal-page-shell";
 import { breadcrumbJsonLd } from "@/src/lib/seo";
 
 export const metadata: Metadata = {
-  title: "Politika privatnosti | Legatech",
+  title: "Politika privatnosti - Legatech",
   description: "Saznajte koje osobne podatke Legatech obrađuje, zašto ih obrađuje i kako možete ostvariti svoja prava.",
   alternates: { canonical: "https://legatech.hr/politika-privatnosti/" },
   openGraph: {
-    title: "Politika privatnosti | Legatech",
+    title: "Politika privatnosti - Legatech",
     description: "Informacije o obradi osobnih podataka na web stranici Legatech.",
     url: "https://legatech.hr/politika-privatnosti/",
     locale: "hr_HR",

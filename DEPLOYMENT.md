@@ -11,20 +11,38 @@ Preview the export with `npm run preview:static` and open `http://localhost:3000
 1. Copy `server/contact/contact-config.example.php` to a directory outside `public_html`, normally `private/legatech-contact.php` next to `public_html`.
 2. Add the real SiteGround SMTP password and a random `rate_limit_salt` of at least 24 characters.
 3. Run Composer through the workflow or SiteGround SSH; `public/api/vendor/` must exist in the deployed output.
-4. The endpoint sends only to `info@legatech.hr` and accepts requests only from the configured production origins.
+4. The endpoint sends only to `info@legatech.hr`. Keep `allowed_origins` limited to `https://legatech.hr` and `https://www.legatech.hr`.
 
-## GitHub repository and secrets
+## Production deployment
 
-Create the private repository `legatech-web`, push the `main` branch, and configure:
+`staging2.legatech.hr` is the WordPress content source, **not** a frontend staging deployment. The new website is released directly to `legatech.hr` through a controlled production workflow.
+
+Create a `production` environment in the GitHub repository with these secrets (never commit them):
 
 - `SITEGROUND_SSH_HOST`
 - `SITEGROUND_SSH_PORT`
 - `SITEGROUND_SSH_USER`
 - `SITEGROUND_SSH_PRIVATE_KEY`
-- `SITEGROUND_KNOWN_HOSTS`
-- `SITEGROUND_DEPLOY_PATH` (absolute `public_html` path for `legatech.hr`)
+- `SITEGROUND_KNOWN_HOSTS` (the verified SSH host-key line, including `[host]:port` for a non-default port)
+- `SITEGROUND_DEPLOY_PATH` (the existing, canonical, absolute path ending in `/public_html` for `legatech.hr`)
 
-The deploy workflow backs up only files from its previous manifest and never deletes unmanaged hosting files.
+Restrict the environment to the `main` branch. Verify the SiteGround SSH host-key fingerprint independently before saving `SITEGROUND_KNOWN_HOSTS`; do not trust an unverified `ssh-keyscan` result.
+
+Set `SITEGROUND_SITE_URL=https://legatech.hr` as a variable in the `production` environment. The workflow checks the homepage, a unique release marker, and that `GET /api/contact.php` returns JSON with HTTP 405; a static server that exposes PHP source fails this check. The private `private/legatech-contact.php` file must already exist next to the production `public_html` directory. Also create a plain-text `.legatech-environment` file **next to** `public_html` containing exactly `production`. This server-side marker guards against a wrongly scoped deploy path. Verify that the GitHub plan supports environment secrets for this repository before enabling deployment.
+
+The release sequence is:
+
+1. Push the reviewed changes to `main`. A push builds and uploads an artifact but **does not deploy**.
+2. Confirm the build, deployment-script tests, PHP dependency packaging, and SEO export pass in GitHub Actions.
+3. Manually run **Build and deploy Legatech** from `main`. This builds again and deploys to the production environment, with a server-side backup and rollback on failure.
+4. On the live site, submit one controlled enquiry and confirm the success message, delivered email, and reply-to address. Check the key routes, cookie consent, and analytics.
+5. Only then set repository variable `LEGATECH_AUTO_PUBLISH=true`. Publishing or updating a controlled WordPress post on `staging2.legatech.hr` will trigger a fresh build and automatic production deploy. Verify the new article appears on `legatech.hr`.
+
+Keep `LEGATECH_AUTO_PUBLISH` unset until step 5. The workflow fails before upload if the production secrets, private contact configuration, environment marker, or URL are missing. Its release job is serialized and is never cancelled mid-deployment. If the live checks fail, leave auto-publishing disabled and restore the previous release.
+
+On the first deployment, the server script backs up the existing `public_html` contents. Later releases back up only files owned by the previous manifest, and unmanaged hosting files are never deleted. Each workflow run has a unique backup directory under `$HOME/legatech-deploy/backups/`. A shell error during installation or a failed HTTP smoke test triggers rollback. If that rollback itself fails, inspect the matching backup before another release. The server-side script also accepts `--rollback <public_html path> <release ID> <staging|production>` for a controlled manual rollback of the currently active release.
+
+Backups are retained rather than deleted automatically. Monitor hosting disk usage and archive or prune older verified backups deliberately after the release is accepted, especially if WordPress publishing is frequent.
 
 ## Analytics and Search Console
 
@@ -64,6 +82,6 @@ define('LEGATECH_GITHUB_REPOSITORY', 'GITHUB_KORISNIK/legatech-web');
 define('LEGATECH_GITHUB_TOKEN', 'github_pat_...');
 ```
 
-Publishing, updating, unpublishing, scheduling or deleting a post then starts one production build. The public website changes only after the workflow completes successfully.
+Publishing, updating, unpublishing, scheduling or deleting a post starts one build. With `LEGATECH_AUTO_PUBLISH=true`, a successful build deploys to `legatech.hr`; otherwise it only uploads an artifact and the live site is unchanged.
 
 GitHub Actions stores the last successful WordPress snapshot. Code deployments may use that snapshot when SiteGround temporarily blocks the REST request, while a WordPress content-change deployment fails safely unless fresh content was downloaded.

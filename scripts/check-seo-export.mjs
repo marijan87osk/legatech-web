@@ -46,6 +46,8 @@ for (const url of urls) {
 
   const $ = load(fs.readFileSync(htmlPath, "utf8"));
   const h1Count = $("h1").length;
+  const pageTitle = $("title").text().trim();
+  const socialTitle = $('meta[property="og:title"]').attr("content")?.trim();
   const canonical = $('link[rel="canonical"]').attr("href");
   const ogUrl = $('meta[property="og:url"]').attr("content");
   const description = $('meta[name="description"]').attr("content")?.trim();
@@ -65,7 +67,9 @@ for (const url of urls) {
   if (h1Count !== 1) fail(`${url}: očekivan je jedan H1, pronađeno ${h1Count}.`);
   if (canonical !== url) fail(`${url}: canonical je ${canonical ?? "nedostaje"}.`);
   if (ogUrl !== url) fail(`${url}: og:url je ${ogUrl ?? "nedostaje"}.`);
-  if (!$("title").text().trim()) fail(`${url}: nedostaje title.`);
+  if (!pageTitle) fail(`${url}: nedostaje title.`);
+  if (/[|–—]/.test(pageTitle)) fail(`${url}: title mora koristiti običan znak - umjesto | ili duge crtice.`);
+  if (socialTitle && /[|–—]/.test(socialTitle)) fail(`${url}: og:title mora koristiti običan znak - umjesto | ili duge crtice.`);
   if (!description) fail(`${url}: nedostaje meta description.`);
   if ($('meta[name="robots"][content*="noindex"]').length) fail(`${url}: sitemap URL je noindex.`);
 
@@ -98,6 +102,35 @@ for (const [pathname, expected] of stableHeadings) {
   const $ = load(fs.readFileSync(file, "utf8"));
   const actual = $("h1").first().text().replace(/\s+/g, " ").trim();
   if (actual !== expected) fail(`${pathname}: H1 se promijenio. Očekivano "${expected}", dobiveno "${actual}".`);
+}
+
+const preservedServiceMetadata = new Map([
+  ["/izrada-web-stranica-cijena/", {
+    title: "Izrada Web Stranica - Cijena I Paketi - Legatech",
+    description: "Profesionalna izrada web stranica za obrte i tvrtke. Paketi od 500 €, responzivan dizajn, SEO temelji, analitika i podrška nakon objave.",
+  }],
+  ["/seo-optimizacija-cijena/", {
+    title: "SEO Optimizacija - Cijena I Paketi - Legatech",
+    description: "SEO optimizacija za tvrtke i obrte - tehnički SEO, sadržaj, lokalni SEO, ključne riječi i mjerenje rezultata. Paketi od 290 € mjesečno.",
+  }],
+  ["/izrada-web-trgovina/", {
+    title: "Izrada Web Trgovina - WooCommerce Webshop - Legatech",
+    description: "Izrada WooCommerce web trgovina s preglednim katalogom, jednostavnom kupnjom, sigurnim plaćanjem i SEO temeljima. Projekti od 1.500 €.",
+  }],
+  ["/odrzavanje-web-stranica/", {
+    title: "Održavanje Web Stranica I WordPress Podrška - Legatech",
+    description: "Redovito WordPress održavanje, backup, sigurnosne provjere, ažuriranja i tehnička podrška. Paketi održavanja od 35 € mjesečno.",
+  }],
+]);
+
+for (const [pathname, expected] of preservedServiceMetadata) {
+  const file = htmlFileFor(`${canonicalOrigin}${pathname}`);
+  if (!fs.existsSync(file)) continue;
+  const $ = load(fs.readFileSync(file, "utf8"));
+  const actualTitle = $("title").text().trim();
+  const actualDescription = $('meta[name="description"]').attr("content")?.trim();
+  if (actualTitle !== expected.title) fail(`${pathname}: promijenjen SEO title.`);
+  if (actualDescription !== expected.description) fail(`${pathname}: promijenjen meta description.`);
 }
 
 const htaccess = fs.readFileSync(path.join(projectRoot, "public", ".htaccess"), "utf8");

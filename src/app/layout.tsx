@@ -6,6 +6,13 @@ import { MobileContactActions } from "@/src/components/mobile-contact-actions";
 import { PrivacyTools } from "@/src/components/privacy-tools";
 import { siteUrl } from "@/src/lib/seo";
 import "./globals.css";
+import "./editorial-home.css";
+import "./editorial-foundation.css";
+import "./editorial-blog.css";
+import "./editorial-project.css";
+import "./editorial-service.css";
+import "./editorial-service-overrides.css";
+import "./editorial-inner.css";
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),

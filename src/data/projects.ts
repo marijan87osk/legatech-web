@@ -23,7 +23,6 @@ export interface ProjectSummary {
   image: string;
   imageAlt: string;
   href?: `/projekti/${string}`;
-  mock: boolean;
 }
 
 export interface ProjectDetail extends ProjectSummary {
@@ -148,7 +147,6 @@ export const ducijaProject: ProjectDetail = {
     title: "Trebate web koji će rasti i nakon objave?",
     description: "Povezat ćemo izradu, vidljivost i tehničku brigu u jasan plan prilagođen vašem poslovanju.",
   },
-  mock: false,
 };
 
 export const balazProject: ProjectDetail = {
@@ -240,7 +238,6 @@ export const balazProject: ProjectDetail = {
     title: "Postojeći web treba pouzdanu brigu i jasniji SEO smjer?",
     description: "Pregledat ćemo tehničko stanje, sadržaj i vidljivost te predložiti realne prioritete za nastavak suradnje.",
   },
-  mock: false,
 };
 
 export const varmosProject: ProjectDetail = {
@@ -333,7 +330,6 @@ export const varmosProject: ProjectDetail = {
     title: "Trebate web, ali još nemate sadržaj ni strukturu?",
     description: "Opišite poslovanje i cilj. Legatech može preuzeti cijeli put od prve ideje do objavljenog weba.",
   },
-  mock: false,
 };
 
 export const krieProject: ProjectDetail = {
@@ -417,7 +413,6 @@ export const krieProject: ProjectDetail = {
     title: "Postojeći shop više ne prati vaš brend i prodaju?",
     description: "Pošaljite adresu trgovine i opišite što želite promijeniti. Predložit ćemo realan smjer redizajna i migracije.",
   },
-  mock: false,
 };
 
 export const barisicPlastProject: ProjectDetail = {
@@ -500,52 +495,9 @@ export const barisicPlastProject: ProjectDetail = {
     title: "Trebate novi web koji neće ovisiti samo o oglasima?",
     description: "Povezat ćemo kvalitetan web, realan početni kanal prometa i SEO plan koji dugoročno gradi vidljivost.",
   },
-  mock: false,
 };
 
-const demoProjects: ProjectSummary[] = [
-  {
-    slug: "atelier-sloj",
-    client: "Atelier Sloj",
-    industry: "Arhitektura",
-    services: ["website-development"],
-    serviceLabel: "Poslovna web stranica",
-    challenge: "Predstaviti projekte jasno i pretvoriti interes investitora u kvalitetne upite.",
-    solution: "Mirna struktura, vizualno vodstvo kroz projekte i kratak put do kontakta.",
-    result: { value: "+43,7%", label: "demo kvalificiranih upita", verified: false },
-    image: "/projects/atelier-sloj.png",
-    imageAlt: "Demo prikaz responzivne web stranice arhitektonskog studija",
-    mock: true,
-  },
-  {
-    slug: "biljka-21",
-    client: "Biljka 21",
-    industry: "Specijalizirana trgovina",
-    services: ["ecommerce-development"],
-    serviceLabel: "Web trgovina",
-    challenge: "Pojednostaviti kupnju na mobitelu i jasnije predstaviti velik izbor biljaka.",
-    solution: "Pregledne kategorije, snažne fotografije proizvoda i kraći put do košarice.",
-    result: { value: "+31,4%", label: "demo mobilnih kupnji", verified: false },
-    image: "/projects/biljka-21.png",
-    imageAlt: "Demo prikaz responzivne web trgovine sobnih biljaka",
-    mock: true,
-  },
-  {
-    slug: "termo-krug",
-    client: "Termo Krug",
-    industry: "Grijanje i hlađenje",
-    services: ["seo-optimization", "website-development"],
-    serviceLabel: "Web stranica i lokalni SEO",
-    challenge: "Povećati lokalnu vidljivost i olakšati slanje hitnog upita sa svakog uređaja.",
-    solution: "Stranice usluga prema namjeri pretraživanja i kontakt vidljiv u pravom trenutku.",
-    result: { value: "+58,2%", label: "demo organskih klikova", verified: false },
-    image: "/projects/termo-krug.png",
-    imageAlt: "Demo prikaz web stranice lokalne tvrtke za grijanje i hlađenje",
-    mock: true,
-  },
-];
-
-export const projects: ProjectSummary[] = [ducijaProject, balazProject, varmosProject, krieProject, barisicPlastProject, ...demoProjects];
+export const projects: ProjectSummary[] = [ducijaProject, balazProject, varmosProject, krieProject, barisicPlastProject];
 export const projectDetails: ProjectDetail[] = [ducijaProject, balazProject, varmosProject, krieProject, barisicPlastProject];
 
 export function getProjectBySlug(slug: string) {

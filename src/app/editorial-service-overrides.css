@@ -1,0 +1,95 @@
+/* Explicitly undo legacy rules that share names with the approved service components. */
+.service-v0-page { --font: "Manrope Variable", Manrope, sans-serif; }
+.service-v0-page .section-intro h2 { max-width: 14.4em; }
+.service-v0-page .text-link { display: inline-block; min-height: 0; gap: 0; font-weight: 400; text-decoration: none; }
+.service-v0-page .webdev-hero-price { max-width: none; grid-template-columns: 1fr; align-items: normal; font-family: var(--font); }
+.service-v0-page .webdev-hero-price strong { color: var(--signal); }
+.service-v0-page .webdev-hero-price > span,
+.service-v0-page .webdev-hero-price small { color: var(--muted); text-align: left; }
+.service-v0-page a.webdev-hero-work .webdev-hero-caption { position: relative; padding-right: 40px; }
+.service-v0-page a.webdev-hero-work .webdev-hero-caption > span[aria-hidden="true"] {
+  position: absolute;
+  top: 24px;
+  right: 0;
+  color: var(--ink);
+  font-size: 20px;
+  line-height: 1;
+}
+.service-v0-page .project-real-label { text-transform: none; }
+.service-v0-page ul, .service-v0-page ol { margin-block: 1em; }
+.service-v0-page .client-logos-wrap { display: block; grid-template-columns: none; gap: 0; }
+.service-v0-page .ecommerce-related-layout,
+.service-v0-page .maintenance-related-layout { display: block; grid-template-columns: none; gap: 0; }
+.service-v0-page .ecommerce-seo-list article { display: block; grid-template-columns: none; }
+.service-v0-page .ecommerce-catalogue-map::before,
+.service-v0-page .ecommerce-catalogue-map::after { content: none; }
+.service-v0-page .ecommerce-catalogue-core { position: static; display: block; width: auto; height: auto; transform: none; border: 0; border-radius: 0; background: transparent; color: var(--ink); }
+.service-v0-page .ecommerce-catalogue-node { position: static; z-index: auto; min-height: 0; padding: 20px 0 0; border: 0; border-top: 1px solid var(--rule); border-radius: 0; background: transparent; }
+.service-v0-page .ecommerce-catalogue-node ul { list-style: disc; }
+.service-v0-page .ecommerce-catalogue-node li { display: list-item; margin: 0; padding: 0; border: 0; border-radius: 0; color: var(--ink); }
+.service-v0-page .ecommerce-related-layout > .section-intro h2 {
+  max-width: 20ch;
+  margin: 0;
+  font-size: clamp(36px, 4.3vw, 64px);
+  font-weight: 500;
+  letter-spacing: -.055em;
+  line-height: 1.08;
+}
+.service-v0-page .ecommerce-related-layout > .section-intro p { max-width: 60ch; margin: 24px 0 0; color: var(--muted); font-size: 16px; }
+.service-v0-page section.seo-timeline { display: block; grid-template-columns: none; }
+.service-v0-page .seo-timeline li { position: static; min-height: 0; padding: 24px 0 0; }
+.service-v0-page .seo-timeline li::before,
+.service-v0-page .seo-timeline li::after { content: none; }
+.service-v0-page .seo-timeline h3 { max-width: none; }
+.service-v0-page .seo-engagement-grid article { display: block; min-height: 0; padding: 24px 0 0; }
+.service-v0-page .maintenance-oneoff-groups dl { display: block; grid-template-columns: none; gap: 0; }
+.service-v0-page .maintenance-oneoff-groups dl div { display: block; justify-content: normal; padding: 16px 0; border-bottom: 0; }
+.service-v0-page .maintenance-oneoff-groups dt { color: var(--ink); }
+.service-v0-page .maintenance-oneoff-groups dd { color: var(--ink); font-family: var(--font); }
+.service-v0-page .maintenance-case dt { text-transform: none; }
+.service-v0-page .service-process ol { border-top: 0; counter-reset: none; }
+.service-v0-page .service-process .process-list li {
+  display: list-item;
+  grid-template-columns: none;
+  padding: 24px 0 0;
+  border-bottom: 0;
+  font-weight: 400;
+  counter-increment: none;
+}
+.service-v0-page .service-process .process-list li::before { content: none; }
+
+/* Legacy fragments still use these aliases; scope them to the approved palette at every width. */
+.service-v0-page {
+  --accent: var(--signal);
+  --border: var(--rule);
+  --radius: 4px;
+  --surface: var(--paper);
+  --surface-muted: var(--stone);
+  --text: var(--ink);
+  --text-muted: var(--muted);
+}
+
+.service-v0-page .section-dark {
+  --accent: var(--rule);
+  --surface: var(--ink);
+  --text: var(--paper);
+  --text-muted: var(--rule);
+}
+
+.service-v0-page .seo-engagement .service-feature-card {
+  background: transparent;
+}
+
+.service-v0-page :is(.ecommerce-hero-copy, .maintenance-hero-copy) .hero-actions .button::after {
+  margin-left: auto;
+  font-size: 20px;
+  line-height: 1;
+}
+
+.service-v0-page :is(.ecommerce-hero-copy, .maintenance-hero-copy) .hero-actions .button-signal::after {
+  content: "↗";
+}
+
+.service-v0-page :is(.ecommerce-hero-copy, .maintenance-hero-copy) .hero-actions .button-outline::after {
+  content: "↓";
+}

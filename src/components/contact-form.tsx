@@ -14,7 +14,7 @@ interface ApiResponse {
   errors?: FieldErrors;
 }
 
-export function ContactForm() {
+export function ContactForm({ home = false }: { home?: boolean }) {
   const formId = useId();
   const formRef = useRef<HTMLFormElement>(null);
   const [status, setStatus] = useState<FormStatus>("idle");
@@ -113,7 +113,7 @@ export function ContactForm() {
         </div>
         <div className="field field-full">
           <label htmlFor={fieldId("description")}>Kratak opis projekta</label>
-          <textarea id={fieldId("description")} name="description" rows={6} required minLength={20} maxLength={4000} placeholder="Opišite čime se bavite, što trebate i koji rezultat želite postići." aria-describedby={errors.description ? fieldId("description-error") : undefined} />
+          <textarea id={fieldId("description")} name="description" rows={home ? 5 : 6} required minLength={20} maxLength={4000} placeholder="Opišite čime se bavite, što trebate i koji rezultat želite postići." aria-describedby={errors.description ? fieldId("description-error") : undefined} />
           {errors.description && <span className="field-error" id={fieldId("description-error")}>{errors.description}</span>}
         </div>
       </div>
@@ -123,9 +123,10 @@ export function ContactForm() {
           <Link href="/politika-privatnosti">Politici privatnosti</Link>.
         </p>
         <button className="button button-primary" type="submit" disabled={status === "submitting"}>
-          {status === "submitting" ? "Šaljemo…" : "Pošaljite upit"}
+          {status === "submitting" ? "Šaljemo…" : "Pošaljite upit"}{home && <span aria-hidden="true">↗</span>}
         </button>
       </div>
+      {home && <p className="form-status" role="status" aria-live="polite" />}
     </form>
   );
 }

@@ -5,11 +5,11 @@ import { LegalPageShell } from "@/src/components/legal-page-shell";
 import { breadcrumbJsonLd } from "@/src/lib/seo";
 
 export const metadata: Metadata = {
-  title: "Politika kolačića | Legatech",
+  title: "Politika kolačića - Legatech",
   description: "Saznajte koje nužne i analitičke kolačiće koristi web stranica Legatech i kako možete promijeniti svoj odabir.",
   alternates: { canonical: "https://legatech.hr/politika-kolacica/" },
   openGraph: {
-    title: "Politika kolačića | Legatech",
+    title: "Politika kolačića - Legatech",
     description: "Informacije o kolačićima i upravljanju privolom na web stranici Legatech.",
     url: "https://legatech.hr/politika-kolacica/",
     locale: "hr_HR",

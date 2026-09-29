@@ -41,15 +41,20 @@ export function absoluteUrl(path: string) {
   return new URL(cleanPath, siteUrl).toString();
 }
 
+export function normalizeMetaTitle(title: string) {
+  return title.replace(/[|–—]/g, "-");
+}
+
 export function createPageMetadata({ title, description, path }: PageMetadataInput): Metadata {
   const url = absoluteUrl(path);
+  const normalizedTitle = normalizeMetaTitle(title);
 
   return {
-    title,
+    title: normalizedTitle,
     description,
     alternates: { canonical: url },
     openGraph: {
-      title,
+      title: normalizedTitle,
       description,
       url,
       siteName,

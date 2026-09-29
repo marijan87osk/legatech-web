@@ -367,6 +367,8 @@ The listing uses one featured article and a varied two-column grid. Avoid three 
 
 ## Demo Content Contract
 
+Launch decision (2026-09-29): demo projects and their image assets have been removed from the website. Do not restore or publish them. The prototype examples below are historical design notes only, not production content.
+
 The user has explicitly authorized temporary fictional content for layout development. This exception does not turn demo claims into production claims.
 
 Centralize content in typed data modules so replacement does not require component edits. Every fictional client, project, result, testimonial, image, or article must include `mock: true`.
@@ -421,7 +423,7 @@ Development and preview environments render mock content with the visible label 
 | Termo Krug | Heating and cooling | SEO optimization | `+58,2% organskih klikova u šest mjeseci` | Service page, Google visibility chart, contact flow |
 | Studio Evident | Business consulting | Website development and SEO | `LCP smanjen s 4,2 s na 1,6 s` | Before and after homepage, service page, mobile form |
 
-All four rows are fictional and must render with `Demo projekt`. The numeric claims are layout fixtures, not evidence.
+All four rows are fictional, historical layout fixtures. They must not render on the website; the numeric claims are not evidence.
 
 ### Demo testimonial
 
