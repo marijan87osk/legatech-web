@@ -6,6 +6,12 @@ on:
   repository_dispatch:
     types: [wordpress_content_changed]
   workflow_dispatch:
+    inputs:
+      bootstrap_production_marker:
+        description: Confirm the live document root and create its one-time production marker
+        type: boolean
+        required: false
+        default: false
 
 permissions:
   contents: read
@@ -199,6 +205,29 @@ jobs:
             printf '  ConnectTimeout 15\n  ServerAliveInterval 30\n  ServerAliveCountMax 3\n'
           } > "$RUNNER_TEMP/legatech-ssh/config"
           chmod 600 "$RUNNER_TEMP/legatech-ssh/config"
+
+      - name: Confirm live document root and create production marker
+        if: ${{ github.event_name == 'workflow_dispatch' && inputs.bootstrap_production_marker }}
+        shell: bash
+        run: |
+          set -euo pipefail
+          [[ "$DEPLOY_TARGET" == production ]]
+          [[ "$SITEGROUND_SITE_URL" == https://legatech.hr ]]
+          [[ "$SITEGROUND_DEPLOY_PATH" == */www/legatech.hr/public_html ]]
+          site_root="${SITEGROUND_DEPLOY_PATH%/public_html}"
+          marker="$site_root/.legatech-environment"
+          challenge="$SITEGROUND_DEPLOY_PATH/legatech-target-$RELEASE_ID.txt"
+          remote="legatech-target"
+          ssh_config="$RUNNER_TEMP/legatech-ssh/config"
+          ssh -F "$ssh_config" "$remote" "set -e; test -d '$SITEGROUND_DEPLOY_PATH'; test ! -L '$SITEGROUND_DEPLOY_PATH'; test \"\$(realpath -e -- '$SITEGROUND_DEPLOY_PATH')\" = '$SITEGROUND_DEPLOY_PATH'; test -f '$site_root/private/legatech-contact.php'; test ! -e '$challenge'; test ! -L '$challenge'; (set -C; printf '%s\n' '$RELEASE_ID' > '$challenge')"
+          cleanup_challenge() {
+            ssh -F "$ssh_config" "$remote" "rm -f -- '$challenge'" || true
+          }
+          trap cleanup_challenge EXIT
+          served=$(curl --silent --show-error --fail --location --max-time 30 --header 'Cache-Control: no-cache' "$SITEGROUND_SITE_URL/legatech-target-$RELEASE_ID.txt?probe=$GITHUB_RUN_ID")
+          [[ "$served" == "$RELEASE_ID" ]]
+          ssh -F "$ssh_config" "$remote" "set -e; test \"\$(cat '$challenge')\" = '$RELEASE_ID'; rm -- '$challenge'; test ! -L '$marker'; if test -e '$marker'; then grep -Fxq production '$marker'; else (set -C; umask 077; printf 'production\n' > '$marker'); fi; grep -Fxq production '$marker'"
+          trap - EXIT
 
       - name: Deploy with server-side backup
         id: site_deploy
