@@ -23,12 +23,13 @@ Create a `production` environment in the GitHub repository with these secrets (n
 - `SITEGROUND_SSH_PORT`
 - `SITEGROUND_SSH_USER`
 - `SITEGROUND_SSH_PRIVATE_KEY`
+- `SITEGROUND_SSH_KEY_PASSPHRASE` (only if the private key is encrypted; the workflow unlocks it in an ephemeral SSH agent)
 - `SITEGROUND_KNOWN_HOSTS` (the verified SSH host-key line, including `[host]:port` for a non-default port)
 - `SITEGROUND_DEPLOY_PATH` (the existing, canonical, absolute path ending in `/public_html` for `legatech.hr`)
 
 Restrict the environment to the `main` branch. Verify the SiteGround SSH host-key fingerprint independently before saving `SITEGROUND_KNOWN_HOSTS`; do not trust an unverified `ssh-keyscan` result.
 
-Set `SITEGROUND_SITE_URL=https://legatech.hr` as a variable in the `production` environment. The workflow checks the homepage, a unique release marker, and that `GET /api/contact.php` returns JSON with HTTP 405; a static server that exposes PHP source fails this check. The private `private/legatech-contact.php` file must already exist next to the production `public_html` directory. Also create a plain-text `.legatech-environment` file **next to** `public_html` containing exactly `production`. This server-side marker guards against a wrongly scoped deploy path. Verify that the GitHub plan supports environment secrets for this repository before enabling deployment.
+Set `SITEGROUND_SITE_URL=https://legatech.hr` as a repository variable. The workflow checks the homepage, a unique release marker, and that `GET /api/contact.php` returns JSON with HTTP 405; a static server that exposes PHP source fails this check. The private `private/legatech-contact.php` file must already exist next to the production `public_html` directory. Also create a plain-text `.legatech-environment` file **next to** `public_html` containing exactly `production`. This server-side marker guards against a wrongly scoped deploy path. Verify that the GitHub plan supports environment secrets for this repository before enabling deployment.
 
 The release sequence is:
 
