@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import { usePathname } from "next/navigation";
 import { useEffect, useRef, useState } from "react";
 
@@ -58,7 +59,7 @@ export function EditorialHeader() {
     <header className="editorial-header" id="vrh">
       <div className="container editorial-header-inner">
         <Link className="editorial-brand" href="/" aria-label="Legatech, naslovna stranica" onClick={closeMenus}>
-          legatech<span>®</span>
+          <Image src="/brand/legatech-black.svg" alt="" width={164} height={41} loading="eager" unoptimized />
         </Link>
         <button
           ref={menuButtonRef}

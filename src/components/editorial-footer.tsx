@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import { CookieSettingsButton } from "./cookie-settings-button";
 
 export function EditorialFooter() {
@@ -7,7 +8,9 @@ export function EditorialFooter() {
       <div className="container">
         <div className="editorial-footer-top">
           <div className="editorial-footer-brand">
-            <Link className="editorial-brand" href="/">legatech<span>®</span></Link>
+            <Link className="editorial-brand" href="/" aria-label="Legatech, naslovna stranica">
+              <Image src="/brand/legatech-black.svg" alt="" width={164} height={41} unoptimized />
+            </Link>
             <p>Web stranice, trgovine i SEO usmjereni na konkretne poslovne ciljeve.</p>
             <p>LEGATECH, obrt za razvoj softvera, vl. Marijan Malčić<br />Kninska ulica 1 A, 31000 Osijek<br />OIB: 14184408003 / MBS: 98086464</p>
           </div>

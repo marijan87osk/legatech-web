@@ -29,8 +29,8 @@
 
 .editorial-site .editorial-header { position: relative; z-index: 50; background: var(--paper); }
 .editorial-site .editorial-header-inner { display: flex; align-items: center; gap: 32px; min-height: 100px; border-bottom: 1px solid var(--rule); }
-.editorial-site .editorial-brand { margin-right: auto; font-size: 34px; font-weight: 800; letter-spacing: -.06em; line-height: 1; }
-.editorial-site .editorial-brand span { margin-left: 3px; font-size: 12px; letter-spacing: 0; vertical-align: top; }
+.editorial-site .editorial-brand { display: block; flex: none; width: 164px; height: 41px; margin-right: auto; }
+.editorial-site .editorial-brand img { display: block; width: 100%; height: auto; }
 .editorial-site .editorial-nav { display: flex; align-items: center; gap: 24px; font-size: 14px; }
 .editorial-site .editorial-nav > a { white-space: nowrap; }
 .editorial-site .editorial-nav a:hover, .editorial-site .editorial-nav a[aria-current="page"] { color: var(--signal); }
@@ -51,6 +51,7 @@
 .editorial-site .editorial-menu-toggle { display: none; }
 
 .editorial-site .editorial-footer { padding: 48px 0 28px; border-top: 1px solid var(--muted); background: var(--ink); color: var(--paper); }
+.editorial-site .editorial-footer .editorial-brand img { filter: invert(1); }
 .editorial-site .editorial-footer-top { display: grid; grid-template-columns: 1fr 1.5fr; gap: 64px; }
 .editorial-site .editorial-footer-brand p { max-width: 40ch; margin-top: 24px; color: var(--rule); font-size: 13px; }
 .editorial-site .editorial-footer-links { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
@@ -84,7 +85,7 @@ body:has(.editorial-site) .mobile-contact-actions { display: none; }
 
 @media (max-width: 700px) {
   .editorial-site .container { width: calc(100% - 40px); }
-  .editorial-site .editorial-brand { font-size: 28px; }
+  .editorial-site .editorial-brand { width: 140px; height: 35px; }
   .editorial-site .editorial-footer-links { grid-template-columns: 1fr 1fr; gap: 28px; }
   .editorial-site .editorial-footer-bottom { flex-direction: column; gap: 12px; }
 }
