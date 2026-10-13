@@ -61,6 +61,8 @@ jobs:
       - name: Verify source
         run: |
           npm run lint
+          php -l wordpress/mu-plugins/legatech-artifact-deployer.php
+          php scripts/test-artifact-deployer.php wordpress/mu-plugins/legatech-artifact-deployer.php
           bash -n scripts/deploy-siteground.sh
           bash -n scripts/test-deploy-siteground.sh
 

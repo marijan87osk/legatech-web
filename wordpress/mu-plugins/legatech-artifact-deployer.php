@@ -2,7 +2,7 @@
 /**
  * Plugin Name: Legatech Artifact Deployer
  * Description: Preuzima provjereni GitHub Actions artifact i lokalno aktivira statični Legatech web.
- * Version: 1.0.1
+ * Version: 1.0.2
  */
 
 declare(strict_types=1);
@@ -170,7 +170,7 @@ function legatech_deployer_verify_release(string $directory, string $repository,
     return $manifest;
 }
 
-function legatech_deployer_run_script(string $script, string $archive, string $target, string $sha, string $deployRoot): array
+function legatech_deployer_run_script(string $script, string $archive, string $target, string $releaseId, string $deployRoot): array
 {
     if (!function_exists('proc_open') || !is_executable('/bin/bash')) throw new RuntimeException('Lokalno izvršavanje deploy skripte nije dostupno.');
     @chmod($script, 0700);
@@ -185,7 +185,7 @@ function legatech_deployer_run_script(string $script, string $archive, string $t
         'PATH' => '/usr/local/bin:/usr/bin:/bin',
         'LEGATECH_DEPLOY_ROOT' => $deployRoot,
     ];
-    $process = proc_open(['/bin/bash', $script, $archive, $target, $sha], $descriptors, $pipes, null, $environment, ['bypass_shell' => true]);
+    $process = proc_open(['/bin/bash', $script, $archive, $target, $releaseId, 'production'], $descriptors, $pipes, null, $environment, ['bypass_shell' => true]);
     if (!is_resource($process)) throw new RuntimeException('Deploy proces nije moguće pokrenuti.');
 
     foreach ($pipes as $pipe) stream_set_blocking($pipe, false);
@@ -247,12 +247,16 @@ function legatech_poll_and_deploy_artifact(): array
         $run = $runs[0];
         $sha = strtolower((string) ($run['head_sha'] ?? ''));
         $runId = (int) ($run['id'] ?? 0);
-        if (!preg_match('/^[a-f0-9]{40}$/', $sha) || $runId <= 0 || ($run['head_branch'] ?? '') !== 'main' || ($run['conclusion'] ?? '') !== 'success') {
+        $runAttempt = (int) ($run['run_attempt'] ?? 0);
+        if (!preg_match('/^[a-f0-9]{40}$/', $sha) || $runId <= 0 || $runAttempt <= 0 || ($run['head_branch'] ?? '') !== 'main' || ($run['conclusion'] ?? '') !== 'success') {
             throw new RuntimeException('Najnoviji GitHub Actions run nije valjan za produkciju.');
         }
 
+        // Match the workflow's release marker and backup identity, including reruns.
+        $releaseId = substr(hash('sha256', $sha . ':' . $runId . ':' . $runAttempt), 0, 40);
+
         $state = get_option(LEGATECH_DEPLOY_STATE_OPTION, []);
-        if (is_array($state) && ($state['sha'] ?? '') === $sha && ($state['status'] ?? '') === 'deployed') {
+        if (is_array($state) && ($state['release_id'] ?? '') === $releaseId && ($state['status'] ?? '') === 'deployed') {
             $state['checked_at'] = gmdate(DATE_ATOM);
             update_option(LEGATECH_DEPLOY_STATE_OPTION, $state, false);
             return ['ok' => true, 'status' => 'up_to_date', 'sha' => $sha];
@@ -283,7 +287,7 @@ function legatech_poll_and_deploy_artifact(): array
             $releaseDirectory . '/deploy-siteground.sh',
             $releaseDirectory . '/legatech-site.tar.gz',
             $productionPath,
-            $sha,
+            $releaseId,
             $deployRoot
         );
 
@@ -291,6 +295,7 @@ function legatech_poll_and_deploy_artifact(): array
             'status' => 'deployed',
             'sha' => $sha,
             'run_id' => $runId,
+            'release_id' => $releaseId,
             'artifact_id' => (int) ($artifact['id'] ?? 0),
             'deployed_at' => gmdate(DATE_ATOM),
             'checked_at' => gmdate(DATE_ATOM),
