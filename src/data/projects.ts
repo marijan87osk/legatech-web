@@ -497,8 +497,89 @@ export const barisicPlastProject: ProjectDetail = {
   },
 };
 
-export const projects: ProjectSummary[] = [ducijaProject, balazProject, varmosProject, krieProject, barisicPlastProject];
-export const projectDetails: ProjectDetail[] = [ducijaProject, balazProject, varmosProject, krieProject, barisicPlastProject];
+export const rumaluProject: ProjectDetail = {
+  slug: "rumalu",
+  client: "Rumalu",
+  industry: "Kozmetički salon i njega lica",
+  services: ["website-development", "seo-optimization"],
+  serviceLabel: "WordPress tema i SEO optimizacija",
+  challenge: "Postojeći statični web pretvoriti u WordPress temu, izraditi zasebne stranice usluga i postaviti jasnu osnovu za SEO i mjerenje.",
+  solution: "Legatech je prenio web u WordPress, razradio stranice tretmana, proveo potpunu on-page optimizaciju te povezao Google Search Console i Google Analytics.",
+  result: {
+    value: "SEO osnova",
+    label: "s uređenim uslugama i postavljenom analitikom",
+    verified: true,
+  },
+  image: "/projects/rumalu/cover.jpg",
+  imageAlt: "Početna stranica Rumalu kozmetičkog salona u Osijeku",
+  href: "/projekti/rumalu",
+  website: "https://rumalu.hr/",
+  websiteLabel: "Posjetite rumalu.hr",
+  variant: "growth",
+  heroTitle: "Svaka usluga dobila je vlastitu stranicu.",
+  lead: "Statični web Rumalu kozmetičkog salona u Osijeku pretvoren je u WordPress temu, uz novu strukturu usluga, potpunu on-page optimizaciju i povezanu analitiku.",
+  startingTitle: "Postojeći statični web trebao je novu osnovu za SEO.",
+  startingPoint: "Rumalu je već imao statičnu web stranicu. Projekt je obuhvatio njezinu pretvorbu u WordPress temu i izradu zasebnih stranica za pojedine usluge kako bi svaki tretman imao vlastito mjesto u strukturi weba i organskoj pretrazi.",
+  goals: [
+    "Omogućiti upravljanje webom kroz WordPress",
+    "Svaku uslugu predstaviti na zasebnoj, optimiziranoj stranici",
+    "Postaviti Search Console i Analytics za praćenje vidljivosti i posjeta",
+  ],
+  scopeTitle: "SEO rad povezan je sa strukturom i upravljanjem webom.",
+  scopeDescription: "Pretvorba u WordPress, zasebne stranice usluga i optimizacija sadržaja provedene su kao dijelovi istog projekta.",
+  scope: [
+    {
+      title: "WordPress tema",
+      description: "Postojeći statični web pretvoren je u WordPress temu kako bi se sadržajem i stranicama moglo upravljati kroz WordPress.",
+    },
+    {
+      title: "Zasebne stranice usluga",
+      description: "Za pojedine tretmane izrađene su zasebne stranice s vlastitim opisima i jasnim putem prema kontaktu za termin.",
+    },
+    {
+      title: "Potpuna on-page optimizacija",
+      description: "SEO naslovi, meta opisi, hijerarhija naslova, sadržaj i interne poveznice usklađeni su s temom svake stranice.",
+    },
+    {
+      title: "Search Console i Analytics",
+      description: "Web je povezan s Google Search Consoleom i Google Analyticsom radi praćenja organske vidljivosti i ponašanja posjetitelja.",
+    },
+  ],
+  galleryTitle: "Od pregleda tretmana do stranice konkretne usluge.",
+  outcomeTitle: "Uređena struktura, optimiziran sadržaj i postavljeno mjerenje.",
+  outcome: "Rumalu sada ima WordPress temu i zasebne stranice usluga s provedenom on-page optimizacijom. Search Console i Analytics povezani su s webom, pa postoji podloga za praćenje organske vidljivosti, posjeta i daljnjeg SEO razvoja.",
+  feature: {
+    label: "Mjerenje",
+    status: "Implementirano",
+    title: "Vidljivost i posjete mogu se pratiti kroz podatke.",
+    description: "Uz optimizirane stranice postavljena je analitika koja omogućuje praćenje weba nakon provedenih dorada.",
+    name: "Google Search Console + Google Analytics",
+    items: [
+      "Povezivanje weba s Google Search Consoleom",
+      "Podaci o pojavljivanjima i klikovima iz Google pretraživanja",
+      "Povezivanje weba s Google Analyticsom",
+      "Podaci o posjetama i pregledima stranica",
+    ],
+    href: "/seo-optimizacija-cijena",
+    linkLabel: "Saznajte više o SEO optimizaciji",
+  },
+  gallery: [
+    { src: "/projects/rumalu/cover.jpg", alt: "Početna stranica Rumalu salona s glavnom porukom i pregledom ponude" },
+    { src: "/projects/rumalu/services.jpg", alt: "Pregled Rumalu usluga s poveznicama na zasebne stranice tretmana" },
+    { src: "/projects/rumalu/service.jpg", alt: "Zasebna Rumalu stranica higijenskog tretmana lica s opisom i pozivom na upit" },
+  ],
+  relatedServices: [
+    { title: "SEO optimizacija", description: "Struktura usluga, on-page optimizacija i mjerenje", href: "/seo-optimizacija-cijena" },
+    { title: "Izrada web stranica", description: "WordPress izvedba prilagođena sadržaju i poslovanju", href: "/izrada-web-stranica-cijena" },
+  ],
+  finalCta: {
+    title: "Postojeći web treba jasniju strukturu i SEO osnovu?",
+    description: "Pregledat ćemo web i ponudu te predložiti kako povezati stranice usluga, optimizaciju i mjerenje.",
+  },
+};
+
+export const projects: ProjectSummary[] = [ducijaProject, balazProject, varmosProject, krieProject, barisicPlastProject, rumaluProject];
+export const projectDetails: ProjectDetail[] = [ducijaProject, balazProject, varmosProject, krieProject, barisicPlastProject, rumaluProject];
 
 export function getProjectBySlug(slug: string) {
   return projectDetails.find((project) => project.slug === slug);
