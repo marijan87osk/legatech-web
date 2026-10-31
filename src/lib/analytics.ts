@@ -16,7 +16,7 @@ export interface StoredConsent {
 
 declare global {
   interface Window {
-    dataLayer?: unknown[][];
+    dataLayer?: Array<IArguments | Record<string, unknown>>;
     gtag?: (...args: unknown[]) => void;
   }
 }
@@ -66,7 +66,11 @@ function setAnalyticsDisabled(disabled: boolean) {
 
 function ensureGtag() {
   window.dataLayer = window.dataLayer ?? [];
-  window.gtag = window.gtag ?? ((...args: unknown[]) => window.dataLayer?.push(args));
+  window.gtag = window.gtag ?? function gtag() {
+    // gtag.js recognizes Arguments commands; plain arrays mean method calls.
+    // eslint-disable-next-line prefer-rest-params
+    window.dataLayer?.push(arguments);
+  };
   return window.gtag;
 }
 

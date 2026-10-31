@@ -336,8 +336,8 @@
   },
   {
     "path": "contact-runtime.js",
-    "bytes": 8841,
-    "sha256": "b4663117ddb0d3c588b66b720c3449238b12442143ce457d3a0909f1ede3dc97"
+    "bytes": 9001,
+    "sha256": "191163b7d05d5dc82f1dc4ddcba563661e20457a4162925cafb8783297b01d03"
   },
   {
     "path": "contact-live.js",

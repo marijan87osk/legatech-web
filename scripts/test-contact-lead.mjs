@@ -30,6 +30,32 @@ const success = (id = receipt) => ({ok: true, sent: true, submissionId: id});
 const response = (body, status = 200) => new Response(JSON.stringify(body), {status, headers: {'Content-Type': 'application/json'}});
 const enquiry = {name: 'Test Čć Žđ', email: 'test@example.invalid', company: 'Test', description: 'Local test only. Never transmitted.', formStartedAt: 1};
 
+test('real gtag bootstrap queues Arguments objects, not plain array method calls', () => {
+  const {analytics, window} = setup({tag: false});
+  analytics.initializeGoogleAnalytics();
+  assert.equal(window.dataLayer.length, 4);
+  for (const command of window.dataLayer) {
+    assert.equal(Array.isArray(command), false, 'Google treats arrays as dataLayer method calls');
+    assert.equal(Object.prototype.toString.call(command), '[object Arguments]');
+  }
+  const config = window.dataLayer.find(command => command[0] === 'config');
+  assert.equal(config[1], 'G-956PBX0RC6');
+  assert.equal(config[2].send_page_view, false);
+  analytics.trackContactLeadOnce(receipt);
+  analytics.trackContactLeadOnce(receipt);
+  const leads = window.dataLayer.filter(command => command[0] === 'event' && command[1] === 'generate_lead');
+  assert.equal(leads.length, 1);
+  assert.equal(Object.prototype.toString.call(leads[0]), '[object Arguments]');
+  assert.deepEqual(JSON.parse(JSON.stringify(leads[0][2])), {method: 'contact_form'});
+});
+
+test('bootstrap creates no queue without analytics consent', () => {
+  const {analytics, window} = setup({tag: false, consent: 'denied'});
+  analytics.initializeGoogleAnalytics();
+  assert.equal(window.gtag, undefined);
+  assert.equal(window.dataLayer, undefined);
+});
+
 test('no lead before the response; one lead after confirmed SMTP receipt, no PII', async () => {
   const {calls, createContactSubmission} = setup();
   let finish;

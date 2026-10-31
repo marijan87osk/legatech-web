@@ -1,10 +1,12 @@
 # GA4 generate_lead — kontakt obrazac
 
-Promjena je samo u lokalnom izvornom projektu `legatech-web`. Redizajn u `legatech redizajn2` na portu 8000 ima pregledni obrazac bez slanja i GA4 integracije; njegova potvrda validacije nije lead i nije povezana s ovim događajem. Ništa nije objavljeno.
+Objavljeni statički redizajn koristi zajedničku GA4/consent i kontakt logiku iz `src/lib/analytics.ts` i `src/lib/contact-submission.ts`, ugrađenu u `redesign/site/contact-runtime.js`. Lokalni redizajn na portu 8000 koristi iste module uz lokalni testni sandučić; produkcija zadržava postojeću privatnu SMTP konfiguraciju.
+
+Bootstrap mora koristiti običnu `function gtag(){ dataLayer.push(arguments); }`, s izvornim objektom `Arguments`. Obični nizovi iz rest-parametara nisu zamjena: Google ih obrađuje kao pozive metoda dataLayera pa config i event ne pokreću mjerenje. Regresijski test izričito provjerava taj oblik, uz postojeću provjeru sadržaja naredbi. Ne dodavati drugi Google tag uz postojeće učitavanje nakon pristanka.
 
 ## Kada se šalje
 
-Postojeći `PrivacyTools` i `trackAnalyticsEvent` ostaju jedina GA4 integracija. Nema dodatnog Google taga. `generate_lead` šalje se tek kada POST `/api/contact.php` vrati HTTP 2xx i JSON s točno `ok: true`, `sent: true` i valjanim nasumičnim `submissionId` od 16 heksadekadskih znakova. API to vraća isključivo nakon uspješnog povratka SMTP `send()` poziva. To potvrđuje prihvat na SMTP servisu, a ne jamči isporuku u primateljev inbox.
+Postojeći consent loader i `trackAnalyticsEvent` ostaju jedina GA4 integracija. Nema dodatnog Google taga. `generate_lead` šalje se tek kada POST `/api/contact.php` vrati HTTP 2xx i JSON s točno `ok: true`, `sent: true` i valjanim nasumičnim `submissionId` od 16 heksadekadskih znakova. API to vraća isključivo nakon uspješnog povratka SMTP `send()` poziva. To potvrđuje prihvat na SMTP servisu, a ne jamči isporuku u primateljev inbox.
 
 Honeypot i dalje dobiva neutralnu potvrdu, ali `sent: false`, bez potvrde slanja i bez Analytics događaja. HTTP 200 sam po sebi nije dovoljan.
 
@@ -24,9 +26,9 @@ php -l public/api/contact.php
 
 Testovi koriste stvarne TypeScript module uz zamijenjeni `fetch` i postojeći `gtag` ulaz; ništa ne šalju SMTP-u ili Googleu. Provjeravaju čekanje potvrde, greške, nevaljan JSON, honeypot, paralelne submitove, ponovljeni receipt, ponovni pokušaj nakon greške, novi upit, pristanak, grešku taga i odsutnost osobnih podataka.
 
-PHP CLI nije pronađen u ovom Windows okruženju pa lokalni `php -l` i stvarno SMTP slanje nisu izvršeni. Postojeći CI već ima provjeru sintakse tog endpointa; CI/deploy nije pokrenut.
+CI provjerava PHP sintaksu i Linux deploy/rollback. Stvarna dostava jedne odobrene produkcijske TEST poruke potvrđena je u zasebnoj post-launch provjeri 31. 10. 2026.; regresijski testovi ne šalju dodatne poruke.
 
-Frontend i `public/api/contact.php` trebaju se isporučiti zajedno pri zasebno odobrenoj objavi. Stari API bez novog ugovora namjerno se ne smatra potvrđenim slanjem. Nemoj kopirati lokalni pregledni server na produkciju.
+Frontend i `public/api/contact.php` već koriste isti ugovor potvrde. Stari API bez novog ugovora namjerno se ne smatra potvrđenim slanjem. Nemoj kopirati lokalni pregledni server na produkciju.
 
 ## Test u GA4 DebugView
 
