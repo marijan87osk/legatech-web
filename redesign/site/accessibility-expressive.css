@@ -1,0 +1,29 @@
+/* Shared accessibility repairs; approved copy, fonts and palette stay intact. */
+:where(a,button,summary,input,select,textarea,[tabindex]):focus-visible{
+  outline:3px solid var(--paper)!important;outline-offset:4px!important;
+  box-shadow:0 0 0 4px var(--black)!important;
+}
+main[tabindex="-1"]:focus{outline:none!important;box-shadow:none!important}
+.field :is(input,select,textarea){border-bottom-color:#626b54;border-bottom-width:2px}
+.field :is(input,textarea)::placeholder{color:#4b5142;opacity:1}
+.section-paper .button-outline,.section-pistachio .button-outline{color:var(--plum);border-color:currentColor}
+/* Readable content stays fully opaque, including while a reveal is moving. */
+.motion-reveal{opacity:1!important}
+.motion-reveal:focus-within{transform:none!important;animation:none!important}
+@keyframes hero-type{from{opacity:1;transform:translateY(28px)}to{opacity:1;transform:translateY(0)}}
+:where(main h1,main h2,main h3,main a){overflow-wrap:anywhere}
+.hero h1 span,.hero h1 em,.company-hero h1 span,.company-hero h1 em{white-space:normal}
+.service-title-unit{display:inline-block;max-width:100%;white-space:normal}
+:where(.hero-grid,.webdev-hero-grid,.case-hero-grid,.ea-hero-grid,.ec-hero-grid,.blog-hero-grid,.contact-grid,.faq-layout,.intro-split)>*{min-width:0}
+main [class*="-layout"]>*,main [class*="-grid"]>*,.ecommerce-catalogue-map>*,.ecommerce-catalogue-core>*{min-width:0}
+.ecommerce-catalogue-core{flex-wrap:wrap;overflow-wrap:anywhere}
+.a11y-column-template{display:grid;grid-template-columns:repeat(var(--template-columns),minmax(0,1fr));min-width:650px;font-size:17px;line-height:1.8}
+.a11y-column-template>div{padding:15px 17px;border:1px solid #bfbfb6;font-weight:600;overflow-wrap:anywhere}
+@media(max-width:340px){
+  .editorial-header-inner{gap:8px}
+  .editorial-header-cta{max-width:86px;white-space:normal;overflow-wrap:anywhere;gap:6px;line-height:1.35}
+  .hero h1{font-size:clamp(42px,14vw,48px)}
+}
+@media(forced-colors:active){
+  :where(a,button,summary,input,select,textarea,[tabindex]):focus-visible{outline-color:Highlight!important;box-shadow:none!important}
+}

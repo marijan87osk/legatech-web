@@ -96,6 +96,24 @@ if [[ -n "$(find "$release_dir" -type l -print -quit)" ]]; then
   echo "Arhiva ne smije sadržavati simboličke poveznice." >&2
   exit 1
 fi
+
+# Read-only checks before any live content is replaced. Never echo credentials.
+if [[ ! -f "$release_dir/legatech-release-$release_id.txt" || "$(< "$release_dir/legatech-release-$release_id.txt")" != "$release_id" ]]; then
+  echo "Missing or mismatched CI release marker." >&2
+  exit 1
+fi
+php -r '
+  $design = json_decode(file_get_contents($argv[1]), true);
+  if (!is_array($design) || ($design["design"] ?? "") !== "approved-expressive-plum-pistachio" || ($design["publicAddressApproved"] ?? false) !== true || ($design["debugMode"] ?? true) !== false || ($design["mailMode"] ?? "") !== "smtp") { fwrite(STDERR, "Unapproved or non-production redesign artifact.\n"); exit(1); }
+  if (version_compare(PHP_VERSION, "8.1", "<") || !extension_loaded("openssl") || !extension_loaded("mbstring")) { fwrite(STDERR, "Production PHP requirements are not met.\n"); exit(1); }
+  $config = dirname($argv[2]) . "/private/legatech-contact.php";
+  if (!is_file($config) || !is_readable($config)) { fwrite(STDERR, "Private SMTP configuration is unavailable.\n"); exit(1); }
+  $c = require $config;
+  foreach (["smtp_host", "smtp_port", "smtp_username", "smtp_password", "from_email", "recipient_email", "rate_limit_salt"] as $key) if (empty($c[$key])) { fwrite(STDERR, "SMTP configuration is incomplete.\n"); exit(1); }
+  if (!in_array($c["smtp_encryption"] ?? "", ["ssl", "tls"], true) || strlen($c["rate_limit_salt"]) < 24 || !in_array("https://legatech.hr", $c["allowed_origins"] ?? [], true) || !filter_var($c["from_email"], FILTER_VALIDATE_EMAIL) || !filter_var($c["recipient_email"], FILTER_VALIDATE_EMAIL) || (str_ends_with(strtolower($c["recipient_email"]), ".test") || str_ends_with(strtolower($c["recipient_email"]), ".invalid")) || in_array($c["smtp_password"], ["local", "PROMIJENITE_OVU_VRIJEDNOST"], true) || $c["smtp_host"] === "smtp.example.com") { fwrite(STDERR, "SMTP settings are test placeholders or unsafe for production.\n"); exit(1); }
+  echo "Redesign approval and private production SMTP settings passed preflight. No email was sent.\n";
+' "$release_dir/legatech-design.json" "$target"
+
 find "$release_dir" -type f ! -name '.legatech-new-manifest' -printf '%P\n' | LC_ALL=C sort > "$new_manifest"
 while IFS= read -r relative; do
   validate_relative_path "$relative" || { echo "Nesigurna putanja u novom manifestu" >&2; exit 1; }

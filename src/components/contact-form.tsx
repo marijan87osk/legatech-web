@@ -3,29 +3,24 @@
 import { CheckCircle, WarningCircle } from "@phosphor-icons/react";
 import Link from "next/link";
 import { FormEvent, useId, useRef, useState } from "react";
-import { trackAnalyticsEvent } from "@/src/lib/analytics";
+import { ContactFieldErrors, createContactSubmission } from "@/src/lib/contact-submission";
 
 type FormStatus = "idle" | "submitting" | "success" | "error";
-type FieldErrors = Partial<Record<"name" | "email" | "company" | "service" | "budget" | "description", string>>;
-
-interface ApiResponse {
-  ok?: boolean;
-  message?: string;
-  errors?: FieldErrors;
-}
 
 export function ContactForm({ home = false }: { home?: boolean }) {
   const formId = useId();
   const formRef = useRef<HTMLFormElement>(null);
   const [status, setStatus] = useState<FormStatus>("idle");
   const [message, setMessage] = useState("");
-  const [errors, setErrors] = useState<FieldErrors>({});
+  const [errors, setErrors] = useState<ContactFieldErrors>({});
   const [startedAt, setStartedAt] = useState(() => Date.now());
+  const [submission] = useState(() => createContactSubmission());
 
   const fieldId = (name: string) => `${formId}-${name}`;
 
   async function handleSubmit(event: FormEvent<HTMLFormElement>) {
     event.preventDefault();
+    if (submission.locked) return;
     const form = event.currentTarget;
     if (!form.checkValidity()) {
       form.reportValidity();
@@ -37,24 +32,13 @@ export function ContactForm({ home = false }: { home?: boolean }) {
     setErrors({});
     const data = Object.fromEntries(new FormData(form).entries());
 
-    try {
-      const response = await fetch("/api/contact.php", {
-        method: "POST",
-        headers: { "Content-Type": "application/json", Accept: "application/json" },
-        body: JSON.stringify({ ...data, formStartedAt: startedAt }),
-      });
-      const result = await response.json().catch(() => ({})) as ApiResponse;
-      if (!response.ok || !result.ok) {
-        setErrors(result.errors ?? {});
-        setMessage(result.message ?? "Upit trenutačno nije moguće poslati. Pokušajte ponovno ili nam se javite e-mailom.");
-        setStatus("error");
-        return;
-      }
+    const result = await submission.submit({ ...data, formStartedAt: startedAt });
+    if (result.status === "success") {
       form.reset();
-      trackAnalyticsEvent("generate_lead", { method: "contact_form" });
       setStatus("success");
-    } catch {
-      setMessage("Nije moguće povezati se sa servisom za slanje. Provjerite vezu ili nam pišite na info@legatech.hr.");
+    } else if (result.status === "error") {
+      setErrors(result.errors);
+      setMessage(result.message);
       setStatus("error");
     }
   }
@@ -65,7 +49,7 @@ export function ContactForm({ home = false }: { home?: boolean }) {
         <CheckCircle size={38} weight="regular" aria-hidden="true" />
         <h3>Upit je poslan.</h3>
         <p>Hvala na informacijama. Javit ćemo se s prijedlogom sljedećeg koraka u jednom radnom danu.</p>
-        <button className="button button-secondary" type="button" onClick={() => { setStartedAt(Date.now()); setStatus("idle"); }}>
+        <button className="button button-secondary" type="button" onClick={() => { submission.reset(); setStartedAt(Date.now()); setStatus("idle"); }}>
           Pošaljite novi upit
         </button>
       </div>

@@ -1,4 +1,6 @@
 * text=auto
+# The approved static snapshot is verified byte-for-byte on Windows and Linux.
+redesign/site/** -text
 *.sh text eol=lf
 *.yml text eol=lf
 *.yaml text eol=lf

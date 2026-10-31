@@ -1,0 +1,9 @@
+User-agent: *
+Allow: /
+Disallow: /reviews/
+Disallow: /design-exploration/
+Disallow: /graft/
+Disallow: /homepage-concept/
+Allow: /homepage-concept/assets/
+
+Sitemap: https://legatech.hr/sitemap.xml

@@ -1,0 +1,9 @@
+{
+  "scope": "legal-provider-section-only",
+  "route": "/uvjeti-koristenja/#pruzatelj",
+  "addressBlockHash": "06fb28ee84472c33db353481ed7bbb0b066851b83065aa5e9483686fd88bddac",
+  "approvedForProduction": true,
+  "reason": "Explicit owner approval for the registered address in the provider legal section only, retaining the notice that this is not a client reception office. Deployment remains unauthorized.",
+  "approvedDate": "2026-10-31",
+  "ownerReply": "Da, odobravam samo taj pravni odjeljak"
+}

@@ -1,0 +1,2804 @@
+<!DOCTYPE html><html lang="hr"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Responsive dizajn - što treba testirati? - Legatech</title><meta name="description" content="Responsive dizajn znači da se web prilagođava različitim veličinama ekrana. To zvuči jednostavno. Desktop verzija ima tri stupca. Na tabletu dva. Na mobitelu…"><link rel="canonical" href="https://legatech.hr/blog/responsive-dizajn-sto-testirati/"><meta property="og:title" content="Responsive dizajn - što treba testirati?"><meta property="og:description" content="Responsive dizajn znači da se web prilagođava različitim veličinama ekrana. To zvuči jednostavno. Desktop verzija ima tri stupca. Na tabletu dva. Na mobitelu…"><meta property="og:site_name" content="Legatech"><meta property="og:locale" content="hr_HR"><meta property="og:type" content="article"><meta property="article:published_time" content="2026-09-05T16:40:56+00:00"><meta property="article:modified_time" content="2026-09-05T16:41:01+00:00"><meta name="twitter:title" content="Responsive dizajn - što treba testirati?"><meta name="twitter:description" content="Responsive dizajn znači da se web prilagođava različitim veličinama ekrana. To zvuči jednostavno. Desktop verzija ima tri stupca. Na tabletu dva. Na mobitelu…"><link rel="icon" type="image/svg+xml" href="/assets/legatech-brand/legatech-t-small.svg"><link rel="stylesheet" href="/home-expressive.css"><script src="/home-expressive.js" defer=""></script><meta name="theme-color" content="#5e2947"><link rel="stylesheet" href="/blog-expressive.css"><script src="/blog-expressive.js" defer=""></script><link rel="stylesheet" href="/contact-live.css"><script src="/site-runtime.js" defer=""></script><script src="/contact-runtime.js" defer=""></script><script src="/contact-live.js" defer=""></script><meta property="og:url" content="https://legatech.hr/blog/responsive-dizajn-sto-testirati/"><meta property="og:image" content="https://legatech.hr/assets/social/blog-responsive-dizajn-sto-testirati.png"><meta property="og:image:secure_url" content="https://legatech.hr/assets/social/blog-responsive-dizajn-sto-testirati.png"><meta property="og:image:type" content="image/png"><meta property="og:image:width" content="1200"><meta property="og:image:height" content="630"><meta property="og:image:alt" content="Responsive dizajn – što treba testirati? — Legatech"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:image" content="https://legatech.hr/assets/social/blog-responsive-dizajn-sto-testirati.png"><meta name="twitter:image:alt" content="Responsive dizajn – što treba testirati? — Legatech"><script type="application/ld+json">[{"@context":"https://schema.org","@type":"Article","@id":"https://legatech.hr/blog/responsive-dizajn-sto-testirati/#article","headline":"Responsive dizajn – što treba testirati?","description":"Responsive dizajn znači da se web prilagođava različitim veličinama ekrana. To zvuči jednostavno. Desktop verzija ima tri stupca. Na tabletu dva. Na mobitelu jedan. Gotovo. U praksi nije tako…","url":"https://legatech.hr/blog/responsive-dizajn-sto-testirati/","mainEntityOfPage":"https://legatech.hr/blog/responsive-dizajn-sto-testirati/","inLanguage":"hr-HR","datePublished":"2026-09-05T16:40:56+00:00","dateModified":"2026-09-05T16:41:01+00:00","author":{"@type":"Person","name":"marijan","url":"https://legatech.hr/o-nama/"},"publisher":{"@id":"https://legatech.hr/#organization"}},{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Naslovna","item":"https://legatech.hr/"},{"@type":"ListItem","position":2,"name":"Blog","item":"https://legatech.hr/blog/"},{"@type":"ListItem","position":3,"name":"Responsive dizajn – što treba testirati?","item":"https://legatech.hr/blog/responsive-dizajn-sto-testirati/"}],"@id":"https://legatech.hr/blog/responsive-dizajn-sto-testirati/#breadcrumb"},{"@context":"https://schema.org","@type":"WebPage","@id":"https://legatech.hr/blog/responsive-dizajn-sto-testirati/#webpage","url":"https://legatech.hr/blog/responsive-dizajn-sto-testirati/","name":"Responsive dizajn - što treba testirati? - Legatech","description":"Responsive dizajn znači da se web prilagođava različitim veličinama ekrana. To zvuči jednostavno. Desktop verzija ima tri stupca. Na tabletu dva. Na mobitelu…","inLanguage":"hr-HR","isPartOf":{"@id":"https://legatech.hr/#website"},"publisher":{"@id":"https://legatech.hr/#organization"},"breadcrumb":{"@id":"https://legatech.hr/blog/responsive-dizajn-sto-testirati/#breadcrumb"},"mainEntity":{"@id":"https://legatech.hr/blog/responsive-dizajn-sto-testirati/#article"}},{"@context":"https://schema.org","@type":"Organization","@id":"https://legatech.hr/#organization","name":"Legatech","url":"https://legatech.hr/","logo":{"@type":"ImageObject","url":"https://legatech.hr/assets/legatech-brand/legatech-icon.png","width":512,"height":512}}]</script><link rel="preload" href="/assets/fonts/barlow-condensed-bold.e476562ec9c1.woff2" as="font" type="font/woff2" crossorigin=""><link rel="preload" href="/homepage-concept/assets/manrope-latin.woff2" as="font" type="font/woff2" crossorigin=""><link rel="preload" href="/homepage-concept/assets/manrope-latin-ext.woff2" as="font" type="font/woff2" crossorigin=""><link rel="stylesheet" href="/accessibility-expressive.css"></head><body class="expressive-blog blog-article"><a class="skip-link" href="#blog-main">Preskočite na sadržaj</a><header class="editorial-header" id="vrh"><div class="container editorial-header-inner"><a class="editorial-brand" aria-label="Legatech, naslovna stranica" href="/"><img alt="Legatech" loading="eager" width="164" height="41" decoding="async" src="/assets/legatech-brand/legatech-black.svg"></a><button class="editorial-menu-toggle" type="button" aria-label="Otvori izbornik" aria-controls="editorial-nav" aria-expanded="false"><span></span><span></span></button><nav class="editorial-nav" id="editorial-nav" data-open="false" aria-label="Glavna navigacija"><div class="editorial-services"><button class="editorial-services-toggle" type="button" aria-expanded="false" aria-controls="editorial-services-menu">Usluge <span class="editorial-chevron" aria-hidden="true"></span></button><div class="editorial-services-menu" id="editorial-services-menu" hidden=""><a href="/izrada-web-stranica-cijena/"><span>01</span><strong>Izrada web stranica</strong><small>Profesionalne stranice koje pretvaraju posjete u upite.</small></a><a href="/seo-optimizacija-cijena/"><span>02</span><strong>SEO optimizacija</strong><small>Veća vidljivost za relevantna pretraživanja.</small></a><a href="/izrada-web-trgovina/"><span>03</span><strong>Izrada web trgovina</strong><small>Jednostavniji put od proizvoda do kupnje.</small></a><a href="/odrzavanje-web-stranica/"><span>04</span><strong>Održavanje web stranica</strong><small>Siguran, ažuran i pouzdan web.</small></a></div></div><a href="/cjenik/">Cjenik</a><a href="/blog/" aria-current="location">Blog</a><a href="/o-nama/">O nama</a><a href="/kontakt/">Kontakt</a></nav><a class="editorial-header-cta" href="/kontakt/">Zatražite ponudu <span aria-hidden="true">↗</span></a></div></header><main id="blog-main" tabindex="-1"><article><header class="blog-post-hero"><div class="container"><a class="blog-breadcrumb" href="/blog/">← Svi članci</a><div class="blog-meta"><span>Izrada web stranica</span><time datetime="2026-09-05T16:40:56+00:00">5. rujna 2026.</time><span>16<!-- --> min čitanja</span><span>marijan</span></div><h1>Responsive dizajn – što treba testirati?</h1><p class="blog-post-deck">Responsive dizajn znači da se web prilagođava različitim veličinama ekrana. To zvuči jednostavno. Desktop verzija ima tri stupca. Na tabletu dva. Na mobitelu jedan. Gotovo. U praksi nije tako.</p></div></header><div class="container blog-reading"><aside class="blog-contents" aria-labelledby="contents-title"><details class="blog-contents-disclosure" open=""><summary><h2 id="contents-title">U ovom vodiču</h2></summary><nav aria-label="Sadržaj članka"><a href="#nije-dovoljno-smanjiti-desktop">Nije dovoljno smanjiti desktop</a><a href="#testirajte-sirinu-ne-uredaj">Testirajte širinu, ne uređaj</a><a href="#breakpoint-nije-uredaj">Breakpoint nije uređaj</a><a href="#resize-test">Resize test</a><a href="#testirajte-hero">Testirajte hero</a><a href="#dugi-naslovi">Dugi naslovi</a><a href="#hrvatski-tekst">Hrvatski tekst</a><a href="#navigacija">Navigacija</a><a href="#mobile-menu">Mobile menu</a><a href="#sticky-header">Sticky header</a></nav></details></aside><div class="blog-prose">
+<p class="wp-block-paragraph">Responsive dizajn znači da se web prilagođava različitim veličinama ekrana.</p>
+
+
+
+<p class="wp-block-paragraph">To zvuči jednostavno.</p>
+
+
+
+<p class="wp-block-paragraph">Desktop verzija ima tri stupca.</p>
+
+
+
+<p class="wp-block-paragraph">Na tabletu dva.</p>
+
+
+
+<p class="wp-block-paragraph">Na mobitelu jedan.</p>
+
+
+
+<p class="wp-block-paragraph">Gotovo.</p>
+
+
+
+<p class="wp-block-paragraph">U praksi nije tako.</p>
+
+
+
+<p class="wp-block-paragraph">Responsive web nije kvalitetan samo zato što ništa ne izlazi izvan ekrana.</p>
+
+
+
+<p class="wp-block-paragraph">Treba provjeriti:</p>
+
+
+
+<ul class="wp-block-list">
+<li>redoslijed sadržaja</li>
+
+
+
+<li>navigaciju</li>
+
+
+
+<li>CTA-ove</li>
+
+
+
+<li>forme</li>
+
+
+
+<li>tipografiju</li>
+
+
+
+<li>slike</li>
+
+
+
+<li>tablice</li>
+
+
+
+<li>modale</li>
+
+
+
+<li>interaktivne elemente</li>
+
+
+
+<li>različite visine i širine ekrana</li>
+</ul>
+
+
+
+<p class="wp-block-paragraph">Dobar responsive dizajn znači da korisnik može normalno koristiti web bez obzira na uređaj.</p>
+
+
+
+<p class="wp-block-paragraph">Ne samo da ga može otvoriti.</p>
+
+
+
+<h2 class="wp-block-heading" id="nije-dovoljno-smanjiti-desktop">Nije dovoljno smanjiti desktop</h2>
+
+
+
+<p class="wp-block-paragraph">Jedna od najčešćih grešaka je prvo napraviti desktop stranicu, a zatim sve elemente samo smanjivati dok ne stanu na mobitel.</p>
+
+
+
+<p class="wp-block-paragraph">Rezultat može tehnički biti responsive.</p>
+
+
+
+<p class="wp-block-paragraph">Ali korisnički put često ostane prilagođen velikom ekranu.</p>
+
+
+
+<p class="wp-block-paragraph">Primjer:</p>
+
+
+
+<p class="wp-block-paragraph">Na desktopu hero sadrži:</p>
+
+
+
+<ul class="wp-block-list">
+<li>veliki naslov</li>
+
+
+
+<li>podnaslov</li>
+
+
+
+<li>dva CTA-a</li>
+
+
+
+<li>ilustraciju</li>
+
+
+
+<li>nekoliko trust elemenata</li>
+</ul>
+
+
+
+<p class="wp-block-paragraph">Sve stane u jedan ekran.</p>
+
+
+
+<p class="wp-block-paragraph">Na mobitelu isti sadržaj može zauzeti tri ili četiri ekrana.</p>
+
+
+
+<p class="wp-block-paragraph">Korisnik glavnu uslugu vidi odmah, ali sadržaj nakon hero sekcije tek nakon dugog scrolla.</p>
+
+
+
+<p class="wp-block-paragraph">Responsive dizajn zato zahtijeva ponovno razmišljanje o prioritetima.</p>
+
+
+
+<p class="wp-block-paragraph">O tome detaljnije govorimo u vodiču <a href="/blog/mobile-first-dizajn/">što je mobile-first dizajn</a>.</p>
+
+
+
+<h2 class="wp-block-heading" id="testirajte-sirinu-ne-uredaj">Testirajte širinu, ne uređaj</h2>
+
+
+
+<p class="wp-block-paragraph">Često ćete čuti:</p>
+
+
+
+<blockquote class="wp-block-quote is-layout-flow wp-block-quote-is-layout-flow">
+<p class="wp-block-paragraph">Treba testirati iPhone, Samsung i tablet.</p>
+</blockquote>
+
+
+
+<p class="wp-block-paragraph">To ima smisla.</p>
+
+
+
+<p class="wp-block-paragraph">Ali još važnije je testirati ponašanje layouta kroz različite širine.</p>
+
+
+
+<p class="wp-block-paragraph">Problem se može pojaviti na 912 px širine, iako:</p>
+
+
+
+<ul class="wp-block-list">
+<li>1024 px izgleda dobro</li>
+
+
+
+<li>768 px izgleda dobro</li>
+</ul>
+
+
+
+<p class="wp-block-paragraph">Responsive dizajn ne sastoji se od nekoliko statičnih screenshotova.</p>
+
+
+
+<p class="wp-block-paragraph">Layout mora funkcionirati između breakpointa.</p>
+
+
+
+<h2 class="wp-block-heading" id="breakpoint-nije-uredaj">Breakpoint nije uređaj</h2>
+
+
+
+<p class="wp-block-paragraph">Breakpoint predstavlja točku na kojoj se layout mijenja.</p>
+
+
+
+<p class="wp-block-paragraph">Primjer:</p>
+
+
+
+<pre class="wp-block-code"><code>Desktop
+↓
+1200 px
+
+Tablet
+↓
+768 px
+
+Mobile
+</code></pre>
+
+
+
+<p class="wp-block-paragraph">Ali 768 px nije “tablet” u fizičkom smislu.</p>
+
+
+
+<p class="wp-block-paragraph">To je samo širina pri kojoj smo odlučili promijeniti layout.</p>
+
+
+
+<p class="wp-block-paragraph">Dobar breakpoint treba proizlaziti iz sadržaja.</p>
+
+
+
+<p class="wp-block-paragraph">Ako navigacija više ne stane na 940 px, možda se upravo tamo treba promijeniti.</p>
+
+
+
+<p class="wp-block-paragraph">Nema razloga čekati proizvoljnih 768 px samo zato što ih framework koristi kao default.</p>
+
+
+
+<h2 class="wp-block-heading" id="resize-test">Resize test</h2>
+
+
+
+<p class="wp-block-paragraph">Jedan od najjednostavnijih testova je ručno mijenjati širinu browsera.</p>
+
+
+
+<p class="wp-block-paragraph">Polako smanjujte ekran.</p>
+
+
+
+<p class="wp-block-paragraph">Gledajte trenutak kada:</p>
+
+
+
+<ul class="wp-block-list">
+<li>tekst počne loše lomiti</li>
+
+
+
+<li>navigacija postane tijesna</li>
+
+
+
+<li>kartice postanu preuske</li>
+
+
+
+<li>CTA-i se sudare</li>
+
+
+
+<li>elementi počnu izlaziti iz viewporta</li>
+</ul>
+
+
+
+<p class="wp-block-paragraph">Tako možete pronaći probleme između standardnih breakpointa.</p>
+
+
+
+<h2 class="wp-block-heading" id="testirajte-hero">Testirajte hero</h2>
+
+
+
+<p class="wp-block-paragraph">Hero je često najkompleksnija sekcija stranice.</p>
+
+
+
+<p class="wp-block-paragraph">Treba provjeriti:</p>
+
+
+
+<ul class="wp-block-list">
+<li>dužinu H1-a</li>
+
+
+
+<li>podnaslov</li>
+
+
+
+<li>CTA gumbe</li>
+
+
+
+<li>fotografiju</li>
+
+
+
+<li>vertikalni razmak</li>
+
+
+
+<li>redoslijed elemenata</li>
+</ul>
+
+
+
+<p class="wp-block-paragraph">Na desktopu može raditi:</p>
+
+
+
+<p class="wp-block-paragraph"><strong>tekst lijevo + slika desno</strong></p>
+
+
+
+<p class="wp-block-paragraph">Na mobitelu treba odlučiti:</p>
+
+
+
+<p class="wp-block-paragraph"><strong>tekst pa slika</strong></p>
+
+
+
+<p class="wp-block-paragraph">ili:</p>
+
+
+
+<p class="wp-block-paragraph"><strong>slika pa tekst</strong></p>
+
+
+
+<p class="wp-block-paragraph">Najčešće glavna poruka treba imati prednost.</p>
+
+
+
+<h2 class="wp-block-heading" id="dugi-naslovi">Dugi naslovi</h2>
+
+
+
+<p class="wp-block-paragraph">Testiranje samo kratkog placeholder naslova može stvoriti lažni osjećaj sigurnosti.</p>
+
+
+
+<p class="wp-block-paragraph">Primjer:</p>
+
+
+
+<p class="wp-block-paragraph"><strong>SEO usluge</strong></p>
+
+
+
+<p class="wp-block-paragraph">stane gotovo svugdje.</p>
+
+
+
+<p class="wp-block-paragraph">Ali pravi H1 može biti:</p>
+
+
+
+<p class="wp-block-paragraph"><strong>SEO optimizacija za male i srednje tvrtke</strong></p>
+
+
+
+<p class="wp-block-paragraph">Na užem ekranu ponašanje je potpuno drugačije.</p>
+
+
+
+<p class="wp-block-paragraph">Zato layout treba testirati sa stvarnim sadržajem.</p>
+
+
+
+<p class="wp-block-paragraph">Ne samo s idealnim demo tekstom.</p>
+
+
+
+<h2 class="wp-block-heading" id="hrvatski-tekst">Hrvatski tekst</h2>
+
+
+
+<p class="wp-block-paragraph">Ovo je posebno važno kod hrvatskog jezika.</p>
+
+
+
+<p class="wp-block-paragraph">Riječi često mogu biti duže nego u dizajnerskom placeholder tekstu na engleskom.</p>
+
+
+
+<p class="wp-block-paragraph">Primjer:</p>
+
+
+
+<p class="wp-block-paragraph"><strong>održavanje web stranica</strong></p>
+
+
+
+<p class="wp-block-paragraph">ili:</p>
+
+
+
+<p class="wp-block-paragraph"><strong>optimizacija za tražilice</strong></p>
+
+
+
+<p class="wp-block-paragraph">mogu napraviti potpuno drugačiji prijelom.</p>
+
+
+
+<p class="wp-block-paragraph">Ako je dizajn napravljen s:</p>
+
+
+
+<blockquote class="wp-block-quote is-layout-flow wp-block-quote-is-layout-flow">
+<p class="wp-block-paragraph">Learn more</p>
+</blockquote>
+
+
+
+<p class="wp-block-paragraph">treba provjeriti što se događa kada stvarni CTA postane:</p>
+
+
+
+<blockquote class="wp-block-quote is-layout-flow wp-block-quote-is-layout-flow">
+<p class="wp-block-paragraph">Dogovorite besplatne konzultacije</p>
+</blockquote>
+
+
+
+<h2 class="wp-block-heading" id="navigacija">Navigacija</h2>
+
+
+
+<p class="wp-block-paragraph">Desktop navigacija često je prvi element koji se mora mijenjati.</p>
+
+
+
+<p class="wp-block-paragraph">Treba provjeriti:</p>
+
+
+
+<ul class="wp-block-list">
+<li>koliko stavki stane</li>
+
+
+
+<li>što se događa s dugim nazivima</li>
+
+
+
+<li>kada se aktivira mobile menu</li>
+
+
+
+<li>je li CTA i dalje dostupan</li>
+
+
+
+<li>rade li podizbornici</li>
+</ul>
+
+
+
+<p class="wp-block-paragraph">Ako se logo, menu i CTA počnu gurati jedni u druge, breakpoint je vjerojatno postavljen prekasno.</p>
+
+
+
+<h2 class="wp-block-heading" id="mobile-menu">Mobile menu</h2>
+
+
+
+<p class="wp-block-paragraph">Hamburger menu treba zasebno testirati.</p>
+
+
+
+<p class="wp-block-paragraph">Provjerite:</p>
+
+
+
+<ul class="wp-block-list">
+<li>otvara li se</li>
+
+
+
+<li>zatvara li se</li>
+
+
+
+<li>radi li klik izvan menija</li>
+
+
+
+<li>postoji li jasan close button</li>
+
+
+
+<li>može li se scrollati</li>
+
+
+
+<li>rade li dropdowni</li>
+
+
+
+<li>zatvara li se nakon klika na link</li>
+</ul>
+
+
+
+<p class="wp-block-paragraph">Posebno provjerite što se događa ako menu ima više sadržaja od visine ekrana.</p>
+
+
+
+<p class="wp-block-paragraph">Korisnik mora moći doći do zadnje stavke.</p>
+
+
+
+<h2 class="wp-block-heading" id="sticky-header">Sticky header</h2>
+
+
+
+<p class="wp-block-paragraph">Sticky header može biti koristan.</p>
+
+
+
+<p class="wp-block-paragraph">Ali na manjem ekranu lako zauzme previše prostora.</p>
+
+
+
+<p class="wp-block-paragraph">Ako header ima:</p>
+
+
+
+<ul class="wp-block-list">
+<li>logo</li>
+
+
+
+<li>CTA</li>
+
+
+
+<li>hamburger</li>
+
+
+
+<li>dodatnu top traku</li>
+</ul>
+
+
+
+<p class="wp-block-paragraph">može zauzeti značajan dio ekrana.</p>
+
+
+
+<p class="wp-block-paragraph">Provjerite i što se događa tijekom scrolla.</p>
+
+
+
+<p class="wp-block-paragraph">Header ne bi trebao:</p>
+
+
+
+<ul class="wp-block-list">
+<li>treperiti</li>
+
+
+
+<li>skakati</li>
+
+
+
+<li>prekrivati anchor sadržaj</li>
+</ul>
+
+
+
+<h2 class="wp-block-heading" id="cta-i">CTA-i</h2>
+
+
+
+<p class="wp-block-paragraph">CTA gumbe treba testirati na više širina.</p>
+
+
+
+<p class="wp-block-paragraph">Problem često nastane kada su dva gumba u istom redu.</p>
+
+
+
+<p class="wp-block-paragraph">Primjer:</p>
+
+
+
+<p class="wp-block-paragraph"><strong>Zatražite ponudu</strong></p>
+
+
+
+<p class="wp-block-paragraph"><strong>Dogovorite besplatne konzultacije</strong></p>
+
+
+
+<p class="wp-block-paragraph">Na širokom desktopu izgledaju dobro.</p>
+
+
+
+<p class="wp-block-paragraph">Na manjem laptopu možda više ne stanu.</p>
+
+
+
+<p class="wp-block-paragraph">Na mobitelu ih je često bolje postaviti vertikalno.</p>
+
+
+
+<p class="wp-block-paragraph">Više o hijerarhiji CTA-ova možete pronaći u članku <a href="/blog/gdje-postaviti-cta/">gdje postaviti CTA na web stranici</a>.</p>
+
+
+
+<h2 class="wp-block-heading" id="klikabilna-povrsina">Klikabilna površina</h2>
+
+
+
+<p class="wp-block-paragraph">Na desktopu korisnik koristi precizan miš.</p>
+
+
+
+<p class="wp-block-paragraph">Na mobitelu koristi prst.</p>
+
+
+
+<p class="wp-block-paragraph">Zato treba testirati:</p>
+
+
+
+<ul class="wp-block-list">
+<li>menu stavke</li>
+
+
+
+<li>gumbe</li>
+
+
+
+<li>ikone</li>
+
+
+
+<li>checkboxove</li>
+
+
+
+<li>slider kontrole</li>
+
+
+
+<li>accordion strelice</li>
+</ul>
+
+
+
+<p class="wp-block-paragraph">Mala ikona može izgledati dovoljno velika vizualno, ali touch target može biti premalen.</p>
+
+
+
+<h2 class="wp-block-heading" id="hover">Hover</h2>
+
+
+
+<p class="wp-block-paragraph">Element koji ovisi samo o hoveru neće raditi isto na touch uređaju.</p>
+
+
+
+<p class="wp-block-paragraph">Primjer:</p>
+
+
+
+<p class="wp-block-paragraph">Kartica prikazuje CTA samo kada korisnik prijeđe mišem preko nje.</p>
+
+
+
+<p class="wp-block-paragraph">Na mobitelu nema klasičnog hover ponašanja.</p>
+
+
+
+<p class="wp-block-paragraph">Važan sadržaj ne smije biti dostupan samo na hover.</p>
+
+
+
+<h2 class="wp-block-heading" id="kartice">Kartice</h2>
+
+
+
+<p class="wp-block-paragraph">Grid s karticama često izgleda ovako:</p>
+
+
+
+<h3 class="wp-block-heading" id="desktop">Desktop</h3>
+
+
+
+<p class="wp-block-paragraph">4 kartice u redu.</p>
+
+
+
+<h3 class="wp-block-heading" id="tablet">Tablet</h3>
+
+
+
+<p class="wp-block-paragraph">2 kartice.</p>
+
+
+
+<h3 class="wp-block-heading" id="mobile">Mobile</h3>
+
+
+
+<p class="wp-block-paragraph">1 kartica.</p>
+
+
+
+<p class="wp-block-paragraph">To je normalan početak.</p>
+
+
+
+<p class="wp-block-paragraph">Ali treba provjeriti i:</p>
+
+
+
+<ul class="wp-block-list">
+<li>jesu li kartice iste visine</li>
+
+
+
+<li>što se događa s dugim naslovima</li>
+
+
+
+<li>koliko sadržaja imaju</li>
+
+
+
+<li>postaje li stranica predugačka</li>
+</ul>
+
+
+
+<p class="wp-block-paragraph">Ako 12 kartica na mobitelu postane 12 vrlo visokih blokova, možda treba promijeniti način prikaza sadržaja.</p>
+
+
+
+<h2 class="wp-block-heading" id="redoslijed-kartica">Redoslijed kartica</h2>
+
+
+
+<p class="wp-block-paragraph">CSS grid i flex mogu vizualno promijeniti redoslijed.</p>
+
+
+
+<p class="wp-block-paragraph">Treba paziti da redoslijed ostane logičan.</p>
+
+
+
+<p class="wp-block-paragraph">Korisnik koji koristi keyboard ili screen reader ne bi trebao dobiti potpuno drugačiji slijed od onoga što vidi na ekranu.</p>
+
+
+
+<p class="wp-block-paragraph">Responsive promjena treba očuvati smisao sadržaja.</p>
+
+
+
+<h2 class="wp-block-heading" id="tablice">Tablice</h2>
+
+
+
+<p class="wp-block-paragraph">Tablice su jedan od najčešćih problema.</p>
+
+
+
+<p class="wp-block-paragraph">Posebno:</p>
+
+
+
+<ul class="wp-block-list">
+<li>cjenici</li>
+
+
+
+<li>usporedbe paketa</li>
+
+
+
+<li>tehničke specifikacije</li>
+</ul>
+
+
+
+<p class="wp-block-paragraph">Na mobitelu tablica može biti preširoka.</p>
+
+
+
+<p class="wp-block-paragraph">Moguća rješenja su:</p>
+
+
+
+<ul class="wp-block-list">
+<li>horizontalni scroll</li>
+
+
+
+<li>kartice</li>
+
+
+
+<li>accordion</li>
+
+
+
+<li>pojednostavljena tablica</li>
+</ul>
+
+
+
+<p class="wp-block-paragraph">Treba testirati stvarne podatke.</p>
+
+
+
+<p class="wp-block-paragraph">Tablica s kratkim demo riječima možda stane.</p>
+
+
+
+<p class="wp-block-paragraph">Prava tablica s dugim nazivima neće.</p>
+
+
+
+<h2 class="wp-block-heading" id="cjenici">Cjenici</h2>
+
+
+
+<p class="wp-block-paragraph">Kod paketa treba provjeriti može li korisnik jednostavno usporediti:</p>
+
+
+
+<ul class="wp-block-list">
+<li>cijene</li>
+
+
+
+<li>karakteristike</li>
+
+
+
+<li>CTA</li>
+</ul>
+
+
+
+<p class="wp-block-paragraph">Ako su tri paketa na desktopu jedan pored drugoga, na mobitelu postaju jedan ispod drugoga.</p>
+
+
+
+<p class="wp-block-paragraph">Tada korisnik može zaboraviti što je sadržavao prvi paket dok dođe do trećeg.</p>
+
+
+
+<p class="wp-block-paragraph">Možda treba dodatno istaknuti ključne razlike.</p>
+
+
+
+<p class="wp-block-paragraph">Našu komercijalnu strukturu možete vidjeti na stranici <a href="/izrada-web-stranica-cijena/">izrada web stranica – cijena i paketi</a>.</p>
+
+
+
+<h2 class="wp-block-heading" id="slike">Slike</h2>
+
+
+
+<p class="wp-block-paragraph">Slika treba kvalitetno reagirati na promjenu širine.</p>
+
+
+
+<p class="wp-block-paragraph">Provjerite:</p>
+
+
+
+<ul class="wp-block-list">
+<li>mijenja li veličinu</li>
+
+
+
+<li>zadržava li proporcije</li>
+
+
+
+<li>cropa li važan sadržaj</li>
+
+
+
+<li>izlazi li iz containera</li>
+
+
+
+<li>učitava li odgovarajuću verziju</li>
+</ul>
+
+
+
+<p class="wp-block-paragraph">Posebno kod fotografija ljudi treba paziti da responsive crop ne odsiječe lice.</p>
+
+
+
+<p class="wp-block-paragraph">Tehničku optimizaciju detaljnije objašnjavamo u vodiču <a href="/blog/optimizacija-slika-za-web/">kako optimizirati slike za web</a>.</p>
+
+
+
+<h2 class="wp-block-heading" id="background-slike">Background slike</h2>
+
+
+
+<p class="wp-block-paragraph">Background slika može izgledati odlično na širokom desktopu.</p>
+
+
+
+<p class="wp-block-paragraph">Na uskom ekranu <code>cover</code> može odrezati vrlo velik dio fotografije.</p>
+
+
+
+<p class="wp-block-paragraph">Ako je važan subjekt na rubu slike, možda potpuno nestane.</p>
+
+
+
+<p class="wp-block-paragraph">Treba testirati:</p>
+
+
+
+<ul class="wp-block-list">
+<li>object position</li>
+
+
+
+<li>background position</li>
+
+
+
+<li>alternativni mobilni vizual</li>
+</ul>
+
+
+
+<p class="wp-block-paragraph">Nekad ima smisla koristiti drugu sliku za mobitel.</p>
+
+
+
+<h2 class="wp-block-heading" id="video">Video</h2>
+
+
+
+<p class="wp-block-paragraph">Responsive video mora zadržati pravilan omjer.</p>
+
+
+
+<p class="wp-block-paragraph">Čest problem je:</p>
+
+
+
+<ul class="wp-block-list">
+<li>overflow</li>
+
+
+
+<li>pogrešna visina</li>
+
+
+
+<li>crne trake</li>
+
+
+
+<li>video širi od containera</li>
+</ul>
+
+
+
+<p class="wp-block-paragraph">Embedded YouTube ili Vimeo sadržaj također treba provjeriti.</p>
+
+
+
+<p class="wp-block-paragraph">Iframe koji ima fiksnu širinu može lako slomiti mobilni layout.</p>
+
+
+
+<h2 class="wp-block-heading" id="forme">Forme</h2>
+
+
+
+<p class="wp-block-paragraph">Forma zahtijeva posebno testiranje.</p>
+
+
+
+<p class="wp-block-paragraph">Provjerite:</p>
+
+
+
+<ul class="wp-block-list">
+<li>jesu li inputi dovoljno široki</li>
+
+
+
+<li>stanu li labeli</li>
+
+
+
+<li>rade li error poruke</li>
+
+
+
+<li>postoji li horizontalni overflow</li>
+
+
+
+<li>može li korisnik normalno scrollati</li>
+
+
+
+<li>radi li submit</li>
+</ul>
+
+
+
+<p class="wp-block-paragraph">Polja koja su na desktopu u dva stupca na mobitelu najčešće trebaju postati jedan stupac.</p>
+
+
+
+<p class="wp-block-paragraph">Detaljnije smo to prošli u članku <a href="/blog/kako-napraviti-dobru-kontakt-formu/">kako napraviti dobru kontakt formu</a>.</p>
+
+
+
+<h2 class="wp-block-heading" id="tipkovnica-na-mobitelu">Tipkovnica na mobitelu</h2>
+
+
+
+<p class="wp-block-paragraph">Forma ne završava layoutom.</p>
+
+
+
+<p class="wp-block-paragraph">Treba otvoriti stvarni input i vidjeti što radi mobilna tipkovnica.</p>
+
+
+
+<p class="wp-block-paragraph">Provjerite:</p>
+
+
+
+<ul class="wp-block-list">
+<li>je li aktivno polje vidljivo</li>
+
+
+
+<li>scrolla li browser pravilno</li>
+
+
+
+<li>je li submit gumb dostupan</li>
+
+
+
+<li>zatvara li modal tipkovnica</li>
+
+
+
+<li>koristi li e-mail polje odgovarajuću tipkovnicu</li>
+</ul>
+
+
+
+<p class="wp-block-paragraph">To se često ne vidi u običnom responsive previewu.</p>
+
+
+
+<h2 class="wp-block-heading" id="modal">Modal</h2>
+
+
+
+<p class="wp-block-paragraph">Modal koji izgleda odlično na desktopu može na mobitelu postati neupotrebljiv.</p>
+
+
+
+<p class="wp-block-paragraph">Provjerite:</p>
+
+
+
+<ul class="wp-block-list">
+<li>stane li u viewport</li>
+
+
+
+<li>može li se scrollati</li>
+
+
+
+<li>je li close button vidljiv</li>
+
+
+
+<li>što radi tipkovnica</li>
+
+
+
+<li>postoji li sadržaj ispod donjeg ruba</li>
+</ul>
+
+
+
+<p class="wp-block-paragraph">Ako modal sadrži kompleksnu formu, zasebna stranica može biti bolje rješenje.</p>
+
+
+
+<h2 class="wp-block-heading" id="cookie-banner">Cookie banner</h2>
+
+
+
+<p class="wp-block-paragraph">Cookie banner obavezno testirajte na manjem ekranu.</p>
+
+
+
+<p class="wp-block-paragraph">Može se dogoditi da:</p>
+
+
+
+<ul class="wp-block-list">
+<li>zauzme gotovo cijeli ekran</li>
+
+
+
+<li>CTA-i nisu vidljivi</li>
+
+
+
+<li>korisnik ne može scrollati</li>
+
+
+
+<li>close ili settings gumb ne stanu</li>
+</ul>
+
+
+
+<p class="wp-block-paragraph">Element koji se pojavljuje svakom novom korisniku zaslužuje ozbiljno testiranje.</p>
+
+
+
+<h2 class="wp-block-heading" id="chat-widget">Chat widget</h2>
+
+
+
+<p class="wp-block-paragraph">Chat widget vrlo često izgleda bezazleno na desktopu.</p>
+
+
+
+<p class="wp-block-paragraph">Na mobitelu može prekrivati:</p>
+
+
+
+<ul class="wp-block-list">
+<li>CTA</li>
+
+
+
+<li>cookie banner</li>
+
+
+
+<li>formu</li>
+
+
+
+<li>sticky navigaciju</li>
+</ul>
+
+
+
+<p class="wp-block-paragraph">Treba provjeriti kako se ponaša zajedno s drugim fixed elementima.</p>
+
+
+
+<h2 class="wp-block-heading" id="horizontalni-overflow">Horizontalni overflow</h2>
+
+
+
+<p class="wp-block-paragraph">Jedan od najčešćih bugova je da cijela stranica može malo kliziti lijevo-desno.</p>
+
+
+
+<p class="wp-block-paragraph">Uzrok može biti:</p>
+
+
+
+<ul class="wp-block-list">
+<li>preširok element</li>
+
+
+
+<li>negativni margin</li>
+
+
+
+<li>transform</li>
+
+
+
+<li>slika</li>
+
+
+
+<li>tablica</li>
+
+
+
+<li>fiksna širina</li>
+</ul>
+
+
+
+<p class="wp-block-paragraph">Horizontalni scroll često je znak da neki responsive detalj nije dobro riješen.</p>
+
+
+
+<h2 class="wp-block-heading" id="fiksne-sirine">Fiksne širine</h2>
+
+
+
+<p class="wp-block-paragraph">Element poput:</p>
+
+
+
+<pre class="wp-block-code"><code>width: 700px
+</code></pre>
+
+
+
+<p class="wp-block-paragraph">može biti potpuno normalan na desktopu.</p>
+
+
+
+<p class="wp-block-paragraph">Na mobitelu širine 390 px neće.</p>
+
+
+
+<p class="wp-block-paragraph">Zato treba paziti gdje se koriste fiksne dimenzije.</p>
+
+
+
+<p class="wp-block-paragraph">Često je bolje koristiti:</p>
+
+
+
+<ul class="wp-block-list">
+<li>max-width</li>
+
+
+
+<li>width: 100%</li>
+
+
+
+<li>fleksibilne gridove</li>
+</ul>
+
+
+
+<p class="wp-block-paragraph">ovisno o elementu.</p>
+
+
+
+<h2 class="wp-block-heading" id="min-width">Min-width</h2>
+
+
+
+<p class="wp-block-paragraph">I <code>min-width</code> može nenamjerno slomiti layout.</p>
+
+
+
+<p class="wp-block-paragraph">Primjer:</p>
+
+
+
+<p class="wp-block-paragraph">Kartica ima minimalnu širinu od 450 px.</p>
+
+
+
+<p class="wp-block-paragraph">Sve izgleda normalno dok viewport ne padne ispod toga.</p>
+
+
+
+<p class="wp-block-paragraph">Tada cijela stranica dobije horizontalni overflow.</p>
+
+
+
+<p class="wp-block-paragraph">Ovakve probleme je lako pronaći resize testom.</p>
+
+
+
+<h2 class="wp-block-heading" id="dugi-url-ovi">Dugi URL-ovi</h2>
+
+
+
+<p class="wp-block-paragraph">Tekst također može napraviti overflow.</p>
+
+
+
+<p class="wp-block-paragraph">Posebno:</p>
+
+
+
+<ul class="wp-block-list">
+<li>dugi URL</li>
+
+
+
+<li>e-mail</li>
+
+
+
+<li>duga riječ</li>
+
+
+
+<li>kod</li>
+
+
+
+<li>ID</li>
+
+
+
+<li>tablični podatak</li>
+</ul>
+
+
+
+<p class="wp-block-paragraph">Treba testirati sadržaj koji se ne može prirodno prelomiti.</p>
+
+
+
+<p class="wp-block-paragraph">Kod blog članaka posebno pazite na code blockove.</p>
+
+
+
+<h2 class="wp-block-heading" id="code-blockovi">Code blockovi</h2>
+
+
+
+<p class="wp-block-paragraph">Kod ili terminal output može biti puno širi od mobilnog ekrana.</p>
+
+
+
+<p class="wp-block-paragraph">Najčešće je bolje omogućiti horizontalni scroll unutar code blocka.</p>
+
+
+
+<p class="wp-block-paragraph">Ne cijele stranice.</p>
+
+
+
+<p class="wp-block-paragraph">To zadržava layout stabilnim.</p>
+
+
+
+<h2 class="wp-block-heading" id="fontovi">Fontovi</h2>
+
+
+
+<p class="wp-block-paragraph">Responsive test treba uključiti stvarno učitavanje fontova.</p>
+
+
+
+<p class="wp-block-paragraph">Custom font može imati drugačije dimenzije od fallbacka.</p>
+
+
+
+<p class="wp-block-paragraph">To može promijeniti:</p>
+
+
+
+<ul class="wp-block-list">
+<li>broj redova naslova</li>
+
+
+
+<li>visinu gumba</li>
+
+
+
+<li>širinu navigacije</li>
+</ul>
+
+
+
+<p class="wp-block-paragraph">Više o tome pročitajte u članku <a href="/blog/kako-fontovi-utjecu-na-brzinu-weba/">kako fontovi utječu na brzinu weba</a>.</p>
+
+
+
+<h2 class="wp-block-heading" id="font-size">Font size</h2>
+
+
+
+<p class="wp-block-paragraph">Ne treba samo linearno smanjivati tipografiju.</p>
+
+
+
+<p class="wp-block-paragraph">H1 od 64 px na desktopu možda ne treba biti 24 px na mobitelu.</p>
+
+
+
+<p class="wp-block-paragraph">Treba pronaći veličinu koja:</p>
+
+
+
+<ul class="wp-block-list">
+<li>zadržava hijerarhiju</li>
+
+
+
+<li>stane na ekran</li>
+
+
+
+<li>ostane čitljiva</li>
+</ul>
+
+
+
+<p class="wp-block-paragraph">Fluid typography može pomoći, ali i nju treba testirati na rubnim širinama.</p>
+
+
+
+<h2 class="wp-block-heading" id="line-height">Line-height</h2>
+
+
+
+<p class="wp-block-paragraph">Ako se font smanji, a line-height ostane isti, naslov može izgledati previše razmaknuto.</p>
+
+
+
+<p class="wp-block-paragraph">Ako je line-height prenizak, višeredni naslov može izgledati zbijeno.</p>
+
+
+
+<p class="wp-block-paragraph">Zato responsive tipografija nije samo <code>font-size</code>.</p>
+
+
+
+<h2 class="wp-block-heading" id="prazan-prostor">Prazan prostor</h2>
+
+
+
+<p class="wp-block-paragraph">Desktop layout često koristi velike vertikalne razmake.</p>
+
+
+
+<p class="wp-block-paragraph">Na mobitelu isti spacing može proizvesti beskonačno dugu stranicu.</p>
+
+
+
+<p class="wp-block-paragraph">Primjer:</p>
+
+
+
+<p class="wp-block-paragraph">Desktop section padding:</p>
+
+
+
+<p class="wp-block-paragraph"><strong>120 px</strong></p>
+
+
+
+<p class="wp-block-paragraph">Na mobitelu možda ima više smisla:</p>
+
+
+
+<p class="wp-block-paragraph"><strong>64 px</strong></p>
+
+
+
+<p class="wp-block-paragraph">Ne treba sve proporcionalno smanjiti, ali ritam treba ponovno procijeniti.</p>
+
+
+
+<h2 class="wp-block-heading" id="premalo-prostora">Premalo prostora</h2>
+
+
+
+<p class="wp-block-paragraph">Ni druga krajnost nije dobra.</p>
+
+
+
+<p class="wp-block-paragraph">Ako sve stisnemo kako bi stranica bila kraća:</p>
+
+
+
+<ul class="wp-block-list">
+<li>tekst postaje zbijen</li>
+
+
+
+<li>CTA-i se dodiruju</li>
+
+
+
+<li>sekcije se teško razlikuju</li>
+</ul>
+
+
+
+<p class="wp-block-paragraph">Responsive dizajn treba zadržati dovoljno prostora za jasnoću.</p>
+
+
+
+<h2 class="wp-block-heading" id="footer">Footer</h2>
+
+
+
+<p class="wp-block-paragraph">Footer se često testira posljednji.</p>
+
+
+
+<p class="wp-block-paragraph">A može sadržavati:</p>
+
+
+
+<ul class="wp-block-list">
+<li>nekoliko stupaca</li>
+
+
+
+<li>linkove</li>
+
+
+
+<li>kontakt</li>
+
+
+
+<li>društvene mreže</li>
+
+
+
+<li>newsletter</li>
+
+
+
+<li>pravne informacije</li>
+</ul>
+
+
+
+<p class="wp-block-paragraph">Na mobitelu treba provjeriti:</p>
+
+
+
+<ul class="wp-block-list">
+<li>redoslijed</li>
+
+
+
+<li>razmake</li>
+
+
+
+<li>linkove</li>
+
+
+
+<li>dužinu sadržaja</li>
+</ul>
+
+
+
+<p class="wp-block-paragraph">Footer s pet stupaca često treba potpuno drugačiju strukturu.</p>
+
+
+
+<h2 class="wp-block-heading" id="accordioni">Accordioni</h2>
+
+
+
+<p class="wp-block-paragraph">Accordion treba testirati u otvorenom i zatvorenom stanju.</p>
+
+
+
+<p class="wp-block-paragraph">Provjerite:</p>
+
+
+
+<ul class="wp-block-list">
+<li>pomiče li sadržaj normalno</li>
+
+
+
+<li>može li se otvoriti više elemenata</li>
+
+
+
+<li>radi li animacija</li>
+
+
+
+<li>ostaje li naslov vidljiv</li>
+
+
+
+<li>može li se koristiti touchom</li>
+</ul>
+
+
+
+<p class="wp-block-paragraph">FAQ može izgledati dobro zatvoren, a potpuno se raspasti kada se otvori dugačak odgovor.</p>
+
+
+
+<h2 class="wp-block-heading" id="slider">Slider</h2>
+
+
+
+<p class="wp-block-paragraph">Carousel treba testirati i bez miša.</p>
+
+
+
+<p class="wp-block-paragraph">Provjerite:</p>
+
+
+
+<ul class="wp-block-list">
+<li>swipe</li>
+
+
+
+<li>touch</li>
+
+
+
+<li>strelice</li>
+
+
+
+<li>dots</li>
+
+
+
+<li>veličinu sadržaja</li>
+
+
+
+<li>visinu slajdova</li>
+</ul>
+
+
+
+<p class="wp-block-paragraph">Ako slajdovi imaju različitu količinu teksta, cijeli layout može stalno mijenjati visinu.</p>
+
+
+
+<p class="wp-block-paragraph">To nije uvijek dobro iskustvo.</p>
+
+
+
+<h2 class="wp-block-heading" id="landscape">Landscape</h2>
+
+
+
+<p class="wp-block-paragraph">Mobilni test često znači samo portrait.</p>
+
+
+
+<p class="wp-block-paragraph">Ali vrijedi okrenuti uređaj i u landscape.</p>
+
+
+
+<p class="wp-block-paragraph">Tada se mijenja:</p>
+
+
+
+<ul class="wp-block-list">
+<li>visina viewporta</li>
+
+
+
+<li>navigacija</li>
+
+
+
+<li>modal</li>
+
+
+
+<li>sticky elementi</li>
+</ul>
+
+
+
+<p class="wp-block-paragraph">Posebno problemi nastaju kod elemenata koji imaju:</p>
+
+
+
+<p class="wp-block-paragraph"><strong>height: 100vh</strong></p>
+
+
+
+<p class="wp-block-paragraph">na mobilnim browserima.</p>
+
+
+
+<h2 class="wp-block-heading" id="visina-ekrana">Visina ekrana</h2>
+
+
+
+<p class="wp-block-paragraph">Dva mobitela mogu imati jednaku širinu, ali različitu visinu.</p>
+
+
+
+<p class="wp-block-paragraph">Hero koji je dizajniran da točno stane u jedan viewport možda će na jednom uređaju izgledati dobro, a na drugom sakriti CTA.</p>
+
+
+
+<p class="wp-block-paragraph">Responsive testiranje zato ne bi trebalo gledati samo širinu.</p>
+
+
+
+<h2 class="wp-block-heading" id="browser-ui">Browser UI</h2>
+
+
+
+<p class="wp-block-paragraph">Mobilni browser ima vlastite kontrole.</p>
+
+
+
+<p class="wp-block-paragraph">Address bar se može:</p>
+
+
+
+<ul class="wp-block-list">
+<li>pojaviti</li>
+
+
+
+<li>sakriti</li>
+
+
+
+<li>promijeniti visinu viewporta</li>
+</ul>
+
+
+
+<p class="wp-block-paragraph">To može utjecati na fullscreen sekcije.</p>
+
+
+
+<p class="wp-block-paragraph">Elementi temeljeni na viewport height vrijednostima zaslužuju dodatno testiranje.</p>
+
+
+
+<h2 class="wp-block-heading" id="safari">Safari</h2>
+
+
+
+<p class="wp-block-paragraph">Safari, Chrome i Firefox ne renderiraju baš sve identično.</p>
+
+
+
+<p class="wp-block-paragraph">Posebno problemi mogu nastati s:</p>
+
+
+
+<ul class="wp-block-list">
+<li>formama</li>
+
+
+
+<li>sticky elementima</li>
+
+
+
+<li>viewportom</li>
+
+
+
+<li>fontovima</li>
+
+
+
+<li>CSS funkcionalnostima</li>
+</ul>
+
+
+
+<p class="wp-block-paragraph">Ne morate testirati svaki browser koji postoji.</p>
+
+
+
+<p class="wp-block-paragraph">Ali glavne browsere koje stvarno koriste vaši korisnici treba pokriti.</p>
+
+
+
+<h2 class="wp-block-heading" id="ios-i-android">iOS i Android</h2>
+
+
+
+<p class="wp-block-paragraph">Browser emulator u DevToolsima je odličan alat.</p>
+
+
+
+<p class="wp-block-paragraph">Ali ne zamjenjuje potpuno pravi uređaj.</p>
+
+
+
+<p class="wp-block-paragraph">Stvarni iPhone ili Android može otkriti probleme poput:</p>
+
+
+
+<ul class="wp-block-list">
+<li>ponašanja tipkovnice</li>
+
+
+
+<li>touch interakcija</li>
+
+
+
+<li>sticky elemenata</li>
+
+
+
+<li>scrolla</li>
+
+
+
+<li>browser UI-a</li>
+</ul>
+
+
+
+<p class="wp-block-paragraph">Zato barem osnovni smoke test treba napraviti i na stvarnom uređaju.</p>
+
+
+
+<h2 class="wp-block-heading" id="tablet-2">Tablet</h2>
+
+
+
+<p class="wp-block-paragraph">Tablet često ostane zaboravljen između desktopa i mobitela.</p>
+
+
+
+<p class="wp-block-paragraph">A upravo tu se mogu pojaviti čudni layouti.</p>
+
+
+
+<p class="wp-block-paragraph">Primjer:</p>
+
+
+
+<p class="wp-block-paragraph">desktop breakpoint još je aktivan, ali nema dovoljno mjesta za cijelu navigaciju.</p>
+
+
+
+<p class="wp-block-paragraph">Ili mobile layout već radi, ali elementi izgledaju previše rastegnuto na širokom tabletu.</p>
+
+
+
+<p class="wp-block-paragraph">Tablet zaslužuje vlastitu provjeru.</p>
+
+
+
+<h2 class="wp-block-heading" id="mali-laptop">Mali laptop</h2>
+
+
+
+<p class="wp-block-paragraph">Isto vrijedi za manje laptope.</p>
+
+
+
+<p class="wp-block-paragraph">Dizajn napravljen na monitoru od 1920 px može izgledati dobro.</p>
+
+
+
+<p class="wp-block-paragraph">Ali na laptopu širine oko 1366 px:</p>
+
+
+
+<ul class="wp-block-list">
+<li>hero možda postane tijesan</li>
+
+
+
+<li>menu se sudara</li>
+
+
+
+<li>četiri kartice više ne stanu dobro</li>
+</ul>
+
+
+
+<p class="wp-block-paragraph">Desktop nije jedna rezolucija.</p>
+
+
+
+<h2 class="wp-block-heading" id="zoom">Zoom</h2>
+
+
+
+<p class="wp-block-paragraph">Vrijedi testirati i browser zoom.</p>
+
+
+
+<p class="wp-block-paragraph">Korisnik može povećati prikaz.</p>
+
+
+
+<p class="wp-block-paragraph">Kod 200% zooma layout se može ponašati slično užem viewportu.</p>
+
+
+
+<p class="wp-block-paragraph">To je relevantno i za accessibility.</p>
+
+
+
+<p class="wp-block-paragraph">Ako web potpuno pukne kada korisnik poveća sadržaj, responsive implementacija nije dovoljno fleksibilna.</p>
+
+
+
+<h2 class="wp-block-heading" id="stvarni-sadrzaj">Stvarni sadržaj</h2>
+
+
+
+<p class="wp-block-paragraph">Jedno od najvažnijih pravila:</p>
+
+
+
+<p class="wp-block-paragraph"><strong>testirajte s pravim sadržajem.</strong></p>
+
+
+
+<p class="wp-block-paragraph">Ne samo:</p>
+
+
+
+<blockquote class="wp-block-quote is-layout-flow wp-block-quote-is-layout-flow">
+<p class="wp-block-paragraph">Lorem ipsum.</p>
+</blockquote>
+
+
+
+<p class="wp-block-paragraph">Pravi sadržaj ima:</p>
+
+
+
+<ul class="wp-block-list">
+<li>duge naslove</li>
+
+
+
+<li>kratke naslove</li>
+
+
+
+<li>različite slike</li>
+
+
+
+<li>različite cijene</li>
+
+
+
+<li>različite količine teksta</li>
+</ul>
+
+
+
+<p class="wp-block-paragraph">Layout treba podnijeti realne varijacije.</p>
+
+
+
+<h2 class="wp-block-heading" id="najduzi-moguci-sadrzaj">Najduži mogući sadržaj</h2>
+
+
+
+<p class="wp-block-paragraph">Kod komponenti testirajte i ekstrem.</p>
+
+
+
+<p class="wp-block-paragraph">Ako kartica obično ima naslov od tri riječi, probajte deset.</p>
+
+
+
+<p class="wp-block-paragraph">Ako CTA obično glasi:</p>
+
+
+
+<p class="wp-block-paragraph"><strong>Kontakt</strong></p>
+
+
+
+<p class="wp-block-paragraph">testirajte:</p>
+
+
+
+<p class="wp-block-paragraph"><strong>Dogovorite besplatne konzultacije</strong></p>
+
+
+
+<p class="wp-block-paragraph">Ako layout tada potpuno pukne, komponenta nije dovoljno robusna.</p>
+
+
+
+<h2 class="wp-block-heading" id="najkraci-sadrzaj">Najkraći sadržaj</h2>
+
+
+
+<p class="wp-block-paragraph">I vrlo kratak sadržaj može otkriti problem.</p>
+
+
+
+<p class="wp-block-paragraph">Ako jedna kartica ima tri odlomka, a druga samo jednu riječ, je li raspored i dalje dobar?</p>
+
+
+
+<p class="wp-block-paragraph">Responsive komponenta treba funkcionirati u različitim sadržajnim scenarijima.</p>
+
+
+
+<h2 class="wp-block-heading" id="stanja-greske">Stanja greške</h2>
+
+
+
+<p class="wp-block-paragraph">Nemojte testirati samo idealno stanje.</p>
+
+
+
+<p class="wp-block-paragraph">Provjerite:</p>
+
+
+
+<ul class="wp-block-list">
+<li>error poruke</li>
+
+
+
+<li>prazne rezultate</li>
+
+
+
+<li>loading</li>
+
+
+
+<li>form validation</li>
+
+
+
+<li>404</li>
+</ul>
+
+
+
+<p class="wp-block-paragraph">Error poruka od dvije linije može na mobitelu promijeniti cijeli layout forme.</p>
+
+
+
+<p class="wp-block-paragraph">To treba biti očekivano.</p>
+
+
+
+<h2 class="wp-block-heading" id="loading-state">Loading state</h2>
+
+
+
+<p class="wp-block-paragraph">Skeleton, spinner ili loader također mora biti responsive.</p>
+
+
+
+<p class="wp-block-paragraph">Ne treba doći do situacije da loading placeholder ima desktop širinu veću od mobilnog ekrana.</p>
+
+
+
+<p class="wp-block-paragraph">I loading je dio UX-a.</p>
+
+
+
+<h2 class="wp-block-heading" id="empty-state">Empty state</h2>
+
+
+
+<p class="wp-block-paragraph">Ako nema:</p>
+
+
+
+<ul class="wp-block-list">
+<li>projekata</li>
+
+
+
+<li>proizvoda</li>
+
+
+
+<li>rezultata pretrage</li>
+</ul>
+
+
+
+<p class="wp-block-paragraph">što korisnik vidi?</p>
+
+
+
+<p class="wp-block-paragraph">Empty state treba također raditi na svim veličinama.</p>
+
+
+
+<p class="wp-block-paragraph">Ne samo glavna idealna verzija stranice.</p>
+
+
+
+<h2 class="wp-block-heading" id="accessibility">Accessibility</h2>
+
+
+
+<p class="wp-block-paragraph">Responsive i accessibility često se preklapaju.</p>
+
+
+
+<p class="wp-block-paragraph">Treba provjeriti:</p>
+
+
+
+<ul class="wp-block-list">
+<li>keyboard navigaciju</li>
+
+
+
+<li>focus stanje</li>
+
+
+
+<li>zoom</li>
+
+
+
+<li>kontrast</li>
+
+
+
+<li>redoslijed sadržaja</li>
+</ul>
+
+
+
+<p class="wp-block-paragraph">Posebno pazite da responsive promjene ne sakriju važan sadržaj korisnicima assistive tehnologija.</p>
+
+
+
+<h2 class="wp-block-heading" id="nemojte-samo-sakriti-problem">Nemojte samo sakriti problem</h2>
+
+
+
+<p class="wp-block-paragraph">Čest responsive “fix” je:</p>
+
+
+
+<pre class="wp-block-code"><code>display: none;
+</code></pre>
+
+
+
+<p class="wp-block-paragraph">Element ne stane?</p>
+
+
+
+<p class="wp-block-paragraph">Sakrij ga na mobitelu.</p>
+
+
+
+<p class="wp-block-paragraph">To ponekad ima smisla za čistu dekoraciju.</p>
+
+
+
+<p class="wp-block-paragraph">Ali ako se radi o:</p>
+
+
+
+<ul class="wp-block-list">
+<li>cijeni</li>
+
+
+
+<li>CTA-u</li>
+
+
+
+<li>važnoj informaciji</li>
+</ul>
+
+
+
+<p class="wp-block-paragraph">to nije pravo rješenje.</p>
+
+
+
+<p class="wp-block-paragraph">Mobilni korisnik ne treba dobiti lošiju informaciju samo zato što ima manji ekran.</p>
+
+
+
+<h2 class="wp-block-heading" id="testirajte-performanse">Testirajte performanse</h2>
+
+
+
+<p class="wp-block-paragraph">Responsive dizajn i performanse također su povezani.</p>
+
+
+
+<p class="wp-block-paragraph">Ako na mobitelu vizualno sakrijete veliku desktop sliku CSS-om, browser ju možda svejedno preuzima.</p>
+
+
+
+<p class="wp-block-paragraph">Korisnik tada plaća performance cijenu elementa kojeg uopće ne vidi.</p>
+
+
+
+<p class="wp-block-paragraph">Responsive implementacija treba kontrolirati i resurse.</p>
+
+
+
+<p class="wp-block-paragraph">Širu performance sliku možete pronaći u članku <a href="/blog/brzina-web-stranice/">kako brzina weba utječe na korisnike i SEO</a>.</p>
+
+
+
+<h2 class="wp-block-heading" id="devtools-je-pocetak">DevTools je početak</h2>
+
+
+
+<p class="wp-block-paragraph">Browser DevTools omogućuje brzo testiranje velikog broja širina.</p>
+
+
+
+<p class="wp-block-paragraph">Koristan je za:</p>
+
+
+
+<ul class="wp-block-list">
+<li>breakpointove</li>
+
+
+
+<li>overflow</li>
+
+
+
+<li>layout</li>
+
+
+
+<li>osnovni touch preview</li>
+</ul>
+
+
+
+<p class="wp-block-paragraph">To treba biti dio svakodnevnog razvoja.</p>
+
+
+
+<p class="wp-block-paragraph">Ali nije jedini test.</p>
+
+
+
+<h2 class="wp-block-heading" id="pravi-uredaji">Pravi uređaji</h2>
+
+
+
+<p class="wp-block-paragraph">Prije objave web bih barem otvorio na:</p>
+
+
+
+<ul class="wp-block-list">
+<li>jednom iPhoneu</li>
+
+
+
+<li>jednom Androidu</li>
+
+
+
+<li>desktopu</li>
+
+
+
+<li>laptopu ili tabletu ako je moguće</li>
+</ul>
+
+
+
+<p class="wp-block-paragraph">Ne treba kupiti laboratorij s 50 uređaja.</p>
+
+
+
+<p class="wp-block-paragraph">Ali stvarni uređaji otkrivaju probleme koje emulacija može propustiti.</p>
+
+
+
+<h2 class="wp-block-heading" id="browserstack-i-slicni-alati">BrowserStack i slični alati</h2>
+
+
+
+<p class="wp-block-paragraph">Kod ozbiljnijih projekata postoje servisi za udaljeno testiranje velikog broja:</p>
+
+
+
+<ul class="wp-block-list">
+<li>browsera</li>
+
+
+
+<li>operativnih sustava</li>
+
+
+
+<li>uređaja</li>
+</ul>
+
+
+
+<p class="wp-block-paragraph">To može biti korisno kada je potrebna šira kompatibilnost.</p>
+
+
+
+<p class="wp-block-paragraph">Za jednostavan mali poslovni web možda nije potrebno svaki put.</p>
+
+
+
+<p class="wp-block-paragraph">Opseg testiranja treba odgovarati važnosti projekta.</p>
+
+
+
+<h2 class="wp-block-heading" id="responsive-checklist">Responsive checklist</h2>
+
+
+
+<p class="wp-block-paragraph">Prije objave provjerite barem:</p>
+
+
+
+<h3 class="wp-block-heading" id="layout">Layout</h3>
+
+
+
+<ul class="wp-block-list">
+<li>nema horizontalnog scrolla</li>
+
+
+
+<li>sekcije se pravilno slažu</li>
+
+
+
+<li>breakpointovi imaju smisla</li>
+</ul>
+
+
+
+<h3 class="wp-block-heading" id="tipografija">Tipografija</h3>
+
+
+
+<ul class="wp-block-list">
+<li>naslovi ne pucaju</li>
+
+
+
+<li>tekst je čitljiv</li>
+
+
+
+<li>razmaci su dobri</li>
+</ul>
+
+
+
+<h3 class="wp-block-heading" id="navigacija-2">Navigacija</h3>
+
+
+
+<ul class="wp-block-list">
+<li>desktop menu radi</li>
+
+
+
+<li>mobile menu radi</li>
+
+
+
+<li>dropdowni su dostupni</li>
+</ul>
+
+
+
+<h3 class="wp-block-heading" id="cta">CTA</h3>
+
+
+
+<ul class="wp-block-list">
+<li>gumbi stanu</li>
+
+
+
+<li>lako ih je kliknuti</li>
+
+
+
+<li>nisu prekriveni</li>
+</ul>
+
+
+
+<h3 class="wp-block-heading" id="slike-2">Slike</h3>
+
+
+
+<ul class="wp-block-list">
+<li>pravilno se skaliraju</li>
+
+
+
+<li>crop je dobar</li>
+
+
+
+<li>ne učitavaju se nepotrebno velike verzije</li>
+</ul>
+
+
+
+<h3 class="wp-block-heading" id="forme-2">Forme</h3>
+
+
+
+<ul class="wp-block-list">
+<li>sva polja rade</li>
+
+
+
+<li>error poruke stanu</li>
+
+
+
+<li>tipkovnica ne blokira formu</li>
+</ul>
+
+
+
+<h3 class="wp-block-heading" id="komponente">Komponente</h3>
+
+
+
+<ul class="wp-block-list">
+<li>accordioni rade</li>
+
+
+
+<li>modali rade</li>
+
+
+
+<li>slideri rade</li>
+
+
+
+<li>tablice su upotrebljive</li>
+</ul>
+
+
+
+<h3 class="wp-block-heading" id="uredaji">Uređaji</h3>
+
+
+
+<ul class="wp-block-list">
+<li>desktop</li>
+
+
+
+<li>tablet</li>
+
+
+
+<li>mobile portrait</li>
+
+
+
+<li>mobile landscape</li>
+</ul>
+
+
+
+<h2 class="wp-block-heading" id="automatizacija-moze-pomoci">Automatizacija može pomoći</h2>
+
+
+
+<p class="wp-block-paragraph">Dio responsive provjera može se automatizirati.</p>
+
+
+
+<p class="wp-block-paragraph">Primjerice, end-to-end test može otvoriti stranicu na nekoliko viewporta i provjeriti:</p>
+
+
+
+<ul class="wp-block-list">
+<li>postoji li glavni CTA</li>
+
+
+
+<li>otvara li se menu</li>
+
+
+
+<li>radi li forma</li>
+</ul>
+
+
+
+<p class="wp-block-paragraph">Visual regression test može pomoći otkriti neočekivanu promjenu layouta.</p>
+
+
+
+<p class="wp-block-paragraph">Ali automatizacija ne zamjenjuje potpuno ljudsku procjenu.</p>
+
+
+
+<p class="wp-block-paragraph">Test može potvrditi:</p>
+
+
+
+<p class="wp-block-paragraph"><strong>gumb postoji.</strong></p>
+
+
+
+<p class="wp-block-paragraph">Ne mora znati:</p>
+
+
+
+<p class="wp-block-paragraph"><strong>gumb izgleda loše i preblizu je drugom elementu.</strong></p>
+
+
+
+<h2 class="wp-block-heading" id="responsive-nije-gotov-na-jednom-screenshotu">Responsive nije gotov na jednom screenshotu</h2>
+
+
+
+<p class="wp-block-paragraph">Čest problem u projektu je:</p>
+
+
+
+<blockquote class="wp-block-quote is-layout-flow wp-block-quote-is-layout-flow">
+<p class="wp-block-paragraph">Evo mobilnog dizajna.</p>
+</blockquote>
+
+
+
+<p class="wp-block-paragraph">Jedan Figma frame od 390 px nije kompletna responsive specifikacija.</p>
+
+
+
+<p class="wp-block-paragraph">Developer mora znati što se događa:</p>
+
+
+
+<ul class="wp-block-list">
+<li>na 320 px</li>
+
+
+
+<li>na 480 px</li>
+
+
+
+<li>na 768 px</li>
+
+
+
+<li>između desktopa i tableta</li>
+</ul>
+
+
+
+<p class="wp-block-paragraph">Zato dizajn treba definirati ponašanje, a ne samo nekoliko statičnih stanja.</p>
+
+
+
+<h2 class="wp-block-heading" id="komponente-trebaju-biti-fleksibilne">Komponente trebaju biti fleksibilne</h2>
+
+
+
+<p class="wp-block-paragraph">Dobra komponenta treba podnijeti različite situacije.</p>
+
+
+
+<p class="wp-block-paragraph">Primjer kartice usluge:</p>
+
+
+
+<ul class="wp-block-list">
+<li>različita dužina naslova</li>
+
+
+
+<li>različit opis</li>
+
+
+
+<li>opcionalna ikona</li>
+
+
+
+<li>CTA</li>
+</ul>
+
+
+
+<p class="wp-block-paragraph">Ako komponenta radi samo s jednim točno određenim tekstom, teško ju je dugoročno održavati.</p>
+
+
+
+<p class="wp-block-paragraph">Responsive dizajn i skalabilnost komponenti idu zajedno.</p>
+
+
+
+<h2 class="wp-block-heading" id="responsive-je-dio-qa-a">Responsive je dio QA-a</h2>
+
+
+
+<p class="wp-block-paragraph">Responsive testiranje ne treba ostaviti developeru da ga “usput pogleda”.</p>
+
+
+
+<p class="wp-block-paragraph">Treba ga tretirati kao normalan dio QA-a.</p>
+
+
+
+<p class="wp-block-paragraph">Posebno treba testirati:</p>
+
+
+
+<ul class="wp-block-list">
+<li>glavne korisničke putove</li>
+
+
+
+<li>kritične breakpointove</li>
+
+
+
+<li>interakcije</li>
+
+
+
+<li>forme</li>
+</ul>
+
+
+
+<p class="wp-block-paragraph">Web koji izgleda dobro na desktop screenshotu nije završen projekt.</p>
+
+
+
+<h2 class="wp-block-heading" id="prije-objave">Prije objave</h2>
+
+
+
+<p class="wp-block-paragraph">Responsive provjera treba biti dio završnog testiranja prije lansiranja.</p>
+
+
+
+<p class="wp-block-paragraph">Ne treba čekati da korisnik nakon objave pošalje:</p>
+
+
+
+<blockquote class="wp-block-quote is-layout-flow wp-block-quote-is-layout-flow">
+<p class="wp-block-paragraph">Na mom mobitelu gumb izlazi iz ekrana.</p>
+</blockquote>
+
+
+
+<p class="wp-block-paragraph">Takve probleme je relativno lako pronaći unaprijed.</p>
+
+
+
+<p class="wp-block-paragraph">Zato responsive testiranje treba biti dio cijelog <a href="/blog/proces-izrade-web-stranice/">procesa izrade web stranice</a>.</p>
+
+
+
+<h2 class="wp-block-heading" id="nakon-objave">Nakon objave</h2>
+
+
+
+<p class="wp-block-paragraph">Ni tada posao nužno nije gotov.</p>
+
+
+
+<p class="wp-block-paragraph">Analytics može pokazati:</p>
+
+
+
+<ul class="wp-block-list">
+<li>koje uređaje ljudi stvarno koriste</li>
+
+
+
+<li>koje rezolucije dominiraju</li>
+
+
+
+<li>postoje li razlike u konverzijama</li>
+</ul>
+
+
+
+<p class="wp-block-paragraph">Ako desktop konvertira dobro, a mobile izrazito loše, to je signal za daljnju analizu.</p>
+
+
+
+<p class="wp-block-paragraph">Podaci stvarnih korisnika mogu pokazati probleme koje niste očekivali tijekom razvoja.</p>
+
+
+
+<h2 class="wp-block-heading" id="cilj-responsive-dizajna">Cilj responsive dizajna</h2>
+
+
+
+<p class="wp-block-paragraph">Cilj nije da web izgleda identično na svakom ekranu.</p>
+
+
+
+<p class="wp-block-paragraph">To često nije ni poželjno.</p>
+
+
+
+<p class="wp-block-paragraph">Cilj je da na svakom uređaju:</p>
+
+
+
+<ul class="wp-block-list">
+<li>poruka ostane jasna</li>
+
+
+
+<li>sadržaj bude čitljiv</li>
+
+
+
+<li>navigacija radi</li>
+
+
+
+<li>CTA je dostupan</li>
+
+
+
+<li>interakcije su jednostavne</li>
+</ul>
+
+
+
+<p class="wp-block-paragraph">Desktop može imati kompleksniji layout.</p>
+
+
+
+<p class="wp-block-paragraph">Mobitel može biti jednostavniji.</p>
+
+
+
+<p class="wp-block-paragraph">Ali oba trebaju omogućiti korisniku da ostvari isti osnovni cilj.</p>
+
+
+
+<p class="wp-block-paragraph">Ako želite krenuti od same logike dizajna za male ekrane, pročitajte <a href="/blog/mobile-first-dizajn/">što je mobile-first dizajn</a>.</p>
+
+
+
+<p class="wp-block-paragraph">Ako vas zanimaju širi problemi koji se često pojavljuju tijekom korištenja stranice, pogledajte i <a href="/blog/najcesce-ux-greske/">najčešće UX greške na web stranicama</a>.</p>
+
+
+
+<p class="wp-block-paragraph">Ako planirate novu poslovnu stranicu, pogledajte naše <a href="/izrada-web-stranica-cijena/">pakete i cijene izrade web stranica</a>.</p>
+</div></div></article><section class="blog-related" aria-labelledby="related-title"><div class="container"><h2 id="related-title">Nastavite čitati</h2><div class="blog-related-list"><a href="/blog/sto-je-keyword-difficulty/"><span>Uncategorized<!-- --> · <!-- -->15<!-- --> min čitanja</span><h3>Što je keyword difficulty?</h3><span>Pročitajte članak ↗</span></a><a href="/blog/kako-pronaci-content-gap/"><span>SEO optimizacija<!-- --> · <!-- -->19<!-- --> min čitanja</span><h3>Kako pronaći content gap u SEO-u?</h3><span>Pročitajte članak ↗</span></a></div></div></section><section class="blog-question" aria-labelledby="blog-question-title"><div class="container blog-question-inner"><div><span class="blog-overline">Pitanje za Legatech</span><h2 id="blog-question-title">Imate konkretan izazov sa svojim webom?</h2></div><a href="/kontakt/">Pošaljite upit <span aria-hidden="true">↗</span></a></div></section></main><footer class="editorial-footer"><div class="container"><div class="editorial-footer-top"><div class="editorial-footer-brand"><a class="editorial-brand" aria-label="Legatech, naslovna stranica" href="/"><img alt="Legatech" loading="lazy" width="164" height="41" decoding="async" src="/assets/legatech-brand/legatech-black.svg"></a><p>Web stranice, trgovine i SEO usmjereni na konkretne poslovne ciljeve.</p><p>LEGATECH, obrt za razvoj softvera, vl. Marijan Malčić<br>Osijek<br>OIB: 14184408003 / MBS: 98086464</p></div><div class="editorial-footer-links"><nav aria-label="Usluge u podnožju"><h2>Usluge</h2><a href="/izrada-web-stranica-cijena/">Izrada web stranica</a><a href="/seo-optimizacija-cijena/">SEO optimizacija</a><a href="/izrada-web-trgovina/">Izrada web trgovina</a><a href="/odrzavanje-web-stranica/">Održavanje web stranica</a><a href="/izrada-web-stranica-osijek/">Izrada web stranica Osijek</a></nav><nav aria-label="Glavne stranice u podnožju"><h2>Istražite</h2><a href="/cjenik/">Cjenik</a><a href="/blog/" aria-current="location">Blog</a><a href="/o-nama/">O nama</a><a href="/kontakt/">Kontakt</a></nav><nav aria-label="Pravne stranice i privatnost"><h2>Pravno</h2><a href="/uvjeti-koristenja/#pruzatelj">Poslovni podaci</a><a href="/politika-privatnosti/">Politika privatnosti</a><a href="/politika-kolacica/">Politika kolačića</a><a href="/uvjeti-koristenja/">Uvjeti korištenja</a><button class="footer-cookie-button" type="button">Postavke kolačića</button></nav></div></div><div class="editorial-footer-bottom"><span>© 2026. Legatech</span><span><a href="mailto:info@legatech.hr">info@legatech.hr</a> / <a href="tel:+385997357070">099 735 7070</a></span><span>Osijek, Hrvatska</span><button class="motion-toggle" type="button">Smanji animacije</button></div></div></footer><dialog id="cookie-preview" aria-labelledby="cookie-preview-title"><button type="button" class="dialog-close" aria-label="Zatvori postavke kolačića">Zatvori ×</button><h2 id="cookie-preview-title">Postavke kolačića</h2><p id="cookie-consent-copy">Google Analytics učitava se samo ako prihvatite analitičke kolačiće. Vaš odabir možete promijeniti u ovim postavkama.</p><div class="cookie-choices"><button type="button" class="button button-signal" data-consent="granted">Prihvati analitičke</button><button type="button" class="button button-outline" data-consent="denied">Odbij analitičke</button></div><a href="/politika-kolacica/">Politika kolačića ↗</a></dialog></body></html>

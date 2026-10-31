@@ -1,0 +1,1497 @@
+[
+  {
+    "path": "index.html",
+    "bytes": 35032,
+    "sha256": "6842f2d187b75c83d296daea794d31358f306503534f21cc692751789b9312fd"
+  },
+  {
+    "path": "izrada-web-stranica-cijena/index.html",
+    "bytes": 42922,
+    "sha256": "27b242d4cdbebbc236622a6c78d2fbcaf102b57dfb630251cf7150593f3a1157"
+  },
+  {
+    "path": "izrada-web-stranica-osijek/index.html",
+    "bytes": 24296,
+    "sha256": "da81074ae0fc48d0c89a760a8942e2f89c7bc23808bf39464abd46298e6f3289"
+  },
+  {
+    "path": "seo-optimizacija-cijena/index.html",
+    "bytes": 46933,
+    "sha256": "f2fcead82c696cb9bb02f951f36215ea64faa289a7aeb1ce242178cd6453b81c"
+  },
+  {
+    "path": "izrada-web-trgovina/index.html",
+    "bytes": 47837,
+    "sha256": "ecfaddfc2962c8a237e40336a1fe968fa2e86ddd0460633ffa6eb2545567ed78"
+  },
+  {
+    "path": "odrzavanje-web-stranica/index.html",
+    "bytes": 54835,
+    "sha256": "a39950db20f50bc82bf856ac1d22e621e788c28a42ba82599810546f0055ca38"
+  },
+  {
+    "path": "cjenik/index.html",
+    "bytes": 37770,
+    "sha256": "0ceb6d8926a5b9326c5b1697a9db19a992dedddfd04ca113cf335af89fb582ab"
+  },
+  {
+    "path": "o-nama/index.html",
+    "bytes": 10354,
+    "sha256": "f6cf4b9a135586cc15753575662924b0d289530ef7d7057a7f600195ea2b5cb8"
+  },
+  {
+    "path": "kontakt/index.html",
+    "bytes": 12601,
+    "sha256": "abce678b4252fca8df927b6832591b2a839a2ac6fbfa1cb29c2885e2d69d574c"
+  },
+  {
+    "path": "politika-privatnosti/index.html",
+    "bytes": 14874,
+    "sha256": "41e9cafce5bb226e8eafa282cd4895511a00ab36bddda3b0992230f169b2aa31"
+  },
+  {
+    "path": "politika-kolacica/index.html",
+    "bytes": 12635,
+    "sha256": "782818d277437ff78a2a70973f027b97aa5b199cf48d66c14bb71db906a9f2e6"
+  },
+  {
+    "path": "uvjeti-koristenja/index.html",
+    "bytes": 12937,
+    "sha256": "19335c4a1cedefe1b24340428578308936a958c3e7fffd0400f6948d2bf93526"
+  },
+  {
+    "path": "blog/accessibility-web-stranice/index.html",
+    "bytes": 60445,
+    "sha256": "29e7b35504e1a87dda56d062f793a3b9bdcc242fa631a116e4a8e556d2736ab2"
+  },
+  {
+    "path": "blog/brzina-web-stranice/index.html",
+    "bytes": 44566,
+    "sha256": "adc2b80ac03c9f89abd88f48a51d5de42b87f3756a56656631ead74d63efa14a"
+  },
+  {
+    "path": "blog/core-web-vitals/index.html",
+    "bytes": 42141,
+    "sha256": "a5e0345489fbbb814bd6f4f8a0522fd9de65665dff9705ae1665045f5ab55112"
+  },
+  {
+    "path": "blog/dobra-pocetna-stranica/index.html",
+    "bytes": 39150,
+    "sha256": "5e3b47eae7c0c318dd441be6c362f287024feeb22f6f5bdad6a225eab628a9df"
+  },
+  {
+    "path": "blog/gdje-postaviti-cta/index.html",
+    "bytes": 36455,
+    "sha256": "d01c5ac4d57bff3e51f9cbcbe196f915d5149c884a81c02f9fb2ba78f423f45a"
+  },
+  {
+    "path": "blog/greske-prije-izrade-web-stranice/index.html",
+    "bytes": 39694,
+    "sha256": "1f0cac5d5067010541d2b88bd110a8bf6ebf0eb652fc0d225138eb782441a163"
+  },
+  {
+    "path": "blog/index.html",
+    "bytes": 36926,
+    "sha256": "3d6140a66fd560037665ca9ebbafec63120e1f2225ccce97df6116dc863c53e5"
+  },
+  {
+    "path": "blog/kako-analizirati-seo-konkurenciju/index.html",
+    "bytes": 62731,
+    "sha256": "be590a1ae6de4e130cc93481a42547d5cf1e2ac44e7114ee2870ecee8c9ed9e0"
+  },
+  {
+    "path": "blog/kako-analizirati-serp/index.html",
+    "bytes": 71408,
+    "sha256": "55f5f80276c29dfb244bfa1e2d21c4e0949721cb3b4b38325386b7db3a0e08dd"
+  },
+  {
+    "path": "blog/kako-fontovi-utjecu-na-brzinu-weba/index.html",
+    "bytes": 48641,
+    "sha256": "cf72eec94bd509db85d910c96f4d07ed7454d3ab9b91d6362a686586921215e5"
+  },
+  {
+    "path": "blog/kako-grupirati-kljucne-rijeci/index.html",
+    "bytes": 60156,
+    "sha256": "b66cb5415f1fa3575e4d672192a43fd28c6738f5f79efebdf0e5780c96c7985e"
+  },
+  {
+    "path": "blog/kako-izgraditi-povjerenje-na-webu/index.html",
+    "bytes": 43507,
+    "sha256": "c3f5474af8388c12e98f43621682591d66cc3bdbaf7403641aa84a6c60fdc47c"
+  },
+  {
+    "path": "blog/kako-izraditi-seo-strategiju/index.html",
+    "bytes": 54065,
+    "sha256": "c508e3ec6e828a5cd314c0a0795883e43deede78ddd98a90d7c0a26e86d6f0d6"
+  },
+  {
+    "path": "blog/kako-napisati-sadrzaj-za-web-stranicu/index.html",
+    "bytes": 36475,
+    "sha256": "6a19ea8e58ba34315d1f7f9a3490dded73c7ff62723121589d93673b7040834e"
+  },
+  {
+    "path": "blog/kako-napraviti-dobru-kontakt-formu/index.html",
+    "bytes": 40145,
+    "sha256": "003ed2b12ab331472d7f70c185e27e75bc78f0883f96427c23df9f5a83c7ace3"
+  },
+  {
+    "path": "blog/kako-napraviti-keyword-mapping/index.html",
+    "bytes": 62660,
+    "sha256": "db92f8a5bdd7962238c07397605de4285cc9f0d5b2058bd9004a072e2a2738b0"
+  },
+  {
+    "path": "blog/kako-napraviti-keyword-research/index.html",
+    "bytes": 61064,
+    "sha256": "107a95226869f6ff2c324d1d481d78f4d4ba30b45413ab78db36837da9a7b4de"
+  },
+  {
+    "path": "blog/kako-odrediti-ciljeve-web-stranice/index.html",
+    "bytes": 35959,
+    "sha256": "fdab8a9fdd0c862084453f7eee9b68bea808126006de24b9477434677bce1bd1"
+  },
+  {
+    "path": "blog/kako-pronaci-content-gap/index.html",
+    "bytes": 71375,
+    "sha256": "b583bbc08e3ce98ee0a1a7aa4a8d85311c03ff7502d0da89f31cd0d0d368289d"
+  },
+  {
+    "path": "blog/kako-seo-funkcionira/index.html",
+    "bytes": 52580,
+    "sha256": "d51462ec38e4e65415c9aa93855558e046d8bfddd49cdc2e0200b3b7cb8d05f2"
+  },
+  {
+    "path": "blog/keyword-cannibalization/index.html",
+    "bytes": 48877,
+    "sha256": "97fdad7e04f2dd38d886a96b2499b387b0616d5aad068e80def7ac4cf4500828"
+  },
+  {
+    "path": "blog/koliko-stranica-treba-imati-poslovna-web-stranica/index.html",
+    "bytes": 35240,
+    "sha256": "8bc2ffe3afda80b7dd18a08f267b0770d142f1206c9b31bbd261892023fb91a1"
+  },
+  {
+    "path": "blog/koliko-traje-izrada-web-stranice/index.html",
+    "bytes": 33775,
+    "sha256": "a65e69f382ccd1a4e3f71544206bd5b233c04f3dd7bb1b773ba1ecbe54ec78f2"
+  },
+  {
+    "path": "blog/koliko-traje-seo/index.html",
+    "bytes": 51264,
+    "sha256": "abec752bd19cace40af7a6c4788ae4e2fc7e44118fce0c3fe1a9ce326a197944"
+  },
+  {
+    "path": "blog/long-tail-kljucne-rijeci/index.html",
+    "bytes": 56958,
+    "sha256": "b1ffffa7d1a135c3470f3d45040c9d63490f0d2fe5e408663e4c014ec296800e"
+  },
+  {
+    "path": "blog/mobile-first-dizajn/index.html",
+    "bytes": 39305,
+    "sha256": "f29773c97244c9ea1b517da2ab221bcdb9db25afe04618545d672d41cf774891"
+  },
+  {
+    "path": "blog/najcesce-ux-greske/index.html",
+    "bytes": 45318,
+    "sha256": "f043c4d1a5ddef6f71b1510fecc4426f9e79a406386a5b5ac2207489304b784b"
+  },
+  {
+    "path": "blog/najcesce-ux-greske-2/index.html",
+    "bytes": 45341,
+    "sha256": "1b77a6808399a82a47b267b44a9a16fed7ef69e3caaec645939c0f51c84ce016"
+  },
+  {
+    "path": "blog/optimizacija-slika-za-web/index.html",
+    "bytes": 52245,
+    "sha256": "a57e5886c8b8af2e6a3b3bf40047164e07f12a4e7ff421f76d490f68b580c904"
+  },
+  {
+    "path": "blog/proces-izrade-web-stranice/index.html",
+    "bytes": 35202,
+    "sha256": "2baaa86d2b98fe7798a3b4375133d2e3ad14dc7c3a0d58366d6bd1bf6b7f7e19"
+  },
+  {
+    "path": "blog/responsive-dizajn-sto-testirati/index.html",
+    "bytes": 56932,
+    "sha256": "43d87ba5366d816c359b409071f5822b0c8575414a79392ecc83dce3d779a582"
+  },
+  {
+    "path": "blog/seo-ciljevi-i-mjerenje/index.html",
+    "bytes": 67451,
+    "sha256": "5c71c029890a0ba97e9c5b541cb8a21e3ada0b11884bb48f09a8c055f7f7c9c3"
+  },
+  {
+    "path": "blog/sto-cini-dobar-poslovni-web/index.html",
+    "bytes": 38031,
+    "sha256": "08fd42b7a99a203a73c6f73f98a4fdaf3d38b87b6603e12618a15d779d92da79"
+  },
+  {
+    "path": "blog/sto-je-keyword-difficulty/index.html",
+    "bytes": 51403,
+    "sha256": "72bad130b2b67cf8df520c8fa9db4aa6580b6ca0e75976e83a18490542b171fb"
+  },
+  {
+    "path": "blog/sto-je-search-intent/index.html",
+    "bytes": 60028,
+    "sha256": "12482f71069135bc1b65a64deebbeaa82ac46029d249d05302259aec98012889"
+  },
+  {
+    "path": "blog/sto-je-seo/index.html",
+    "bytes": 63314,
+    "sha256": "ed66051817ebfe7607d9b8b77cc93c62ed3b5cf79a8a2a67bd12a63670313f97"
+  },
+  {
+    "path": "blog/sto-pripremiti-prije-izrade-web-stranice/index.html",
+    "bytes": 34411,
+    "sha256": "ac611ae10294f2d92dd10e8aaa0144f99e43c3c07738d743de246485f985ff29"
+  },
+  {
+    "path": "blog/sto-treba-imati-stranica-usluge/index.html",
+    "bytes": 41878,
+    "sha256": "867867089a856df7b42cdf8c7c30f819b860fddd71b7604c9da4690b1dbc9603"
+  },
+  {
+    "path": "blog/sto-utjece-na-cijenu-web-stranice/index.html",
+    "bytes": 34731,
+    "sha256": "f44f92fe53c5f107b228a820f4feb5c38feaae8031e50cfbf775925d66896a04"
+  },
+  {
+    "path": "blog/struktura-web-stranice-za-malu-tvrtku/index.html",
+    "bytes": 37168,
+    "sha256": "dc5f7b9ae922c5a3a0003be9319302377a32125b3f5f4a6c89f4f435f28771a1"
+  },
+  {
+    "path": "blog/zasto-je-dobar-hosting-vazan/index.html",
+    "bytes": 49788,
+    "sha256": "e10e92bd874065ab8b17706293e487d70898ee0d3f35da84e476592bc3b94a29"
+  },
+  {
+    "path": "blog/zasto-je-lighthouse-rezultat-los/index.html",
+    "bytes": 52750,
+    "sha256": "1167945f189597f9cfff95b336d1ac23d6aa0de689aacd543adac6dc79b58151"
+  },
+  {
+    "path": "blog/zasto-korisnici-napustaju-web/index.html",
+    "bytes": 42453,
+    "sha256": "24cdfba2714d5c65d7c5b55a20db15b17a376cc01c67351d1c92edf5c04277cb"
+  },
+  {
+    "path": "projekti/barisic-plast/index.html",
+    "bytes": 16593,
+    "sha256": "c93813181d6a1358a91a44650b70371bece3d4022b72b0ce4ef327f627e1648c"
+  },
+  {
+    "path": "projekti/ducija/index.html",
+    "bytes": 16294,
+    "sha256": "837c16ce0bc6de5ab1b40f1e4b724c1d163c4024451d177baad9f74e342b2777"
+  },
+  {
+    "path": "projekti/index.html",
+    "bytes": 18168,
+    "sha256": "47a6b08590e86aaabbe2089ea487c50b75dd6186c0bc2712af2149657bd7d29c"
+  },
+  {
+    "path": "projekti/krie-design/index.html",
+    "bytes": 16434,
+    "sha256": "8b79a6aa23ed90a22cdf49e9a87582b9e8f1fac4e21f0e83c68d91cf007cf0fb"
+  },
+  {
+    "path": "projekti/odvjetnicki-ured-balaz/index.html",
+    "bytes": 16805,
+    "sha256": "e10c4d78418890ce3782d7b31681315468f6e01f16c84693076d6ed723cd9b6f"
+  },
+  {
+    "path": "projekti/rumalu/index.html",
+    "bytes": 16404,
+    "sha256": "c9ad4fcd8a3e1f3af4775b12472005aca4e33b41a9bccbe55aff8d17dbeb558b"
+  },
+  {
+    "path": "projekti/varmos/index.html",
+    "bytes": 16088,
+    "sha256": "9b6c3623bedd0cc4de80901888cb97ad954ecfa58753de5c9618063b9591eefa"
+  },
+  {
+    "path": "404.html",
+    "bytes": 5860,
+    "sha256": "f601449f7164df5c738d112571faba15ef4aca53e8cb0e68d6120e7558affa72"
+  },
+  {
+    "path": "assets/legatech-brand/legatech-t-small.svg",
+    "bytes": 289,
+    "sha256": "518ff5c24f55320e3ba5d54503e684198f99f4a4af83cf5dc9ea8a39676a95fb"
+  },
+  {
+    "path": "home-expressive.css",
+    "bytes": 36002,
+    "sha256": "dcbf83972ac516ff4e22339cb8064fffc024d239447f2c7e6dafe5809cf0d4df"
+  },
+  {
+    "path": "home-expressive.js",
+    "bytes": 4392,
+    "sha256": "43e4103aa8b69fec3eae0d75a80314335a83b05b38cd0c32a2124a6762c4e7cd"
+  },
+  {
+    "path": "contact-live.css",
+    "bytes": 537,
+    "sha256": "683a324cba1a09261edaf1fb6a64b4ce6bf1ff8a143de87aa91ab9029bde43a8"
+  },
+  {
+    "path": "contact-runtime.js",
+    "bytes": 8841,
+    "sha256": "b4663117ddb0d3c588b66b720c3449238b12442143ce457d3a0909f1ede3dc97"
+  },
+  {
+    "path": "contact-live.js",
+    "bytes": 4919,
+    "sha256": "a98013dece730e9ad99562d8239d44f2be00b63b5e92b08f9f20ce0a4f25b6f9"
+  },
+  {
+    "path": "assets/fonts/barlow-condensed-bold.e476562ec9c1.woff2",
+    "bytes": 39460,
+    "sha256": "187d56ee4d7d758c27a847c1e0272e45c8178ecf9f442a1387a3a2e5be2b90ac"
+  },
+  {
+    "path": "homepage-concept/assets/manrope-latin.woff2",
+    "bytes": 24836,
+    "sha256": "a30ddcd349703aff7464c34bef3fffdff405ee50c113440d7c8693c02d210972"
+  },
+  {
+    "path": "homepage-concept/assets/manrope-latin-ext.woff2",
+    "bytes": 15120,
+    "sha256": "3911b66d9f2e005a4b989223405d0e5032619c668597ba467cc76a23c8fffcfb"
+  },
+  {
+    "path": "accessibility-expressive.css",
+    "bytes": 2113,
+    "sha256": "35014935ab4273b6ec89a80e845a5a16c68988a06fb597186f7849ecf154ff51"
+  },
+  {
+    "path": "assets/legatech-brand/legatech-black.svg",
+    "bytes": 1936,
+    "sha256": "799eaebd29080b8efc7eeb036447c8f9955ef23db9d438bb41df06eecb3259ed"
+  },
+  {
+    "path": "assets/projects/ducija-hero.webp",
+    "bytes": 36802,
+    "sha256": "61abf75cf1092dd2d8f7de2d06a5f65a0cc2044d13ed32eca481d8c7ccc29de6"
+  },
+  {
+    "path": "assets/clients/krie.webp",
+    "bytes": 2320,
+    "sha256": "845f9d86a41a3f236fb5ef5ad16bcbe43312e815dae47309e5194a3df569ff5a"
+  },
+  {
+    "path": "assets/clients/the-glow.webp",
+    "bytes": 10274,
+    "sha256": "819a6a21193b8547df88f86a21dd2288f4ab2eb6d9774694d16fcd85f7f109a4"
+  },
+  {
+    "path": "assets/clients/dokkica.webp",
+    "bytes": 10636,
+    "sha256": "9e58c9243ea2df25c84f99dc3b98c2a7c308dbd73e66655098ca60d84d5f795f"
+  },
+  {
+    "path": "assets/clients/atom.webp",
+    "bytes": 7022,
+    "sha256": "8cd2616d98b2e7e0a279823d828dd1d4a5a6aad722b704508dba2556a3872306"
+  },
+  {
+    "path": "assets/clients/varmos.webp",
+    "bytes": 9218,
+    "sha256": "ebc6a714237d56977b577cf77b3c2af130e0f245fc7c4b330df2b791ba002505"
+  },
+  {
+    "path": "assets/clients/roxort.webp",
+    "bytes": 3074,
+    "sha256": "5a8be471344ca35cdfa09c6b294d67efa931cf45a8bde98311df23e61f662660"
+  },
+  {
+    "path": "assets/clients/universum.webp",
+    "bytes": 6944,
+    "sha256": "b8f9857a655b37e922d34c0c95c56df8e45061f9c5358e0256cd24fbcabf5bf1"
+  },
+  {
+    "path": "assets/clients/tradingview.webp",
+    "bytes": 5166,
+    "sha256": "f706beb118bdde6bad85cb2425f3c25b5b3cc2819bee688cd15ab7f0d0ead438"
+  },
+  {
+    "path": "assets/projects/ducija.webp",
+    "bytes": 134748,
+    "sha256": "92db3f37e5b35aef8ba24a1fa831755603e27983b98671638ca2ef226990acdf"
+  },
+  {
+    "path": "assets/projects/balaz.webp",
+    "bytes": 71822,
+    "sha256": "6a334d28c1872b26bc90c62183c0eaea1f6ec16d1051d307620ec6684532201b"
+  },
+  {
+    "path": "assets/projects/varmos.webp",
+    "bytes": 117440,
+    "sha256": "4e31b00f40fe1733e755de9fa6935719735801ebf86194d5f8af7482b55c152d"
+  },
+  {
+    "path": "assets/responsive/61abf75cf109-320.webp",
+    "bytes": 14186,
+    "sha256": "0441c184a12cb7d9fe7e2e473581d3f8870572487619f44004c92ce86e2ca0b0"
+  },
+  {
+    "path": "assets/responsive/61abf75cf109-480.webp",
+    "bytes": 26044,
+    "sha256": "2f2d8247706100e13e28183b64154b3fa0cebbedd2fb35aa989b2c133ca95c08"
+  },
+  {
+    "path": "assets/responsive/61abf75cf109-768.webp",
+    "bytes": 41494,
+    "sha256": "76f95d1e7caad5a95a6889337441099812692d1a46ef151b41ae4ea963ba9c9e"
+  },
+  {
+    "path": "assets/responsive/845f9d86a41a-96.webp",
+    "bytes": 380,
+    "sha256": "0fadecc182ff512f31e5656489259bdb7412302b63e4babcb2904e2f78cc1171"
+  },
+  {
+    "path": "assets/responsive/845f9d86a41a-192.webp",
+    "bytes": 856,
+    "sha256": "1e821b14746f7744a1cc8c746dc6bd32f170ec6339194331890d3067973a8a89"
+  },
+  {
+    "path": "assets/responsive/845f9d86a41a-256.webp",
+    "bytes": 1074,
+    "sha256": "18c8b4bbca5a7e6e5d8db461595372cd5a42ca93645385c079f87c2cff6d60c8"
+  },
+  {
+    "path": "assets/responsive/819a6a21193b-96.webp",
+    "bytes": 906,
+    "sha256": "d7999d4a0f2f503aedc442625d9d618dd4b84f7fb56b712b6ebe1191bfc0dfcb"
+  },
+  {
+    "path": "assets/responsive/819a6a21193b-192.webp",
+    "bytes": 2648,
+    "sha256": "b985a2631fc3af246bf5bc4daea10f5463dcdc8118b0a4ca798311579c084f46"
+  },
+  {
+    "path": "assets/responsive/819a6a21193b-256.webp",
+    "bytes": 3934,
+    "sha256": "70c4010884df00c39d29e201b376fda448d199a6dd3d2114440ecfd42a6a7692"
+  },
+  {
+    "path": "assets/responsive/9e58c9243ea2-96.webp",
+    "bytes": 1022,
+    "sha256": "adf23260f480ca6f9329253b3ecd2a1a5f9148d53db28a5290b3065fe0f09cac"
+  },
+  {
+    "path": "assets/responsive/9e58c9243ea2-192.webp",
+    "bytes": 2720,
+    "sha256": "bc15962b6091a2f1dc929468736ac55269557984fcfc48feae2e94631d691832"
+  },
+  {
+    "path": "assets/responsive/9e58c9243ea2-256.webp",
+    "bytes": 4016,
+    "sha256": "58a1a9c1fe5cbc4dd320e7aade54b7fa2108f011e1f1ee256eda698b317142fd"
+  },
+  {
+    "path": "assets/responsive/8cd2616d98b2-96.webp",
+    "bytes": 938,
+    "sha256": "57b58a9be0cb8048dcdad1a0b9e383c4f44305185bc4d578e2ec3aabac7774b7"
+  },
+  {
+    "path": "assets/responsive/8cd2616d98b2-192.webp",
+    "bytes": 2182,
+    "sha256": "f0ddfe1478c7737b14eb159fec87b11542970f61311c05890b14c8360de8610d"
+  },
+  {
+    "path": "assets/responsive/8cd2616d98b2-256.webp",
+    "bytes": 2802,
+    "sha256": "b404dd12e2b4de947ff786ed1c127999281a754c8265f980a3df095549be45fa"
+  },
+  {
+    "path": "assets/responsive/ebc6a714237d-96.webp",
+    "bytes": 984,
+    "sha256": "3418865f384626179e0590b22e43c9f2c047a27b703433d20b078170300e61ad"
+  },
+  {
+    "path": "assets/responsive/ebc6a714237d-192.webp",
+    "bytes": 2590,
+    "sha256": "9819fd54d12851703d0ac4ace84abd005c94d1d4a299665dd6e5dc4311214266"
+  },
+  {
+    "path": "assets/responsive/ebc6a714237d-256.webp",
+    "bytes": 3630,
+    "sha256": "837367bf26d3f7a8f369efa437deb5c528716fb2ea7f6da263ff060e67ed0cf2"
+  },
+  {
+    "path": "assets/responsive/5a8be471344c-96.webp",
+    "bytes": 574,
+    "sha256": "3a69cb0b41c9f6f9fc19c09dd7af37bc4c777d85d349566e437b66581dda5b86"
+  },
+  {
+    "path": "assets/responsive/5a8be471344c-192.webp",
+    "bytes": 1242,
+    "sha256": "14d51f04dd1cc6574830fc5dc25a90c474d6770fb143e12ba28b78af2bda4f0c"
+  },
+  {
+    "path": "assets/responsive/5a8be471344c-256.webp",
+    "bytes": 1504,
+    "sha256": "2b98e3c168cb770adcbf8e1e30ac98b8c9c22ab12ed68a1eab2e470c9a0c981c"
+  },
+  {
+    "path": "assets/responsive/b8f9857a655b-96.webp",
+    "bytes": 614,
+    "sha256": "a57293af32b50e1cdfcae8943f319639aee02c60166b882154eb4f827f7ec5eb"
+  },
+  {
+    "path": "assets/responsive/b8f9857a655b-192.webp",
+    "bytes": 1696,
+    "sha256": "3f5c6c809e6966c1fd5ae315b70da73f1a8ff84a90f53537489452dd54db0d56"
+  },
+  {
+    "path": "assets/responsive/b8f9857a655b-256.webp",
+    "bytes": 2600,
+    "sha256": "f32a2194b2cbbd244671adedc83f23866e6d4369cc8ada934549c3dd2fe2ff33"
+  },
+  {
+    "path": "assets/responsive/f706beb118bd-96.webp",
+    "bytes": 644,
+    "sha256": "99e0641820b1d9b955d40db8dd1e915a67546d253bf7e2b1f58facfd303d7ba2"
+  },
+  {
+    "path": "assets/responsive/f706beb118bd-192.webp",
+    "bytes": 1560,
+    "sha256": "649dac69a4c5fed9a12cb8bc831340141a19e4f92469fca0ee18128cfbef791a"
+  },
+  {
+    "path": "assets/responsive/f706beb118bd-256.webp",
+    "bytes": 2048,
+    "sha256": "955bccd4ace86b8a0e280995d42d899ef058800d620169ff7496d7929e17862a"
+  },
+  {
+    "path": "assets/responsive/92db3f37e5b3-320.webp",
+    "bytes": 14358,
+    "sha256": "de99d88779887121d4f6268fb72d1b7a93aebe37bc6b74e2d6e2e6a9cd41ea32"
+  },
+  {
+    "path": "assets/responsive/92db3f37e5b3-480.webp",
+    "bytes": 26150,
+    "sha256": "b596177ab3d2e688093824a2cfacb2600220b0880c802f8506f6f034830f0698"
+  },
+  {
+    "path": "assets/responsive/92db3f37e5b3-768.webp",
+    "bytes": 50382,
+    "sha256": "b0e0c539e276cda9a6c5627889d81fefc38b3826c87b1a51766d4974da6d0a57"
+  },
+  {
+    "path": "assets/responsive/92db3f37e5b3-1024.webp",
+    "bytes": 70372,
+    "sha256": "e7a91ee37e845aae816dfd4734dee0caeba3e2777e646375ce1f70701402365a"
+  },
+  {
+    "path": "assets/responsive/92db3f37e5b3-1440.webp",
+    "bytes": 103596,
+    "sha256": "284e64c29672a896c9f40791d8600d68db3d0685b7d362de901fbf7040d28f7d"
+  },
+  {
+    "path": "assets/responsive/6a334d28c187-320.webp",
+    "bytes": 9346,
+    "sha256": "f7c3afdfb7bf5839f0244612c21cac509ea72e832bfd1013cc5979da53d2911c"
+  },
+  {
+    "path": "assets/responsive/6a334d28c187-480.webp",
+    "bytes": 15786,
+    "sha256": "72d86c09d4b2b53df95b89b8b0dcff506efb8231fb6596a2a8d5417733af670c"
+  },
+  {
+    "path": "assets/responsive/6a334d28c187-768.webp",
+    "bytes": 29020,
+    "sha256": "2b03a207d1310417ab6932ad9f7ca35d78198d843b592b6e2249a496fe3a0395"
+  },
+  {
+    "path": "assets/responsive/6a334d28c187-1024.webp",
+    "bytes": 42224,
+    "sha256": "3aaadc26d94e6c8120b047cb9cfd12132b1d5e1aaa09f6f3e210d427ccc4e73d"
+  },
+  {
+    "path": "assets/responsive/6a334d28c187-1440.webp",
+    "bytes": 62490,
+    "sha256": "ee83d3139c347cddf848ea5be69173921d9ebe587a0b817778ddd77791e25ab5"
+  },
+  {
+    "path": "assets/responsive/4e31b00f40fe-320.webp",
+    "bytes": 16774,
+    "sha256": "3947ceebc4ec4845cd58a9fc1dc86b6d08f96304f703f808956903e7ad3f0085"
+  },
+  {
+    "path": "assets/responsive/4e31b00f40fe-480.webp",
+    "bytes": 28620,
+    "sha256": "bb307ac4928eba11c67d01a8ba72c40930b91df4d6623eb00942de0cfe8bdd38"
+  },
+  {
+    "path": "assets/responsive/4e31b00f40fe-768.webp",
+    "bytes": 54602,
+    "sha256": "7de917c71be5c9194493c9ff9b85ea139eb993e0da0d69ae9f38566764a38ace"
+  },
+  {
+    "path": "assets/responsive/4e31b00f40fe-1024.webp",
+    "bytes": 78188,
+    "sha256": "cdd56e0cd079276d22b9feacd38c4b6c7e4b8c41bb4d61d80d431734cc67c60d"
+  },
+  {
+    "path": "assets/responsive/4e31b00f40fe-1440.webp",
+    "bytes": 110218,
+    "sha256": "a69c290590795a98e06ea8d12fb63789e70c5138a6f2e5f73f9dba13f21e5e9e"
+  },
+  {
+    "path": "assets/social/home.png",
+    "bytes": 35687,
+    "sha256": "b5fd17b451f1223e4c20f1c1c06bef0822bbc7ed3d951f6ad6b832cde7b88cbe"
+  },
+  {
+    "path": "assets/legatech-brand/legatech-icon.png",
+    "bytes": 10222,
+    "sha256": "6c9c842f0350f6e26066d855ac3385efe6b2c521f9d7c5fd79bddd0d27f73533"
+  },
+  {
+    "path": "company-expressive.css",
+    "bytes": 7017,
+    "sha256": "e93a1f702599ee013834788ab50dcc916cb883b3f17952ce0bbec2271a000658"
+  },
+  {
+    "path": "pricing-expressive.css",
+    "bytes": 10391,
+    "sha256": "907af2cc83869687b20d7f98644e59042cbfc58b341d9c62ccc329f55f9257ca"
+  },
+  {
+    "path": "services-expressive.css",
+    "bytes": 21565,
+    "sha256": "70559edc74b0d7bd0c0a6a29de2cc3c1d8cba22fab06218973f01e6dc2679cd6"
+  },
+  {
+    "path": "assets/projects/barisic-plast.webp",
+    "bytes": 104414,
+    "sha256": "e2ce302754c2bb48a5eeed342cb512cd901b7980051037ebf25cf1f8bd7e0123"
+  },
+  {
+    "path": "assets/responsive/e2ce302754c2-320.webp",
+    "bytes": 12602,
+    "sha256": "e759ef7a309221917a3c3da12b649f933415360e814c776cb76126f00c7a5009"
+  },
+  {
+    "path": "assets/responsive/e2ce302754c2-480.webp",
+    "bytes": 22226,
+    "sha256": "8b09356e17fcf9296f4a772bb8727daa44cc8459ba1b8eb839d77ecad61e9a12"
+  },
+  {
+    "path": "assets/responsive/e2ce302754c2-768.webp",
+    "bytes": 39698,
+    "sha256": "5dba0bf7d273902f657824a3acd4fc36659b2ee29b9440bad11677bc28bffe03"
+  },
+  {
+    "path": "assets/responsive/e2ce302754c2-1024.webp",
+    "bytes": 58678,
+    "sha256": "c0005807f6161bc5786b2017714bd21aa75679352f6694dd96f74460a8d8c27a"
+  },
+  {
+    "path": "assets/responsive/e2ce302754c2-1440.webp",
+    "bytes": 85850,
+    "sha256": "0a6d3a2a46a5d11c58b77014cb5b289c8c6d09e35f9915f718fef7f674c71692"
+  },
+  {
+    "path": "assets/social/izrada-web-stranica-cijena.png",
+    "bytes": 38395,
+    "sha256": "c86970b462a5074a4d94cc3fc9fcdea7a5a39bfe0183fd5cdc70d5b73f9d120d"
+  },
+  {
+    "path": "osijek-expressive.css",
+    "bytes": 10215,
+    "sha256": "8aac4f87811994c543bcd04db23e8072111131f9a71590735cbfa47cbfc81810"
+  },
+  {
+    "path": "assets/case-studies/ducija/cover.webp",
+    "bytes": 134748,
+    "sha256": "92db3f37e5b35aef8ba24a1fa831755603e27983b98671638ca2ef226990acdf"
+  },
+  {
+    "path": "assets/social/izrada-web-stranica-osijek.png",
+    "bytes": 36401,
+    "sha256": "f1b4892a49946e152aa14904cbb668a93d4d712fe1b759149516877bdeba7605"
+  },
+  {
+    "path": "assets/social/seo-optimizacija-cijena.png",
+    "bytes": 36878,
+    "sha256": "f8ead277a6ed83ab7bc238ca75e07a3caf952817bdcfc89b2f7c32258f104dce"
+  },
+  {
+    "path": "assets/projects/krie.webp",
+    "bytes": 152280,
+    "sha256": "73049aab01f54153dd378932c04350eb0064ff54c5353c8f756d0bfd5aa06a4e"
+  },
+  {
+    "path": "assets/responsive/73049aab01f5-320.webp",
+    "bytes": 14516,
+    "sha256": "42fb8cc32ad71d9250f445dd50d37e4cc67f7ef0ddb886a77ca2db065f7334a0"
+  },
+  {
+    "path": "assets/responsive/73049aab01f5-480.webp",
+    "bytes": 27842,
+    "sha256": "cd7bf492ecb9f4e455940e508f8032bf68a6bfb9088b735816e5cfcbcdfbdd15"
+  },
+  {
+    "path": "assets/responsive/73049aab01f5-768.webp",
+    "bytes": 57102,
+    "sha256": "79cce6d180e264e66b66a7580ecffbcc8d27ca9a2165d515f5b4a9d35338d261"
+  },
+  {
+    "path": "assets/responsive/73049aab01f5-1024.webp",
+    "bytes": 84128,
+    "sha256": "059b724c84e28ff773169e7c672aa229e00f51c840706d4294f0aac05c93f077"
+  },
+  {
+    "path": "assets/responsive/73049aab01f5-1440.webp",
+    "bytes": 129086,
+    "sha256": "31cf99e18bcf92869158bf190dbcfbb5ed6bc15b1164c99ed6abed7ead3d8dee"
+  },
+  {
+    "path": "assets/social/izrada-web-trgovina.png",
+    "bytes": 44840,
+    "sha256": "552a518a622d29b70b7471671ed3c01103d6f65ae3de822b269e25baacaf7ff5"
+  },
+  {
+    "path": "assets/social/odrzavanje-web-stranica.png",
+    "bytes": 48248,
+    "sha256": "44c327e8fccf567c7809b218c14860d21f3da1196f49be35b4b26ac770c54836"
+  },
+  {
+    "path": "assets/social/cjenik.png",
+    "bytes": 38125,
+    "sha256": "d0ec9fd90c2daf037d50ee34eb1b64b0c2be6eeb8cbe07e803d6c6fdd2fe1e68"
+  },
+  {
+    "path": "assets/social/o-nama.png",
+    "bytes": 43303,
+    "sha256": "e1f89616a44861133872ea68e98dfa4a16711f373cc495f7169e46e22b8f0bb4"
+  },
+  {
+    "path": "assets/social/kontakt.png",
+    "bytes": 36115,
+    "sha256": "c9de97fbb70c09468b68f943af3fffd61e848d4de55a56d4611a160cfa865b2a"
+  },
+  {
+    "path": "legal-expressive.css",
+    "bytes": 6759,
+    "sha256": "d15a6df73082f61af7f81db45785be99845f7e5f54e056ecf36b23fa53c5cdb5"
+  },
+  {
+    "path": "legal-expressive.js",
+    "bytes": 380,
+    "sha256": "85d0498732e4bb040be3092d0d703d610efdcefd70b761b11f4532bdf9f3b248"
+  },
+  {
+    "path": "assets/social/politika-privatnosti.png",
+    "bytes": 32728,
+    "sha256": "8d0163803e9bc1e50e62d85bbe893a7b70719994785675a1a6022625680ddae8"
+  },
+  {
+    "path": "assets/social/politika-kolacica.png",
+    "bytes": 32218,
+    "sha256": "3d1934066e00beac636ac3c4db575d8d23c9cb4fc138632c729361cc9ebccda2"
+  },
+  {
+    "path": "assets/social/uvjeti-koristenja.png",
+    "bytes": 32460,
+    "sha256": "5460900196fbc7ba9c23955f327b268835654137ec7ca0d13abe8e48ba9b7faa"
+  },
+  {
+    "path": "blog-expressive.css",
+    "bytes": 11748,
+    "sha256": "44977e1632990948eb614316d9b06d43b7ebb1d7e9bd23e69c02dfc7d3bf44f5"
+  },
+  {
+    "path": "blog-expressive.js",
+    "bytes": 261,
+    "sha256": "01f72fcdf4eb80dd867da6a95e3feda24228b1f0c09fc2ec5d3c9bbb0468a144"
+  },
+  {
+    "path": "assets/social/blog-accessibility-web-stranice.png",
+    "bytes": 35862,
+    "sha256": "c709de373ccae480ad1c78c74153ed7f99cbea72e77f42b292e81aa2854306ad"
+  },
+  {
+    "path": "assets/social/blog-brzina-web-stranice.png",
+    "bytes": 41735,
+    "sha256": "ad5ae083d8e80300f35414afe6e84f976a003fca02071395dcf5a4a6fea35f83"
+  },
+  {
+    "path": "assets/social/blog-core-web-vitals.png",
+    "bytes": 35444,
+    "sha256": "968e14f9a21c29761450a98f24137119f9253fd782a8549a7fce69c1e0049662"
+  },
+  {
+    "path": "assets/social/blog-dobra-pocetna-stranica.png",
+    "bytes": 40336,
+    "sha256": "bb07ed0e465db1709e743bf652b4bba271dd1a55a61a46f715bca6fb4e178eac"
+  },
+  {
+    "path": "assets/social/blog-gdje-postaviti-cta.png",
+    "bytes": 39164,
+    "sha256": "2cd5115df88ca2797cfec57d1df914bb11d3aaf5eceab512919f7cc96f8bb35b"
+  },
+  {
+    "path": "assets/social/blog-greske-prije-izrade-web-stranice.png",
+    "bytes": 37425,
+    "sha256": "b6011987114d0f05a84b0e3dfa20179a3760d943ab8ce7bc4f929e315d831f0c"
+  },
+  {
+    "path": "assets/social/blog.png",
+    "bytes": 37264,
+    "sha256": "20859bd47257d591e4660f52be52ed6f4e85dab55b7a2dbc3739b05d6bd20a71"
+  },
+  {
+    "path": "assets/social/blog-kako-analizirati-seo-konkurenciju.png",
+    "bytes": 37238,
+    "sha256": "9c931d0f3c7e483aeb8c5d8d8d1044e27c9a260f967143e56adf0c50ac85e0d5"
+  },
+  {
+    "path": "assets/social/blog-kako-analizirati-serp.png",
+    "bytes": 35778,
+    "sha256": "9be519d6ea945ded771e39f61b74d7369d76aec1747456c264a7f77fd1c44401"
+  },
+  {
+    "path": "assets/social/blog-kako-fontovi-utjecu-na-brzinu-weba.png",
+    "bytes": 40723,
+    "sha256": "6d8fa1d2157d613d173e13b2887eaf0c4558bc9efc9e99bb1ca3377c9298826b"
+  },
+  {
+    "path": "assets/social/blog-kako-grupirati-kljucne-rijeci.png",
+    "bytes": 39150,
+    "sha256": "50f45a0bf1170928ae9de2dddaa47c2a913fc42de5e00949455e4f38b2871330"
+  },
+  {
+    "path": "assets/social/blog-kako-izgraditi-povjerenje-na-webu.png",
+    "bytes": 38510,
+    "sha256": "c62d0b617bd138f8dfde422124af05f58162556fcbd80bcf602e34d6823c5ac1"
+  },
+  {
+    "path": "assets/social/blog-kako-izraditi-seo-strategiju.png",
+    "bytes": 36343,
+    "sha256": "0907589dc73f89e1ac12968809dadd65bb3e8f81e7ade9fc6a8662f24650ca43"
+  },
+  {
+    "path": "assets/social/blog-kako-napisati-sadrzaj-za-web-stranicu.png",
+    "bytes": 39766,
+    "sha256": "4efc7fc8ad2a957a91388b3697c14c183951e5e9e234600fce2791da5d48b3ef"
+  },
+  {
+    "path": "assets/social/blog-kako-napraviti-dobru-kontakt-formu.png",
+    "bytes": 38688,
+    "sha256": "7861b699ea480ef510d88bb7aabaa4d78d66c5e33e87a2d2a8e3f7e05cbd7fcf"
+  },
+  {
+    "path": "assets/social/blog-kako-napraviti-keyword-mapping.png",
+    "bytes": 38405,
+    "sha256": "9944dfd242231a92d19d2c7bd1f22324f37929f62b973e9c084a17378efe1343"
+  },
+  {
+    "path": "assets/social/blog-kako-napraviti-keyword-research.png",
+    "bytes": 40901,
+    "sha256": "176746544be3fc757b4d185650d0e3c718e3a2138570b68cd85a11acf48041eb"
+  },
+  {
+    "path": "assets/social/blog-kako-odrediti-ciljeve-web-stranice.png",
+    "bytes": 45550,
+    "sha256": "b9aca9da0e01fafcfdcad2f53e6c4a352a30deb0bc0b0af9d6e8d39402dc639e"
+  },
+  {
+    "path": "assets/social/blog-kako-pronaci-content-gap.png",
+    "bytes": 37940,
+    "sha256": "fe8d8146e852eac02aec19d2e72116d1a3898401b7331bef3fa1f4fbb8a3d538"
+  },
+  {
+    "path": "assets/social/blog-kako-seo-funkcionira.png",
+    "bytes": 33796,
+    "sha256": "1fc94d8db9d7d6d606fb353ae4e0afd40ea7e5d1a915ffea9e34e64ee05446cc"
+  },
+  {
+    "path": "assets/social/blog-keyword-cannibalization.png",
+    "bytes": 37778,
+    "sha256": "97377e095551d030fb893683c627476148f93f461f409cea1f3b33f3e2e6a03c"
+  },
+  {
+    "path": "assets/social/blog-koliko-stranica-treba-imati-poslovna-web-stranica.png",
+    "bytes": 43740,
+    "sha256": "1db7b751d0a262cf151e2f63c7e2ae54cb900fb97d4e6be3b1c41eca465cbb7c"
+  },
+  {
+    "path": "assets/social/blog-koliko-traje-izrada-web-stranice.png",
+    "bytes": 37325,
+    "sha256": "e63e0fdc3c5331370a9c373a2bca507e5099dbbd538b02c5aee95b28bfad6c62"
+  },
+  {
+    "path": "assets/social/blog-koliko-traje-seo.png",
+    "bytes": 39755,
+    "sha256": "42a0d6a76b583c9f99ec57e5d1736caac7029b8915dab86d3ccaebca0e520799"
+  },
+  {
+    "path": "assets/social/blog-long-tail-kljucne-rijeci.png",
+    "bytes": 36521,
+    "sha256": "ae9332f1b82b5a4284678529c6ae1878c4ad8dd0d9ec8745ae6868e4aedecbb1"
+  },
+  {
+    "path": "assets/social/blog-mobile-first-dizajn.png",
+    "bytes": 35214,
+    "sha256": "b386ae87dc09d13311e1cb83ba1e119de89dfe7a2bf22a4432c6bd36af38f4a2"
+  },
+  {
+    "path": "assets/social/blog-najcesce-ux-greske.png",
+    "bytes": 41426,
+    "sha256": "2e5b107f2a43b2236da04d7ac3813a2086a1c3a8133909a97f6745284d075ce6"
+  },
+  {
+    "path": "assets/social/blog-najcesce-ux-greske-2.png",
+    "bytes": 41426,
+    "sha256": "2e5b107f2a43b2236da04d7ac3813a2086a1c3a8133909a97f6745284d075ce6"
+  },
+  {
+    "path": "assets/social/blog-optimizacija-slika-za-web.png",
+    "bytes": 39540,
+    "sha256": "af27a3d61aa670c06315cf154f9119b27e9ca228cc28bfecb425815b99a8a2ed"
+  },
+  {
+    "path": "assets/social/blog-proces-izrade-web-stranice.png",
+    "bytes": 40711,
+    "sha256": "493f050640358b0a56e73e36a639731b9cb71b148dc117bcb37df98d0b74a20d"
+  },
+  {
+    "path": "assets/social/blog-responsive-dizajn-sto-testirati.png",
+    "bytes": 40096,
+    "sha256": "f199c7cc2d24f1f37b42509b2fc22d2cf2e2884401bf841e51d678f8a24c6a60"
+  },
+  {
+    "path": "assets/social/blog-seo-ciljevi-i-mjerenje.png",
+    "bytes": 41615,
+    "sha256": "0365ad0c837f28017d1c432e83ef656314c6f3266e213eb07ca3a4db3358ed04"
+  },
+  {
+    "path": "assets/social/blog-sto-cini-dobar-poslovni-web.png",
+    "bytes": 36958,
+    "sha256": "a8e7431584666ab6ccd4ab5d10f45b17a96d74beed341f70939c154b1f9793c9"
+  },
+  {
+    "path": "assets/social/blog-sto-je-keyword-difficulty.png",
+    "bytes": 36026,
+    "sha256": "556b17f87ee9704076a568289197184bd51fba749e18a293f01f389409b4ddf6"
+  },
+  {
+    "path": "assets/social/blog-sto-je-search-intent.png",
+    "bytes": 33587,
+    "sha256": "dec7c35a7b6277b7e1ed214f5294466a9627f25fced4b0aa319d080fdf1724d7"
+  },
+  {
+    "path": "assets/social/blog-sto-je-seo.png",
+    "bytes": 36440,
+    "sha256": "fdfe3564580502a1637fa4070997b4fbdc032733f2ae86881628d051ba2526f1"
+  },
+  {
+    "path": "assets/social/blog-sto-pripremiti-prije-izrade-web-stranice.png",
+    "bytes": 41976,
+    "sha256": "981042fcc98b489299bffea5d3dc5be7ba16c8576fbef5b5be07d68532a5eaec"
+  },
+  {
+    "path": "assets/social/blog-sto-treba-imati-stranica-usluge.png",
+    "bytes": 36994,
+    "sha256": "fa42533505412c9f6d291a26d159f68fc77993216ebf72ba12119d9eb736cacb"
+  },
+  {
+    "path": "assets/social/blog-sto-utjece-na-cijenu-web-stranice.png",
+    "bytes": 38127,
+    "sha256": "a5c9d05afe7111e1f1f752808413ac892d31f44e7159f5bfb4390a9226e36b04"
+  },
+  {
+    "path": "assets/social/blog-struktura-web-stranice-za-malu-tvrtku.png",
+    "bytes": 42641,
+    "sha256": "0710fd2d2892d282d001bae2f3b214eb32947ce9e50d17d36208ebdfd411d405"
+  },
+  {
+    "path": "assets/social/blog-zasto-je-dobar-hosting-vazan.png",
+    "bytes": 42929,
+    "sha256": "97c3396b54ca139191029e4ab8f74d4806ae809e47d5c0d271a54299ca8a4630"
+  },
+  {
+    "path": "assets/social/blog-zasto-je-lighthouse-rezultat-los.png",
+    "bytes": 43204,
+    "sha256": "7dba7381e0969132dba5d95c40e3a11f6e1920534b62b0c6abdc146796377778"
+  },
+  {
+    "path": "assets/social/blog-zasto-korisnici-napustaju-web.png",
+    "bytes": 40362,
+    "sha256": "716ba35be175bc3c32be6d5bd4b8b6b8b8135457c7b4d60382f149894c602a49"
+  },
+  {
+    "path": "projects-expressive.css",
+    "bytes": 12247,
+    "sha256": "3c20885f1b35fcd3c8ab89bde8c51808cf0abb78a24499d8e6a4b92715e426f4"
+  },
+  {
+    "path": "assets/case-studies/barisic-plast/cover.webp",
+    "bytes": 104414,
+    "sha256": "e2ce302754c2bb48a5eeed342cb512cd901b7980051037ebf25cf1f8bd7e0123"
+  },
+  {
+    "path": "assets/case-studies/barisic-plast/inquiry.webp",
+    "bytes": 14136,
+    "sha256": "c5c13e339c828c127c33da58fbf503a2e31d416b69ac2ec3a727ac071b61627f"
+  },
+  {
+    "path": "assets/case-studies/barisic-plast/work.webp",
+    "bytes": 107120,
+    "sha256": "bd5a061c4256677143719458f486a2450f1fe5bfd7af21285c7f09fa299a0dec"
+  },
+  {
+    "path": "assets/responsive/c5c13e339c82-320.webp",
+    "bytes": 1304,
+    "sha256": "7a60a5523a839d7bd38c5d27aa63359da36d308a3a97f7d65d51e76c91e7801f"
+  },
+  {
+    "path": "assets/responsive/c5c13e339c82-480.webp",
+    "bytes": 2440,
+    "sha256": "b4964311541979715167d82c84bad90b878f87958b2ea967ddef52c02842bee0"
+  },
+  {
+    "path": "assets/responsive/c5c13e339c82-768.webp",
+    "bytes": 4870,
+    "sha256": "0745b6cf81a19da6bde2c8303376b4d14c587869f4ca9aa8a1bc0d06bd764ced"
+  },
+  {
+    "path": "assets/responsive/c5c13e339c82-1024.webp",
+    "bytes": 7286,
+    "sha256": "4458d417456a22a7c97dd24b067a7dc7c6df9c10b2f29a7830d2dc64838df9d0"
+  },
+  {
+    "path": "assets/responsive/c5c13e339c82-1440.webp",
+    "bytes": 11468,
+    "sha256": "6c0f080056317f6eb06897f72c035e1a804482d96c840d0d737e7d4c3a372b88"
+  },
+  {
+    "path": "assets/responsive/bd5a061c4256-320.webp",
+    "bytes": 9066,
+    "sha256": "cab392c5c4bbc2379fa896a9de0b1ac9d5d2bd24efa860f080dcdec470dbcb2d"
+  },
+  {
+    "path": "assets/responsive/bd5a061c4256-480.webp",
+    "bytes": 17802,
+    "sha256": "b7fc6b7bc39f576f5304611c2c368542d05e140abd4a0e95ce9585408470b7e4"
+  },
+  {
+    "path": "assets/responsive/bd5a061c4256-768.webp",
+    "bytes": 36768,
+    "sha256": "50972f2691284e8c998ce859e323bbf29cef3c0b886f5f59a7b901d67e0578db"
+  },
+  {
+    "path": "assets/responsive/bd5a061c4256-1024.webp",
+    "bytes": 54812,
+    "sha256": "36ab6d1da1dc8c2869233e88179e46ac6233d2a3959c97366fec1e1184bf3e91"
+  },
+  {
+    "path": "assets/responsive/bd5a061c4256-1440.webp",
+    "bytes": 81406,
+    "sha256": "a0ab62d2c431b5f9053bcb0c6c51c5565b0ad8dd019727b4b1b91e6d298c5f80"
+  },
+  {
+    "path": "assets/social/projekti-barisic-plast.png",
+    "bytes": 36512,
+    "sha256": "0767f2eee3c78d75879dcbd019b6b41a125114728cba7861909011c7a244ae45"
+  },
+  {
+    "path": "assets/case-studies/ducija/packages.webp",
+    "bytes": 33036,
+    "sha256": "d6b6983101042dfcf31243693a685738dfcec7f68f3f9325c97923018d8e8b2b"
+  },
+  {
+    "path": "assets/case-studies/ducija/process.webp",
+    "bytes": 80416,
+    "sha256": "2a590a0dfaab88830cc21a049e91d660723848a5b7172774aab26da479f64084"
+  },
+  {
+    "path": "assets/responsive/d6b698310104-320.webp",
+    "bytes": 3882,
+    "sha256": "4f47f0403e5e379870db7dd8852137ed657d874668ed421a9d8c79803f029fb2"
+  },
+  {
+    "path": "assets/responsive/d6b698310104-480.webp",
+    "bytes": 6684,
+    "sha256": "a864c8c7fd65a2a2c50c320dd08ff6e93b85c4c31d500561d239b91af8ef3bdc"
+  },
+  {
+    "path": "assets/responsive/d6b698310104-768.webp",
+    "bytes": 12706,
+    "sha256": "30f7d4d81c81e9e5bee627ade6ab9c61dfdbbe9e5a9156f553820338379590ab"
+  },
+  {
+    "path": "assets/responsive/d6b698310104-1024.webp",
+    "bytes": 18812,
+    "sha256": "49d9bd62f3b20665666f5874403056ae1bc0786e68dfc1b50f2761285fb0a7a2"
+  },
+  {
+    "path": "assets/responsive/d6b698310104-1440.webp",
+    "bytes": 27906,
+    "sha256": "b8e45db90312fa921f2026b98ccc8fc1f5baa91e47ee2509ad70a1c7b0de0fb1"
+  },
+  {
+    "path": "assets/responsive/2a590a0dfaab-320.webp",
+    "bytes": 8036,
+    "sha256": "f25b83dc261e38a2512fd8335ae019075772d19672c62e514a027b844b2ad90c"
+  },
+  {
+    "path": "assets/responsive/2a590a0dfaab-480.webp",
+    "bytes": 14588,
+    "sha256": "3f8b7d2097eaf606d5896f8af15bdf7785e9e070df43674c16aebb70c7c86a4b"
+  },
+  {
+    "path": "assets/responsive/2a590a0dfaab-768.webp",
+    "bytes": 29968,
+    "sha256": "b4221170d7e62a6a0a1a38ff5e446fec89d88ba29f1f59253e424282e5bfb3e2"
+  },
+  {
+    "path": "assets/responsive/2a590a0dfaab-1024.webp",
+    "bytes": 43018,
+    "sha256": "1a2ef08d750aaac91fa826261acb84141314bfb4c6afba0316c11fc9a708f6cf"
+  },
+  {
+    "path": "assets/responsive/2a590a0dfaab-1440.webp",
+    "bytes": 65166,
+    "sha256": "dc40826dc31d1698f08b94f3a78c18881e2d79e3cebd2ea866f26fb0a2ab98a7"
+  },
+  {
+    "path": "assets/social/projekti-ducija.png",
+    "bytes": 34420,
+    "sha256": "a193d90dd77a356dfc57fbd9795eba7828cb4cb464cf84b6d4b6bfd7dd86eadc"
+  },
+  {
+    "path": "assets/case-studies/odvjetnicki-ured-balaz/cover.webp",
+    "bytes": 71822,
+    "sha256": "6a334d28c1872b26bc90c62183c0eaea1f6ec16d1051d307620ec6684532201b"
+  },
+  {
+    "path": "assets/case-studies/varmos/desktop.webp",
+    "bytes": 117440,
+    "sha256": "4e31b00f40fe1733e755de9fa6935719735801ebf86194d5f8af7482b55c152d"
+  },
+  {
+    "path": "assets/case-studies/krie-design/cover.webp",
+    "bytes": 152280,
+    "sha256": "73049aab01f54153dd378932c04350eb0064ff54c5353c8f756d0bfd5aa06a4e"
+  },
+  {
+    "path": "assets/case-studies/rumalu/cover.jpg",
+    "bytes": 56080,
+    "sha256": "4595b36378e3abc2f311dd1ff7ee8ffcac899de8434236c9f123712b9bd4876e"
+  },
+  {
+    "path": "assets/responsive/4595b36378e3-320.webp",
+    "bytes": 6554,
+    "sha256": "e7fd7cd6b5bf8644c5b492256c293f7647cd1139d2dd4028635ad22d5fbedea0"
+  },
+  {
+    "path": "assets/responsive/4595b36378e3-480.webp",
+    "bytes": 11322,
+    "sha256": "d0f11114b027bf7c7b1103a0aa0956fd325c06a164fe24038ba5ecd3b78b2255"
+  },
+  {
+    "path": "assets/responsive/4595b36378e3-768.webp",
+    "bytes": 20408,
+    "sha256": "3fc566b8fccf4062fb8aa2b0590dd18e18cfdd0f325b5244717d93b98feec7fe"
+  },
+  {
+    "path": "assets/responsive/4595b36378e3-1024.webp",
+    "bytes": 29414,
+    "sha256": "4637960d8db4757b2a362eb4b0381a82d5d257658351cf913d2e85deb34e6866"
+  },
+  {
+    "path": "assets/responsive/4595b36378e3-1265.webp",
+    "bytes": 37982,
+    "sha256": "2d7f796402fdd94652cac24a82b9eb3356e23694afe65f33d41e7f9b8568def7"
+  },
+  {
+    "path": "assets/social/projekti.png",
+    "bytes": 39098,
+    "sha256": "8213e9fb1022d2bd6cb48c861c13dcb93bdced88c579d2d5f4f223ddfa8d55ea"
+  },
+  {
+    "path": "assets/case-studies/krie-design/shop.webp",
+    "bytes": 182762,
+    "sha256": "0685d55cada9912816d319a74b276bffb6a343058af6159feee7ab266689e200"
+  },
+  {
+    "path": "assets/case-studies/krie-design/product.webp",
+    "bytes": 141570,
+    "sha256": "0d0d89b80c9385c6f3b2bc22c2256051b0e88721603fa46ad4ffb7f8aa5826c7"
+  },
+  {
+    "path": "assets/responsive/0685d55cada9-320.webp",
+    "bytes": 13458,
+    "sha256": "10ad0b18b2f06ca09b1e6065098b51e1cd5f728cf8dd42eadd43d9de8c35799b"
+  },
+  {
+    "path": "assets/responsive/0685d55cada9-480.webp",
+    "bytes": 24960,
+    "sha256": "aa76329f69f3acf1cc70d66305723a89f961b720a5e1b7955f5eef5d9caf2f1a"
+  },
+  {
+    "path": "assets/responsive/0685d55cada9-768.webp",
+    "bytes": 54700,
+    "sha256": "a625354f05c0708dd3148f6fad4057350845438aaa1bc37b2d7fed9d68d6ad82"
+  },
+  {
+    "path": "assets/responsive/0685d55cada9-1024.webp",
+    "bytes": 86212,
+    "sha256": "2f789f4a13de67f3b9f220da53524aff942e4b813cbb96f8a88257e345477d28"
+  },
+  {
+    "path": "assets/responsive/0685d55cada9-1440.webp",
+    "bytes": 141912,
+    "sha256": "fa68a07fce549fc999f6dd184eea24930baf4c7367cbd1d0783a8b236b75c663"
+  },
+  {
+    "path": "assets/responsive/0d0d89b80c93-320.webp",
+    "bytes": 8644,
+    "sha256": "ca45fd6f7525d728b81ac71e3389fbcfa4f19ecf61764ed13378911895c0dec4"
+  },
+  {
+    "path": "assets/responsive/0d0d89b80c93-480.webp",
+    "bytes": 18402,
+    "sha256": "e6cc1d101a33afd8b743ed6634ea13b84b3f4555ee1d12c32260beea0327c374"
+  },
+  {
+    "path": "assets/responsive/0d0d89b80c93-768.webp",
+    "bytes": 43204,
+    "sha256": "07b31407578c486a46b6fb215cb4d9622b49559aed14026f4f887461ca904afe"
+  },
+  {
+    "path": "assets/responsive/0d0d89b80c93-1024.webp",
+    "bytes": 67580,
+    "sha256": "d8b5249cc97e475d634e19de5a036617053d81a9956c9c25a871cf61c44766e9"
+  },
+  {
+    "path": "assets/responsive/0d0d89b80c93-1440.webp",
+    "bytes": 112696,
+    "sha256": "541a678baa5862c70babe5ed06b95dc7fca0d8f5852a98da82c3e8c46ab986f8"
+  },
+  {
+    "path": "assets/social/projekti-krie-design.png",
+    "bytes": 35649,
+    "sha256": "68e37d3d925e1106d9799757a006280996655fd97549498a86d8d49602bb968d"
+  },
+  {
+    "path": "assets/case-studies/odvjetnicki-ured-balaz/services.webp",
+    "bytes": 39820,
+    "sha256": "e4ec6454d34d31b93cb8e0b3865eb445c4b24f241531f7ba629ddff69f8fb093"
+  },
+  {
+    "path": "assets/case-studies/odvjetnicki-ured-balaz/contact.webp",
+    "bytes": 37212,
+    "sha256": "a1f938974c366ceb79a4eb5ba1a9baae54cde6a7ed6c0c4c297849b90ddf156f"
+  },
+  {
+    "path": "assets/responsive/e4ec6454d34d-320.webp",
+    "bytes": 4038,
+    "sha256": "29b34f0d9b00c7873ee22ad0abe59e98bf2da504f031e9b7df1c84bd63a80727"
+  },
+  {
+    "path": "assets/responsive/e4ec6454d34d-480.webp",
+    "bytes": 7178,
+    "sha256": "c13aec5cd31060ff922846427125743b18830bb81239431e8b8c7fe39c2b7378"
+  },
+  {
+    "path": "assets/responsive/e4ec6454d34d-768.webp",
+    "bytes": 14518,
+    "sha256": "0989e1902f2551e789df1f7977bf32cf4ee97b2cbe322819d92be9ba579e2ddb"
+  },
+  {
+    "path": "assets/responsive/e4ec6454d34d-1024.webp",
+    "bytes": 21090,
+    "sha256": "da5f54b70ee9513017ebbefc3f9efdd526d0488cdebca1ce61394d5e84bf9e52"
+  },
+  {
+    "path": "assets/responsive/e4ec6454d34d-1440.webp",
+    "bytes": 31872,
+    "sha256": "754008a90195ffedfa71b0b2b900d97ab4c29ef5dbc0a1e40d5620407ce78348"
+  },
+  {
+    "path": "assets/responsive/a1f938974c36-320.webp",
+    "bytes": 3090,
+    "sha256": "30d8b0ee95a9e21a43484326d66ba51018d5ad994acc20ede6741b841fa5af34"
+  },
+  {
+    "path": "assets/responsive/a1f938974c36-480.webp",
+    "bytes": 6252,
+    "sha256": "954927e1db7f835920f12f3d9aaf2f0b57fc6b8410f6986f9c1bc0f6ada39078"
+  },
+  {
+    "path": "assets/responsive/a1f938974c36-768.webp",
+    "bytes": 13002,
+    "sha256": "a95cb6aa1fddc828848a858ecd01601edfa738aba07ef2799f1fd4bd396bcff2"
+  },
+  {
+    "path": "assets/responsive/a1f938974c36-1024.webp",
+    "bytes": 18434,
+    "sha256": "f2cca08edd7fb1f766c6b37305f43bf1589c46179dcce3bcad1a993c391215bd"
+  },
+  {
+    "path": "assets/responsive/a1f938974c36-1440.webp",
+    "bytes": 29652,
+    "sha256": "010ef614031c859baf7159a72834f0475cdb926de87ada0e76a5d7d4514c4f3d"
+  },
+  {
+    "path": "assets/social/projekti-odvjetnicki-ured-balaz.png",
+    "bytes": 39529,
+    "sha256": "4c8bcc22211b6cca0af5431dfa8ad7b7ba66608a3ddd22132ccbef53e1de1062"
+  },
+  {
+    "path": "assets/case-studies/rumalu/services.jpg",
+    "bytes": 81324,
+    "sha256": "6aaae6f859834c627ab476d886df4b94fbf841103d5c1c0f401ccdbf8e978501"
+  },
+  {
+    "path": "assets/case-studies/rumalu/service.jpg",
+    "bytes": 54029,
+    "sha256": "b480477760b21c84849b382b9b9d3e8b09fbe496d0056e7488b256026173b8cd"
+  },
+  {
+    "path": "assets/responsive/6aaae6f85983-320.webp",
+    "bytes": 9240,
+    "sha256": "e1afd11c2f25cd6a31fa7b3c399b2ca3765811d3af4d03a3d5bb86ae0908d7fe"
+  },
+  {
+    "path": "assets/responsive/6aaae6f85983-480.webp",
+    "bytes": 17024,
+    "sha256": "48b92a2174ce0bd9d0ac6f552b6940cb0368d1d78d9d9b29417e59fd5a11b236"
+  },
+  {
+    "path": "assets/responsive/6aaae6f85983-768.webp",
+    "bytes": 31444,
+    "sha256": "6eb6eb1e6777944c7897f8427bc66554bab1949b54f7ec1127fcccc6180f18bb"
+  },
+  {
+    "path": "assets/responsive/6aaae6f85983-1024.webp",
+    "bytes": 45702,
+    "sha256": "675264b32c553738cf3216083e9df2d198063df0dac049991bfa23d6d6bc65c4"
+  },
+  {
+    "path": "assets/responsive/6aaae6f85983-1265.webp",
+    "bytes": 59906,
+    "sha256": "d7ac4374d96b2ead3d6daccf19f239d766be3dd567743fe9e2ec4f35d7dadba4"
+  },
+  {
+    "path": "assets/responsive/b480477760b2-320.webp",
+    "bytes": 6532,
+    "sha256": "24977f85ceda9c577c47f851e6f74e320384cdd48b19f616eb789fb3b178f32e"
+  },
+  {
+    "path": "assets/responsive/b480477760b2-480.webp",
+    "bytes": 10420,
+    "sha256": "20c69933ad324b1200789f336eedc28750098817319665a1ff2ae024a04d6f00"
+  },
+  {
+    "path": "assets/responsive/b480477760b2-768.webp",
+    "bytes": 18888,
+    "sha256": "6f969258463aab628c2707e132165ac7b1654cabd82aee2d9dec6dfe4c919800"
+  },
+  {
+    "path": "assets/responsive/b480477760b2-1024.webp",
+    "bytes": 27600,
+    "sha256": "e59d1619e2eeea562790cb08bb26ee374fa7445472e2473f4a32a6dd12197859"
+  },
+  {
+    "path": "assets/responsive/b480477760b2-1265.webp",
+    "bytes": 36020,
+    "sha256": "f06cc813a2cb9d046f3483dfe9d61d0031f4102a639518320966e242c93e0549"
+  },
+  {
+    "path": "assets/social/projekti-rumalu.png",
+    "bytes": 39889,
+    "sha256": "9f21f7ae3e7069fb67d36370d784a09269dc4626d2bf62cd97872ee135122e55"
+  },
+  {
+    "path": "assets/case-studies/varmos/services.webp",
+    "bytes": 68332,
+    "sha256": "d222c789c57dd314a27399d4b83bc3cae3cca8c5f82908a63f9fb285cc3b279b"
+  },
+  {
+    "path": "assets/case-studies/varmos/contact.webp",
+    "bytes": 38370,
+    "sha256": "1a96f006577f0f1f8c6e06b6c1a56555b5de6c9f7145d31724a0a6d96982b98f"
+  },
+  {
+    "path": "assets/responsive/d222c789c57d-320.webp",
+    "bytes": 6916,
+    "sha256": "661778eef932bd349b1bd6723206ca7e75ca5b9087e978421408527e1eb2686b"
+  },
+  {
+    "path": "assets/responsive/d222c789c57d-480.webp",
+    "bytes": 13162,
+    "sha256": "cfd587c3d042221fd117d3ab5f90be1dbaceb6cfa4df91860254224d5b6c3424"
+  },
+  {
+    "path": "assets/responsive/d222c789c57d-768.webp",
+    "bytes": 26952,
+    "sha256": "0ae784b0839a177a12c28c8b106e5ddf0f9e2362cb824d25178931ccef490aaa"
+  },
+  {
+    "path": "assets/responsive/d222c789c57d-1024.webp",
+    "bytes": 40702,
+    "sha256": "25aafae79012262834285ead2892a830dafb546df644064fb5841a2917609e65"
+  },
+  {
+    "path": "assets/responsive/d222c789c57d-1440.webp",
+    "bytes": 62234,
+    "sha256": "ef5f3e5ad8092fce6603e7f9d1f2e47bc30ebfd179ed4fcc218b47718e1470f0"
+  },
+  {
+    "path": "assets/responsive/1a96f006577f-320.webp",
+    "bytes": 3256,
+    "sha256": "996053d20fa2a2bd4796f5185f717a64e92f212a4c9fd2dc8bd50d0f4f8d2ce1"
+  },
+  {
+    "path": "assets/responsive/1a96f006577f-480.webp",
+    "bytes": 6598,
+    "sha256": "89d1c1d670ec980a2196ecbc0e0859f2b15e543372b4bc4d944071784f9eddd5"
+  },
+  {
+    "path": "assets/responsive/1a96f006577f-768.webp",
+    "bytes": 12976,
+    "sha256": "e02b901770f2dd231f445e0d3820d3dba02c7eb1e8ddbb613e665e2ed3cbe3c5"
+  },
+  {
+    "path": "assets/responsive/1a96f006577f-1024.webp",
+    "bytes": 20454,
+    "sha256": "0e2c89e2fe27aed63615531d5de44b07ea4919a2073649ced2b43368e50c4153"
+  },
+  {
+    "path": "assets/responsive/1a96f006577f-1440.webp",
+    "bytes": 32502,
+    "sha256": "635d99ad9d54372ef1f25ab8ff5968630c9d04917f09b3b0d429352553978439"
+  },
+  {
+    "path": "assets/social/projekti-varmos.png",
+    "bytes": 38959,
+    "sha256": "83b9e4211729cfbbebb074129ab527c6d785bf6899619634108ef8aa92def567"
+  },
+  {
+    "path": "site-runtime.js",
+    "bytes": 99,
+    "sha256": "fc39d973c592dad31fe183b2b9c7f2ba293822ecb6f7ad306d9e8989d095d795"
+  },
+  {
+    "path": "robots.txt",
+    "bytes": 196,
+    "sha256": "5310555264d5c9f45cb734708de50d2d18381a0efbce4ca9db183c3136c0a108"
+  },
+  {
+    "path": "sitemap.xml",
+    "bytes": 4557,
+    "sha256": "423a2201c53b059946f8aaaa938688a26dcd0f0774721cd426e028affdb7ba79"
+  },
+  {
+    "path": ".htaccess",
+    "bytes": 3773,
+    "sha256": "5b6a919725381e6ddaf039131d3e782063db3d0aef9079506e8350c4369dc08c"
+  }
+]

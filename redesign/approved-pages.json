@@ -1,0 +1,498 @@
+[
+  {
+    "route": "/",
+    "title": "Izrada web stranica, trgovina i SEO - Legatech",
+    "h1": "DIGITALNA AGENCIJA IZ OSIJEKA.",
+    "description": "Legatech pomaže tvrtkama i obrtima izgraditi brze web stranice, WooCommerce trgovine i organsku vidljivost kroz SEO. Zatražite ponudu.",
+    "mainHash": "1664c7c8382540825c45555a42cd21d9b2014e0363f262deb487fa1ab4164ce7",
+    "stableMainHash": "38ed7033b7b09ee9b7f2c002ff5bd3eea310f369f565ce66c53aae2ac51b11de"
+  },
+  {
+    "route": "/izrada-web-stranica-cijena/",
+    "title": "Izrada web stranica – cijena od 500 € - Legatech",
+    "h1": "Izrada web stranica – cijena i paketi",
+    "description": "Profesionalna izrada web stranica za obrte i tvrtke. Paketi od 500 €, responzivan dizajn, SEO temelji, analitika i podrška nakon objave.",
+    "mainHash": "34a8511fb995a6b05a0efc8676654dbee3415af9b99453b5068d5e2fe04a0c47",
+    "stableMainHash": "34a8511fb995a6b05a0efc8676654dbee3415af9b99453b5068d5e2fe04a0c47"
+  },
+  {
+    "route": "/izrada-web-stranica-osijek/",
+    "title": "Izrada web stranica Osijek - Od 500 € - Legatech",
+    "h1": "Izrada web stranica u Osijeku.",
+    "description": "Izrada web stranica u Osijeku za obrte i tvrtke. Moderan dizajn, WordPress, SEO optimizacija i izravna suradnja. Cijene od 500 €. Zatražite ponudu.",
+    "mainHash": "7c9b7a346d677674204b85904782d185247c7cc0ae6e17c6054eb590148b39ea",
+    "stableMainHash": "7c9b7a346d677674204b85904782d185247c7cc0ae6e17c6054eb590148b39ea"
+  },
+  {
+    "route": "/seo-optimizacija-cijena/",
+    "title": "SEO optimizacija – od 290 € mjesečno - Legatech",
+    "h1": "SEO optimizacija – cijena i paketi",
+    "description": "SEO optimizacija za tvrtke i obrte - tehnički SEO, sadržaj, lokalni SEO, ključne riječi i mjerenje rezultata. Paketi od 290 € mjesečno.",
+    "mainHash": "87829dd5b2a54f8570211839d30fbab99825bb0c7ebd82995bc07e66d832b2aa",
+    "stableMainHash": "87829dd5b2a54f8570211839d30fbab99825bb0c7ebd82995bc07e66d832b2aa"
+  },
+  {
+    "route": "/izrada-web-trgovina/",
+    "title": "Izrada web trgovina – WooCommerce od 1.500 € - Legatech",
+    "h1": "Izrada web trgovina koje kupcima olakšavaju kupnju.",
+    "description": "Izrada WooCommerce web trgovina s preglednim katalogom, jednostavnom kupnjom, sigurnim plaćanjem i SEO temeljima. Projekti od 1.500 €.",
+    "mainHash": "57bae77e1d0dd1de8f5bd7261ae24fb271fe7e57d7fb5b7041c5945c878d68fe",
+    "stableMainHash": "57bae77e1d0dd1de8f5bd7261ae24fb271fe7e57d7fb5b7041c5945c878d68fe"
+  },
+  {
+    "route": "/odrzavanje-web-stranica/",
+    "title": "Održavanje web stranica – od 35 € mjesečno - Legatech",
+    "h1": "Održavanje web stranica koje ostaju sigurne, ažurne i dostupne.",
+    "description": "Redovito WordPress održavanje, backup, sigurnosne provjere, ažuriranja i tehnička podrška. Paketi održavanja od 35 € mjesečno.",
+    "mainHash": "98fe076734878e37a92a54e78fc20a93815fdc5f8787524b912796a29e3d0f10",
+    "stableMainHash": "98fe076734878e37a92a54e78fc20a93815fdc5f8787524b912796a29e3d0f10"
+  },
+  {
+    "route": "/cjenik/",
+    "title": "Cjenik izrade web stranica, SEO-a i održavanja - Legatech",
+    "h1": "Jasan okvir prije prvog razgovora.",
+    "description": "Početne cijene Legatech usluga: web stranice od 500 €, web trgovine od 1.500 €, SEO od 290 € mjesečno i održavanje od 35 € mjesečno.",
+    "mainHash": "ce2a0c85c39b75f0430296bc4ea3e183e22b6244a5a6f5e751c0e49bce733a2e",
+    "stableMainHash": "ce2a0c85c39b75f0430296bc4ea3e183e22b6244a5a6f5e751c0e49bce733a2e"
+  },
+  {
+    "route": "/o-nama/",
+    "title": "O Legatechu - Digitalna agencija Osijek",
+    "h1": "Mala agencija. Izravan pristup. Ozbiljna izvedba.",
+    "description": "Upoznajte Legatech, malu digitalnu agenciju iz Osijeka s osobnim pristupom webu, SEO-u i online prodaji.",
+    "mainHash": "f4a2288f1fb3c73d37e721c33c1bdf790efd8f3661dad60dd123b40308cc7778",
+    "stableMainHash": "f4a2288f1fb3c73d37e721c33c1bdf790efd8f3661dad60dd123b40308cc7778"
+  },
+  {
+    "route": "/kontakt/",
+    "title": "Kontakt - Zatražite ponudu od Legatecha",
+    "h1": "Recite nam što želite postići.",
+    "description": "Kontaktirajte Legatech za izradu web stranice, SEO optimizaciju, web trgovinu ili održavanje. Odgovaramo u jednom radnom danu.",
+    "mainHash": "1c24cda9e3a35c4d1092b4ebca8eb1d0f57c3094480f5d99cdf0c80c7acabae1",
+    "stableMainHash": "1c24cda9e3a35c4d1092b4ebca8eb1d0f57c3094480f5d99cdf0c80c7acabae1"
+  },
+  {
+    "route": "/politika-privatnosti/",
+    "title": "Politika privatnosti - Legatech",
+    "h1": "Politika privatnosti",
+    "description": "Saznajte koje osobne podatke Legatech obrađuje, zašto ih obrađuje i kako možete ostvariti svoja prava.",
+    "mainHash": "337ba4c9ca9e82f84c8ebfb5b99463f3fd42704fd74ca185a1c27883b7ebb689",
+    "stableMainHash": "337ba4c9ca9e82f84c8ebfb5b99463f3fd42704fd74ca185a1c27883b7ebb689"
+  },
+  {
+    "route": "/politika-kolacica/",
+    "title": "Politika kolačića - Legatech",
+    "h1": "Politika kolačića",
+    "description": "Saznajte koje nužne i analitičke kolačiće koristi web stranica Legatech i kako možete promijeniti svoj odabir.",
+    "mainHash": "78dd3e0fa42a02123ce1ec3897e73d32ee46fcbb8618d90c49c62ef1ad1ca241",
+    "stableMainHash": "78dd3e0fa42a02123ce1ec3897e73d32ee46fcbb8618d90c49c62ef1ad1ca241"
+  },
+  {
+    "route": "/uvjeti-koristenja/",
+    "title": "Uvjeti korištenja - Legatech",
+    "h1": "Uvjeti korištenja",
+    "description": "Uvjeti korištenja web stranice Legatech, informacije o ponudama, cijenama, autorskim pravima i odgovornosti.",
+    "mainHash": "e021a90cf06de1e0fa309178f6db1c853d87a9876b93e2237611141d7ddf269e",
+    "stableMainHash": "e021a90cf06de1e0fa309178f6db1c853d87a9876b93e2237611141d7ddf269e"
+  },
+  {
+    "route": "/blog/accessibility-web-stranice/",
+    "title": "Accessibility web stranice - Legatech",
+    "h1": "Accessibility web stranice",
+    "description": "Accessibility, odnosno pristupačnost web stranice, znači da sadržaj i funkcionalnosti weba može koristiti što širi krug ljudi. To uključuje korisnike koji…",
+    "mainHash": "52132cbab1212d52fb1c92bf6af6ff54b690aaae3115e00ed69bcd77e4098306",
+    "stableMainHash": "52132cbab1212d52fb1c92bf6af6ff54b690aaae3115e00ed69bcd77e4098306"
+  },
+  {
+    "route": "/blog/brzina-web-stranice/",
+    "title": "Kako brzina weba utječe na korisnike i SEO? - Legatech",
+    "h1": "Kako brzina weba utječe na korisnike i SEO?",
+    "description": "Brzina web stranice nije samo tehnička tema. Ona direktno utječe na to kako korisnik doživljava web, koliko dugo ostaje, hoće li kliknuti dalje i hoće li na…",
+    "mainHash": "01651b530d59a07f82c910a62e0f617d05016ede20957033a6046c975b476e06",
+    "stableMainHash": "01651b530d59a07f82c910a62e0f617d05016ede20957033a6046c975b476e06"
+  },
+  {
+    "route": "/blog/core-web-vitals/",
+    "title": "Što su Core Web Vitals? - Legatech",
+    "h1": "Što su Core Web Vitals?",
+    "description": "Core Web Vitals su skup metrika kojima se pokušava izmjeriti stvarno korisničko iskustvo web stranice. Umjesto da gledamo samo koliko je vremena potrebno da se…",
+    "mainHash": "2438581bbad09f6b436d25c8a3298f6c4d892141ed66804954e0481ad45a2da0",
+    "stableMainHash": "2438581bbad09f6b436d25c8a3298f6c4d892141ed66804954e0481ad45a2da0"
+  },
+  {
+    "route": "/blog/dobra-pocetna-stranica/",
+    "title": "Kako izgleda dobra početna stranica? - Legatech",
+    "h1": "Kako izgleda dobra početna stranica?",
+    "description": "Početna stranica često je prvi kontakt korisnika s tvrtkom. Zato u nekoliko sekundi treba odgovoriti na osnovna pitanja: Problem nastaje kada početna stranica…",
+    "mainHash": "9e9a73011a78437657aa70c2893212db62bdf4f1a7985ef0589d1f387b36fa93",
+    "stableMainHash": "9e9a73011a78437657aa70c2893212db62bdf4f1a7985ef0589d1f387b36fa93"
+  },
+  {
+    "route": "/blog/gdje-postaviti-cta/",
+    "title": "Gdje postaviti CTA na web stranici? - Legatech",
+    "h1": "Gdje postaviti CTA na web stranici?",
+    "description": "CTA, odnosno poziv na akciju, jedan je od najvažnijih elemenata poslovne web stranice. Njegov je zadatak korisniku jasno pokazati što može napraviti sljedeće…",
+    "mainHash": "903932142ecc84241b5fa04728bad43dbd186e221b1b3e11ec8abc578627fa47",
+    "stableMainHash": "903932142ecc84241b5fa04728bad43dbd186e221b1b3e11ec8abc578627fa47"
+  },
+  {
+    "route": "/blog/greske-prije-izrade-web-stranice/",
+    "title": "Greške prije izrade web stranice - Legatech",
+    "h1": "Greške prije izrade web stranice",
+    "description": "Najskuplje greške kod izrade web stranice često ne nastaju tijekom razvoja. Nastaju prije nego što je projekt zapravo počeo. Ako se ne definiraju ciljevi…",
+    "mainHash": "f0f5720dd459dd94d4174675c45a1f7ca06696d3f578f9a4b1c84a4250c8c64e",
+    "stableMainHash": "f0f5720dd459dd94d4174675c45a1f7ca06696d3f578f9a4b1c84a4250c8c64e"
+  },
+  {
+    "route": "/blog/",
+    "title": "Blog o web stranicama i SEO-u - Legatech",
+    "h1": "Praktični odgovori za bolji web.",
+    "description": "Praktični vodiči o izradi web stranica, SEO optimizaciji, web trgovinama i održavanju.",
+    "mainHash": "51b8146ad15a8b03c28a08bdad15685b549649bc9d04054c89e5588b22580255",
+    "stableMainHash": "51b8146ad15a8b03c28a08bdad15685b549649bc9d04054c89e5588b22580255"
+  },
+  {
+    "route": "/blog/kako-analizirati-seo-konkurenciju/",
+    "title": "Kako analizirati SEO konkurenciju? - Legatech",
+    "h1": "Kako analizirati SEO konkurenciju?",
+    "description": "SEO analiza konkurencije pomaže razumjeti zašto drugi webovi dobivaju organski promet za teme koje su važne vašem poslovanju. Cilj nije kopirati njihove članke…",
+    "mainHash": "92ea983dbda4d0050c1dfac150afd567c27040a54dacb5ab255eb2b4715a9b5f",
+    "stableMainHash": "92ea983dbda4d0050c1dfac150afd567c27040a54dacb5ab255eb2b4715a9b5f"
+  },
+  {
+    "route": "/blog/kako-analizirati-serp/",
+    "title": "Kako analizirati SERP za SEO? - Legatech",
+    "h1": "Kako analizirati SERP za SEO?",
+    "description": "SERP analiza je pregled rezultata koje Google prikazuje za određenu pretragu prije nego što odlučimo kakvu stranicu trebamo napraviti ili optimizirati. SERP je…",
+    "mainHash": "485d116d2d1cc4cffcb8e321f2b8ccb21436928dcc939f748e8b866b8b623947",
+    "stableMainHash": "485d116d2d1cc4cffcb8e321f2b8ccb21436928dcc939f748e8b866b8b623947"
+  },
+  {
+    "route": "/blog/kako-fontovi-utjecu-na-brzinu-weba/",
+    "title": "Kako fontovi utječu na brzinu web stranice? - Legatech",
+    "h1": "Kako fontovi utječu na brzinu web stranice?",
+    "description": "Fontovi su važan dio vizualnog identiteta web stranice. Utječu na: Ali svaki dodatni web font koji učitamo ima i tehničku cijenu. Browser ga mora: Ako web…",
+    "mainHash": "8a8b3b87317da6f29eebdf3bd3c3f6ff1bab4258289aaec9fd98c3e4967fa69d",
+    "stableMainHash": "8a8b3b87317da6f29eebdf3bd3c3f6ff1bab4258289aaec9fd98c3e4967fa69d"
+  },
+  {
+    "route": "/blog/kako-grupirati-kljucne-rijeci/",
+    "title": "Kako grupirati ključne riječi za SEO? - Legatech",
+    "h1": "Kako grupirati ključne riječi za SEO?",
+    "description": "Nakon keyword researcha često završimo s velikom listom pojmova. Primjer: Na prvi pogled možemo imati deset različitih keyworda. Ali to ne znači da trebamo…",
+    "mainHash": "a5232415ce3102650c7cc12b82de56b899aef655d7bd7da343c62a03e671e690",
+    "stableMainHash": "a5232415ce3102650c7cc12b82de56b899aef655d7bd7da343c62a03e671e690"
+  },
+  {
+    "route": "/blog/kako-izgraditi-povjerenje-na-webu/",
+    "title": "Kako izgraditi povjerenje na webu? - Legatech",
+    "h1": "Kako izgraditi povjerenje na webu?",
+    "description": "Korisnik koji prvi put dolazi na vašu web stranicu najčešće vas ne poznaje. Možda je došao preko Googlea, oglasa, preporuke ili društvenih mreža, ali još uvijek…",
+    "mainHash": "253676a0c368d493d350a8af2534f76bb43fcf2d4c6481686e9c9a69906b459d",
+    "stableMainHash": "253676a0c368d493d350a8af2534f76bb43fcf2d4c6481686e9c9a69906b459d"
+  },
+  {
+    "route": "/blog/kako-izraditi-seo-strategiju/",
+    "title": "Kako izraditi SEO strategiju? - Legatech",
+    "h1": "Kako izraditi SEO strategiju?",
+    "description": "SEO strategija je plan kojim povezujemo poslovne ciljeve, korisničke pretrage, strukturu weba, sadržaj, tehničku optimizaciju i mjerenje rezultata. Drugim…",
+    "mainHash": "cb2a780afeb39f1dded3d735815b54951b16ab2cf5afecf947f7fce10b947d8f",
+    "stableMainHash": "cb2a780afeb39f1dded3d735815b54951b16ab2cf5afecf947f7fce10b947d8f"
+  },
+  {
+    "route": "/blog/kako-napisati-sadrzaj-za-web-stranicu/",
+    "title": "Kako napisati sadržaj za web stranicu - Legatech",
+    "h1": "Kako napisati sadržaj za web stranicu",
+    "description": "Dobar dizajn može privući pažnju, ali sadržaj je ono što korisniku objašnjava što nudite, zašto bi vas trebao odabrati i što treba napraviti sljedeće. Zato…",
+    "mainHash": "d29503e4e15562de7c8ea02648c53933b94e005fdd4704b86e3d92ef4ce795af",
+    "stableMainHash": "d29503e4e15562de7c8ea02648c53933b94e005fdd4704b86e3d92ef4ce795af"
+  },
+  {
+    "route": "/blog/kako-napraviti-dobru-kontakt-formu/",
+    "title": "Kako napraviti dobru kontakt formu? - Legatech",
+    "h1": "Kako napraviti dobru kontakt formu?",
+    "description": "Kontakt forma često je posljednji korak prije nego što posjetitelj postane potencijalni klijent. Možete imati odličan dizajn, jasan sadržaj, dobre reference i…",
+    "mainHash": "4b7265e1c8d86969e3a6047d5f198809e54f16d4bec98ea0a0c6b787dfa12979",
+    "stableMainHash": "4b7265e1c8d86969e3a6047d5f198809e54f16d4bec98ea0a0c6b787dfa12979"
+  },
+  {
+    "route": "/blog/kako-napraviti-keyword-mapping/",
+    "title": "Kako napraviti keyword mapping? - Legatech",
+    "h1": "Kako napraviti keyword mapping?",
+    "description": "Keyword mapping je proces povezivanja ključnih riječi i search intenta s konkretnim URL-ovima na web stranici. Drugim riječima, nakon što napravimo keyword…",
+    "mainHash": "8ac7d5e97d18430dab36cd56d73fd73c2c0e3be1c00b044f1602da81560f6b83",
+    "stableMainHash": "8ac7d5e97d18430dab36cd56d73fd73c2c0e3be1c00b044f1602da81560f6b83"
+  },
+  {
+    "route": "/blog/kako-napraviti-keyword-research/",
+    "title": "Kako napraviti keyword research za SEO? - Legatech",
+    "h1": "Kako napraviti keyword research za SEO?",
+    "description": "Keyword research je proces pronalaženja i analize pojmova koje ljudi koriste kada nešto traže na Googleu. Ali kvalitetan keyword research nije samo: upiši…",
+    "mainHash": "b07560901be164749758ac2738b5f874983c6b23d035fc52ed995023ff65bc9c",
+    "stableMainHash": "b07560901be164749758ac2738b5f874983c6b23d035fc52ed995023ff65bc9c"
+  },
+  {
+    "route": "/blog/kako-odrediti-ciljeve-web-stranice/",
+    "title": "Kako odrediti ciljeve web stranice prije početka izrade - Legatech",
+    "h1": "Kako odrediti ciljeve web stranice prije početka izrade",
+    "description": "Prije početka izrade web stranice često se prvo razgovara o bojama, dizajnu, primjerima drugih webova i tome što treba staviti na naslovnu stranicu. To su važne…",
+    "mainHash": "fd8af742d3d93ebdada08d675c167ae4eb7ff750981d968b8f8e6710ae24fc75",
+    "stableMainHash": "fd8af742d3d93ebdada08d675c167ae4eb7ff750981d968b8f8e6710ae24fc75"
+  },
+  {
+    "route": "/blog/kako-pronaci-content-gap/",
+    "title": "Kako pronaći content gap u SEO-u? - Legatech",
+    "h1": "Kako pronaći content gap u SEO-u?",
+    "description": "Content gap predstavlja temu, pitanje ili search intent za koji drugi relevantni webovi imaju sadržaj, a vaš web ga nema ili ga ne pokriva dovoljno kvalitetno…",
+    "mainHash": "c0ad189dc35312f0ad94c085ea083828cbefbf980e134128a702a998e4e3e668",
+    "stableMainHash": "c0ad189dc35312f0ad94c085ea083828cbefbf980e134128a702a998e4e3e668"
+  },
+  {
+    "route": "/blog/kako-seo-funkcionira/",
+    "title": "Kako SEO funkcionira? - Legatech",
+    "h1": "Kako SEO funkcionira?",
+    "description": "SEO funkcionira tako da web stranicu učinimo što jasnijom, korisnijom i tehnički dostupnijom tražilicama i ljudima koji pretražuju određenu temu…",
+    "mainHash": "96add318dcd23cc2d935ae9b56d9902a28b7c269ed5c1882f1aa32aa87a40b36",
+    "stableMainHash": "96add318dcd23cc2d935ae9b56d9902a28b7c269ed5c1882f1aa32aa87a40b36"
+  },
+  {
+    "route": "/blog/keyword-cannibalization/",
+    "title": "Što je keyword cannibalization? - Legatech",
+    "h1": "Što je keyword cannibalization?",
+    "description": "Keyword cannibalization nastaje kada više stranica na istom webu cilja isti ili vrlo sličan search intent pa tražilici nije potpuno jasno koji URL treba…",
+    "mainHash": "ac1376269571cd4f136730bd0c615c048f229fe9447f206a5a5987c6872987c0",
+    "stableMainHash": "ac1376269571cd4f136730bd0c615c048f229fe9447f206a5a5987c6872987c0"
+  },
+  {
+    "route": "/blog/koliko-stranica-treba-imati-poslovna-web-stranica/",
+    "title": "Koliko stranica treba imati poslovna web stranica? - Legatech",
+    "h1": "Koliko stranica treba imati poslovna web stranica?",
+    "description": "Jedno od čestih pitanja prije izrade novog weba je: Koliko stranica zapravo trebamo? Odgovor nije isti za svaki posao. Mala lokalna tvrtka može imati kvalitetan…",
+    "mainHash": "bc10ed6abda7e94dc0cb59acadc7d9cded50654350c9910cd891c7cd443dd73d",
+    "stableMainHash": "bc10ed6abda7e94dc0cb59acadc7d9cded50654350c9910cd891c7cd443dd73d"
+  },
+  {
+    "route": "/blog/koliko-traje-izrada-web-stranice/",
+    "title": "Koliko traje izrada web stranice? - Legatech",
+    "h1": "Koliko traje izrada web stranice?",
+    "description": "Jedno od prvih pitanja kod izrade novog weba je: Koliko će cijeli projekt trajati? Za jednostavniju poslovnu web stranicu često je dovoljno nekoliko tjedana…",
+    "mainHash": "c08483e63601a097b7e88c68126c6e20bb40559d4b25cfd36209b94f8e038721",
+    "stableMainHash": "c08483e63601a097b7e88c68126c6e20bb40559d4b25cfd36209b94f8e038721"
+  },
+  {
+    "route": "/blog/koliko-traje-seo/",
+    "title": "Koliko traje da SEO pokaže rezultate? - Legatech",
+    "h1": "Koliko traje da SEO pokaže rezultate?",
+    "description": "Jedno od najčešćih pitanja kod SEO-a je: Koliko dugo treba čekati rezultate? Najkraći odgovor je: ovisi. Ali to ne znači da se ništa konkretnije ne može reći…",
+    "mainHash": "9e06440f4de0a9a974749e129179a0f1037ecd77a2aee5de0f40ccdca1e93ad0",
+    "stableMainHash": "9e06440f4de0a9a974749e129179a0f1037ecd77a2aee5de0f40ccdca1e93ad0"
+  },
+  {
+    "route": "/blog/long-tail-kljucne-rijeci/",
+    "title": "Što su long-tail ključne riječi? - Legatech",
+    "h1": "Što su long-tail ključne riječi?",
+    "description": "Long-tail ključne riječi su specifičniji i uži upiti koje korisnici upisuju u Google. Primjer širokog keyworda: SEO Primjer long-tail upita: koliko traje SEO za…",
+    "mainHash": "3465ab47d52cc5da4372e3380b0ba30c9e485c2e1ecc83c2c5fd7317fe9a5967",
+    "stableMainHash": "3465ab47d52cc5da4372e3380b0ba30c9e485c2e1ecc83c2c5fd7317fe9a5967"
+  },
+  {
+    "route": "/blog/mobile-first-dizajn/",
+    "title": "Što je mobile-first dizajn? - Legatech",
+    "h1": "Što je mobile-first dizajn?",
+    "description": "Mobile-first dizajn znači da web stranicu planiramo imajući mobilnog korisnika na umu od samog početka. Ne radi se samo o tome da desktop verziju kasnije…",
+    "mainHash": "526205c5fa96337ae479e5620c084985adae4415f2e0be60db1a7131c80e283f",
+    "stableMainHash": "526205c5fa96337ae479e5620c084985adae4415f2e0be60db1a7131c80e283f"
+  },
+  {
+    "route": "/blog/najcesce-ux-greske/",
+    "title": "Najčešće UX greške na web stranicama - Legatech",
+    "h1": "Najčešće UX greške na web stranicama",
+    "description": "UX, odnosno korisničko iskustvo, ne svodi se samo na to izgleda li web moderno. Dobar UX znači da korisnik može jednostavno: Velik broj poslovnih web stranica…",
+    "mainHash": "c8d4ba9994e3405c874d86bd032b4e948a2d06b70df00cb7de54531b6c456c41",
+    "stableMainHash": "c8d4ba9994e3405c874d86bd032b4e948a2d06b70df00cb7de54531b6c456c41"
+  },
+  {
+    "route": "/blog/najcesce-ux-greske-2/",
+    "title": "Najčešće UX greške na web stranicama - Legatech",
+    "h1": "Najčešće UX greške na web stranicama",
+    "description": "UX, odnosno korisničko iskustvo, ne svodi se samo na to izgleda li web moderno. Dobar UX znači da korisnik može jednostavno: Velik broj poslovnih web stranica…",
+    "mainHash": "786e621ecd87664c62ae66e9bcbaba1f5ce812322e59fc7ff65c1b018662f3af",
+    "stableMainHash": "786e621ecd87664c62ae66e9bcbaba1f5ce812322e59fc7ff65c1b018662f3af"
+  },
+  {
+    "route": "/blog/optimizacija-slika-za-web/",
+    "title": "Kako optimizirati slike za web stranicu? - Legatech",
+    "h1": "Kako optimizirati slike za web stranicu?",
+    "description": "Slike su jedan od najčešćih razloga zbog kojih web stranica postane nepotrebno teška. Problem često nije u tome što web ima puno fotografija. Problem je što se…",
+    "mainHash": "cc8df3c213507d395d52bd2091439af8c02111c0e6a5582545668959a9a13864",
+    "stableMainHash": "cc8df3c213507d395d52bd2091439af8c02111c0e6a5582545668959a9a13864"
+  },
+  {
+    "route": "/blog/proces-izrade-web-stranice/",
+    "title": "Kako izgleda proces izrade web stranice - Legatech",
+    "h1": "Kako izgleda proces izrade web stranice",
+    "description": "Izrada web stranice često se svodi na pitanje dizajna: koje će boje koristiti, kako će izgledati naslovna stranica i gdje će se nalaziti fotografije. U praksi…",
+    "mainHash": "a3cc7f5e2f9999fa998a7fc6b5be56f87e996d3be4d3ac591991a4f614dc6c2a",
+    "stableMainHash": "a3cc7f5e2f9999fa998a7fc6b5be56f87e996d3be4d3ac591991a4f614dc6c2a"
+  },
+  {
+    "route": "/blog/responsive-dizajn-sto-testirati/",
+    "title": "Responsive dizajn - što treba testirati? - Legatech",
+    "h1": "Responsive dizajn – što treba testirati?",
+    "description": "Responsive dizajn znači da se web prilagođava različitim veličinama ekrana. To zvuči jednostavno. Desktop verzija ima tri stupca. Na tabletu dva. Na mobitelu…",
+    "mainHash": "28efe5cf47581e9d6cbfcda2edfe4e3eda200ce2183c4cff298c85bf6d34b237",
+    "stableMainHash": "28efe5cf47581e9d6cbfcda2edfe4e3eda200ce2183c4cff298c85bf6d34b237"
+  },
+  {
+    "route": "/blog/seo-ciljevi-i-mjerenje/",
+    "title": "Kako postaviti SEO ciljeve i mjeriti uspjeh? - Legatech",
+    "h1": "Kako postaviti SEO ciljeve i mjeriti uspjeh?",
+    "description": "SEO ima smisla samo ako znamo što pokušavamo postići. Vrlo je lako završiti u situaciji gdje svaki mjesec pratimo: ali zapravo ne znamo donosi li SEO poslovnu…",
+    "mainHash": "7b1e67d94402ef95d0b95494b10419757a91e60067a61e104102e2064e6a1ebf",
+    "stableMainHash": "7b1e67d94402ef95d0b95494b10419757a91e60067a61e104102e2064e6a1ebf"
+  },
+  {
+    "route": "/blog/sto-cini-dobar-poslovni-web/",
+    "title": "Što čini dobar poslovni web? - Legatech",
+    "h1": "Što čini dobar poslovni web?",
+    "description": "Dobar poslovni web nije samo web koji izgleda moderno. Njegov je posao pomoći korisniku da brzo razumije tko ste, što nudite, zašto bi vam trebao vjerovati i…",
+    "mainHash": "bce8cba373db89614d217c0e79ac0f3bc9ea9fe46f5dccd014d64b7ae3c7988b",
+    "stableMainHash": "bce8cba373db89614d217c0e79ac0f3bc9ea9fe46f5dccd014d64b7ae3c7988b"
+  },
+  {
+    "route": "/blog/sto-je-keyword-difficulty/",
+    "title": "Što je keyword difficulty? - Legatech",
+    "h1": "Što je keyword difficulty?",
+    "description": "Keyword difficulty, često označen kraticom KD, SEO je metrika koja pokušava procijeniti koliko će biti teško rangirati za određenu ključnu riječ. Najčešće se…",
+    "mainHash": "83cae4760d84a668defdc877e5b66012597d4254204be3ebb3cc43a9f4c20e37",
+    "stableMainHash": "83cae4760d84a668defdc877e5b66012597d4254204be3ebb3cc43a9f4c20e37"
+  },
+  {
+    "route": "/blog/sto-je-search-intent/",
+    "title": "Što je search intent? - Legatech",
+    "h1": "Što je search intent?",
+    "description": "Search intent opisuje što korisnik zapravo želi postići kada nešto upiše u Google. Dvije ključne riječi mogu izgledati vrlo slično, ali imati potpuno drugačiju…",
+    "mainHash": "a10931bfd793eeac06c47105d7e8f24baad0564a1810eeb6fbe84aa827acfd9f",
+    "stableMainHash": "a10931bfd793eeac06c47105d7e8f24baad0564a1810eeb6fbe84aa827acfd9f"
+  },
+  {
+    "route": "/blog/sto-je-seo/",
+    "title": "Što je SEO i kako funkcionira? - Legatech",
+    "h1": "Što je SEO i kako funkcionira?",
+    "description": "SEO je proces poboljšavanja web stranice kako bi je tražilice lakše pronašle, razumjele i prikazale korisnicima koji traže relevantne informacije, proizvode ili…",
+    "mainHash": "9e8ea496dca3a8a854fa827c8555a8481770b423efaada37faf16e7fe4b1d972",
+    "stableMainHash": "9e8ea496dca3a8a854fa827c8555a8481770b423efaada37faf16e7fe4b1d972"
+  },
+  {
+    "route": "/blog/sto-pripremiti-prije-izrade-web-stranice/",
+    "title": "Što pripremiti prije izrade nove web stranice - Legatech",
+    "h1": "Što pripremiti prije izrade nove web stranice",
+    "description": "Izrada nove web stranice može krenuti vrlo brzo, ali kvaliteta konačnog rezultata često ovisi o tome koliko je dobro projekt pripremljen prije nego što počnu…",
+    "mainHash": "f6c61dba61811ea16ccf578c037cef097f891d6ec955bcf141b99a6b73bd8da2",
+    "stableMainHash": "f6c61dba61811ea16ccf578c037cef097f891d6ec955bcf141b99a6b73bd8da2"
+  },
+  {
+    "route": "/blog/sto-treba-imati-stranica-usluge/",
+    "title": "Što treba imati stranica usluge? - Legatech",
+    "h1": "Što treba imati stranica usluge?",
+    "description": "Stranica usluge jedna je od najvažnijih stranica svakog poslovnog weba. Korisnik na nju najčešće dolazi jer već traži konkretno rješenje. Ne zanima ga samo tko…",
+    "mainHash": "596da5b22b92d443ef3b79c5ee6db072fe1e047971b8c5ea83cd7057a9b9dba6",
+    "stableMainHash": "596da5b22b92d443ef3b79c5ee6db072fe1e047971b8c5ea83cd7057a9b9dba6"
+  },
+  {
+    "route": "/blog/sto-utjece-na-cijenu-web-stranice/",
+    "title": "Što utječe na cijenu web stranice? - Legatech",
+    "h1": "Što utječe na cijenu web stranice?",
+    "description": "Cijena web stranice može se kretati od nekoliko stotina do nekoliko tisuća eura, a kod kompleksnih projekata i znatno više. Razlika nije samo u tome koliko…",
+    "mainHash": "5501516f54c5d5fec057fbd4885166827b3f7964cfbd5b926e1265391c2e7b3e",
+    "stableMainHash": "5501516f54c5d5fec057fbd4885166827b3f7964cfbd5b926e1265391c2e7b3e"
+  },
+  {
+    "route": "/blog/struktura-web-stranice-za-malu-tvrtku/",
+    "title": "Kako napraviti strukturu web stranice za malu tvrtku - Legatech",
+    "h1": "Kako napraviti strukturu web stranice za malu tvrtku",
+    "description": "Struktura web stranice određuje kako su informacije organizirane, koje stranice postoje i na koji način korisnik dolazi od naslovne stranice do informacije koju…",
+    "mainHash": "c4de4f171235a8b6cf2ae30ccb5cf84567048b475dbfe1a499cde7e5faa50ab7",
+    "stableMainHash": "c4de4f171235a8b6cf2ae30ccb5cf84567048b475dbfe1a499cde7e5faa50ab7"
+  },
+  {
+    "route": "/blog/zasto-je-dobar-hosting-vazan/",
+    "title": "Zašto je dobar hosting važan za web stranicu? - Legatech",
+    "h1": "Zašto je dobar hosting važan za web stranicu?",
+    "description": "Hosting je infrastruktura na kojoj vaša web stranica živi. Korisnik ga ne vidi. Ne zna koji server koristite, koliko memorije imate ni kako je konfiguriran…",
+    "mainHash": "e1e6059b1e7b85f16c31546e2ebb762a63633aef033d72cdd0bae24bd52917c1",
+    "stableMainHash": "e1e6059b1e7b85f16c31546e2ebb762a63633aef033d72cdd0bae24bd52917c1"
+  },
+  {
+    "route": "/blog/zasto-je-lighthouse-rezultat-los/",
+    "title": "Zašto je Lighthouse rezultat loš iako je web brz? - Legatech",
+    "h1": "Zašto je Lighthouse rezultat loš iako je web brz?",
+    "description": "Otvorite svoju web stranicu. Učita se gotovo odmah. Navigacija radi. Slike se brzo pojavljuju. Sve djeluje potpuno normalno. Zatim otvorite Lighthouse ili…",
+    "mainHash": "1e69460a283c6ec840104823f58cd7157ea03e98fc3a7d19ac75b589b797711a",
+    "stableMainHash": "1e69460a283c6ec840104823f58cd7157ea03e98fc3a7d19ac75b589b797711a"
+  },
+  {
+    "route": "/blog/zasto-korisnici-napustaju-web/",
+    "title": "Zašto korisnici napuštaju web stranicu? - Legatech",
+    "h1": "Zašto korisnici napuštaju web stranicu?",
+    "description": "Korisnik može doći na web preko Googlea, oglasa, preporuke ili društvenih mreža. To još ne znači da će ostati. Ako u prvih nekoliko sekundi ne može razumjeti…",
+    "mainHash": "ff552416e15d89fca8147fa73bb9a349b8f99948fca0f52e8d4981ef76b1d570",
+    "stableMainHash": "ff552416e15d89fca8147fa73bb9a349b8f99948fca0f52e8d4981ef76b1d570"
+  },
+  {
+    "route": "/projekti/barisic-plast/",
+    "title": "Barišić Plast: Izrada web stranice, SEO i početna Google Ads kampanja - Legatech",
+    "h1": "Web i SEO koji donose upite.",
+    "description": "Web, početni Google Ads i SEO povezani u dugoročan kanal za vidljivost i nove poslovne upite.",
+    "mainHash": "b75127687a422f78aca43eb6edbb77c8410099494fc281cdbc6890174c84785b",
+    "stableMainHash": "b75127687a422f78aca43eb6edbb77c8410099494fc281cdbc6890174c84785b"
+  },
+  {
+    "route": "/projekti/ducija/",
+    "title": "Ducija: Izrada web stranice, SEO i održavanje - Legatech",
+    "h1": "Od nule do rastućih upita.",
+    "description": "Web, lokalni SEO i održavanje povezani u stabilan kanal za najam šatora u Osijeku i okolici.",
+    "mainHash": "cd6a0e13cb57d2a0c728d82925ed302021d8df4a091ad7fd67937128cb06527c",
+    "stableMainHash": "cd6a0e13cb57d2a0c728d82925ed302021d8df4a091ad7fd67937128cb06527c"
+  },
+  {
+    "route": "/projekti/",
+    "title": "Projekti web stranica, trgovina i SEO-a - Legatech",
+    "h1": "Projekt počinje problemom, ne stilom.",
+    "description": "Pregled stvarnih Legatech projekata izrade web stranica, trgovina, SEO-a i održavanja.",
+    "mainHash": "6f88dbd1bbe8d947f03efc7f8ec99495ffa20b4d6cb077a27cdf57319eff0103",
+    "stableMainHash": "6f88dbd1bbe8d947f03efc7f8ec99495ffa20b4d6cb077a27cdf57319eff0103"
+  },
+  {
+    "route": "/projekti/krie-design/",
+    "title": "KRIÉ: Redizajn i izrada web trgovine - Legatech",
+    "h1": "KRIÉ web trgovina po mjeri.",
+    "description": "Custom dvojezični shop koji povezuje kolekcije, proizvode, plaćanje i dostavu u jedno dosljedno iskustvo kupnje.",
+    "mainHash": "140d4737a33ff1a77cd6b815c4e67c7b185f679dbe066f297de01421dd8b3285",
+    "stableMainHash": "140d4737a33ff1a77cd6b815c4e67c7b185f679dbe066f297de01421dd8b3285"
+  },
+  {
+    "route": "/projekti/odvjetnicki-ured-balaz/",
+    "title": "Odvjetnički ured Balaž: SEO optimizacija i održavanje - Legatech",
+    "h1": "Vidljivost i briga za postojeći web.",
+    "description": "Kontinuirani SEO i održavanje za odvjetnički ured s velikim brojem usluga i lokalnih stranica.",
+    "mainHash": "e3818423d7be26cee17e17607f8f6a7ad0c4fc8280b226476bf1503f36bceb61",
+    "stableMainHash": "e3818423d7be26cee17e17607f8f6a7ad0c4fc8280b226476bf1503f36bceb61"
+  },
+  {
+    "route": "/projekti/rumalu/",
+    "title": "Rumalu: WordPress tema i SEO optimizacija - Legatech",
+    "h1": "Svaka usluga dobila je vlastitu stranicu.",
+    "description": "Statični web Rumalu kozmetičkog salona u Osijeku pretvoren je u WordPress temu, uz novu strukturu usluga, potpunu on-page optimizaciju i povezanu analitiku.",
+    "mainHash": "106ffab69dcfbfe8fb7918b7ef13b3033a11024786016da1e28480452d4603ec",
+    "stableMainHash": "106ffab69dcfbfe8fb7918b7ef13b3033a11024786016da1e28480452d4603ec"
+  },
+  {
+    "route": "/projekti/varmos/",
+    "title": "Varmos: Izrada web stranice i održavanje - Legatech",
+    "h1": "Digitalna prisutnost izgrađena od nule.",
+    "description": "Poslovna web stranica osmišljena, napisana i izrađena od nule kako bi Varmos jasno predstavio usluge i primao upite.",
+    "mainHash": "25ad60fbb01f8caeca641f1ce11e6bef22098fb1e31ebad89eed332c1abb4432",
+    "stableMainHash": "25ad60fbb01f8caeca641f1ce11e6bef22098fb1e31ebad89eed332c1abb4432"
+  }
+]

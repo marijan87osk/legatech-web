@@ -146,3 +146,27 @@ export function trackAnalyticsEvent(
   if (readStoredConsent()?.analytics !== "granted" || !window.gtag) return;
   window.gtag("event", name, parameters);
 }
+
+// Opaque server receipts stay in memory only; never include them in GA payloads.
+const trackedLeadReceipts = new Set<string>();
+
+export function trackContactLeadOnce(receipt: string) {
+  if (
+    typeof window === "undefined" ||
+    !/^[a-f0-9]{16}$/.test(receipt) ||
+    readStoredConsent()?.analytics !== "granted" ||
+    !window.gtag ||
+    trackedLeadReceipts.has(receipt)
+  ) return;
+
+  // Mark before invoking the tag, including if a tag/extension throws afterward.
+  trackedLeadReceipts.add(receipt);
+  try {
+    trackAnalyticsEvent("generate_lead", {
+      method: "contact_form",
+      ...(process.env.NEXT_PUBLIC_GA_DEBUG_MODE === "true" ? { debug_mode: true } : {}),
+    });
+  } catch {
+    // Analytics must never turn a delivered enquiry into a visible send failure.
+  }
+}

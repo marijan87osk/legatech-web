@@ -4,12 +4,15 @@ import { tmpdir } from "node:os";
 import path from "node:path";
 import { load } from "cheerio";
 import sanitizeHtml from "sanitize-html";
+import { assertSnapshotFresh } from "./wordpress-snapshot-freshness.mjs";
 
 const projectRoot = process.cwd();
 const apiRoot = (process.env.WORDPRESS_API_URL ?? "https://staging2.legatech.hr/?rest_route=/wp/v2").replace(/\/$/, "");
 const snapshotUrl = process.env.WORDPRESS_SNAPSHOT_URL?.trim() || null;
 const snapshotFile = process.env.WORDPRESS_SNAPSHOT_FILE?.trim() || null;
 const outputFile = path.join(projectRoot, "src", "generated", "blog-posts.json");
+const syncMetadataFile = path.join(projectRoot, "src", "generated", "blog-sync.json");
+let snapshotGeneratedAt = new Date().toISOString();
 const mediaDirectory = path.join(projectRoot, "public", "blog-media");
 const mediaPublicPath = "/blog-media";
 const timeoutMs = 20_000;
@@ -176,6 +179,10 @@ async function fetchSnapshotPosts() {
   if (!snapshot || snapshot.version !== 1 || !Array.isArray(snapshot.posts)) {
     throw new Error("WordPress snapshot nema očekivani format.");
   }
+  // A successful read of an old committed snapshot must not unpublish newer articles.
+  const state = JSON.parse(await readFile(path.join(projectRoot, "redesign/blog-state.json"), "utf8"));
+  const previous = await pathExists(syncMetadataFile) ? JSON.parse(await readFile(syncMetadataFile, "utf8")) : null;
+  snapshotGeneratedAt = assertSnapshotFresh(snapshot, state, previous);
   return snapshot.posts;
 }
 
@@ -341,6 +348,7 @@ async function main() {
     }
     await writeFile(stagingOutput, `${JSON.stringify(normalized, null, 2)}\n`, "utf8");
     await activateSnapshot(stagingOutput, stagingMediaDirectory);
+    await writeFile(syncMetadataFile, `${JSON.stringify({ generatedAt: snapshotGeneratedAt, source: usesSnapshot ? "wordpress-snapshot" : "wordpress-rest", postsHash: createHash("sha256").update(JSON.stringify(normalized)).digest("hex") }, null, 2)}\n`, "utf8");
     console.log(`Sinkronizirano WordPress članaka: ${normalized.length}`);
   } finally {
     await rm(stagingRoot, { force: true, recursive: true });

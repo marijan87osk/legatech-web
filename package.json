@@ -5,11 +5,13 @@
   "scripts": {
     "dev": "next dev",
     "sync:blog": "node scripts/sync-wordpress-blog.mjs",
-    "build": "npm run sync:blog && next build && node scripts/clean-static-export.mjs",
-    "build:offline": "next build && node scripts/clean-static-export.mjs",
-    "check:seo": "node scripts/check-seo-export.mjs",
-    "preview:static": "serve out",
-    "start": "serve out",
+    "build": "npm run sync:blog && node scripts/build-redesign.mjs --fresh",
+    "build:offline": "node scripts/build-redesign.mjs",
+    "build:legacy": "next build && node scripts/clean-static-export.mjs",
+    "check:seo": "node scripts/check-redesign-export.mjs",
+    "test:release": "node --test scripts/test-contact-lead.mjs scripts/test-redesign.mjs scripts/test-release-preflight.mjs",
+    "preview:static": "node scripts/preview-redesign.mjs",
+    "start": "node scripts/preview-redesign.mjs",
     "lint": "eslint ."
   },
   "dependencies": {

@@ -8,3 +8,4 @@ npm-debug.log*
 public/api/vendor/
 server/contact/vendor/
 .legatech-deploy/
+.redesign-tests/

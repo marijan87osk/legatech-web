@@ -20,6 +20,14 @@ first_id=1111111111111111111111111111111111111111
 second_id=2222222222222222222222222222222222222222
 third_id=3333333333333333333333333333333333333333
 mkdir -p "$target" "$fixture/first" "$fixture/second"
+mkdir -p "$site_root/private"
+cat > "$site_root/private/legatech-contact.php" <<'PHP'
+<?php
+return ['smtp_host'=>'smtp.fixture.example','smtp_port'=>465,'smtp_encryption'=>'ssl','smtp_username'=>'fixture','smtp_password'=>'fixture-password-only','from_email'=>'web@fixture.example','recipient_email'=>'inbox@fixture.example','rate_limit_salt'=>'fixture-salt-with-at-least-24-characters','allowed_origins'=>['https://legatech.hr']];
+PHP
+design='{"design":"approved-expressive-plum-pistachio","publicAddressApproved":true,"debugMode":false,"mailMode":"smtp"}'
+printf '%s\n' "$design" > "$fixture/first/legatech-design.json"
+printf '%s\n' "$design" > "$fixture/second/legatech-design.json"
 printf 'production\n' > "$site_root/.legatech-environment"
 printf 'old site\n' > "$target/index.html"
 
@@ -67,6 +75,8 @@ test ! -e "$target/.legatech-manifest"
 test ! -e "$target/legatech-release-$first_id.txt"
 
 mkdir -p "$fixture/outside" "$fixture/third/linked"
+printf '%s\n' "$design" > "$fixture/third/legatech-design.json"
+printf '%s\n' "$third_id" > "$fixture/third/legatech-release-$third_id.txt"
 ln -s "$fixture/outside" "$target/linked"
 printf 'must not escape\n' > "$fixture/third/linked/page.html"
 tar -czf "$fixture/third.tar.gz" -C "$fixture/third" .

@@ -71,7 +71,7 @@ if (!is_array($payload)) {
 }
 
 if (clean_line($payload['website'] ?? '') !== '') {
-    respond(200, ['ok' => true, 'message' => 'Upit je zaprimljen.']);
+    respond(200, ['ok' => true, 'sent' => false, 'message' => 'Upit je zaprimljen.']);
 }
 
 $startedAt = filter_var($payload['formStartedAt'] ?? null, FILTER_VALIDATE_INT);
@@ -175,10 +175,12 @@ try {
         . '<p><strong>Opis:</strong><br>' . nl2br($escape($values['description'])) . '</p>'
         . '<p><small>Identifikator upita: ' . $requestId . '</small></p>';
     $mail->AltBody = "Novi upit s legatech.hr\n\nIme: {$values['name']}\nE-mail: {$values['email']}\nTvrtka ili obrt: " . ($values['company'] ?: 'Nije navedeno') . "\nUsluga: {$values['service']}\nBudžet: {$values['budget']}\n\nOpis:\n{$values['description']}\n\nIdentifikator: {$requestId}";
-    $mail->send();
+    if (!$mail->send()) throw new Exception('SMTP slanje nije potvrđeno.');
 } catch (Exception $error) {
     error_log('Legatech kontakt [' . $requestId . ']: SMTP slanje nije uspjelo: ' . $error->getMessage());
     respond(502, ['ok' => false, 'message' => 'Poruku trenutačno nije moguće poslati. Pokušajte ponovno ili nam pišite na info@legatech.hr.']);
 }
 
-respond(200, ['ok' => true, 'message' => 'Upit je poslan.']);
+// This receipt exists only after SMTP accepted the message. No enquiry fields
+// are included in the response or sent to Analytics.
+respond(200, ['ok' => true, 'sent' => true, 'submissionId' => $requestId, 'message' => 'Upit je poslan.']);

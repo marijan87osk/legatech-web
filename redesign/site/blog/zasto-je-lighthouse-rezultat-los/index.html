@@ -1,0 +1,2520 @@
+<!DOCTYPE html><html lang="hr"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Zašto je Lighthouse rezultat loš iako je web brz? - Legatech</title><meta name="description" content="Otvorite svoju web stranicu. Učita se gotovo odmah. Navigacija radi. Slike se brzo pojavljuju. Sve djeluje potpuno normalno. Zatim otvorite Lighthouse ili…"><link rel="canonical" href="https://legatech.hr/blog/zasto-je-lighthouse-rezultat-los/"><meta property="og:title" content="Zašto je Lighthouse rezultat loš iako je web brz?"><meta property="og:description" content="Otvorite svoju web stranicu. Učita se gotovo odmah. Navigacija radi. Slike se brzo pojavljuju. Sve djeluje potpuno normalno. Zatim otvorite Lighthouse ili…"><meta property="og:site_name" content="Legatech"><meta property="og:locale" content="hr_HR"><meta property="og:type" content="article"><meta property="article:published_time" content="2026-09-02T11:37:46+00:00"><meta property="article:modified_time" content="2026-09-05T16:38:14+00:00"><meta name="twitter:title" content="Zašto je Lighthouse rezultat loš iako je web brz?"><meta name="twitter:description" content="Otvorite svoju web stranicu. Učita se gotovo odmah. Navigacija radi. Slike se brzo pojavljuju. Sve djeluje potpuno normalno. Zatim otvorite Lighthouse ili…"><link rel="icon" type="image/svg+xml" href="/assets/legatech-brand/legatech-t-small.svg"><link rel="stylesheet" href="/home-expressive.css"><script src="/home-expressive.js" defer=""></script><meta name="theme-color" content="#5e2947"><link rel="stylesheet" href="/blog-expressive.css"><script src="/blog-expressive.js" defer=""></script><link rel="stylesheet" href="/contact-live.css"><script src="/site-runtime.js" defer=""></script><script src="/contact-runtime.js" defer=""></script><script src="/contact-live.js" defer=""></script><meta property="og:url" content="https://legatech.hr/blog/zasto-je-lighthouse-rezultat-los/"><meta property="og:image" content="https://legatech.hr/assets/social/blog-zasto-je-lighthouse-rezultat-los.png"><meta property="og:image:secure_url" content="https://legatech.hr/assets/social/blog-zasto-je-lighthouse-rezultat-los.png"><meta property="og:image:type" content="image/png"><meta property="og:image:width" content="1200"><meta property="og:image:height" content="630"><meta property="og:image:alt" content="Zašto je Lighthouse rezultat loš iako je web brz? — Legatech"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:image" content="https://legatech.hr/assets/social/blog-zasto-je-lighthouse-rezultat-los.png"><meta name="twitter:image:alt" content="Zašto je Lighthouse rezultat loš iako je web brz? — Legatech"><script type="application/ld+json">[{"@context":"https://schema.org","@type":"Article","@id":"https://legatech.hr/blog/zasto-je-lighthouse-rezultat-los/#article","headline":"Zašto je Lighthouse rezultat loš iako je web brz?","description":"Otvorite svoju web stranicu. Učita se gotovo odmah. Navigacija radi. Slike se brzo pojavljuju. Sve djeluje potpuno normalno. Zatim otvorite Lighthouse ili PageSpeed Insights i dobijete: Performance…","url":"https://legatech.hr/blog/zasto-je-lighthouse-rezultat-los/","mainEntityOfPage":"https://legatech.hr/blog/zasto-je-lighthouse-rezultat-los/","inLanguage":"hr-HR","datePublished":"2026-09-02T11:37:46+00:00","dateModified":"2026-09-05T16:38:14+00:00","author":{"@type":"Person","name":"marijan","url":"https://legatech.hr/o-nama/"},"publisher":{"@id":"https://legatech.hr/#organization"}},{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Naslovna","item":"https://legatech.hr/"},{"@type":"ListItem","position":2,"name":"Blog","item":"https://legatech.hr/blog/"},{"@type":"ListItem","position":3,"name":"Zašto je Lighthouse rezultat loš iako je web brz?","item":"https://legatech.hr/blog/zasto-je-lighthouse-rezultat-los/"}],"@id":"https://legatech.hr/blog/zasto-je-lighthouse-rezultat-los/#breadcrumb"},{"@context":"https://schema.org","@type":"WebPage","@id":"https://legatech.hr/blog/zasto-je-lighthouse-rezultat-los/#webpage","url":"https://legatech.hr/blog/zasto-je-lighthouse-rezultat-los/","name":"Zašto je Lighthouse rezultat loš iako je web brz? - Legatech","description":"Otvorite svoju web stranicu. Učita se gotovo odmah. Navigacija radi. Slike se brzo pojavljuju. Sve djeluje potpuno normalno. Zatim otvorite Lighthouse ili…","inLanguage":"hr-HR","isPartOf":{"@id":"https://legatech.hr/#website"},"publisher":{"@id":"https://legatech.hr/#organization"},"breadcrumb":{"@id":"https://legatech.hr/blog/zasto-je-lighthouse-rezultat-los/#breadcrumb"},"mainEntity":{"@id":"https://legatech.hr/blog/zasto-je-lighthouse-rezultat-los/#article"}},{"@context":"https://schema.org","@type":"Organization","@id":"https://legatech.hr/#organization","name":"Legatech","url":"https://legatech.hr/","logo":{"@type":"ImageObject","url":"https://legatech.hr/assets/legatech-brand/legatech-icon.png","width":512,"height":512}}]</script><link rel="preload" href="/assets/fonts/barlow-condensed-bold.e476562ec9c1.woff2" as="font" type="font/woff2" crossorigin=""><link rel="preload" href="/homepage-concept/assets/manrope-latin.woff2" as="font" type="font/woff2" crossorigin=""><link rel="preload" href="/homepage-concept/assets/manrope-latin-ext.woff2" as="font" type="font/woff2" crossorigin=""><link rel="stylesheet" href="/accessibility-expressive.css"></head><body class="expressive-blog blog-article"><a class="skip-link" href="#blog-main">Preskočite na sadržaj</a><header class="editorial-header" id="vrh"><div class="container editorial-header-inner"><a class="editorial-brand" aria-label="Legatech, naslovna stranica" href="/"><img alt="Legatech" loading="eager" width="164" height="41" decoding="async" src="/assets/legatech-brand/legatech-black.svg"></a><button class="editorial-menu-toggle" type="button" aria-label="Otvori izbornik" aria-controls="editorial-nav" aria-expanded="false"><span></span><span></span></button><nav class="editorial-nav" id="editorial-nav" data-open="false" aria-label="Glavna navigacija"><div class="editorial-services"><button class="editorial-services-toggle" type="button" aria-expanded="false" aria-controls="editorial-services-menu">Usluge <span class="editorial-chevron" aria-hidden="true"></span></button><div class="editorial-services-menu" id="editorial-services-menu" hidden=""><a href="/izrada-web-stranica-cijena/"><span>01</span><strong>Izrada web stranica</strong><small>Profesionalne stranice koje pretvaraju posjete u upite.</small></a><a href="/seo-optimizacija-cijena/"><span>02</span><strong>SEO optimizacija</strong><small>Veća vidljivost za relevantna pretraživanja.</small></a><a href="/izrada-web-trgovina/"><span>03</span><strong>Izrada web trgovina</strong><small>Jednostavniji put od proizvoda do kupnje.</small></a><a href="/odrzavanje-web-stranica/"><span>04</span><strong>Održavanje web stranica</strong><small>Siguran, ažuran i pouzdan web.</small></a></div></div><a href="/cjenik/">Cjenik</a><a href="/blog/" aria-current="location">Blog</a><a href="/o-nama/">O nama</a><a href="/kontakt/">Kontakt</a></nav><a class="editorial-header-cta" href="/kontakt/">Zatražite ponudu <span aria-hidden="true">↗</span></a></div></header><main id="blog-main" tabindex="-1"><article><header class="blog-post-hero"><div class="container"><a class="blog-breadcrumb" href="/blog/">← Svi članci</a><div class="blog-meta"><span>Izrada web stranica</span><time datetime="2026-09-02T11:37:46+00:00">2. rujna 2026.</time><span>14<!-- --> min čitanja</span><span>marijan</span></div><h1>Zašto je Lighthouse rezultat loš iako je web brz?</h1><p class="blog-post-deck">Otvorite svoju web stranicu. Učita se gotovo odmah. Navigacija radi. Slike se brzo pojavljuju. Sve djeluje potpuno normalno.</p></div></header><div class="container blog-reading"><aside class="blog-contents" aria-labelledby="contents-title"><details class="blog-contents-disclosure" open=""><summary><h2 id="contents-title">U ovom vodiču</h2></summary><nav aria-label="Sadržaj članka"><a href="#sto-je-lighthouse">Što je Lighthouse?</a><a href="#lab-test">Lab test</a><a href="#vas-uredaj-nije-prosjek">Vaš uređaj nije prosjek</a><a href="#cache-vara">Cache vara</a><a href="#prvi-posjet">Prvi posjet</a><a href="#jedan-broj-skriva-puno-toga">Jedan broj skriva puno toga</a><a href="#lcp">LCP</a><a href="#cls">CLS</a><a href="#javascript">JavaScript</a><a href="#main-thread">Main thread</a></nav></details></aside><div class="blog-prose">
+<p class="wp-block-paragraph">Otvorite svoju web stranicu.</p>
+
+
+
+<p class="wp-block-paragraph">Učita se gotovo odmah.</p>
+
+
+
+<p class="wp-block-paragraph">Navigacija radi.</p>
+
+
+
+<p class="wp-block-paragraph">Slike se brzo pojavljuju.</p>
+
+
+
+<p class="wp-block-paragraph">Sve djeluje potpuno normalno.</p>
+
+
+
+<p class="wp-block-paragraph">Zatim otvorite Lighthouse ili PageSpeed Insights i dobijete:</p>
+
+
+
+<p class="wp-block-paragraph"><strong>Performance: 62</strong></p>
+
+
+
+<p class="wp-block-paragraph">Prva reakcija često je:</p>
+
+
+
+<blockquote class="wp-block-quote is-layout-flow wp-block-quote-is-layout-flow">
+<p class="wp-block-paragraph">Kako je moguće da je rezultat toliko loš kada meni web radi brzo?</p>
+</blockquote>
+
+
+
+<p class="wp-block-paragraph">Odgovor je jednostavan.</p>
+
+
+
+<p class="wp-block-paragraph">Vaš subjektivni osjećaj brzine i Lighthouse test ne mjere potpuno istu stvar.</p>
+
+
+
+<p class="wp-block-paragraph">Na vlastitom računalu možda imate:</p>
+
+
+
+<ul class="wp-block-list">
+<li>brz procesor</li>
+
+
+
+<li>brzu internetsku vezu</li>
+
+
+
+<li>već cacheirane resurse</li>
+
+
+
+<li>prethodno učitane fontove</li>
+
+
+
+<li>moderan browser</li>
+</ul>
+
+
+
+<p class="wp-block-paragraph">Lighthouse pokušava web analizirati u kontroliranijim i često zahtjevnijim uvjetima.</p>
+
+
+
+<p class="wp-block-paragraph">Zato nizak rezultat ne mora značiti da je web potpuno spor.</p>
+
+
+
+<p class="wp-block-paragraph">Ali isto tako ne treba automatski zaključiti da Lighthouse “nije bitan”.</p>
+
+
+
+<p class="wp-block-paragraph">Loš rezultat vrlo često otkrije tehničke probleme koje na vlastitom uređaju jednostavno ne primjećujete.</p>
+
+
+
+<h2 class="wp-block-heading" id="sto-je-lighthouse">Što je Lighthouse?</h2>
+
+
+
+<p class="wp-block-paragraph">Lighthouse je alat za automatsku analizu web stranice.</p>
+
+
+
+<p class="wp-block-paragraph">Može analizirati nekoliko područja, među kojima su:</p>
+
+
+
+<ul class="wp-block-list">
+<li>performance</li>
+
+
+
+<li>accessibility</li>
+
+
+
+<li>best practices</li>
+
+
+
+<li>SEO</li>
+</ul>
+
+
+
+<p class="wp-block-paragraph">Kod performansi pokušava procijeniti koliko kvalitetno stranica radi u određenim testnim uvjetima.</p>
+
+
+
+<p class="wp-block-paragraph">Ne gleda samo:</p>
+
+
+
+<p class="wp-block-paragraph"><strong>koliko sekundi je trajao download cijele stranice.</strong></p>
+
+
+
+<p class="wp-block-paragraph">Analizira različite dijelove iskustva.</p>
+
+
+
+<p class="wp-block-paragraph">Primjerice:</p>
+
+
+
+<ul class="wp-block-list">
+<li>kada korisnik vidi glavni sadržaj</li>
+
+
+
+<li>koliko se stranica blokira</li>
+
+
+
+<li>pomiče li se layout</li>
+
+
+
+<li>koliko JavaScripta browser mora obraditi</li>
+</ul>
+
+
+
+<p class="wp-block-paragraph">Zato Performance rezultat nije običan timer.</p>
+
+
+
+<h2 class="wp-block-heading" id="lab-test">Lab test</h2>
+
+
+
+<p class="wp-block-paragraph">Lighthouse koristi laboratorijsko testiranje.</p>
+
+
+
+<p class="wp-block-paragraph">To znači da se web testira u kontroliranim uvjetima.</p>
+
+
+
+<p class="wp-block-paragraph">To je korisno jer test možemo ponavljati i uspoređivati rezultate.</p>
+
+
+
+<p class="wp-block-paragraph">Primjer:</p>
+
+
+
+<p class="wp-block-paragraph">Prije optimizacije:</p>
+
+
+
+<p class="wp-block-paragraph"><strong>Performance 58</strong></p>
+
+
+
+<p class="wp-block-paragraph">Nakon optimizacije hero slike:</p>
+
+
+
+<p class="wp-block-paragraph"><strong>Performance 76</strong></p>
+
+
+
+<p class="wp-block-paragraph">Možemo vidjeti da je promjena imala pozitivan utjecaj.</p>
+
+
+
+<p class="wp-block-paragraph">Ali lab test nije isto što i iskustvo svakog stvarnog korisnika.</p>
+
+
+
+<h2 class="wp-block-heading" id="vas-uredaj-nije-prosjek">Vaš uređaj nije prosjek</h2>
+
+
+
+<p class="wp-block-paragraph">Ako razvijate web na modernom računalu i brzoj vezi, vrlo lako možete dobiti pogrešan dojam.</p>
+
+
+
+<p class="wp-block-paragraph">Vaše računalo možda ima:</p>
+
+
+
+<ul class="wp-block-list">
+<li>snažan CPU</li>
+
+
+
+<li>32 GB RAM-a</li>
+
+
+
+<li>gigabitni internet</li>
+
+
+
+<li>dobar Wi-Fi</li>
+</ul>
+
+
+
+<p class="wp-block-paragraph">Korisnik može imati:</p>
+
+
+
+<ul class="wp-block-list">
+<li>nekoliko godina star Android</li>
+
+
+
+<li>slabiji procesor</li>
+
+
+
+<li>mobilnu mrežu</li>
+
+
+
+<li>nizak signal</li>
+</ul>
+
+
+
+<p class="wp-block-paragraph">JavaScript koji vaše računalo obradi gotovo trenutno na slabijem uređaju može predstavljati puno veći problem.</p>
+
+
+
+<p class="wp-block-paragraph">Zato:</p>
+
+
+
+<blockquote class="wp-block-quote is-layout-flow wp-block-quote-is-layout-flow">
+<p class="wp-block-paragraph">Kod mene se učitava brzo.</p>
+</blockquote>
+
+
+
+<p class="wp-block-paragraph">nije dovoljan performance test.</p>
+
+
+
+<h2 class="wp-block-heading" id="cache-vara">Cache vara</h2>
+
+
+
+<p class="wp-block-paragraph">Postoji još jedan razlog zašto vam vlastiti web često djeluje posebno brz.</p>
+
+
+
+<p class="wp-block-paragraph">Već ste ga otvorili.</p>
+
+
+
+<p class="wp-block-paragraph">Browser možda već ima cacheirane:</p>
+
+
+
+<ul class="wp-block-list">
+<li>CSS datoteke</li>
+
+
+
+<li>JavaScript</li>
+
+
+
+<li>fontove</li>
+
+
+
+<li>logo</li>
+
+
+
+<li>slike</li>
+</ul>
+
+
+
+<p class="wp-block-paragraph">Kod sljedećeg posjeta ne mora ih sve ponovno preuzimati.</p>
+
+
+
+<p class="wp-block-paragraph">Novi korisnik nema tu prednost.</p>
+
+
+
+<p class="wp-block-paragraph">Njegov prvi posjet često je puno važniji za performance analizu.</p>
+
+
+
+<h2 class="wp-block-heading" id="prvi-posjet">Prvi posjet</h2>
+
+
+
+<p class="wp-block-paragraph">Zamislimo potencijalnog klijenta koji na Googleu pronađe vašu stranicu.</p>
+
+
+
+<p class="wp-block-paragraph">To je njegov prvi posjet.</p>
+
+
+
+<p class="wp-block-paragraph">Browser nema:</p>
+
+
+
+<ul class="wp-block-list">
+<li>vaš font</li>
+
+
+
+<li>CSS</li>
+
+
+
+<li>JavaScript</li>
+
+
+
+<li>slike</li>
+</ul>
+
+
+
+<p class="wp-block-paragraph">Sve mora dobiti prvi put.</p>
+
+
+
+<p class="wp-block-paragraph">Upravo taj trenutak treba biti kvalitetan.</p>
+
+
+
+<p class="wp-block-paragraph">Ne samo ponovno otvaranje weba na računalu osobe koja ga je razvila.</p>
+
+
+
+<h2 class="wp-block-heading" id="jedan-broj-skriva-puno-toga">Jedan broj skriva puno toga</h2>
+
+
+
+<p class="wp-block-paragraph">Performance rezultat izgleda jednostavno:</p>
+
+
+
+<p class="wp-block-paragraph"><strong>72</strong></p>
+
+
+
+<p class="wp-block-paragraph">Ali iza njega se nalazi nekoliko metrika i dijagnostičkih podataka.</p>
+
+
+
+<p class="wp-block-paragraph">Zato ne treba optimizirati broj.</p>
+
+
+
+<p class="wp-block-paragraph">Treba pronaći:</p>
+
+
+
+<p class="wp-block-paragraph"><strong>što uzrokuje loš broj?</strong></p>
+
+
+
+<p class="wp-block-paragraph">Moguće je da web ima:</p>
+
+
+
+<ul class="wp-block-list">
+<li>odličan server</li>
+
+
+
+<li>male slike</li>
+
+
+
+<li>brz LCP</li>
+</ul>
+
+
+
+<p class="wp-block-paragraph">ali puno JavaScripta koji blokira main thread.</p>
+
+
+
+<p class="wp-block-paragraph">Drugi web može imati potpuno suprotan problem.</p>
+
+
+
+<p class="wp-block-paragraph">Oba mogu završiti s približno sličnim ukupnim rezultatom.</p>
+
+
+
+<p class="wp-block-paragraph">Rješenje nije isto.</p>
+
+
+
+<h2 class="wp-block-heading" id="lcp">LCP</h2>
+
+
+
+<p class="wp-block-paragraph">Jedna od važnih stvari koju ćete susresti je Largest Contentful Paint.</p>
+
+
+
+<p class="wp-block-paragraph">LCP promatra koliko brzo korisnik dobiva glavni veliki sadržaj u početnom prikazu.</p>
+
+
+
+<p class="wp-block-paragraph">To često može biti:</p>
+
+
+
+<ul class="wp-block-list">
+<li>hero fotografija</li>
+
+
+
+<li>veliki naslov</li>
+
+
+
+<li>glavni vizual</li>
+</ul>
+
+
+
+<p class="wp-block-paragraph">Ako je ostatak stranice brz, ali se hero fotografija od nekoliko megabajta dugo učitava, Lighthouse će to primijetiti.</p>
+
+
+
+<p class="wp-block-paragraph">Vama web možda djeluje dovoljno brz jer su:</p>
+
+
+
+<ul class="wp-block-list">
+<li>navigacija</li>
+
+
+
+<li>pozadina</li>
+
+
+
+<li>tekst</li>
+</ul>
+
+
+
+<p class="wp-block-paragraph">već vidljivi.</p>
+
+
+
+<p class="wp-block-paragraph">Ali glavni element još kasni.</p>
+
+
+
+<p class="wp-block-paragraph">Detaljnije smo ovu metriku objasnili u vodiču <a href="/blog/core-web-vitals/">što su Core Web Vitals</a>.</p>
+
+
+
+<h2 class="wp-block-heading" id="cls">CLS</h2>
+
+
+
+<p class="wp-block-paragraph">Drugi problem može biti stabilnost layouta.</p>
+
+
+
+<p class="wp-block-paragraph">Stranica se možda učita brzo, ali elementi tijekom učitavanja skaču.</p>
+
+
+
+<p class="wp-block-paragraph">Primjer:</p>
+
+
+
+<p class="wp-block-paragraph">H1 se pojavi.</p>
+
+
+
+<p class="wp-block-paragraph">Nakon toga se učita font.</p>
+
+
+
+<p class="wp-block-paragraph">Naslov postane širi.</p>
+
+
+
+<p class="wp-block-paragraph">Prelomi se u dodatni red.</p>
+
+
+
+<p class="wp-block-paragraph">Sve ispod njega pomakne se prema dolje.</p>
+
+
+
+<p class="wp-block-paragraph">Stranica nije nužno spora.</p>
+
+
+
+<p class="wp-block-paragraph">Ali iskustvo nije potpuno stabilno.</p>
+
+
+
+<p class="wp-block-paragraph">Lighthouse može takve stvari lakše otkriti nego korisnik koji samo površno pogleda vrijeme učitavanja.</p>
+
+
+
+<h2 class="wp-block-heading" id="javascript">JavaScript</h2>
+
+
+
+<p class="wp-block-paragraph">Jedan od najvećih razloga za razliku između:</p>
+
+
+
+<p class="wp-block-paragraph"><strong>web izgleda brzo</strong></p>
+
+
+
+<p class="wp-block-paragraph">i:</p>
+
+
+
+<p class="wp-block-paragraph"><strong>Lighthouse score je loš</strong></p>
+
+
+
+<p class="wp-block-paragraph">može biti JavaScript.</p>
+
+
+
+<p class="wp-block-paragraph">Stranica se vizualno pojavi.</p>
+
+
+
+<p class="wp-block-paragraph">Ali browser u pozadini još obrađuje veliku količinu koda.</p>
+
+
+
+<p class="wp-block-paragraph">To može utjecati na:</p>
+
+
+
+<ul class="wp-block-list">
+<li>interakciju</li>
+
+
+
+<li>gumbe</li>
+
+
+
+<li>menu</li>
+
+
+
+<li>forme</li>
+
+
+
+<li>animacije</li>
+</ul>
+
+
+
+<p class="wp-block-paragraph">Na snažnom računalu možda nećete primijetiti ništa.</p>
+
+
+
+<p class="wp-block-paragraph">Na slabijem mobitelu razlika može biti značajna.</p>
+
+
+
+<h2 class="wp-block-heading" id="main-thread">Main thread</h2>
+
+
+
+<p class="wp-block-paragraph">Browser velik dio posla obavlja na glavnom threadu.</p>
+
+
+
+<p class="wp-block-paragraph">Ako je on zauzet dugim zadatkom, druge stvari moraju čekati.</p>
+
+
+
+<p class="wp-block-paragraph">Primjer:</p>
+
+
+
+<p class="wp-block-paragraph">Browser obrađuje veliku JavaScript skriptu.</p>
+
+
+
+<p class="wp-block-paragraph">Korisnik klikne hamburger menu.</p>
+
+
+
+<p class="wp-block-paragraph">Klik se dogodio, ali browser još nije spreman obraditi reakciju.</p>
+
+
+
+<p class="wp-block-paragraph">Korisnik osjeća kašnjenje.</p>
+
+
+
+<p class="wp-block-paragraph">To je jedan od razloga zašto web može biti vizualno učitan, ali još ne djelovati potpuno responzivno.</p>
+
+
+
+<h2 class="wp-block-heading" id="veliki-bundle">Veliki bundle</h2>
+
+
+
+<p class="wp-block-paragraph">Kod Reacta i drugih JavaScript frameworka lako se može proizvesti velik bundle.</p>
+
+
+
+<p class="wp-block-paragraph">U njemu možda završavaju:</p>
+
+
+
+<ul class="wp-block-list">
+<li>komponente</li>
+
+
+
+<li>biblioteke</li>
+
+
+
+<li>utilityji</li>
+
+
+
+<li>animacije</li>
+
+
+
+<li>kod koji korisniku još nije potreban</li>
+</ul>
+
+
+
+<p class="wp-block-paragraph">Browser taj kod mora:</p>
+
+
+
+<ol class="wp-block-list">
+<li>preuzeti</li>
+
+
+
+<li>parsirati</li>
+
+
+
+<li>obraditi</li>
+
+
+
+<li>izvršiti</li>
+</ol>
+
+
+
+<p class="wp-block-paragraph">Zato veličina JavaScripta nije samo pitanje kilobajta.</p>
+
+
+
+<p class="wp-block-paragraph">Postoji i CPU trošak.</p>
+
+
+
+<h2 class="wp-block-heading" id="unused-javascript">Unused JavaScript</h2>
+
+
+
+<p class="wp-block-paragraph">Lighthouse često prijavljuje unused JavaScript.</p>
+
+
+
+<p class="wp-block-paragraph">To znači da je korisnik preuzeo određeni kod koji nije bio potreban za trenutni prikaz stranice.</p>
+
+
+
+<p class="wp-block-paragraph">Primjer:</p>
+
+
+
+<p class="wp-block-paragraph">Na početnoj stranici učitava se kod za:</p>
+
+
+
+<ul class="wp-block-list">
+<li>kompleksnu galeriju</li>
+
+
+
+<li>booking calendar</li>
+
+
+
+<li>chart biblioteku</li>
+</ul>
+
+
+
+<p class="wp-block-paragraph">iako nijedan od tih elemenata nije trenutno prikazan.</p>
+
+
+
+<p class="wp-block-paragraph">To je nepotreban teret.</p>
+
+
+
+<p class="wp-block-paragraph">Rješenje može biti:</p>
+
+
+
+<ul class="wp-block-list">
+<li>code splitting</li>
+
+
+
+<li>dynamic import</li>
+
+
+
+<li>uvjetno učitavanje</li>
+</ul>
+
+
+
+<p class="wp-block-paragraph">ovisno o tehnologiji.</p>
+
+
+
+<h2 class="wp-block-heading" id="wordpress-ima-isti-problem">WordPress ima isti problem</h2>
+
+
+
+<p class="wp-block-paragraph">Problem nije rezerviran samo za React.</p>
+
+
+
+<p class="wp-block-paragraph">WordPress plugin može učitati svoj CSS i JavaScript na svakoj stranici.</p>
+
+
+
+<p class="wp-block-paragraph">Primjer:</p>
+
+
+
+<p class="wp-block-paragraph">Plugin za contact formu koristi se samo na <code>/kontakt/</code>.</p>
+
+
+
+<p class="wp-block-paragraph">Ali njegov CSS i JS učitavaju se i na:</p>
+
+
+
+<ul class="wp-block-list">
+<li>naslovnoj</li>
+
+
+
+<li>blogu</li>
+
+
+
+<li>uslugama</li>
+
+
+
+<li>projektima</li>
+</ul>
+
+
+
+<p class="wp-block-paragraph">Ako nekoliko pluginova radi isto, brzo se nakupi dosta nepotrebnih resursa.</p>
+
+
+
+<h2 class="wp-block-heading" id="third-party-skripte">Third-party skripte</h2>
+
+
+
+<p class="wp-block-paragraph">Vrlo čest Lighthouse problem nisu ni tema ni framework.</p>
+
+
+
+<p class="wp-block-paragraph">To su vanjski servisi.</p>
+
+
+
+<p class="wp-block-paragraph">Primjer:</p>
+
+
+
+<ul class="wp-block-list">
+<li>Google Analytics</li>
+
+
+
+<li>Google Tag Manager</li>
+
+
+
+<li>Meta Pixel</li>
+
+
+
+<li>Microsoft Clarity</li>
+
+
+
+<li>chat widget</li>
+
+
+
+<li>cookie consent</li>
+
+
+
+<li>Hotjar</li>
+
+
+
+<li>remarketing</li>
+
+
+
+<li>embedded video</li>
+</ul>
+
+
+
+<p class="wp-block-paragraph">Svaki od tih alata može biti poslovno opravdan.</p>
+
+
+
+<p class="wp-block-paragraph">Ali zajedno imaju cijenu.</p>
+
+
+
+<p class="wp-block-paragraph">Treba procijeniti:</p>
+
+
+
+<p class="wp-block-paragraph"><strong>Trebamo li stvarno sve što se učitava?</strong></p>
+
+
+
+<h2 class="wp-block-heading" id="tag-manager">Tag Manager</h2>
+
+
+
+<p class="wp-block-paragraph">Google Tag Manager je vrlo praktičan.</p>
+
+
+
+<p class="wp-block-paragraph">Ali može postati mjesto gdje se godinama dodaju novi tagovi bez čišćenja starih.</p>
+
+
+
+<p class="wp-block-paragraph">Web developer možda optimizira stranicu do detalja.</p>
+
+
+
+<p class="wp-block-paragraph">A nakon toga GTM učita:</p>
+
+
+
+<ul class="wp-block-list">
+<li>nekoliko analytics alata</li>
+
+
+
+<li>advertising skripte</li>
+
+
+
+<li>heatmap</li>
+
+
+
+<li>tracking koji se više ne koristi</li>
+</ul>
+
+
+
+<p class="wp-block-paragraph">Zato performance audit treba uključiti i marketinški tracking setup.</p>
+
+
+
+<h2 class="wp-block-heading" id="cookie-alat">Cookie alat</h2>
+
+
+
+<p class="wp-block-paragraph">Cookie consent također može imati performance trošak.</p>
+
+
+
+<p class="wp-block-paragraph">Posebno ako koristi kompleksan vanjski sustav.</p>
+
+
+
+<p class="wp-block-paragraph">To ne znači da ga treba ukloniti ako je potreban.</p>
+
+
+
+<p class="wp-block-paragraph">Ali vrijedi provjeriti:</p>
+
+
+
+<ul class="wp-block-list">
+<li>koliko skripti dodaje</li>
+
+
+
+<li>kada ih učitava</li>
+
+
+
+<li>blokira li sadržaj</li>
+
+
+
+<li>postoje li nepotrebne integracije</li>
+</ul>
+
+
+
+<p class="wp-block-paragraph">Compliance funkcionalnost također treba kvalitetno implementirati.</p>
+
+
+
+<h2 class="wp-block-heading" id="chat-widget">Chat widget</h2>
+
+
+
+<p class="wp-block-paragraph">Chat je još jedan dobar primjer.</p>
+
+
+
+<p class="wp-block-paragraph">Može biti vrijedan poslovni alat.</p>
+
+
+
+<p class="wp-block-paragraph">Ali neki chat widgeti učitavaju značajnu količinu:</p>
+
+
+
+<ul class="wp-block-list">
+<li>JavaScripta</li>
+
+
+
+<li>CSS-a</li>
+
+
+
+<li>fontova</li>
+
+
+
+<li>dodatnih requestova</li>
+</ul>
+
+
+
+<p class="wp-block-paragraph">Ako gotovo nitko ne koristi chat, treba razmotriti je li njegova poslovna vrijednost dovoljna za cijenu koju svaki posjetitelj plaća.</p>
+
+
+
+<h2 class="wp-block-heading" id="slike">Slike</h2>
+
+
+
+<p class="wp-block-paragraph">Lighthouse score vrlo često ruše slike.</p>
+
+
+
+<p class="wp-block-paragraph">To može biti zbog:</p>
+
+
+
+<ul class="wp-block-list">
+<li>prevelikih dimenzija</li>
+
+
+
+<li>lošeg formata</li>
+
+
+
+<li>nedovoljne kompresije</li>
+
+
+
+<li>pogrešne responsive verzije</li>
+
+
+
+<li>načina učitavanja</li>
+</ul>
+
+
+
+<p class="wp-block-paragraph">Web na vašoj brzoj vezi može otvoriti sliku od 2 MB vrlo brzo.</p>
+
+
+
+<p class="wp-block-paragraph">Simulirani mobilni korisnik neće nužno imati isto iskustvo.</p>
+
+
+
+<p class="wp-block-paragraph">Zato smo pripremili zaseban vodič o <a href="/blog/optimizacija-slika-za-web/">optimizaciji slika za web</a>.</p>
+
+
+
+<h2 class="wp-block-heading" id="hero-slika">Hero slika</h2>
+
+
+
+<p class="wp-block-paragraph">Hero slika posebno često utječe na Lighthouse.</p>
+
+
+
+<p class="wp-block-paragraph">Razlog je jednostavan.</p>
+
+
+
+<p class="wp-block-paragraph">Ona je:</p>
+
+
+
+<ul class="wp-block-list">
+<li>velika</li>
+
+
+
+<li>odmah vidljiva</li>
+
+
+
+<li>često LCP element</li>
+</ul>
+
+
+
+<p class="wp-block-paragraph">Ako koristite:</p>
+
+
+
+<p class="wp-block-paragraph"><strong>3840 × 2160 fotografiju</strong></p>
+
+
+
+<p class="wp-block-paragraph">za prikaz od približno 1200 px, šaljete nepotrebno veliku datoteku.</p>
+
+
+
+<p class="wp-block-paragraph">Ako uz to koristite lazy loading na hero slici, rezultat može biti još lošiji.</p>
+
+
+
+<h2 class="wp-block-heading" id="fontovi">Fontovi</h2>
+
+
+
+<p class="wp-block-paragraph">Fontovi također mogu biti dio problema.</p>
+
+
+
+<p class="wp-block-paragraph">Primjer:</p>
+
+
+
+<p class="wp-block-paragraph">Web učitava:</p>
+
+
+
+<ul class="wp-block-list">
+<li>dva font familyja</li>
+
+
+
+<li>šest weightova svakog</li>
+
+
+
+<li>italic verzije</li>
+</ul>
+
+
+
+<p class="wp-block-paragraph">To može značiti velik broj dodatnih fileova.</p>
+
+
+
+<p class="wp-block-paragraph">Fontovi također mogu uzrokovati pomicanje sadržaja nakon učitavanja.</p>
+
+
+
+<p class="wp-block-paragraph">Zato treba optimizirati:</p>
+
+
+
+<ul class="wp-block-list">
+<li>broj familyja</li>
+
+
+
+<li>weightove</li>
+
+
+
+<li>format</li>
+
+
+
+<li>preload</li>
+
+
+
+<li>fallback</li>
+</ul>
+
+
+
+<p class="wp-block-paragraph">Detaljnije smo to obradili u članku <a href="/blog/kako-fontovi-utjecu-na-brzinu-weba/">kako fontovi utječu na brzinu weba</a>.</p>
+
+
+
+<h2 class="wp-block-heading" id="hosting">Hosting</h2>
+
+
+
+<p class="wp-block-paragraph">Nizak Lighthouse rezultat ne znači automatski da trebate promijeniti hosting.</p>
+
+
+
+<p class="wp-block-paragraph">Ali spor serverski odgovor može biti početak problema.</p>
+
+
+
+<p class="wp-block-paragraph">Ako server dugo čeka prije nego što počne vraćati stranicu, svi frontend resursi kreću kasnije.</p>
+
+
+
+<p class="wp-block-paragraph">Možete savršeno optimizirati slike.</p>
+
+
+
+<p class="wp-block-paragraph">Ako HTML dolazi presporo, ukupno iskustvo i dalje pati.</p>
+
+
+
+<p class="wp-block-paragraph">Više o tome pročitajte u vodiču <a href="/blog/zasto-je-dobar-hosting-vazan/">zašto je dobar hosting važan</a>.</p>
+
+
+
+<h2 class="wp-block-heading" id="render-blocking-resursi">Render-blocking resursi</h2>
+
+
+
+<p class="wp-block-paragraph">Browser ne može uvijek odmah prikazati sadržaj.</p>
+
+
+
+<p class="wp-block-paragraph">Određeni CSS i JavaScript resursi mogu blokirati renderiranje dok se ne preuzmu i obrade.</p>
+
+
+
+<p class="wp-block-paragraph">Zato Lighthouse može prijaviti render-blocking resources.</p>
+
+
+
+<p class="wp-block-paragraph">To ne znači:</p>
+
+
+
+<p class="wp-block-paragraph"><strong>uklonite sav CSS.</strong></p>
+
+
+
+<p class="wp-block-paragraph">Znači da treba provjeriti:</p>
+
+
+
+<ul class="wp-block-list">
+<li>treba li taj resurs odmah</li>
+
+
+
+<li>koliko je velik</li>
+
+
+
+<li>može li se drugačije učitati</li>
+</ul>
+
+
+
+<h2 class="wp-block-heading" id="css">CSS</h2>
+
+
+
+<p class="wp-block-paragraph">Veliki CSS file može sadržavati ogroman broj stilova koji trenutnoj stranici nisu potrebni.</p>
+
+
+
+<p class="wp-block-paragraph">To se često događa kod:</p>
+
+
+
+<ul class="wp-block-list">
+<li>frameworka</li>
+
+
+
+<li>page buildera</li>
+
+
+
+<li>velikih tema</li>
+
+
+
+<li>pluginova</li>
+</ul>
+
+
+
+<p class="wp-block-paragraph">Ako web koristi samo mali dio svih dostupnih komponenti, korisnik možda svejedno dobiva stilove za cijeli sustav.</p>
+
+
+
+<p class="wp-block-paragraph">To nije uvijek jednostavno riješiti.</p>
+
+
+
+<p class="wp-block-paragraph">Ali vrijedi razumjeti gdje trošak nastaje.</p>
+
+
+
+<h2 class="wp-block-heading" id="dom">DOM</h2>
+
+
+
+<p class="wp-block-paragraph">Lighthouse može upozoriti i na vrlo velik DOM.</p>
+
+
+
+<p class="wp-block-paragraph">Jednostavna vizualna sekcija možda u HTML-u nije tako jednostavna.</p>
+
+
+
+<p class="wp-block-paragraph">Page builder može proizvesti:</p>
+
+
+
+<pre class="wp-block-code"><code>Section
+└── Wrapper
+    └── Container
+        └── Inner
+            └── Column
+                └── Wrapper
+                    └── Content
+</code></pre>
+
+
+
+<p class="wp-block-paragraph">Ako to ponovite stotinama puta, DOM postaje velik.</p>
+
+
+
+<p class="wp-block-paragraph">Browser mora održavati cijelu tu strukturu.</p>
+
+
+
+<h2 class="wp-block-heading" id="builder-nije-automatski-problem">Builder nije automatski problem</h2>
+
+
+
+<p class="wp-block-paragraph">Važno je ne zaključiti:</p>
+
+
+
+<blockquote class="wp-block-quote is-layout-flow wp-block-quote-is-layout-flow">
+<p class="wp-block-paragraph">Page builder = spor web.</p>
+</blockquote>
+
+
+
+<p class="wp-block-paragraph">To nije nužno točno.</p>
+
+
+
+<p class="wp-block-paragraph">Dobar builder web može biti vrlo brz.</p>
+
+
+
+<p class="wp-block-paragraph">Ali builder olakšava dodavanje:</p>
+
+
+
+<ul class="wp-block-list">
+<li>sekcija</li>
+
+
+
+<li>efekata</li>
+
+
+
+<li>wrappera</li>
+
+
+
+<li>pluginova</li>
+</ul>
+
+
+
+<p class="wp-block-paragraph">pa je lakše izgraditi nepotrebno kompleksnu stranicu.</p>
+
+
+
+<p class="wp-block-paragraph">Problem je način korištenja alata, ne samo alat.</p>
+
+
+
+<h2 class="wp-block-heading" id="animacije">Animacije</h2>
+
+
+
+<p class="wp-block-paragraph">Animacije također mogu utjecati na rezultat.</p>
+
+
+
+<p class="wp-block-paragraph">Posebno kompleksne scroll animacije i efekti koji traže puno JavaScripta.</p>
+
+
+
+<p class="wp-block-paragraph">Ako imate:</p>
+
+
+
+<ul class="wp-block-list">
+<li>parallax</li>
+
+
+
+<li>custom cursor</li>
+
+
+
+<li>scroll reveal</li>
+
+
+
+<li>horizontal scroll</li>
+
+
+
+<li>nekoliko Lottie animacija</li>
+</ul>
+
+
+
+<p class="wp-block-paragraph">web može izgledati impresivno na snažnom računalu.</p>
+
+
+
+<p class="wp-block-paragraph">Ali performance cijena može biti značajna.</p>
+
+
+
+<p class="wp-block-paragraph">Svaki efekt treba opravdati svoju svrhu.</p>
+
+
+
+<h2 class="wp-block-heading" id="lighthouse-rezultat-varira">Lighthouse rezultat varira</h2>
+
+
+
+<p class="wp-block-paragraph">Još jedna stvar koja zbunjuje korisnike:</p>
+
+
+
+<p class="wp-block-paragraph">Pokrenete test.</p>
+
+
+
+<p class="wp-block-paragraph">Dobijete:</p>
+
+
+
+<p class="wp-block-paragraph"><strong>74</strong></p>
+
+
+
+<p class="wp-block-paragraph">Pokrenete ga ponovno.</p>
+
+
+
+<p class="wp-block-paragraph">Dobijete:</p>
+
+
+
+<p class="wp-block-paragraph"><strong>81</strong></p>
+
+
+
+<p class="wp-block-paragraph">Pa opet:</p>
+
+
+
+<p class="wp-block-paragraph"><strong>68</strong></p>
+
+
+
+<p class="wp-block-paragraph">To ne znači nužno da se web između tri testa promijenio.</p>
+
+
+
+<p class="wp-block-paragraph">Na rezultat mogu utjecati različite okolnosti testa.</p>
+
+
+
+<p class="wp-block-paragraph">Zato nije dobro donositi zaključke na temelju jednog jedinog pokretanja.</p>
+
+
+
+<h2 class="wp-block-heading" id="testirajte-vise-puta">Testirajte više puta</h2>
+
+
+
+<p class="wp-block-paragraph">Ako radite performance optimizaciju, napravite nekoliko testova.</p>
+
+
+
+<p class="wp-block-paragraph">Tražite obrazac.</p>
+
+
+
+<p class="wp-block-paragraph">Ako dobijete:</p>
+
+
+
+<ul class="wp-block-list">
+<li>69</li>
+
+
+
+<li>71</li>
+
+
+
+<li>73</li>
+
+
+
+<li>70</li>
+</ul>
+
+
+
+<p class="wp-block-paragraph">realno ste oko 70.</p>
+
+
+
+<p class="wp-block-paragraph">Ako nakon promjene dobivate:</p>
+
+
+
+<ul class="wp-block-list">
+<li>89</li>
+
+
+
+<li>92</li>
+
+
+
+<li>90</li>
+</ul>
+
+
+
+<p class="wp-block-paragraph">vrlo vjerojatno ste nešto stvarno poboljšali.</p>
+
+
+
+<p class="wp-block-paragraph">Jedan rezultat od 95 među deset testova od 70 nije dovoljan dokaz.</p>
+
+
+
+<h2 class="wp-block-heading" id="produkcija-i-lokalno">Produkcija i lokalno</h2>
+
+
+
+<p class="wp-block-paragraph">Nemojte performance zaključke donositi samo na development verziji.</p>
+
+
+
+<p class="wp-block-paragraph">Development build može imati:</p>
+
+
+
+<ul class="wp-block-list">
+<li>debugging</li>
+
+
+
+<li>source mapove</li>
+
+
+
+<li>dodatne provjere</li>
+
+
+
+<li>drugačiji način serviranja resursa</li>
+</ul>
+
+
+
+<p class="wp-block-paragraph">Produkcijski build može se ponašati značajno drugačije.</p>
+
+
+
+<p class="wp-block-paragraph">Konačnu analizu treba raditi na stvarnom produkcijskom setupu ili reprezentativnom stagingu.</p>
+
+
+
+<h2 class="wp-block-heading" id="ekstenzije">Ekstenzije</h2>
+
+
+
+<p class="wp-block-paragraph">Kod lokalnog Lighthouse testa browser ekstenzije također mogu utjecati na okruženje.</p>
+
+
+
+<p class="wp-block-paragraph">Za kontroliranije rezultate često ima smisla koristiti:</p>
+
+
+
+<ul class="wp-block-list">
+<li>Incognito</li>
+
+
+
+<li>zaseban profil</li>
+
+
+
+<li>PageSpeed Insights</li>
+</ul>
+
+
+
+<p class="wp-block-paragraph">ovisno o tome što analizirate.</p>
+
+
+
+<p class="wp-block-paragraph">Cilj je smanjiti vanjske faktore.</p>
+
+
+
+<h2 class="wp-block-heading" id="pagespeed-i-lighthouse">PageSpeed i Lighthouse</h2>
+
+
+
+<p class="wp-block-paragraph">Ova dva pojma često se koriste kao sinonimi, ali nisu potpuno ista stvar.</p>
+
+
+
+<p class="wp-block-paragraph">Lighthouse je audit engine.</p>
+
+
+
+<p class="wp-block-paragraph">PageSpeed Insights koristi Lighthouse za laboratorijski dio analize, ali može prikazati i podatke stvarnih korisnika kada su dostupni.</p>
+
+
+
+<p class="wp-block-paragraph">Zato PageSpeed stranica može pokazati:</p>
+
+
+
+<ul class="wp-block-list">
+<li>stvarno korisničko iskustvo</li>
+
+
+
+<li>laboratorijski test</li>
+</ul>
+
+
+
+<p class="wp-block-paragraph">i ta dva rezultata se mogu razlikovati.</p>
+
+
+
+<p class="wp-block-paragraph">To nije kontradikcija.</p>
+
+
+
+<p class="wp-block-paragraph">Mjere različite stvari.</p>
+
+
+
+<h2 class="wp-block-heading" id="field-podaci">Field podaci</h2>
+
+
+
+<p class="wp-block-paragraph">Ako web ima dovoljno stvarnog prometa, field podaci mogu biti posebno vrijedni.</p>
+
+
+
+<p class="wp-block-paragraph">Oni pokazuju kako stranicu doživljavaju pravi korisnici s različitim:</p>
+
+
+
+<ul class="wp-block-list">
+<li>uređajima</li>
+
+
+
+<li>vezama</li>
+
+
+
+<li>lokacijama</li>
+</ul>
+
+
+
+<p class="wp-block-paragraph">To je drugačije od jednog simuliranog Lighthouse testa.</p>
+
+
+
+<p class="wp-block-paragraph">Zato ne treba gledati samo veliki Performance broj.</p>
+
+
+
+<h2 class="wp-block-heading" id="core-web-vitals-su-vazniji-kontekst">Core Web Vitals su važniji kontekst</h2>
+
+
+
+<p class="wp-block-paragraph">Ako Lighthouse rezultat nije savršen, ali stvarni Core Web Vitals podaci pokazuju dobro iskustvo, situacija je puno manje zabrinjavajuća nego kada i stvarni korisnici imaju probleme.</p>
+
+
+
+<p class="wp-block-paragraph">Zato prije panike pogledajte širi kontekst.</p>
+
+
+
+<p class="wp-block-paragraph">Naš vodič <a href="/blog/core-web-vitals/">što su Core Web Vitals</a> detaljnije objašnjava razliku između laboratorijskih i stvarnih podataka.</p>
+
+
+
+<h2 class="wp-block-heading" id="score-nije-seo-pozicija">Score nije SEO pozicija</h2>
+
+
+
+<p class="wp-block-paragraph">Lighthouse Performance rezultat od 100 ne znači:</p>
+
+
+
+<p class="wp-block-paragraph"><strong>Google će vas rangirati na prvo mjesto.</strong></p>
+
+
+
+<p class="wp-block-paragraph">Isto tako rezultat 70 ne znači:</p>
+
+
+
+<p class="wp-block-paragraph"><strong>Google će vas kazniti.</strong></p>
+
+
+
+<p class="wp-block-paragraph">SEO uključuje puno više:</p>
+
+
+
+<ul class="wp-block-list">
+<li>relevantnost</li>
+
+
+
+<li>kvalitetu sadržaja</li>
+
+
+
+<li>search intent</li>
+
+
+
+<li>interne linkove</li>
+
+
+
+<li>backlinkove</li>
+
+
+
+<li>tehničku ispravnost</li>
+</ul>
+
+
+
+<p class="wp-block-paragraph">Performance je dio ukupne kvalitete.</p>
+
+
+
+<p class="wp-block-paragraph">Ne cijeli SEO.</p>
+
+
+
+<h2 class="wp-block-heading" id="ne-uklanjajte-korisne-stvari-zbog-scorea">Ne uklanjajte korisne stvari zbog scorea</h2>
+
+
+
+<p class="wp-block-paragraph">Recimo da imate kvalitetnu interaktivnu kalkulaciju koju korisnici stvarno koriste.</p>
+
+
+
+<p class="wp-block-paragraph">Dodaje određeni JavaScript.</p>
+
+
+
+<p class="wp-block-paragraph">Lighthouse rezultat padne s:</p>
+
+
+
+<p class="wp-block-paragraph"><strong>98 na 94</strong></p>
+
+
+
+<p class="wp-block-paragraph">Nema smisla automatski ukloniti korisnu funkcionalnost samo zbog četiri boda.</p>
+
+
+
+<p class="wp-block-paragraph">Performanse treba optimizirati u kontekstu poslovne vrijednosti.</p>
+
+
+
+<p class="wp-block-paragraph">Cilj nije imati najbolji testni rezultat.</p>
+
+
+
+<p class="wp-block-paragraph">Cilj je imati kvalitetan web.</p>
+
+
+
+<h2 class="wp-block-heading" id="ali-ne-koristite-to-kao-izgovor">Ali ne koristite to kao izgovor</h2>
+
+
+
+<p class="wp-block-paragraph">S druge strane, vrlo je lako reći:</p>
+
+
+
+<blockquote class="wp-block-quote is-layout-flow wp-block-quote-is-layout-flow">
+<p class="wp-block-paragraph">Lighthouse nije bitan.</p>
+</blockquote>
+
+
+
+<p class="wp-block-paragraph">i ignorirati:</p>
+
+
+
+<ul class="wp-block-list">
+<li>sliku od 6 MB</li>
+
+
+
+<li>1,5 MB nepotrebnog JavaScripta</li>
+
+
+
+<li>ogromni DOM</li>
+
+
+
+<li>loš server response</li>
+</ul>
+
+
+
+<p class="wp-block-paragraph">To nije dobar pristup.</p>
+
+
+
+<p class="wp-block-paragraph">Lighthouse je odličan dijagnostički alat.</p>
+
+
+
+<p class="wp-block-paragraph">Samo ga treba pravilno interpretirati.</p>
+
+
+
+<h2 class="wp-block-heading" id="crveno-prvo">Crveno prvo</h2>
+
+
+
+<p class="wp-block-paragraph">Ako imate Performance 45, nemojte prvo loviti sitnu optimizaciju koja će donijeti jedan bod.</p>
+
+
+
+<p class="wp-block-paragraph">Pogledajte najveće probleme.</p>
+
+
+
+<p class="wp-block-paragraph">Često to mogu biti:</p>
+
+
+
+<ol class="wp-block-list">
+<li>ogromne slike</li>
+
+
+
+<li>spor LCP</li>
+
+
+
+<li>previše JavaScripta</li>
+
+
+
+<li>third-party skripte</li>
+
+
+
+<li>spor server</li>
+
+
+
+<li>render-blocking resursi</li>
+</ol>
+
+
+
+<p class="wp-block-paragraph">Rješavanje jednog velikog problema može dati puno veći rezultat od deset mikrooptimizacija.</p>
+
+
+
+<h2 class="wp-block-heading" id="opportunities">Opportunities</h2>
+
+
+
+<p class="wp-block-paragraph">Lighthouse daje listu mogućnosti za poboljšanje.</p>
+
+
+
+<p class="wp-block-paragraph">Primjerice:</p>
+
+
+
+<ul class="wp-block-list">
+<li>optimizirajte slike</li>
+
+
+
+<li>smanjite unused JavaScript</li>
+
+
+
+<li>poboljšajte cache</li>
+
+
+
+<li>eliminirajte render-blocking resurse</li>
+</ul>
+
+
+
+<p class="wp-block-paragraph">To je korisna lista.</p>
+
+
+
+<p class="wp-block-paragraph">Ali nije automatski task list koju treba slijepo izvršiti od vrha prema dnu.</p>
+
+
+
+<p class="wp-block-paragraph">Prvo treba razumjeti zašto se problem pojavljuje.</p>
+
+
+
+<h2 class="wp-block-heading" id="diagnostics">Diagnostics</h2>
+
+
+
+<p class="wp-block-paragraph">Diagnostics daju dodatni kontekst.</p>
+
+
+
+<p class="wp-block-paragraph">Mogu pokazati stvari poput:</p>
+
+
+
+<ul class="wp-block-list">
+<li>velikog main-thread rada</li>
+
+
+
+<li>velikog JavaScript execution timea</li>
+
+
+
+<li>kompleksnog DOM-a</li>
+
+
+
+<li>velikih payloadova</li>
+</ul>
+
+
+
+<p class="wp-block-paragraph">Takve informacije developeru mogu pomoći pronaći pravi uzrok problema.</p>
+
+
+
+<p class="wp-block-paragraph">Performance audit je početak istrage.</p>
+
+
+
+<p class="wp-block-paragraph">Ne konačno rješenje.</p>
+
+
+
+<h2 class="wp-block-heading" id="network-panel">Network panel</h2>
+
+
+
+<p class="wp-block-paragraph">Ako vidite:</p>
+
+
+
+<p class="wp-block-paragraph"><strong>Avoid enormous network payloads</strong></p>
+
+
+
+<p class="wp-block-paragraph">otvorite Network panel.</p>
+
+
+
+<p class="wp-block-paragraph">Sortirajte resurse prema veličini.</p>
+
+
+
+<p class="wp-block-paragraph">Odmah možete vidjeti:</p>
+
+
+
+<ul class="wp-block-list">
+<li>slike</li>
+
+
+
+<li>video</li>
+
+
+
+<li>JavaScript</li>
+
+
+
+<li>fontove</li>
+</ul>
+
+
+
+<p class="wp-block-paragraph">koji zauzimaju najviše.</p>
+
+
+
+<p class="wp-block-paragraph">To je puno korisnije od pokušaja nasumične optimizacije.</p>
+
+
+
+<h2 class="wp-block-heading" id="performance-panel">Performance panel</h2>
+
+
+
+<p class="wp-block-paragraph">Za probleme povezane s JavaScriptom i interakcijama Performance panel može dati puno detaljniju sliku.</p>
+
+
+
+<p class="wp-block-paragraph">Možete vidjeti:</p>
+
+
+
+<ul class="wp-block-list">
+<li>što main thread radi</li>
+
+
+
+<li>koliko dugo traju taskovi</li>
+
+
+
+<li>gdje nastaje blokiranje</li>
+
+
+
+<li>što se događa tijekom učitavanja</li>
+</ul>
+
+
+
+<p class="wp-block-paragraph">Lighthouse može reći:</p>
+
+
+
+<p class="wp-block-paragraph"><strong>postoji problem.</strong></p>
+
+
+
+<p class="wp-block-paragraph">Performance profiling može pomoći odgovoriti:</p>
+
+
+
+<p class="wp-block-paragraph"><strong>zašto postoji problem?</strong></p>
+
+
+
+<h2 class="wp-block-heading" id="testirajte-templateove">Testirajte templateove</h2>
+
+
+
+<p class="wp-block-paragraph">Nemojte testirati samo naslovnu.</p>
+
+
+
+<p class="wp-block-paragraph">Web može imati:</p>
+
+
+
+<p class="wp-block-paragraph"><strong>Naslovna: 96</strong></p>
+
+
+
+<p class="wp-block-paragraph">ali:</p>
+
+
+
+<p class="wp-block-paragraph"><strong>Blog: 75</strong></p>
+
+
+
+<p class="wp-block-paragraph"><strong>Proizvod: 54</strong></p>
+
+
+
+<p class="wp-block-paragraph"><strong>Checkout: 63</strong></p>
+
+
+
+<p class="wp-block-paragraph">Razlog je što različiti templateovi imaju različite:</p>
+
+
+
+<ul class="wp-block-list">
+<li>slike</li>
+
+
+
+<li>skripte</li>
+
+
+
+<li>komponente</li>
+
+
+
+<li>funkcionalnosti</li>
+</ul>
+
+
+
+<p class="wp-block-paragraph">Kod poslovnog weba provjerite barem:</p>
+
+
+
+<ul class="wp-block-list">
+<li>početnu</li>
+
+
+
+<li>glavnu uslugu</li>
+
+
+
+<li>blog članak</li>
+
+
+
+<li>kontakt</li>
+</ul>
+
+
+
+<p class="wp-block-paragraph">Kod webshopa dodatno:</p>
+
+
+
+<ul class="wp-block-list">
+<li>kategoriju</li>
+
+
+
+<li>proizvod</li>
+
+
+
+<li>košaricu</li>
+
+
+
+<li>checkout</li>
+</ul>
+
+
+
+<h2 class="wp-block-heading" id="najvaznija-stranica-nije-uvijek-pocetna">Najvažnija stranica nije uvijek početna</h2>
+
+
+
+<p class="wp-block-paragraph">Ako 80% organskog prometa dolazi direktno na blog članke, njihova kvaliteta može biti važnija od savršenog scorea početne.</p>
+
+
+
+<p class="wp-block-paragraph">Ako većina Google Ads kampanje vodi na landing stranicu, optimizirajte nju.</p>
+
+
+
+<p class="wp-block-paragraph">Performance prioritete treba povezati s ponašanjem stvarnih korisnika.</p>
+
+
+
+<h2 class="wp-block-heading" id="prije-i-poslije">Prije i poslije</h2>
+
+
+
+<p class="wp-block-paragraph">Kod svake veće optimizacije dobro je napraviti mjerenje prije.</p>
+
+
+
+<p class="wp-block-paragraph">Primjer:</p>
+
+
+
+<h3 class="wp-block-heading" id="prije">Prije</h3>
+
+
+
+<p class="wp-block-paragraph">Performance: 61<br>Hero: 2,4 MB<br>11 font datoteka<br>velik unused JS</p>
+
+
+
+<h3 class="wp-block-heading" id="promjene">Promjene</h3>
+
+
+
+<ul class="wp-block-list">
+<li>hero WebP 230 KB</li>
+
+
+
+<li>uklonjena 4 font weighta</li>
+
+
+
+<li>odgođen chat</li>
+
+
+
+<li>uklonjen nepotreban plugin</li>
+</ul>
+
+
+
+<h3 class="wp-block-heading" id="nakon">Nakon</h3>
+
+
+
+<p class="wp-block-paragraph">Performance: 88</p>
+
+
+
+<p class="wp-block-paragraph">Tada znate što ste napravili i kakav je efekt.</p>
+
+
+
+<h2 class="wp-block-heading" id="jedna-promjena">Jedna promjena</h2>
+
+
+
+<p class="wp-block-paragraph">Kod debugginga je korisno ne promijeniti sve odjednom.</p>
+
+
+
+<p class="wp-block-paragraph">Ako istovremeno:</p>
+
+
+
+<ul class="wp-block-list">
+<li>promijenite hosting</li>
+
+
+
+<li>komprimirate slike</li>
+
+
+
+<li>uklonite pluginove</li>
+
+
+
+<li>promijenite temu</li>
+
+
+
+<li>prebacite fontove</li>
+</ul>
+
+
+
+<p class="wp-block-paragraph">i score poraste, ne znate što je stvarno riješilo problem.</p>
+
+
+
+<p class="wp-block-paragraph">Kod ozbiljnije optimizacije promjene treba raditi kontrolirano.</p>
+
+
+
+<h2 class="wp-block-heading" id="nemojte-instalirati-pet-optimization-pluginova">Nemojte instalirati pet optimization pluginova</h2>
+
+
+
+<p class="wp-block-paragraph">Kod WordPressa postoji iskušenje:</p>
+
+
+
+<p class="wp-block-paragraph">Lighthouse je loš.</p>
+
+
+
+<p class="wp-block-paragraph">Instaliraj:</p>
+
+
+
+<ul class="wp-block-list">
+<li>cache plugin</li>
+
+
+
+<li>image plugin</li>
+
+
+
+<li>JS optimization plugin</li>
+
+
+
+<li>database optimization plugin</li>
+
+
+
+<li>još jedan cache plugin</li>
+</ul>
+
+
+
+<p class="wp-block-paragraph">Više optimization pluginova ne znači nužno bolji rezultat.</p>
+
+
+
+<p class="wp-block-paragraph">Mogu nastati:</p>
+
+
+
+<ul class="wp-block-list">
+<li>konflikti</li>
+
+
+
+<li>dupli cache</li>
+
+
+
+<li>pokvareni scriptovi</li>
+
+
+
+<li>teško održavanje</li>
+</ul>
+
+
+
+<p class="wp-block-paragraph">Bolje je razumjeti problem i koristiti minimalan broj potrebnih alata.</p>
+
+
+
+<h2 class="wp-block-heading" id="cache-moze-sakriti-problem">Cache može sakriti problem</h2>
+
+
+
+<p class="wp-block-paragraph">Cache može napraviti veliku razliku.</p>
+
+
+
+<p class="wp-block-paragraph">Ali ako samo cacheirate vrlo težak web, underlying problem i dalje postoji.</p>
+
+
+
+<p class="wp-block-paragraph">To se može pokazati:</p>
+
+
+
+<ul class="wp-block-list">
+<li>u administraciji</li>
+
+
+
+<li>kod prijavljenih korisnika</li>
+
+
+
+<li>u checkoutu</li>
+
+
+
+<li>nakon čišćenja cachea</li>
+</ul>
+
+
+
+<p class="wp-block-paragraph">Zato treba optimizirati i samu aplikaciju.</p>
+
+
+
+<h2 class="wp-block-heading" id="lighthouse-nije-cilj-projekta">Lighthouse nije cilj projekta</h2>
+
+
+
+<p class="wp-block-paragraph">Performance treba definirati kao jedan od kriterija kvalitete.</p>
+
+
+
+<p class="wp-block-paragraph">Uz:</p>
+
+
+
+<ul class="wp-block-list">
+<li>UX</li>
+
+
+
+<li>SEO</li>
+
+
+
+<li>accessibility</li>
+
+
+
+<li>sadržaj</li>
+
+
+
+<li>funkcionalnost</li>
+</ul>
+
+
+
+<p class="wp-block-paragraph">Ako samo lovimo Lighthouse 100, lako je izgubiti širu sliku.</p>
+
+
+
+<p class="wp-block-paragraph">Primjerice, možemo ukloniti sve slike i dobiti bržu stranicu.</p>
+
+
+
+<p class="wp-block-paragraph">Ali ako prodajemo interijere, portfolio bez fotografija nema poslovnog smisla.</p>
+
+
+
+<h2 class="wp-block-heading" id="dobar-rezultat">Dobar rezultat</h2>
+
+
+
+<p class="wp-block-paragraph">Ne postoji jedan Lighthouse broj koji bi svaki web morao postići pod svaku cijenu.</p>
+
+
+
+<p class="wp-block-paragraph">Važnije je:</p>
+
+
+
+<ul class="wp-block-list">
+<li>postoje li ozbiljni problemi</li>
+
+
+
+<li>kakvi su Core Web Vitals</li>
+
+
+
+<li>kako web radi na stvarnim uređajima</li>
+
+
+
+<li>postoji li nepotreban tehnički teret</li>
+</ul>
+
+
+
+<p class="wp-block-paragraph">Web s vrlo dobrim iskustvom i rezultatom u visokim 80-ima ili 90-ima ne treba nužno radikalan zahvat samo zbog nekoliko preostalih bodova.</p>
+
+
+
+<p class="wp-block-paragraph">Web s rezultatom 40 i velikim tehničkim problemima zaslužuje ozbiljniju analizu.</p>
+
+
+
+<h2 class="wp-block-heading" id="prioritet-korisniku">Prioritet korisniku</h2>
+
+
+
+<p class="wp-block-paragraph">Najvažnije pitanje ostaje:</p>
+
+
+
+<p class="wp-block-paragraph"><strong>Kako web radi stvarnom korisniku?</strong></p>
+
+
+
+<p class="wp-block-paragraph">Treba li čekati?</p>
+
+
+
+<p class="wp-block-paragraph">Pomiče li se sadržaj?</p>
+
+
+
+<p class="wp-block-paragraph">Reagira li menu odmah?</p>
+
+
+
+<p class="wp-block-paragraph">Može li brzo doći do cijene?</p>
+
+
+
+<p class="wp-block-paragraph">Radi li kontakt forma?</p>
+
+
+
+<p class="wp-block-paragraph">Lighthouse nam može pomoći pronaći tehničke prepreke.</p>
+
+
+
+<p class="wp-block-paragraph">Ali korisnički cilj određuje jesu li te prepreke stvarno važne.</p>
+
+
+
+<p class="wp-block-paragraph">Ako želite krenuti od šire performance slike, pročitajte <a href="/blog/brzina-web-stranice/">kako brzina weba utječe na korisnike i SEO</a>.</p>
+
+
+
+<p class="wp-block-paragraph">Za optimizaciju glavnih vizuala pogledajte <a href="/blog/optimizacija-slika-za-web/">kako optimizirati slike za web</a>, a za metrike koje mjere stvarno iskustvo pročitajte <a href="/blog/core-web-vitals/">što su Core Web Vitals</a>.</p>
+
+
+
+<p class="wp-block-paragraph">Ako planirate novu poslovnu stranicu, pogledajte naše <a href="/izrada-web-stranica-cijena/">pakete i cijene izrade web stranica</a>.</p>
+</div></div></article><section class="blog-related" aria-labelledby="related-title"><div class="container"><h2 id="related-title">Nastavite čitati</h2><div class="blog-related-list"><a href="/blog/sto-je-keyword-difficulty/"><span>Uncategorized<!-- --> · <!-- -->15<!-- --> min čitanja</span><h3>Što je keyword difficulty?</h3><span>Pročitajte članak ↗</span></a><a href="/blog/kako-pronaci-content-gap/"><span>SEO optimizacija<!-- --> · <!-- -->19<!-- --> min čitanja</span><h3>Kako pronaći content gap u SEO-u?</h3><span>Pročitajte članak ↗</span></a></div></div></section><section class="blog-question" aria-labelledby="blog-question-title"><div class="container blog-question-inner"><div><span class="blog-overline">Pitanje za Legatech</span><h2 id="blog-question-title">Imate konkretan izazov sa svojim webom?</h2></div><a href="/kontakt/">Pošaljite upit <span aria-hidden="true">↗</span></a></div></section></main><footer class="editorial-footer"><div class="container"><div class="editorial-footer-top"><div class="editorial-footer-brand"><a class="editorial-brand" aria-label="Legatech, naslovna stranica" href="/"><img alt="Legatech" loading="lazy" width="164" height="41" decoding="async" src="/assets/legatech-brand/legatech-black.svg"></a><p>Web stranice, trgovine i SEO usmjereni na konkretne poslovne ciljeve.</p><p>LEGATECH, obrt za razvoj softvera, vl. Marijan Malčić<br>Osijek<br>OIB: 14184408003 / MBS: 98086464</p></div><div class="editorial-footer-links"><nav aria-label="Usluge u podnožju"><h2>Usluge</h2><a href="/izrada-web-stranica-cijena/">Izrada web stranica</a><a href="/seo-optimizacija-cijena/">SEO optimizacija</a><a href="/izrada-web-trgovina/">Izrada web trgovina</a><a href="/odrzavanje-web-stranica/">Održavanje web stranica</a><a href="/izrada-web-stranica-osijek/">Izrada web stranica Osijek</a></nav><nav aria-label="Glavne stranice u podnožju"><h2>Istražite</h2><a href="/cjenik/">Cjenik</a><a href="/blog/" aria-current="location">Blog</a><a href="/o-nama/">O nama</a><a href="/kontakt/">Kontakt</a></nav><nav aria-label="Pravne stranice i privatnost"><h2>Pravno</h2><a href="/uvjeti-koristenja/#pruzatelj">Poslovni podaci</a><a href="/politika-privatnosti/">Politika privatnosti</a><a href="/politika-kolacica/">Politika kolačića</a><a href="/uvjeti-koristenja/">Uvjeti korištenja</a><button class="footer-cookie-button" type="button">Postavke kolačića</button></nav></div></div><div class="editorial-footer-bottom"><span>© 2026. Legatech</span><span><a href="mailto:info@legatech.hr">info@legatech.hr</a> / <a href="tel:+385997357070">099 735 7070</a></span><span>Osijek, Hrvatska</span><button class="motion-toggle" type="button">Smanji animacije</button></div></div></footer><dialog id="cookie-preview" aria-labelledby="cookie-preview-title"><button type="button" class="dialog-close" aria-label="Zatvori postavke kolačića">Zatvori ×</button><h2 id="cookie-preview-title">Postavke kolačića</h2><p id="cookie-consent-copy">Google Analytics učitava se samo ako prihvatite analitičke kolačiće. Vaš odabir možete promijeniti u ovim postavkama.</p><div class="cookie-choices"><button type="button" class="button button-signal" data-consent="granted">Prihvati analitičke</button><button type="button" class="button button-outline" data-consent="denied">Odbij analitičke</button></div><a href="/politika-kolacica/">Politika kolačića ↗</a></dialog></body></html>
