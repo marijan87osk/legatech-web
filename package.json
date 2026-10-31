@@ -9,7 +9,7 @@
     "build:offline": "node scripts/build-redesign.mjs",
     "build:legacy": "next build && node scripts/clean-static-export.mjs",
     "check:seo": "node scripts/check-redesign-export.mjs",
-    "test:release": "node --test scripts/test-contact-lead.mjs scripts/test-redesign.mjs scripts/test-release-preflight.mjs",
+    "test:release": "node --test scripts/test-contact-lead.mjs scripts/test-redesign.mjs scripts/test-release-preflight.mjs scripts/test-asset-versioning.mjs",
     "preview:static": "node scripts/preview-redesign.mjs",
     "start": "node scripts/preview-redesign.mjs",
     "lint": "eslint ."

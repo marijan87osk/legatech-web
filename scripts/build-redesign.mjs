@@ -5,6 +5,7 @@ import {createHash} from 'node:crypto';
 import {load} from 'cheerio';
 import sanitizeHtml from 'sanitize-html';
 import {assertSnapshotFresh} from './wordpress-snapshot-freshness.mjs';
+import {versionPublicAssets} from './version-public-assets.mjs';
 
 const hash=x=>createHash('sha256').update(x).digest('hex');
 const text=x=>load(String(x??''),null,false).text().replace(/\s+/g,' ').trim();
@@ -176,7 +177,8 @@ export async function buildRedesign({repoRoot=process.cwd(),outputRoot=path.reso
   if(touched)await writeFile(file,$.html());
  }
  await writeFile(path.join(out,'sitemap.xml'),'<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n'+sitemap.map(u=>'  <url><loc>'+u+'</loc></url>').join('\n')+'\n</urlset>\n');
- const design={version:1,design:'approved-expressive-plum-pistachio',pages:routes.size,cmsPosts:effective.length,changed,removed,wordpressSyncFresh,wordpressSnapshotAuthoritative:fresh,publicAddressApproved:legalApproved,addressBlockHash:blockHash,debugMode:false,mailMode:'smtp'};
+ const assets=await versionPublicAssets({outputRoot:out,htmlFiles:html,origin});
+ const design={version:1,design:'approved-expressive-plum-pistachio',pages:routes.size,cmsPosts:effective.length,changed,removed,wordpressSyncFresh,wordpressSnapshotAuthoritative:fresh,publicAddressApproved:legalApproved,addressBlockHash:blockHash,debugMode:false,mailMode:'smtp',versionedAssets:Object.keys(assets).length};
  await writeFile(path.join(out,'legatech-design.json'),JSON.stringify(design,null,2));return design;
 }
 if(process.argv[1]&&path.resolve(process.argv[1])===fileURLToPath(import.meta.url))console.log(await buildRedesign({repoRoot:path.resolve(import.meta.dirname,'..'),fresh:process.argv.includes('--fresh')||process.env.LEGATECH_WORDPRESS_SYNC_FRESH==='true'}));

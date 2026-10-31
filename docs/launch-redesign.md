@@ -1,5 +1,13 @@
 # Lokalni kandidat redizajna
 
+## Cacheiranje javnih resursa
+
+Produkcijski build stvara `asset-manifest.json` i CSS/JS kopije s hashom sadržaja u nazivu. HTML, uključujući 404, koristi te nazive. Promjena sadržaja stvara novi URL, a nepromijenjeni resurs zadržava isti URL. Stari nazivi ostaju dostupni radi već spremljenih HTML dokumenata.
+
+Hashirani CSS/JS imaju `public, max-age=31536000, immutable`; HTML, izvorni nehashirani CSS/JS i javni metapodaci moraju se revalidirati. Build isključuje naslijeđeni `mod_expires` kako ne bi nadjačao tu politiku. Za primjenu `.htaccess` pravila na izravne statičke URL-ove SiteGround NGINX Direct Delivery treba biti isključen za produkcijsku domenu.
+
+`check:seo` provjerava hashove i HTML reference, a `scripts/check-live-redesign.mjs` nakon objave provjerava manifest, cache/security zaglavlja i `/index.html` preusmjeravanja. SMTP konfiguracija i PHP endpoint ne sudjeluju u verzioniranju resursa.
+
 Detaljan postupak pripreme i preostale hosting/SMTP provjere nalaze se u `../legatech redizajn2/LAUNCH.md` (lokalni radni prostor).
 
 Produkcijski izvor je `redesign/site/` s inventarom `redesign/files.json`. `scripts/build-redesign.mjs` primjenjuje svježi WordPress sadržaj kroz odobreni predložak. `npm run build:offline` čuva noviji odobreni sadržaj kada je cache stariji, dok `LEGATECH_WORDPRESS_SYNC_FRESH=true` dopušta potvrđeno povlačenje članaka. Sinkronizator odbija sirove snimke starije od odobrene osnove ili zadnje prihvaćene snimke. Metadata vremena i hasha nalazi se u `src/generated/blog-sync.json` i prati cache.

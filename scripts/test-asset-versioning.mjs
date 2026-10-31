@@ -1,0 +1,24 @@
+import {test} from 'node:test';
+import assert from 'node:assert/strict';
+import {mkdtemp,mkdir,writeFile,readFile,rm,realpath} from 'node:fs/promises';
+import path from 'node:path';
+import {versionPublicAssets} from './version-public-assets.mjs';
+const fixtures=path.resolve(import.meta.dirname,'../.redesign-tests');
+test('asset URLs remain stable until content changes and preserve cached-document compatibility',async t=>{
+ await mkdir(fixtures,{recursive:true});const dir=await mkdtemp(path.join(fixtures,'assets-'));
+ t.after(async()=>{if(!dir.startsWith(fixtures+path.sep)||await realpath(dir)!==dir)throw Error('Unsafe cleanup');await rm(dir,{recursive:true,force:true});});
+ const page=path.join(dir,'index.html'),html='<main><h1>Čitljiv sadržaj</h1></main><link rel="stylesheet" href="/app.css"><script src="/app.js"></script>';
+ await writeFile(page,html);await writeFile(path.join(dir,'app.js'),'window.test=1;');await writeFile(path.join(dir,'app.css'),'body{color:black}');
+ const first=await versionPublicAssets({outputRoot:dir,htmlFiles:[page],origin:'https://legatech.hr'});
+ assert.match(first['/app.js'],/^\/app\.[a-f0-9]{12}\.js$/);assert.ok((await readFile(page,'utf8')).includes(first['/app.js']));
+ assert.equal(await readFile(path.join(dir,'app.js'),'utf8'),'window.test=1;');
+ const stable=await versionPublicAssets({outputRoot:dir,htmlFiles:[page],origin:'https://legatech.hr'});assert.deepEqual(stable,first);
+ await writeFile(page,html);await writeFile(path.join(dir,'app.js'),'window.test=2;');
+ const changed=await versionPublicAssets({outputRoot:dir,htmlFiles:[page],origin:'https://legatech.hr'});
+ assert.notEqual(changed['/app.js'],first['/app.js']);assert.equal(changed['/app.css'],first['/app.css']);
+ assert.ok((await readFile(page,'utf8')).includes('Čitljiv sadržaj'));
+ const rules=await readFile(path.join(dir,'.htaccess'),'utf8');
+ assert.equal(rules.match(/# BEGIN LEGATECH ASSET CACHE/g).length,1);
+ assert.ok(rules.includes('public, max-age=0, must-revalidate'));
+ assert.ok(rules.includes('public, max-age=31536000, immutable'));
+});

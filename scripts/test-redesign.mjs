@@ -32,7 +32,10 @@ test('equivalent REST and snapshot versions retain reviewed pages and repaired l
  const out=await fixture(t),snapshot=posts.map(p=>({...p,publishedAt:p.publishedAt+'+00:00',modifiedAt:p.modifiedAt+'+00:00',excerpt:p.excerpt+' Dulji automatski sažetak iz drugog izvoza.',contentHtml:p.contentHtml.replace(/\s+id="[^"]*"/g,'')}));
  const result=await buildRedesign({repoRoot:repo,outputRoot:out,posts:snapshot,fresh:true});
  assert.deepEqual(result.changed,[]);assert.deepEqual(result.removed,[]);
- assert.equal(await readFile(path.join(out,'blog/core-web-vitals/index.html'),'utf8'),await readFile(path.join(repo,'redesign/site/blog/core-web-vitals/index.html'),'utf8'));
+ let html=await readFile(path.join(out,'blog/core-web-vitals/index.html'),'utf8');
+ const assets=JSON.parse(await readFile(path.join(out,'asset-manifest.json'),'utf8'));
+ for(const [source,versioned]of Object.entries(assets))html=html.replaceAll(versioned,source);
+ assert.equal(html,await readFile(path.join(repo,'redesign/site/blog/core-web-vitals/index.html'),'utf8'));
  assert.deepEqual((await checkRedesign({repoRoot:repo,outputRoot:out})).errors,[]);
 });
 test('an older incomplete cache cannot erase the three October articles',async t=>{

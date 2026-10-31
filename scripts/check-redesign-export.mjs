@@ -14,6 +14,7 @@ export async function checkRedesign({repoRoot=process.cwd(),outputRoot=path.reso
  if(!privateStreet||!privatePostalCity)throw Error('Registered address section has an unexpected structure');
  const approved=JSON.parse(await readFile(path.join(repo,'redesign/approved-pages.json'),'utf8'));
  const design=JSON.parse(await readFile(path.join(out,'legatech-design.json'),'utf8'));
+ const assets=JSON.parse(await readFile(path.join(out,'asset-manifest.json'),'utf8'));
  async function walk(dir){for(const e of await readdir(dir,{withFileTypes:true})){const file=path.join(dir,e.name);if(e.isSymbolicLink()){errors.push('Symlink: '+file);continue;}if(e.isDirectory())await walk(file);else{
   const relative=path.relative(out,file).replaceAll(path.sep,'/');inventory.push(relative);
   if(e.name.endsWith('.html')&&!relative.startsWith('api/'))htmlFiles.push({file,relative});
@@ -43,7 +44,8 @@ export async function checkRedesign({repoRoot=process.cwd(),outputRoot=path.reso
   const refs=[];$('link[rel=stylesheet],link[rel=preload],link[rel=icon],script[src],img[src]').each((_,n)=>refs.push($(n).attr('src')||$(n).attr('href')));
   $('[srcset]').each((_,n)=>refs.push(...$(n).attr('srcset').split(',').map(p=>p.trim().split(/\s+/)[0])));
   for(const ref of refs){if(!ref||ref.startsWith('data:'))continue;const u=new URL(ref,config.origin+route);if(u.origin!==config.origin){errors.push(route+' external initial asset '+ref);continue;}try{await access(path.join(out,decodeURIComponent(u.pathname)));}catch{errors.push(route+' missing asset '+ref);}}
-  if($('script[src="/site-runtime.js"]').length!==1||$('script[src*="googletagmanager.com"]').length)errors.push(route+' GA runtime/tag');
+  if($('script[src]').filter((_,n)=>new URL($(n).attr('src'),config.origin).pathname===assets['/site-runtime.js']).length!==1||$('script[src*="googletagmanager.com"]').length)errors.push(route+' GA runtime/tag');
+  $('script[src],link[rel=stylesheet]').each((_,n)=>{const url=new URL($(n).attr('src')||$(n).attr('href'),config.origin);if(url.origin===config.origin&&!Object.values(assets).includes(url.pathname))errors.push(route+' unversioned script/style');});
   if($('#contact-form').length&&($('#contact-form').attr('action')!=='/api/contact.php'||$('#contact-form').attr('method')!=='post'))errors.push(route+' contact route');
   const protectedPage=approved.find(p=>p.route===route&&!route.startsWith('/blog/'));
   if(protectedPage){
@@ -53,10 +55,15 @@ export async function checkRedesign({repoRoot=process.cwd(),outputRoot=path.reso
    if($('title').text()!==protectedPage.title||$('meta[name=description]').attr('content')!==protectedPage.description)errors.push(route+' approved metadata changed');
   }
  }
- const runtime=await readFile(path.join(out,'site-runtime.js'),'utf8'),context=vm.createContext({window:{}});vm.runInContext(runtime,context);
+ for(const [source,versioned]of Object.entries(assets)){
+  const match=versioned.match(/\.([a-f0-9]{12})\.(?:css|js)$/);
+  if(!match||hash(await readFile(path.join(out,versioned))).slice(0,12)!==match[1]||hash(await readFile(path.join(out,source)))!==hash(await readFile(path.join(out,versioned))))errors.push('Invalid asset fingerprint '+source);
+ }
+ const runtime=await readFile(path.join(out,assets['/site-runtime.js']),'utf8'),context=vm.createContext({window:{}});vm.runInContext(runtime,context);
  if(context.window.LegatechRuntime?.gaDebugMode!=='false'||context.window.LegatechRuntime?.mailMode!=='smtp'||context.window.LegatechRuntime?.gaMeasurementId!==config.gaMeasurementId)errors.push('Production runtime settings');
  if(inventory.includes('local-runtime.js')||inventory.includes('server.mjs')||inventory.includes('contact-runtime-config.json'))errors.push('Local runtime/config included');
  const htaccess=await readFile(path.join(out,'.htaccess'),'utf8');if(/Header\s+(?:always\s+)?set\s+X-Robots-Tag.*noindex/i.test(htaccess))errors.push('Production noindex header');
+ if(!htaccess.includes('# BEGIN LEGATECH ASSET CACHE')||!htaccess.includes('ExpiresActive Off')||!htaccess.includes('public, max-age=31536000, immutable'))errors.push('Missing release-aware cache policy');
  for(const p of ['naslovna','o-meni','izrada-web-trgovine','izrada-web-stranica','seo-optimizacija','robots-xml-sitemap'])if(!htaccess.includes('^'+p+'/?$'))errors.push('Missing redirect '+p);
  for(const p of ['api/contact.php','api/vendor/autoload.php','404.html'])if(!inventory.includes(p))errors.push('Missing production file '+p);
  const sitemap=load(await readFile(path.join(out,'sitemap.xml'),'utf8'),{xmlMode:true});
