@@ -6,6 +6,7 @@ import {load} from 'cheerio';
 import sanitizeHtml from 'sanitize-html';
 import {assertSnapshotFresh} from './wordpress-snapshot-freshness.mjs';
 import {versionPublicAssets} from './version-public-assets.mjs';
+import {applyUiUx} from './ui-ux-refinements.mjs';
 
 const hash=x=>createHash('sha256').update(x).digest('hex');
 const text=x=>load(String(x??''),null,false).text().replace(/\s+/g,' ').trim();
@@ -93,7 +94,7 @@ export async function buildRedesign({repoRoot=process.cwd(),outputRoot=path.reso
   meta($,'og:image:alt',p.title);meta($,'twitter:image:alt',p.title);
   $('.blog-post-hero h1').text(p.title);$('.blog-post-deck').text(description);
   populateMeta($,$('.blog-post-hero .blog-meta'),p);$('.blog-post-hero .blog-meta').append($('<span>').text(text(p.authorName||'Legatech')));
-  $('.blog-prose').html(safeContent(p.contentHtml));
+  $('.blog-prose').removeAttr('data-ux-grouped').html(safeContent(p.contentHtml));
   const used=new Set($('[id]').not('.blog-prose [id]').map((_,e)=>e.attribs.id).get()),toc=$('.blog-contents nav').empty();
   $('.blog-prose h2,.blog-prose h3').each((_,node)=>{
    const h=$(node);let id=h.attr('id')||slugId(h.text()),suffix=1,candidate=id;
@@ -164,6 +165,7 @@ export async function buildRedesign({repoRoot=process.cwd(),outputRoot=path.reso
  const sitemap=[];
  for(const file of html){
   const $=load(await readFile(file,'utf8')),route='/'+path.relative(out,file).replaceAll(path.sep,'/').replace(/index\.html$/,'');let touched=false;
+  applyUiUx($,{route});touched=true;
   if(removed.length)$('a[href]').each((_,n)=>{const u=new URL($(n).attr('href'),origin+route);if(u.origin===origin&&removed.includes(u.pathname.split('/')[2])&&u.pathname.startsWith('/blog/')){$(n).replaceWith($(n).contents());touched=true;}});
   const canonical=$('link[rel=canonical]').attr('href');
   const alias=config.canonicalAliases?.[route];

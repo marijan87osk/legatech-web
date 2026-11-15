@@ -1,318 +1,318 @@
 [
   {
     "path": "index.html",
-    "bytes": 35032,
-    "sha256": "6842f2d187b75c83d296daea794d31358f306503534f21cc692751789b9312fd"
+    "bytes": 37680,
+    "sha256": "ca97f1ae85f90f01ed3e9ae3e6f4f540a4bfccc3ea529c01482da8a0c9422606"
   },
   {
     "path": "izrada-web-stranica-cijena/index.html",
-    "bytes": 42922,
-    "sha256": "27b242d4cdbebbc236622a6c78d2fbcaf102b57dfb630251cf7150593f3a1157"
+    "bytes": 45882,
+    "sha256": "4729302c7f2108b9719193627115f57cdc415014fdc94a3e63bc7e62fde43d24"
   },
   {
     "path": "izrada-web-stranica-osijek/index.html",
-    "bytes": 24296,
-    "sha256": "da81074ae0fc48d0c89a760a8942e2f89c7bc23808bf39464abd46298e6f3289"
+    "bytes": 26899,
+    "sha256": "f3a3a1763c0f922b4c5ca94037e1cdfbf7822623900d5f12863bca28d57f87c6"
   },
   {
     "path": "seo-optimizacija-cijena/index.html",
-    "bytes": 46933,
-    "sha256": "f2fcead82c696cb9bb02f951f36215ea64faa289a7aeb1ce242178cd6453b81c"
+    "bytes": 49880,
+    "sha256": "e13dbd11d2f96c5dbe850393d7c2499a2c0e5a15031f8c86739b0aa7d125f969"
   },
   {
     "path": "izrada-web-trgovina/index.html",
-    "bytes": 47837,
-    "sha256": "ecfaddfc2962c8a237e40336a1fe968fa2e86ddd0460633ffa6eb2545567ed78"
+    "bytes": 51080,
+    "sha256": "2b15159a5fc25997a9917d2b117b2f1eeb0be006eb30b8e13880417029f80988"
   },
   {
     "path": "odrzavanje-web-stranica/index.html",
-    "bytes": 54835,
-    "sha256": "a39950db20f50bc82bf856ac1d22e621e788c28a42ba82599810546f0055ca38"
+    "bytes": 58556,
+    "sha256": "687748c0abffc05da06d0f97821ce7631347387bc3f7a74a1db942f3aa0c9150"
   },
   {
     "path": "cjenik/index.html",
-    "bytes": 37770,
-    "sha256": "0ceb6d8926a5b9326c5b1697a9db19a992dedddfd04ca113cf335af89fb582ab"
+    "bytes": 47356,
+    "sha256": "71729a156a6e458bfa2693159b08bfe51d0297b352bce90fd9d160bddba9b6fc"
   },
   {
     "path": "o-nama/index.html",
-    "bytes": 10354,
-    "sha256": "f6cf4b9a135586cc15753575662924b0d289530ef7d7057a7f600195ea2b5cb8"
+    "bytes": 10844,
+    "sha256": "b10071f4fe67b7b9143cc77823ca7832878f7c96ac0956f8b5db17d93dead957"
   },
   {
     "path": "kontakt/index.html",
-    "bytes": 12601,
-    "sha256": "abce678b4252fca8df927b6832591b2a839a2ac6fbfa1cb29c2885e2d69d574c"
+    "bytes": 15194,
+    "sha256": "c6f81a524d2af2fb025ae7be28cfb7665893391c8f15e9dc66e180e468ae221e"
   },
   {
     "path": "politika-privatnosti/index.html",
-    "bytes": 14874,
-    "sha256": "41e9cafce5bb226e8eafa282cd4895511a00ab36bddda3b0992230f169b2aa31"
+    "bytes": 15015,
+    "sha256": "97c5faa5920b906a17a95526f20718ac219ef229579ec1011e267b85a57d6e4d"
   },
   {
     "path": "politika-kolacica/index.html",
-    "bytes": 12635,
-    "sha256": "782818d277437ff78a2a70973f027b97aa5b199cf48d66c14bb71db906a9f2e6"
+    "bytes": 12776,
+    "sha256": "6e5b8d9b27ef2abac90324a26c1b66b7bb3df8972103b4dc774d67b6045bd001"
   },
   {
     "path": "uvjeti-koristenja/index.html",
-    "bytes": 12937,
-    "sha256": "19335c4a1cedefe1b24340428578308936a958c3e7fffd0400f6948d2bf93526"
+    "bytes": 13078,
+    "sha256": "d9c29c0488a35ea001fbfb8ad872848a9a8ceddf3d6903a1f2c747478ba5826d"
   },
   {
     "path": "blog/accessibility-web-stranice/index.html",
-    "bytes": 60445,
-    "sha256": "29e7b35504e1a87dda56d062f793a3b9bdcc242fa631a116e4a8e556d2736ab2"
+    "bytes": 58188,
+    "sha256": "c49919065bc128bb144fd1847cacce54b9c2ebbb05b29e479b72723ba0a246d1"
   },
   {
     "path": "blog/brzina-web-stranice/index.html",
-    "bytes": 44566,
-    "sha256": "adc2b80ac03c9f89abd88f48a51d5de42b87f3756a56656631ead74d63efa14a"
+    "bytes": 42662,
+    "sha256": "c4e4b3c657e77017fb0970d1bf00204522a82093e40391587ddf45f262fb6efa"
   },
   {
     "path": "blog/core-web-vitals/index.html",
-    "bytes": 42141,
-    "sha256": "a5e0345489fbbb814bd6f4f8a0522fd9de65665dff9705ae1665045f5ab55112"
+    "bytes": 40316,
+    "sha256": "d05533e3fec60e5edc16f4bf56febc5fff819367ba9016fe6a4dc1f1919b6cfc"
   },
   {
     "path": "blog/dobra-pocetna-stranica/index.html",
-    "bytes": 39150,
-    "sha256": "5e3b47eae7c0c318dd441be6c362f287024feeb22f6f5bdad6a225eab628a9df"
+    "bytes": 38508,
+    "sha256": "e44ea91838294cd7d63bd0c0677e1486454964769263e80a669a82632e4c101e"
   },
   {
     "path": "blog/gdje-postaviti-cta/index.html",
-    "bytes": 36455,
-    "sha256": "d01c5ac4d57bff3e51f9cbcbe196f915d5149c884a81c02f9fb2ba78f423f45a"
+    "bytes": 34641,
+    "sha256": "88cad750efd08de5e0ab36587eea4f45c2b540060ee34bc6f809e0a6da2d1ef2"
   },
   {
     "path": "blog/greske-prije-izrade-web-stranice/index.html",
-    "bytes": 39694,
-    "sha256": "1f0cac5d5067010541d2b88bd110a8bf6ebf0eb652fc0d225138eb782441a163"
+    "bytes": 37459,
+    "sha256": "b5deb81f84b773d78e05f1c49b28bc34c1c23704a89cf689809db79594e52ef4"
   },
   {
     "path": "blog/index.html",
-    "bytes": 36926,
-    "sha256": "3d6140a66fd560037665ca9ebbafec63120e1f2225ccce97df6116dc863c53e5"
+    "bytes": 40093,
+    "sha256": "73b441997110275c9ff72cc0f7befe872ae3b40f7c5d6a88a8ec9c3b3864e879"
   },
   {
     "path": "blog/kako-analizirati-seo-konkurenciju/index.html",
-    "bytes": 62731,
-    "sha256": "be590a1ae6de4e130cc93481a42547d5cf1e2ac44e7114ee2870ecee8c9ed9e0"
+    "bytes": 62015,
+    "sha256": "63c11a80238b8a8b99addcdd3c50f55425c7ecec1eaa0c2b0534a9db736089a4"
   },
   {
     "path": "blog/kako-analizirati-serp/index.html",
-    "bytes": 71408,
-    "sha256": "55f5f80276c29dfb244bfa1e2d21c4e0949721cb3b4b38325386b7db3a0e08dd"
+    "bytes": 69450,
+    "sha256": "33aa4b47b47533ddb5b9f8dd74ee5928f17bdb24f747977d31de2013432d450e"
   },
   {
     "path": "blog/kako-fontovi-utjecu-na-brzinu-weba/index.html",
-    "bytes": 48641,
-    "sha256": "cf72eec94bd509db85d910c96f4d07ed7454d3ab9b91d6362a686586921215e5"
+    "bytes": 47631,
+    "sha256": "7e7d9a1d20144c4f373fcf82bcc0749096bb7cb99a60a01c52f8c53defdee653"
   },
   {
     "path": "blog/kako-grupirati-kljucne-rijeci/index.html",
-    "bytes": 60156,
-    "sha256": "b66cb5415f1fa3575e4d672192a43fd28c6738f5f79efebdf0e5780c96c7985e"
+    "bytes": 60007,
+    "sha256": "6f73b28a386541efbace01308d0955c688f197adbbe28a21b4f5248b9379726b"
   },
   {
     "path": "blog/kako-izgraditi-povjerenje-na-webu/index.html",
-    "bytes": 43507,
-    "sha256": "c3f5474af8388c12e98f43621682591d66cc3bdbaf7403641aa84a6c60fdc47c"
+    "bytes": 42044,
+    "sha256": "50789338fc084abb423901d95f15b665ade55f87c8dfbe0bd26ece85c390375b"
   },
   {
     "path": "blog/kako-izraditi-seo-strategiju/index.html",
-    "bytes": 54065,
-    "sha256": "c508e3ec6e828a5cd314c0a0795883e43deede78ddd98a90d7c0a26e86d6f0d6"
+    "bytes": 54019,
+    "sha256": "6812a59b7f6660d1e6abaf82449553680bc46057ac51c73922ed25a07abefbea"
   },
   {
     "path": "blog/kako-napisati-sadrzaj-za-web-stranicu/index.html",
-    "bytes": 36475,
-    "sha256": "6a19ea8e58ba34315d1f7f9a3490dded73c7ff62723121589d93673b7040834e"
+    "bytes": 34493,
+    "sha256": "6ae9f5102761ca958753bff61aa97ba505280343e2f334995cbbd685206670b8"
   },
   {
     "path": "blog/kako-napraviti-dobru-kontakt-formu/index.html",
-    "bytes": 40145,
-    "sha256": "003ed2b12ab331472d7f70c185e27e75bc78f0883f96427c23df9f5a83c7ace3"
+    "bytes": 38498,
+    "sha256": "ef7d0f9ae2a8aaf2a2f17c0a7c5745f8dbc20e2262fcd422bc1f01926ab157a4"
   },
   {
     "path": "blog/kako-napraviti-keyword-mapping/index.html",
-    "bytes": 62660,
-    "sha256": "db92f8a5bdd7962238c07397605de4285cc9f0d5b2058bd9004a072e2a2738b0"
+    "bytes": 61527,
+    "sha256": "445d73f280a9da4a67795da0ea3d90ed5b6e51ae528f665792d22a87888896f5"
   },
   {
     "path": "blog/kako-napraviti-keyword-research/index.html",
-    "bytes": 61064,
-    "sha256": "107a95226869f6ff2c324d1d481d78f4d4ba30b45413ab78db36837da9a7b4de"
+    "bytes": 57845,
+    "sha256": "02e52ac8059927d3067fee2ef35799b20bab97ec234f1ee86a8f30e5e209c6a0"
   },
   {
     "path": "blog/kako-odrediti-ciljeve-web-stranice/index.html",
-    "bytes": 35959,
-    "sha256": "fdab8a9fdd0c862084453f7eee9b68bea808126006de24b9477434677bce1bd1"
+    "bytes": 34290,
+    "sha256": "b6b6e09cd15111868171a463e1ec2eef3fb6cef478801de97953a99d1403d186"
   },
   {
     "path": "blog/kako-pronaci-content-gap/index.html",
-    "bytes": 71375,
-    "sha256": "b583bbc08e3ce98ee0a1a7aa4a8d85311c03ff7502d0da89f31cd0d0d368289d"
+    "bytes": 70043,
+    "sha256": "1fc1b066870db66f34cd461330e42b60f7ba82f960df874fb403e6c5b30ed105"
   },
   {
     "path": "blog/kako-seo-funkcionira/index.html",
-    "bytes": 52580,
-    "sha256": "d51462ec38e4e65415c9aa93855558e046d8bfddd49cdc2e0200b3b7cb8d05f2"
+    "bytes": 49423,
+    "sha256": "b12c17833b3fde09ec5e1cdf0c679876c19ef551b7fa3ff32a47fa268b7b5dd9"
   },
   {
     "path": "blog/keyword-cannibalization/index.html",
-    "bytes": 48877,
-    "sha256": "97fdad7e04f2dd38d886a96b2499b387b0616d5aad068e80def7ac4cf4500828"
+    "bytes": 43620,
+    "sha256": "2f96dadf9972f3b4f5a1b5e535294414c8f6f796263de1fb89af17b2948a163b"
   },
   {
     "path": "blog/koliko-stranica-treba-imati-poslovna-web-stranica/index.html",
-    "bytes": 35240,
-    "sha256": "8bc2ffe3afda80b7dd18a08f267b0770d142f1206c9b31bbd261892023fb91a1"
+    "bytes": 34417,
+    "sha256": "1f5e3caa258b3923e47e49743d276e4a135deca9f9e19f4fa65e5163c9bb9741"
   },
   {
     "path": "blog/koliko-traje-izrada-web-stranice/index.html",
-    "bytes": 33775,
-    "sha256": "a65e69f382ccd1a4e3f71544206bd5b233c04f3dd7bb1b773ba1ecbe54ec78f2"
+    "bytes": 32957,
+    "sha256": "8d7fb11b61a02b8c1c55cf1cd20dde1528761b684a7928252032863e70430e96"
   },
   {
     "path": "blog/koliko-traje-seo/index.html",
-    "bytes": 51264,
-    "sha256": "abec752bd19cace40af7a6c4788ae4e2fc7e44118fce0c3fe1a9ce326a197944"
+    "bytes": 48592,
+    "sha256": "7525877dfb7b96ca73227395d2f69ef0784231b924e75c675228ed4b0161ef92"
   },
   {
     "path": "blog/long-tail-kljucne-rijeci/index.html",
-    "bytes": 56958,
-    "sha256": "b1ffffa7d1a135c3470f3d45040c9d63490f0d2fe5e408663e4c014ec296800e"
+    "bytes": 54180,
+    "sha256": "bf67f99871521d180684516bd5f9bf8906ff0415de48c25e79b57c9dfb532400"
   },
   {
     "path": "blog/mobile-first-dizajn/index.html",
-    "bytes": 39305,
-    "sha256": "f29773c97244c9ea1b517da2ab221bcdb9db25afe04618545d672d41cf774891"
+    "bytes": 37983,
+    "sha256": "29a9b349351e957ae5e1829144d579a53664bb64c8436d27ba44ffffc70998ea"
   },
   {
     "path": "blog/najcesce-ux-greske/index.html",
-    "bytes": 45318,
-    "sha256": "f043c4d1a5ddef6f71b1510fecc4426f9e79a406386a5b5ac2207489304b784b"
+    "bytes": 43209,
+    "sha256": "22116b7e35adaec06aabaded288b2137b1a3ad66094e811417566d399d75bcb1"
   },
   {
     "path": "blog/najcesce-ux-greske-2/index.html",
-    "bytes": 45341,
-    "sha256": "1b77a6808399a82a47b267b44a9a16fed7ef69e3caaec645939c0f51c84ce016"
+    "bytes": 43232,
+    "sha256": "a977bf122cbcbaa31c1c0623371553ae26a60258a726025c8071a48c03296d40"
   },
   {
     "path": "blog/optimizacija-slika-za-web/index.html",
-    "bytes": 52245,
-    "sha256": "a57e5886c8b8af2e6a3b3bf40047164e07f12a4e7ff421f76d490f68b580c904"
+    "bytes": 51454,
+    "sha256": "fff9a5f351dacfd9c4a66f1ddef410c0b8074e4bcc45ff9a04831e31d67ca38e"
   },
   {
     "path": "blog/proces-izrade-web-stranice/index.html",
-    "bytes": 35202,
-    "sha256": "2baaa86d2b98fe7798a3b4375133d2e3ad14dc7c3a0d58366d6bd1bf6b7f7e19"
+    "bytes": 33818,
+    "sha256": "a20c8cad8c67cd5f4612cb861c5a58e329315a4a3f9f3ad647981c9cfca29c98"
   },
   {
     "path": "blog/responsive-dizajn-sto-testirati/index.html",
-    "bytes": 56932,
-    "sha256": "43d87ba5366d816c359b409071f5822b0c8575414a79392ecc83dce3d779a582"
+    "bytes": 54629,
+    "sha256": "0d93b572d1c02f2b852df764d5e02dbfaa6289291ca5b9e381ab7c7024cbf04d"
   },
   {
     "path": "blog/seo-ciljevi-i-mjerenje/index.html",
-    "bytes": 67451,
-    "sha256": "5c71c029890a0ba97e9c5b541cb8a21e3ada0b11884bb48f09a8c055f7f7c9c3"
+    "bytes": 64559,
+    "sha256": "b3e8898e08d7f8a7c47ce7689f07cef90a279a441edc1726348b42c7f934ba01"
   },
   {
     "path": "blog/sto-cini-dobar-poslovni-web/index.html",
-    "bytes": 38031,
-    "sha256": "08fd42b7a99a203a73c6f73f98a4fdaf3d38b87b6603e12618a15d779d92da79"
+    "bytes": 35625,
+    "sha256": "2d74b52b8b8558b2aee0c0ae060d884900fa08e77e390af15117450980597009"
   },
   {
     "path": "blog/sto-je-keyword-difficulty/index.html",
-    "bytes": 51403,
-    "sha256": "72bad130b2b67cf8df520c8fa9db4aa6580b6ca0e75976e83a18490542b171fb"
+    "bytes": 47584,
+    "sha256": "b9f70fb99f31bbd6873dfb06922cfff0c8064a9b721509e3884ce4ef9d76d6bd"
   },
   {
     "path": "blog/sto-je-search-intent/index.html",
-    "bytes": 60028,
-    "sha256": "12482f71069135bc1b65a64deebbeaa82ac46029d249d05302259aec98012889"
+    "bytes": 57021,
+    "sha256": "34e043ee425ea9722cb5c294250a2f685b36e2aa1672ec074a7c46fb19ef2de7"
   },
   {
     "path": "blog/sto-je-seo/index.html",
-    "bytes": 63314,
-    "sha256": "ed66051817ebfe7607d9b8b77cc93c62ed3b5cf79a8a2a67bd12a63670313f97"
+    "bytes": 60766,
+    "sha256": "4f0bc1abcedf72a7557128afd2fcf0a9f5ffcc868ce0f28f26fb07f75c0f289a"
   },
   {
     "path": "blog/sto-pripremiti-prije-izrade-web-stranice/index.html",
-    "bytes": 34411,
-    "sha256": "ac611ae10294f2d92dd10e8aaa0144f99e43c3c07738d743de246485f985ff29"
+    "bytes": 35337,
+    "sha256": "b42019c0e4a979c5288cbc53839ceeba8c5b533c75c0d555ac8138bf93f16672"
   },
   {
     "path": "blog/sto-treba-imati-stranica-usluge/index.html",
-    "bytes": 41878,
-    "sha256": "867867089a856df7b42cdf8c7c30f819b860fddd71b7604c9da4690b1dbc9603"
+    "bytes": 40152,
+    "sha256": "878dc4c84d451f52d2e29ae9f42655ca8f43b2e548ba5baf1659d6489dd28b84"
   },
   {
     "path": "blog/sto-utjece-na-cijenu-web-stranice/index.html",
-    "bytes": 34731,
-    "sha256": "f44f92fe53c5f107b228a820f4feb5c38feaae8031e50cfbf775925d66896a04"
+    "bytes": 33405,
+    "sha256": "23ee0276cc51659133bcc73b5208a551ac0ea982e513547867d60f202203ac17"
   },
   {
     "path": "blog/struktura-web-stranice-za-malu-tvrtku/index.html",
-    "bytes": 37168,
-    "sha256": "dc5f7b9ae922c5a3a0003be9319302377a32125b3f5f4a6c89f4f435f28771a1"
+    "bytes": 36467,
+    "sha256": "32564bbf2f5b59fb2aa257573f5e74f3286aba6c80690a2a08e7153ac77dd47a"
   },
   {
     "path": "blog/zasto-je-dobar-hosting-vazan/index.html",
-    "bytes": 49788,
-    "sha256": "e10e92bd874065ab8b17706293e487d70898ee0d3f35da84e476592bc3b94a29"
+    "bytes": 47864,
+    "sha256": "8913d4dc5a0827bfffe5cb4bbf2c2fd08c25c7d9f6018585aaa082f7b12693a1"
   },
   {
     "path": "blog/zasto-je-lighthouse-rezultat-los/index.html",
-    "bytes": 52750,
-    "sha256": "1167945f189597f9cfff95b336d1ac23d6aa0de689aacd543adac6dc79b58151"
+    "bytes": 48664,
+    "sha256": "a13331d31141e1ee1432c2977b431d4beb3daa5b7e5031d3c2b7914723d908d0"
   },
   {
     "path": "blog/zasto-korisnici-napustaju-web/index.html",
-    "bytes": 42453,
-    "sha256": "24cdfba2714d5c65d7c5b55a20db15b17a376cc01c67351d1c92edf5c04277cb"
+    "bytes": 40326,
+    "sha256": "27f246af904f5a3b6bbffce8991660b1aa23607276008dd0bfa8d89d86736542"
   },
   {
     "path": "projekti/barisic-plast/index.html",
-    "bytes": 16593,
-    "sha256": "c93813181d6a1358a91a44650b70371bece3d4022b72b0ce4ef327f627e1648c"
+    "bytes": 16747,
+    "sha256": "7d7a1c5229333dc58972d9006504e10855874f949783d98d2219b9e353adcd82"
   },
   {
     "path": "projekti/ducija/index.html",
-    "bytes": 16294,
-    "sha256": "837c16ce0bc6de5ab1b40f1e4b724c1d163c4024451d177baad9f74e342b2777"
+    "bytes": 16448,
+    "sha256": "3dfb11273b3da408c8854dc61f1c9529c44f4691c95aaf03b582a4d9801fc414"
   },
   {
     "path": "projekti/index.html",
-    "bytes": 18168,
-    "sha256": "47a6b08590e86aaabbe2089ea487c50b75dd6186c0bc2712af2149657bd7d29c"
+    "bytes": 18322,
+    "sha256": "02e39abb816548e73ebb039e8f6f795d5dbfadb64d02ca46598aaf135ee568c9"
   },
   {
     "path": "projekti/krie-design/index.html",
-    "bytes": 16434,
-    "sha256": "8b79a6aa23ed90a22cdf49e9a87582b9e8f1fac4e21f0e83c68d91cf007cf0fb"
+    "bytes": 16588,
+    "sha256": "f23ef691b1e1c6d503ac965d015457e293fae5f172109a060e950dcb611f49d0"
   },
   {
     "path": "projekti/odvjetnicki-ured-balaz/index.html",
-    "bytes": 16805,
-    "sha256": "e10c4d78418890ce3782d7b31681315468f6e01f16c84693076d6ed723cd9b6f"
+    "bytes": 16959,
+    "sha256": "b11c239ff22a9715302270b28fca111dfa5fca71a5687946ec8aa32ce47dc40c"
   },
   {
     "path": "projekti/rumalu/index.html",
-    "bytes": 16404,
-    "sha256": "c9ad4fcd8a3e1f3af4775b12472005aca4e33b41a9bccbe55aff8d17dbeb558b"
+    "bytes": 16558,
+    "sha256": "17e75c1d192de0db62cfb9cdc47918387d787645b952dd61364008ae72c3edfd"
   },
   {
     "path": "projekti/varmos/index.html",
-    "bytes": 16088,
-    "sha256": "9b6c3623bedd0cc4de80901888cb97ad954ecfa58753de5c9618063b9591eefa"
+    "bytes": 16242,
+    "sha256": "17bddebc4f66c6d66603efc601879fee2371ba7e0a888ee2e105af3999716322"
   },
   {
     "path": "404.html",
-    "bytes": 5860,
-    "sha256": "f601449f7164df5c738d112571faba15ef4aca53e8cb0e68d6120e7558affa72"
+    "bytes": 6001,
+    "sha256": "9d39cd004efbbe3ea421676a8ef58b26e6c9d86a33e3c694b7e289054d29003a"
   },
   {
     "path": "assets/legatech-brand/legatech-t-small.svg",
@@ -341,8 +341,8 @@
   },
   {
     "path": "contact-live.js",
-    "bytes": 4919,
-    "sha256": "a98013dece730e9ad99562d8239d44f2be00b63b5e92b08f9f20ce0a4f25b6f9"
+    "bytes": 7105,
+    "sha256": "435adc4fbe6683be8869881bde9ae830f29afd0e11b41ae23b19c224e17136a4"
   },
   {
     "path": "assets/fonts/barlow-condensed-bold.e476562ec9c1.woff2",
@@ -363,6 +363,16 @@
     "path": "accessibility-expressive.css",
     "bytes": 2113,
     "sha256": "35014935ab4273b6ec89a80e845a5a16c68988a06fb597186f7849ecf154ff51"
+  },
+  {
+    "path": "ux-refinements.css",
+    "bytes": 7540,
+    "sha256": "dbc21397509051161c9ed05b06b05ed4f7d41742d882e47980a7305ca1902151"
+  },
+  {
+    "path": "ux-interactions.js",
+    "bytes": 2253,
+    "sha256": "67a98fdfe17430fc2ccc86beec50bf313d6159ce9733631e847a8d7269c5c87c"
   },
   {
     "path": "assets/legatech-brand/legatech-black.svg",

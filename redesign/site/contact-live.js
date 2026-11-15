@@ -33,6 +33,26 @@
 
   const form=document.querySelector('#contact-form'),status=document.querySelector('#form-status');
   if(!form||!status)return;
+  const packageSelect=form.querySelector('#contact-package'),packageSummary=form.querySelector('#package-selection');
+  const serviceField=form.querySelector('[name="service"]'),descriptionField=form.querySelector('[name="description"]');
+  const descriptionHint=form.querySelector('#description-hint');
+  const serviceCodes={web:'Izrada web stranica',shop:'Izrada web trgovina',seo:'SEO optimizacija',care:'Održavanje web stranica'};
+  function packageChoice(){const option=packageSelect?.selectedOptions[0];return option?.value&&option.dataset.service?{label:option.textContent,service:option.dataset.service}:null;}
+  function packagePrefix(){const choice=packageChoice();return choice?'Odabrani paket: '+choice.label+'\n\n':'';}
+  function updatePackage(){
+    const choice=packageChoice();
+    if(packageSummary){packageSummary.hidden=!choice;packageSummary.textContent=choice?'Upit za '+choice.label+' · '+choice.service:'';}
+    const limit=4000-packagePrefix().length;if(descriptionField)descriptionField.maxLength=limit;
+    if(descriptionHint)descriptionHint.textContent='Napišite barem 20 znakova: čime se bavite, što trebate i koji rezultat želite. Najviše '+limit.toLocaleString('hr-HR')+' znakova.';
+  }
+  if(packageSelect){
+    const params=new URLSearchParams(location.search),requested=params.get('paket');
+    if([...packageSelect.options].some(option=>option.value===requested&&option.dataset.service)){packageSelect.value=requested;serviceField.value=packageChoice().service;}
+    else if(serviceCodes[params.get('usluga')])serviceField.value=serviceCodes[params.get('usluga')];
+    packageSelect.addEventListener('change',()=>{const choice=packageChoice();if(choice)serviceField.value=choice.service;updatePackage();});
+    serviceField.addEventListener('change',()=>{if(packageChoice()?.service!==serviceField.value)packageSelect.value='';updatePackage();});
+    form.addEventListener('reset',()=>queueMicrotask(updatePackage));updatePackage();
+  }
   const submission=window.LegatechContact.createContactSubmission();
   const submit=form.querySelector('button[type="submit"]');
   const fields=[...form.querySelectorAll('input,select,textarea')];
@@ -66,7 +86,9 @@
     textFields.forEach(validate);if(!form.reportValidity())return;
     const payload=Object.fromEntries(new FormData(form).entries());
     form.setAttribute('aria-busy','true');submit.disabled=true;submit.textContent='Šaljemo…';
-    const result=await submission.submit({...payload,formStartedAt:startedAt});
+    // The existing API receives the visible choice as part of the message only.
+    // Never include the selection or any form fields in Analytics parameters.
+    const result=await submission.submit({...payload,description:packagePrefix()+payload.description,formStartedAt:startedAt});
     form.setAttribute('aria-busy','false');submit.disabled=false;
     if(result.status==='success'){
       completed=true;form.reset();fields.forEach(field=>field.disabled=true);

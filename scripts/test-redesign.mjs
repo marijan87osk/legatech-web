@@ -10,6 +10,7 @@ import {assertSnapshotFresh} from './wordpress-snapshot-freshness.mjs';
 const repo=path.resolve(import.meta.dirname,'..'),fixtures=path.join(repo,'.redesign-tests');
 // CI may restore a newer cache before tests; fixtures must remain deterministic.
 const posts=JSON.parse(await readFile(path.join(repo,'redesign/blog-seed.json'),'utf8'));
+const newestFixtureDate=new Date(Math.max(...posts.map(p=>Date.parse(/(?:Z|[+-]\d\d:\d\d)$/.test(p.modifiedAt)?p.modifiedAt:p.modifiedAt+'Z')))+60_000).toISOString();
 await mkdir(fixtures,{recursive:true});
 test('stale CMS snapshots cannot replace newer approved or cached content',()=>{
  const state={post:{modifiedAt:'2026-10-22T10:00:00'}};
@@ -63,7 +64,7 @@ test('new WordPress content keeps the template and strips executable markup',asy
  assert.deepEqual((await checkRedesign({repoRoot:repo,outputRoot:out})).errors,[]);
 });
 test('a title-only CMS update is not mistaken for unchanged content',async t=>{
- const out=await fixture(t),updated={...posts[0],title:posts[0].title+' — dopuna',modifiedAt:'2026-10-31T10:01:00'};
+ const out=await fixture(t),updated={...posts[0],title:posts[0].title+' — dopuna',modifiedAt:newestFixtureDate};
  const result=await buildRedesign({repoRoot:repo,outputRoot:out,posts:[updated,...posts.slice(1)],fresh:true});
  assert.ok(result.changed.includes(updated.slug));
  const $=load(await readFile(path.join(out,'blog',updated.slug,'index.html'),'utf8'));assert.equal($('h1').text(),updated.title);
@@ -77,7 +78,7 @@ test('a fresh WordPress unpublish removes its page and dangling links',async t=>
  assert.deepEqual((await checkRedesign({repoRoot:repo,outputRoot:out})).errors,[]);
 });
 test('a verified cached unpublish survives later code builds',async t=>{
- const out=await fixture(t),remaining=posts.slice(0,-1),metadata={generatedAt:'2026-10-31T12:00:00Z',postsHash:createHash('sha256').update(JSON.stringify(remaining)).digest('hex')};
+ const out=await fixture(t),remaining=posts.slice(0,-1),metadata={generatedAt:newestFixtureDate,postsHash:createHash('sha256').update(JSON.stringify(remaining)).digest('hex')};
  const result=await buildRedesign({repoRoot:repo,outputRoot:out,posts:remaining,fresh:false,cachedSyncMetadata:metadata});
  assert.ok(result.removed.includes(posts.at(-1).slug));assert.equal(result.wordpressSyncFresh,false);assert.equal(result.wordpressSnapshotAuthoritative,true);
  assert.deepEqual((await checkRedesign({repoRoot:repo,outputRoot:out})).errors,[]);

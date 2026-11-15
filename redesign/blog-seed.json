@@ -6,9 +6,9 @@
     "excerpt": "Keyword difficulty, često označen kraticom KD, SEO je metrika koja pokušava procijeniti koliko će biti teško rangirati za određenu ključnu riječ. Najčešće se prikazuje kao broj na skali od 0 do 100. Niži broj sugerira lakšu konkurenciju, a viši težu. Na prvi pogled djeluje jednostavno: KD 10 = lako KD 80 = teško U praksi […]",
     "contentHtml": "\n<p class=\"wp-block-paragraph\">Keyword difficulty, često označen kraticom <strong>KD</strong>, SEO je metrika koja pokušava procijeniti koliko će biti teško rangirati za određenu ključnu riječ.</p>\n\n\n\n<p class=\"wp-block-paragraph\">Najčešće se prikazuje kao broj na skali od 0 do 100.</p>\n\n\n\n<p class=\"wp-block-paragraph\">Niži broj sugerira lakšu konkurenciju, a viši težu.</p>\n\n\n\n<p class=\"wp-block-paragraph\">Na prvi pogled djeluje jednostavno:</p>\n\n\n\n<p class=\"wp-block-paragraph\"><strong>KD 10 = lako</strong></p>\n\n\n\n<p class=\"wp-block-paragraph\"><strong>KD 80 = teško</strong></p>\n\n\n\n<p class=\"wp-block-paragraph\">U praksi stvari nisu tako jednostavne.</p>\n\n\n\n<p class=\"wp-block-paragraph\">Keyword difficulty nije Googleova metrika. To je procjena koju izrađuje određeni SEO alat koristeći vlastitu metodologiju.</p>\n\n\n\n<p class=\"wp-block-paragraph\">Zato KD treba promatrati kao koristan filter, a ne kao konačnu odluku o tome možemo li ili ne možemo rangirati.</p>\n\n\n\n<h2 class=\"wp-block-heading\">Zašto KD postoji?</h2>\n\n\n\n<p class=\"wp-block-paragraph\">Kod keyword researcha vrlo brzo možemo završiti s tisućama potencijalnih upita.</p>\n\n\n\n<p class=\"wp-block-paragraph\">Nemoguće je ručno detaljno analizirati svaki SERP.</p>\n\n\n\n<p class=\"wp-block-paragraph\">Keyword difficulty zato služi kao prvi filter.</p>\n\n\n\n<p class=\"wp-block-paragraph\">Ako imamo 5.000 keyworda, možemo brzo dobiti osjećaj:</p>\n\n\n\n<ul class=\"wp-block-list\">\n<li>gdje je konkurencija relativno mala</li>\n\n\n\n<li>gdje je velika</li>\n\n\n\n<li>koje teme vrijedi prvo detaljnije istražiti</li>\n</ul>\n\n\n\n<p class=\"wp-block-paragraph\">Tek nakon toga radimo ozbiljniju analizu.</p>\n\n\n\n<p class=\"wp-block-paragraph\">Drugim riječima:</p>\n\n\n\n<p class=\"wp-block-paragraph\"><strong>KD pomaže pronaći gdje gledati.</strong></p>\n\n\n\n<p class=\"wp-block-paragraph\">Ne govori automatski što trebamo napraviti.</p>\n\n\n\n<h2 class=\"wp-block-heading\">KD nije Google score</h2>\n\n\n\n<p class=\"wp-block-paragraph\">Google vašem keywordu ne dodjeljuje:</p>\n\n\n\n<p class=\"wp-block-paragraph\"><strong>Difficulty: 34</strong></p>\n\n\n\n<p class=\"wp-block-paragraph\">SEO alati sami pokušavaju procijeniti koliko je konkurencija jaka.</p>\n\n\n\n<p class=\"wp-block-paragraph\">To je vrlo važna razlika.</p>\n\n\n\n<p class=\"wp-block-paragraph\">Ako Ahrefs kaže KD 25, to ne znači da Google neku temu smatra “25% teškom”.</p>\n\n\n\n<p class=\"wp-block-paragraph\">To znači da Ahrefs na temelju svojih podataka procjenjuje konkurenciju prema svojoj metodologiji.</p>\n\n\n\n<p class=\"wp-block-paragraph\">Drugi alat za isti keyword može prikazati drugačiji rezultat.</p>\n\n\n\n<p class=\"wp-block-paragraph\">I oba mogu biti legitimna jer koriste drugačiji model.</p>\n\n\n\n<h2 class=\"wp-block-heading\">Kako Ahrefs računa KD?</h2>\n\n\n\n<p class=\"wp-block-paragraph\">Budući da za keyword research često koristimo Ahrefs, vrijedi razumjeti njegovu metriku.</p>\n\n\n\n<p class=\"wp-block-paragraph\">Ahrefs Keyword Difficulty procjenjuje koliko je teško ući među prvih deset organskih Google rezultata i prikazuje rezultat na skali od 0 do 100.</p>\n\n\n\n<p class=\"wp-block-paragraph\">Njihova trenutna metodologija temelji KD prvenstveno na broju referring domena koje linkaju na stranice koje se već nalaze među prvih deset rezultata.</p>\n\n\n\n<p class=\"wp-block-paragraph\">Što top-ranking stranice imaju više referring domena, KD je u pravilu viši.</p>\n\n\n\n<p class=\"wp-block-paragraph\">Važno je što Ahrefs KD pritom <strong>ne uključuje on-page SEO faktore</strong>. Zato sam Ahrefs preporučuje ručnu analizu SERP-a nakon početnog filtriranja keyworda.</p>\n\n\n\n<h2 class=\"wp-block-heading\">Referring domains</h2>\n\n\n\n<p class=\"wp-block-paragraph\">Referring domain je zasebna domena koja linka na određenu stranicu.</p>\n\n\n\n<p class=\"wp-block-paragraph\">Primjer:</p>\n\n\n\n<p class=\"wp-block-paragraph\">Ako jedan portal prema vašem članku postavi 50 linkova, i dalje govorimo o jednoj referring domeni.</p>\n\n\n\n<p class=\"wp-block-paragraph\">Ako prema vama linka 50 različitih webova, imate 50 referring domena.</p>\n\n\n\n<p class=\"wp-block-paragraph\">To je važna razlika.</p>\n\n\n\n<p class=\"wp-block-paragraph\">SEO alati zato često puno više pažnje daju broju različitih domena nego sirovom broju svih backlinkova.</p>\n\n\n\n<h2 class=\"wp-block-heading\">KD skala nije linearna</h2>\n\n\n\n<p class=\"wp-block-paragraph\">Još jedna važna stvar kod Ahrefsa jest da KD skala nije linearna.</p>\n\n\n\n<p class=\"wp-block-paragraph\">Razlika između KD 10 i KD 20 nije nužno jednaka razlici između KD 70 i KD 80.</p>\n\n\n\n<p class=\"wp-block-paragraph\">Ahrefs trenutačno, primjerice, povezuje KD 10 s okvirno deset referring domena potrebnih za ulazak u top 10, dok KD 40 povezuje s približno 56, a KD 80 sa stotinama referring domena. To su procjene, ne uvjeti koje morate doslovno ispuniti.</p>\n\n\n\n<p class=\"wp-block-paragraph\">Zato KD 80 nije samo “dvostruko teži” od KD 40.</p>\n\n\n\n<p class=\"wp-block-paragraph\">Može predstavljati potpuno drugačiju razinu konkurencije.</p>\n\n\n\n<h2 class=\"wp-block-heading\">KD mjeri samo dio problema</h2>\n\n\n\n<p class=\"wp-block-paragraph\">Ovo je najvažnije ograničenje.</p>\n\n\n\n<p class=\"wp-block-paragraph\">Keyword može imati nizak KD, a i dalje biti jako težak za vas.</p>\n\n\n\n<p class=\"wp-block-paragraph\">Zašto?</p>\n\n\n\n<p class=\"wp-block-paragraph\">Zato što ranking ne ovisi samo o backlinkovima.</p>\n\n\n\n<p class=\"wp-block-paragraph\">Recimo da keyword ima KD 5.</p>\n\n\n\n<p class=\"wp-block-paragraph\">Ali SERP sadrži:</p>\n\n\n\n<ul class=\"wp-block-list\">\n<li>Google</li>\n\n\n\n<li>Wikipediju</li>\n\n\n\n<li>službene državne izvore</li>\n\n\n\n<li>velike specijalizirane portale</li>\n</ul>\n\n\n\n<p class=\"wp-block-paragraph\">Možda top stranice nemaju mnogo backlinkova prema konkretnom URL-u, ali imaju druge velike prednosti.</p>\n\n\n\n<p class=\"wp-block-paragraph\">Zato broj pet ne znači:</p>\n\n\n\n<p class=\"wp-block-paragraph\"><strong>ovo je lagan keyword.</strong></p>\n\n\n\n<p class=\"wp-block-paragraph\">Znači samo:</p>\n\n\n\n<p class=\"wp-block-paragraph\"><strong>prema metrici ovog alata backlink konkurencija izgleda relativno nisko.</strong></p>\n\n\n\n<h2 class=\"wp-block-heading\">Search intent može biti veći problem</h2>\n\n\n\n<p class=\"wp-block-paragraph\">Možete imati vrlo nizak KD i potpuno pogriješiti search intent.</p>\n\n\n\n<p class=\"wp-block-paragraph\">Primjer:</p>\n\n\n\n<p class=\"wp-block-paragraph\">Keyword:</p>\n\n\n\n<p class=\"wp-block-paragraph\"><strong>kalupi za kekse</strong></p>\n\n\n\n<p class=\"wp-block-paragraph\">KD može izgledati pristupačno.</p>\n\n\n\n<p class=\"wp-block-paragraph\">Ali SERP je gotovo potpuno sastavljen od webshop kategorija i proizvoda.</p>\n\n\n\n<p class=\"wp-block-paragraph\">Ako pokušate rangirati informacijski blog:</p>\n\n\n\n<p class=\"wp-block-paragraph\"><strong>Što su kalupi za kekse?</strong></p>\n\n\n\n<p class=\"wp-block-paragraph\">problem nije backlink difficulty.</p>\n\n\n\n<p class=\"wp-block-paragraph\">Problem je što ste napravili pogrešnu vrstu stranice.</p>\n\n\n\n<p class=\"wp-block-paragraph\">Zato prije konačne odluke treba razumjeti <a href=\"https://legatech.hr/blog/sto-je-search-intent/\" target=\"_blank\" rel=\"noopener noreferrer\">što je search intent</a>.</p>\n\n\n\n<h2 class=\"wp-block-heading\">SERP je važniji od jednog broja</h2>\n\n\n\n<p class=\"wp-block-paragraph\">Kod keyworda koji ozbiljno razmatramo uvijek treba otvoriti SERP.</p>\n\n\n\n<p class=\"wp-block-paragraph\">Pogledajte:</p>\n\n\n\n<ul class=\"wp-block-list\">\n<li>kakve stranice rangiraju</li>\n\n\n\n<li>koliko su relevantne</li>\n\n\n\n<li>koliko su kvalitetne</li>\n\n\n\n<li>koliko imaju backlinkova</li>\n\n\n\n<li>kakve domene stoje iza njih</li>\n\n\n\n<li>postoji li prostor za bolji rezultat</li>\n</ul>\n\n\n\n<p class=\"wp-block-paragraph\">KD bez SERP analize je samo približna informacija.</p>\n\n\n\n<p class=\"wp-block-paragraph\">O tome detaljnije govorimo u vodiču <a href=\"https://legatech.hr/blog/kako-analizirati-serp/\" target=\"_blank\" rel=\"noopener noreferrer\">kako analizirati SERP</a>.</p>\n\n\n\n<h2 class=\"wp-block-heading\">Primjer niskog KD-a</h2>\n\n\n\n<p class=\"wp-block-paragraph\">Pretpostavimo:</p>\n\n\n\n<p class=\"wp-block-paragraph\"><strong>KD: 8</strong></p>\n\n\n\n<p class=\"wp-block-paragraph\">Na prvi pogled odlična prilika.</p>\n\n\n\n<p class=\"wp-block-paragraph\">Ali otvorimo SERP.</p>\n\n\n\n<p class=\"wp-block-paragraph\">Prvih deset rezultata su vrlo dobro pogođeni landing pageovi s:</p>\n\n\n\n<ul class=\"wp-block-list\">\n<li>točnim intentom</li>\n\n\n\n<li>snažnim brandovima</li>\n\n\n\n<li>kvalitetnim sadržajem</li>\n\n\n\n<li>dugom poviješću</li>\n</ul>\n\n\n\n<p class=\"wp-block-paragraph\">Tada keyword možda nije tako jednostavan kako score sugerira.</p>\n\n\n\n<p class=\"wp-block-paragraph\">KD je rekao:</p>\n\n\n\n<p class=\"wp-block-paragraph\"><strong>backlink barijera nije velika.</strong></p>\n\n\n\n<p class=\"wp-block-paragraph\">Nije rekao:</p>\n\n\n\n<p class=\"wp-block-paragraph\"><strong>vaš web će lako biti prvi.</strong></p>\n\n\n\n<h2 class=\"wp-block-heading\">Primjer visokog KD-a</h2>\n\n\n\n<p class=\"wp-block-paragraph\">S druge strane, keyword ima:</p>\n\n\n\n<p class=\"wp-block-paragraph\"><strong>KD 60</strong></p>\n\n\n\n<p class=\"wp-block-paragraph\">Možda ga ne trebamo automatski odbaciti.</p>\n\n\n\n<p class=\"wp-block-paragraph\">Ako je taj keyword jedan od najvrjednijih upita za poslovanje, možemo ga tretirati kao dugoročni target.</p>\n\n\n\n<p class=\"wp-block-paragraph\">Primjer:</p>\n\n\n\n<p class=\"wp-block-paragraph\">Ako je određeni commercial keyword direktno vezan uz uslugu koju želimo prodavati, možda ima smisla ulagati godinu ili više u:</p>\n\n\n\n<ul class=\"wp-block-list\">\n<li>bolju landing stranicu</li>\n\n\n\n<li>supporting sadržaj</li>\n\n\n\n<li>interne linkove</li>\n\n\n\n<li>kvalitetne backlinkove</li>\n\n\n\n<li>brand</li>\n</ul>\n\n\n\n<p class=\"wp-block-paragraph\">Visok KD znači da će vjerojatno trebati više resursa.</p>\n\n\n\n<p class=\"wp-block-paragraph\">Ne znači da keyword treba ignorirati.</p>\n\n\n\n<h2 class=\"wp-block-heading\">Business value prije KD-a</h2>\n\n\n\n<p class=\"wp-block-paragraph\">Recimo da imamo dvije opcije.</p>\n\n\n\n<h3 class=\"wp-block-heading\">Keyword A</h3>\n\n\n\n<p class=\"wp-block-paragraph\">Volume: 4.000<br>KD: 12<br>Business value: nizak</p>\n\n\n\n<h3 class=\"wp-block-heading\">Keyword B</h3>\n\n\n\n<p class=\"wp-block-paragraph\">Volume: 400<br>KD: 42<br>Business value: vrlo visok</p>\n\n\n\n<p class=\"wp-block-paragraph\">Ako Keyword B redovito dovodi potencijalnog klijenta za uslugu vrijednu nekoliko tisuća eura, možda je puno važniji.</p>\n\n\n\n<p class=\"wp-block-paragraph\">SEO strategija ne treba loviti samo lake keyworde.</p>\n\n\n\n<p class=\"wp-block-paragraph\">Treba birati keyworde koji imaju smisla za poslovanje.</p>\n\n\n\n<h2 class=\"wp-block-heading\">KD kao filter</h2>\n\n\n\n<p class=\"wp-block-paragraph\">Najbolja uloga keyword difficultyja je početno filtriranje.</p>\n\n\n\n<p class=\"wp-block-paragraph\">Recimo da imate 2.000 keyworda.</p>\n\n\n\n<p class=\"wp-block-paragraph\">Možete pronaći teme koje kombiniraju:</p>\n\n\n\n<ul class=\"wp-block-list\">\n<li>realan KD</li>\n\n\n\n<li>dobar volume</li>\n\n\n\n<li>jak business value</li>\n\n\n\n<li>relevantan intent</li>\n</ul>\n\n\n\n<p class=\"wp-block-paragraph\">Zatim ih ručno analizirati.</p>\n\n\n\n<p class=\"wp-block-paragraph\">To je puno bolje nego pokušavati ručno analizirati svih 2.000.</p>\n\n\n\n<h2 class=\"wp-block-heading\">Low-KD strategija</h2>\n\n\n\n<p class=\"wp-block-paragraph\">Za novu domenu ima smisla tražiti određeni broj manje konkurentnih tema.</p>\n\n\n\n<p class=\"wp-block-paragraph\">To može omogućiti prve rezultate dok web još nema velik autoritet.</p>\n\n\n\n<p class=\"wp-block-paragraph\">Primjer:</p>\n\n\n\n<p class=\"wp-block-paragraph\">umjesto širokog:</p>\n\n\n\n<p class=\"wp-block-paragraph\"><strong>SEO</strong></p>\n\n\n\n<p class=\"wp-block-paragraph\">možemo prvo razvijati specifičnije teme poput:</p>\n\n\n\n<p class=\"wp-block-paragraph\"><strong>koliko traje SEO za novi web</strong></p>\n\n\n\n<p class=\"wp-block-paragraph\">ili:</p>\n\n\n\n<p class=\"wp-block-paragraph\"><strong>kako napraviti keyword mapping</strong></p>\n\n\n\n<p class=\"wp-block-paragraph\">Ali ne zato što želimo zauvijek ostati samo na lakim keywordima.</p>\n\n\n\n<p class=\"wp-block-paragraph\">Oni su početna pozicija.</p>\n\n\n\n<h2 class=\"wp-block-heading\">Nemojte graditi cijeli web samo oko KD 0–10</h2>\n\n\n\n<p class=\"wp-block-paragraph\">Ako cijela strategija izgleda:</p>\n\n\n\n<blockquote class=\"wp-block-quote is-layout-flow wp-block-quote-is-layout-flow\">\n<p class=\"wp-block-paragraph\">Sortiraj Ahrefs od najnižeg KD-a prema najvišem i piši redom.</p>\n</blockquote>\n\n\n\n<p class=\"wp-block-paragraph\">vrlo brzo možemo završiti s puno nevažnih članaka.</p>\n\n\n\n<p class=\"wp-block-paragraph\">Zašto su neki keywordi lagani?</p>\n\n\n\n<p class=\"wp-block-paragraph\">Ponekad zato što:</p>\n\n\n\n<ul class=\"wp-block-list\">\n<li>nitko ozbiljan ne želi rangirati za njih</li>\n\n\n\n<li>nemaju poslovnu vrijednost</li>\n\n\n\n<li>search intent je čudan</li>\n\n\n\n<li>volume je zanemariv</li>\n</ul>\n\n\n\n<p class=\"wp-block-paragraph\">Nizak KD sam po sebi nije prilika.</p>\n\n\n\n<h2 class=\"wp-block-heading\">Zero KD</h2>\n\n\n\n<p class=\"wp-block-paragraph\">KD 0 posebno je privlačan početnicima.</p>\n\n\n\n<p class=\"wp-block-paragraph\">Ali ne znači:</p>\n\n\n\n<p class=\"wp-block-paragraph\"><strong>garantirano ćete rangirati.</strong></p>\n\n\n\n<p class=\"wp-block-paragraph\">Može značiti da trenutni top rezultati imaju vrlo malo referring domena.</p>\n\n\n\n<p class=\"wp-block-paragraph\">I dalje treba analizirati:</p>\n\n\n\n<ul class=\"wp-block-list\">\n<li>intent</li>\n\n\n\n<li>relevantnost</li>\n\n\n\n<li>kvalitetu rezultata</li>\n\n\n\n<li>authority vlastite domene</li>\n</ul>\n\n\n\n<p class=\"wp-block-paragraph\">KD 0 nije SEO cheat code.</p>\n\n\n\n<h2 class=\"wp-block-heading\">High KD nije loš keyword</h2>\n\n\n\n<p class=\"wp-block-paragraph\">Obrnuto, KD 70 ne znači:</p>\n\n\n\n<p class=\"wp-block-paragraph\"><strong>nemojte ni pokušavati.</strong></p>\n\n\n\n<p class=\"wp-block-paragraph\">Ako je to core keyword industrije, trebate ga barem imati u dugoročnom planu.</p>\n\n\n\n<p class=\"wp-block-paragraph\">Možda danas napravite kvalitetnu pillar stranicu.</p>\n\n\n\n<p class=\"wp-block-paragraph\">Zatim kroz godinu gradite:</p>\n\n\n\n<ul class=\"wp-block-list\">\n<li>supporting content</li>\n\n\n\n<li>autoritet</li>\n\n\n\n<li>backlinkove</li>\n</ul>\n\n\n\n<p class=\"wp-block-paragraph\">SEO može biti dugoročna investicija.</p>\n\n\n\n<h2 class=\"wp-block-heading\">Authority vaše domene</h2>\n\n\n\n<p class=\"wp-block-paragraph\">Isti keyword nije jednako težak za svaki web.</p>\n\n\n\n<p class=\"wp-block-paragraph\">Nova domena i veliki etablirani brand nemaju istu početnu poziciju.</p>\n\n\n\n<p class=\"wp-block-paragraph\">Ako vaš web već ima:</p>\n\n\n\n<ul class=\"wp-block-list\">\n<li>relevantne backlinkove</li>\n\n\n\n<li>jak content cluster</li>\n\n\n\n<li>godine organske vidljivosti</li>\n</ul>\n\n\n\n<p class=\"wp-block-paragraph\">možda možete konkurirati puno težem keywordu.</p>\n\n\n\n<p class=\"wp-block-paragraph\">Zato “difficulty” treba promatrati relativno prema vlastitom webu.</p>\n\n\n\n<h2 class=\"wp-block-heading\">Topical relevance</h2>\n\n\n\n<p class=\"wp-block-paragraph\">Zamislite dvije domene.</p>\n\n\n\n<p class=\"wp-block-paragraph\">Prva već ima 50 kvalitetnih članaka o SEO-u.</p>\n\n\n\n<p class=\"wp-block-paragraph\">Druga je web o receptima koji slučajno želi rangirati za jednu SEO temu.</p>\n\n\n\n<p class=\"wp-block-paragraph\">Čak i ako imaju sličan autoritet, kontekst je potpuno drugačiji.</p>\n\n\n\n<p class=\"wp-block-paragraph\">Relevantnost cijelog weba može igrati veliku ulogu u stvarnoj konkurentnosti.</p>\n\n\n\n<p class=\"wp-block-paragraph\">KD score to ne može u potpunosti prikazati.</p>\n\n\n\n<h2 class=\"wp-block-heading\">Kvaliteta sadržaja</h2>\n\n\n\n<p class=\"wp-block-paragraph\">Ako top rezultati imaju slab sadržaj, to može biti prilika.</p>\n\n\n\n<p class=\"wp-block-paragraph\">Primjer:</p>\n\n\n\n<ul class=\"wp-block-list\">\n<li>zastarjeli članci</li>\n\n\n\n<li>površni odgovori</li>\n\n\n\n<li>loša struktura</li>\n\n\n\n<li>nema konkretnih primjera</li>\n</ul>\n\n\n\n<p class=\"wp-block-paragraph\">KD možda ostaje visok zbog backlinkova.</p>\n\n\n\n<p class=\"wp-block-paragraph\">Ali SERP svejedno može imati content gap.</p>\n\n\n\n<p class=\"wp-block-paragraph\">Tada možemo napraviti bolji rezultat i dugoročno graditi autoritet.</p>\n\n\n\n<h2 class=\"wp-block-heading\">Slab sadržaj ne garantira ranking</h2>\n\n\n\n<p class=\"wp-block-paragraph\">S druge strane, nemojte zaključiti:</p>\n\n\n\n<blockquote class=\"wp-block-quote is-layout-flow wp-block-quote-is-layout-flow\">\n<p class=\"wp-block-paragraph\">Njihov članak je loš, lako ćemo ih prestići.</p>\n</blockquote>\n\n\n\n<p class=\"wp-block-paragraph\">Možda imaju:</p>\n\n\n\n<ul class=\"wp-block-list\">\n<li>ogroman brand</li>\n\n\n\n<li>vrlo jake backlinkove</li>\n\n\n\n<li>druge signale autoriteta</li>\n</ul>\n\n\n\n<p class=\"wp-block-paragraph\">SERP treba promatrati kao cijeli sustav.</p>\n\n\n\n<h2 class=\"wp-block-heading\">DR nije KD</h2>\n\n\n\n<p class=\"wp-block-paragraph\">Ahrefs ima i Domain Rating, odnosno DR.</p>\n\n\n\n<p class=\"wp-block-paragraph\">To nije isto što i Keyword Difficulty.</p>\n\n\n\n<p class=\"wp-block-paragraph\">KD procjenjuje konkurenciju pojedinog keyworda prema rezultatima koji za njega rangiraju.</p>\n\n\n\n<p class=\"wp-block-paragraph\">DR procjenjuje relativnu snagu backlink profila cijele domene.</p>\n\n\n\n<p class=\"wp-block-paragraph\">Možete imati:</p>\n\n\n\n<p class=\"wp-block-paragraph\"><strong>DR 20</strong></p>\n\n\n\n<p class=\"wp-block-paragraph\">i rangirati za keyword KD 40.</p>\n\n\n\n<p class=\"wp-block-paragraph\">I obrnuto.</p>\n\n\n\n<p class=\"wp-block-paragraph\">Ne postoji pravilo:</p>\n\n\n\n<blockquote class=\"wp-block-quote is-layout-flow wp-block-quote-is-layout-flow\">\n<p class=\"wp-block-paragraph\">Moj DR mora biti veći od KD-a.</p>\n</blockquote>\n\n\n\n<p class=\"wp-block-paragraph\">To su dvije različite metrike.</p>\n\n\n\n<h2 class=\"wp-block-heading\">UR i page-level snaga</h2>\n\n\n\n<p class=\"wp-block-paragraph\">SEO konkurencija često se događa na razini stranice, ne samo domene.</p>\n\n\n\n<p class=\"wp-block-paragraph\">Možda konkurentska domena ima ogroman autoritet.</p>\n\n\n\n<p class=\"wp-block-paragraph\">Ali konkretni URL koji rangira ima malo backlinkova.</p>\n\n\n\n<p class=\"wp-block-paragraph\">To je jedan od razloga zašto Ahrefs KD gleda referring domene top-ranking stranica, a ne samo authority cijele domene.</p>\n\n\n\n<p class=\"wp-block-paragraph\">Kod SERP analize zato gledajte i page-level podatke.</p>\n\n\n\n<h2 class=\"wp-block-heading\">Search volume + KD</h2>\n\n\n\n<p class=\"wp-block-paragraph\">Jedna popularna metoda je tražiti:</p>\n\n\n\n<p class=\"wp-block-paragraph\"><strong>visok volume + nizak KD</strong></p>\n\n\n\n<p class=\"wp-block-paragraph\">To može biti dobar početni filter.</p>\n\n\n\n<p class=\"wp-block-paragraph\">Ali nedostaje treća varijabla:</p>\n\n\n\n<p class=\"wp-block-paragraph\"><strong>business value.</strong></p>\n\n\n\n<p class=\"wp-block-paragraph\">Bolja kombinacija je:</p>\n\n\n\n<p class=\"wp-block-paragraph\"><strong>relevantan volume + realan KD + jak intent + poslovna vrijednost.</strong></p>\n\n\n\n<p class=\"wp-block-paragraph\">Tako izbjegavamo keyworde koji izgledaju lijepo u tablici, ali ne donose ništa poslovanju.</p>\n\n\n\n<h2 class=\"wp-block-heading\">Traffic potential</h2>\n\n\n\n<p class=\"wp-block-paragraph\">Search volume također nije cijela priča.</p>\n\n\n\n<p class=\"wp-block-paragraph\">Jedna stranica može rangirati za velik broj sličnih keyworda.</p>\n\n\n\n<p class=\"wp-block-paragraph\">Ahrefs zato koristi i metricu Traffic Potential, koja procjenjuje ukupni organski promet koji vodeća stranica za određenu temu dobiva preko svih keyworda za koje rangira.</p>\n\n\n\n<p class=\"wp-block-paragraph\">To je često korisnije od gledanja jednog exact keyworda.</p>\n\n\n\n<h2 class=\"wp-block-heading\">Primjer</h2>\n\n\n\n<p class=\"wp-block-paragraph\">Keyword:</p>\n\n\n\n<p class=\"wp-block-paragraph\"><strong>keyword mapping</strong></p>\n\n\n\n<p class=\"wp-block-paragraph\">možda nema ogroman search volume.</p>\n\n\n\n<p class=\"wp-block-paragraph\">Ali kvalitetan članak može rangirati i za:</p>\n\n\n\n<ul class=\"wp-block-list\">\n<li>SEO keyword mapping</li>\n\n\n\n<li>mapiranje ključnih riječi</li>\n\n\n\n<li>keyword map</li>\n\n\n\n<li>target keyword URL</li>\n</ul>\n\n\n\n<p class=\"wp-block-paragraph\">Ukupna tema zato može imati veći potencijal nego što pojedinačni volume sugerira.</p>\n\n\n\n<h2 class=\"wp-block-heading\">Parent topic</h2>\n\n\n\n<p class=\"wp-block-paragraph\">Sličnu logiku ima i Parent Topic.</p>\n\n\n\n<p class=\"wp-block-paragraph\">Ako specifičan keyword može prirodno biti pokriven širom temom koja već dobiva više prometa, možda vam ne treba zaseban URL.</p>\n\n\n\n<p class=\"wp-block-paragraph\">To se direktno povezuje s našim vodičima o <a href=\"https://legatech.hr/blog/kako-grupirati-kljucne-rijeci/\" target=\"_blank\" rel=\"noopener noreferrer\">keyword clusteringu</a> i <a href=\"https://legatech.hr/blog/kako-napraviti-keyword-mapping/\" target=\"_blank\" rel=\"noopener noreferrer\">keyword mappingu</a>.</p>\n\n\n\n<h2 class=\"wp-block-heading\">KD i long-tail</h2>\n\n\n\n<p class=\"wp-block-paragraph\">Long-tail keywordi često imaju niži KD.</p>\n\n\n\n<p class=\"wp-block-paragraph\">Ali ne uvijek.</p>\n\n\n\n<p class=\"wp-block-paragraph\">Vrlo specifičan commercial long-tail može biti izrazito vrijedan i konkurentan.</p>\n\n\n\n<p class=\"wp-block-paragraph\">Primjer:</p>\n\n\n\n<p class=\"wp-block-paragraph\"><strong>najbolja SEO agencija za webshop</strong></p>\n\n\n\n<p class=\"wp-block-paragraph\">možda ima manji volume, ali svi konkurenti mogu biti vrlo ozbiljne agencije.</p>\n\n\n\n<p class=\"wp-block-paragraph\">Specifičnost ne znači automatski lakoću.</p>\n\n\n\n<p class=\"wp-block-paragraph\">Ako želite detaljnije razumjeti te upite, pogledajte vodič o <a href=\"https://legatech.hr/blog/long-tail-kljucne-rijeci/\" target=\"_blank\" rel=\"noopener noreferrer\">long-tail ključnim riječima</a>.</p>\n\n\n\n<h2 class=\"wp-block-heading\">KD i lokalni SEO</h2>\n\n\n\n<p class=\"wp-block-paragraph\">Kod lokalnih keyworda brojke mogu biti posebno varljive.</p>\n\n\n\n<p class=\"wp-block-paragraph\">Primjer:</p>\n\n\n\n<p class=\"wp-block-paragraph\"><strong>SEO Osijek</strong></p>\n\n\n\n<p class=\"wp-block-paragraph\">Volume je malen.</p>\n\n\n\n<p class=\"wp-block-paragraph\">KD može biti nizak.</p>\n\n\n\n<p class=\"wp-block-paragraph\">Ali lokalni SERP može imati nekoliko vrlo relevantnih etabliranih tvrtki.</p>\n\n\n\n<p class=\"wp-block-paragraph\">Ili suprotno:</p>\n\n\n\n<p class=\"wp-block-paragraph\">konkurencija može biti slaba pa je prilika vrlo dobra.</p>\n\n\n\n<p class=\"wp-block-paragraph\">Tu ručna analiza lokalnog SERP-a vrijedi više od same metrike.</p>\n\n\n\n<h2 class=\"wp-block-heading\">KD i B2B</h2>\n\n\n\n<p class=\"wp-block-paragraph\">Kod B2B tema volume je često vrlo malen.</p>\n\n\n\n<p class=\"wp-block-paragraph\">KD možda također izgleda nizak.</p>\n\n\n\n<p class=\"wp-block-paragraph\">Ali pojedinačni lead može vrijediti puno.</p>\n\n\n\n<p class=\"wp-block-paragraph\">Primjer:</p>\n\n\n\n<p class=\"wp-block-paragraph\"><strong>automatizacija testiranja legacy aplikacija</strong></p>\n\n\n\n<p class=\"wp-block-paragraph\">možda nema velik search volume.</p>\n\n\n\n<p class=\"wp-block-paragraph\">Ako je usluga vrijedna desetke tisuća eura, SEO prilika može biti vrlo zanimljiva.</p>\n\n\n\n<p class=\"wp-block-paragraph\">KD ne razumije ekonomiku vašeg poslovanja.</p>\n\n\n\n<p class=\"wp-block-paragraph\">Vi morate.</p>\n\n\n\n<h2 class=\"wp-block-heading\">KD kod web trgovine</h2>\n\n\n\n<p class=\"wp-block-paragraph\">Kod webshopa treba posebno paziti na page type.</p>\n\n\n\n<p class=\"wp-block-paragraph\">Keyword može imati KD 15.</p>\n\n\n\n<p class=\"wp-block-paragraph\">Ali ako je SERP:</p>\n\n\n\n<ul class=\"wp-block-list\">\n<li>kategorija</li>\n\n\n\n<li>kategorija</li>\n\n\n\n<li>kategorija</li>\n\n\n\n<li>kategorija</li>\n\n\n\n<li>product listing</li>\n</ul>\n\n\n\n<p class=\"wp-block-paragraph\">blog članak nije prirodan target.</p>\n\n\n\n<p class=\"wp-block-paragraph\">Prvo treba imati odgovarajuću e-commerce arhitekturu.</p>\n\n\n\n<p class=\"wp-block-paragraph\">Tek onda razmišljati o difficultyju.</p>\n\n\n\n<h2 class=\"wp-block-heading\">KD se može promijeniti</h2>\n\n\n\n<p class=\"wp-block-paragraph\">Keyword Difficulty nije fiksna karakteristika keyworda.</p>\n\n\n\n<p class=\"wp-block-paragraph\">SERP se mijenja.</p>\n\n\n\n<p class=\"wp-block-paragraph\">Nove stranice ulaze u top 10.</p>\n\n\n\n<p class=\"wp-block-paragraph\">Stare izlaze.</p>\n\n\n\n<p class=\"wp-block-paragraph\">Njihov backlink profil raste ili pada.</p>\n\n\n\n<p class=\"wp-block-paragraph\">Zato se i KD s vremenom može promijeniti. Ahrefs također periodično osvježava SERP podatke, a frekvencija osvježavanja ovisi o popularnosti keyworda.</p>\n\n\n\n<p class=\"wp-block-paragraph\">Nemojte spremiti jedan KD broj i tretirati ga kao vječnu činjenicu.</p>\n\n\n\n<h2 class=\"wp-block-heading\">Različita država, različit KD</h2>\n\n\n\n<p class=\"wp-block-paragraph\">SERP nije isti u Hrvatskoj i SAD-u.</p>\n\n\n\n<p class=\"wp-block-paragraph\">Zato difficulty može ovisiti o lokaciji koja se analizira.</p>\n\n\n\n<p class=\"wp-block-paragraph\">Keyword:</p>\n\n\n\n<p class=\"wp-block-paragraph\"><strong>SEO agency</strong></p>\n\n\n\n<p class=\"wp-block-paragraph\">u SAD-u može imati potpuno drugačiju konkurenciju od ekvivalentnog hrvatskog upita.</p>\n\n\n\n<p class=\"wp-block-paragraph\">Uvijek provjerite tržište koje stvarno ciljate.</p>\n\n\n\n<h2 class=\"wp-block-heading\">Nemojte uspoređivati alate direktno</h2>\n\n\n\n<p class=\"wp-block-paragraph\">Ako Ahrefs pokaže:</p>\n\n\n\n<p class=\"wp-block-paragraph\"><strong>KD 30</strong></p>\n\n\n\n<p class=\"wp-block-paragraph\">a drugi alat:</p>\n\n\n\n<p class=\"wp-block-paragraph\"><strong>Difficulty 52</strong></p>\n\n\n\n<p class=\"wp-block-paragraph\">nije nužno da je jedan pogrešan.</p>\n\n\n\n<p class=\"wp-block-paragraph\">Mogu koristiti potpuno različite modele.</p>\n\n\n\n<p class=\"wp-block-paragraph\">Zato odaberite jedan glavni alat za usporedbe unutar projekta.</p>\n\n\n\n<p class=\"wp-block-paragraph\">Tako barem radite s konzistentnom skalom.</p>\n\n\n\n<h2 class=\"wp-block-heading\">Keyword difficulty vs. Google Ads Competition</h2>\n\n\n\n<p class=\"wp-block-paragraph\">Ove dvije metrike nisu ista stvar.</p>\n\n\n\n<p class=\"wp-block-paragraph\">Google Ads Competition odnosi se na konkurenciju među oglašivačima u plaćenim rezultatima.</p>\n\n\n\n<p class=\"wp-block-paragraph\">SEO Keyword Difficulty procjenjuje organsku konkurenciju.</p>\n\n\n\n<p class=\"wp-block-paragraph\">Keyword može imati:</p>\n\n\n\n<ul class=\"wp-block-list\">\n<li>visoku PPC konkurenciju</li>\n\n\n\n<li>relativno nizak SEO KD</li>\n</ul>\n\n\n\n<p class=\"wp-block-paragraph\">ili obrnuto.</p>\n\n\n\n<p class=\"wp-block-paragraph\">Nemojte ih miješati.</p>\n\n\n\n<p class=\"wp-block-paragraph\">Ahrefs također izričito razlikuje svoju organsku KD metriku od konkurencije u Google Keyword Planneru.</p>\n\n\n\n<h2 class=\"wp-block-heading\">Kada vjerovati KD-u?</h2>\n\n\n\n<p class=\"wp-block-paragraph\">KD-u bih najviše vjerovao kao relativnom signalu kod velike liste sličnih keyworda.</p>\n\n\n\n<p class=\"wp-block-paragraph\">Primjer:</p>\n\n\n\n<p class=\"wp-block-paragraph\">imate 500 SEO tema.</p>\n\n\n\n<p class=\"wp-block-paragraph\">KD vam pomaže brzo razlikovati:</p>\n\n\n\n<ul class=\"wp-block-list\">\n<li>relativno lake</li>\n\n\n\n<li>srednje</li>\n\n\n\n<li>vrlo konkurentne</li>\n</ul>\n\n\n\n<p class=\"wp-block-paragraph\">Za konačnu odluku o pet najvažnijih tema napravio bih ručnu analizu.</p>\n\n\n\n<p class=\"wp-block-paragraph\">To je idealna kombinacija automatizacije i stručne procjene.</p>\n\n\n\n<h2 class=\"wp-block-heading\">Kada mu ne vjerovati samom?</h2>\n\n\n\n<p class=\"wp-block-paragraph\">Posebno oprezno kada:</p>\n\n\n\n<ul class=\"wp-block-list\">\n<li>keyword ima mixed intent</li>\n\n\n\n<li>radi se o lokalnoj pretrazi</li>\n\n\n\n<li>top rezultati su veliki brandovi</li>\n\n\n\n<li>keyword je izrazito komercijalan</li>\n\n\n\n<li>vaš web ima specifičnu topical prednost</li>\n\n\n\n<li>SERP sadrži neobične tipove rezultata</li>\n</ul>\n\n\n\n<p class=\"wp-block-paragraph\">Tu jedan score može sakriti previše važnih informacija.</p>\n\n\n\n<h2 class=\"wp-block-heading\">Kako procijeniti stvarnu težinu?</h2>\n\n\n\n<p class=\"wp-block-paragraph\">Za važan keyword ne bih gledao samo KD.</p>\n\n\n\n<p class=\"wp-block-paragraph\">Gledao bih pet stvari:</p>\n\n\n\n<ol class=\"wp-block-list\">\n<li><strong>Search intent</strong> – možemo li napraviti pravi tip stranice?</li>\n\n\n\n<li><strong>SERP quality</strong> – koliko su rezultati stvarno dobri?</li>\n\n\n\n<li><strong>Backlink gap</strong> – koliko authorityja nedostaje?</li>\n\n\n\n<li><strong>Topical relevance</strong> – koliko je naš web već snažan u temi?</li>\n\n\n\n<li><strong>Business value</strong> – vrijedi li se uopće boriti?</li>\n</ol>\n\n\n\n<p class=\"wp-block-paragraph\">Tek tada imamo realniju procjenu.</p>\n\n\n\n<h2 class=\"wp-block-heading\">Primjer procjene</h2>\n\n\n\n<p class=\"wp-block-paragraph\">Recimo:</p>\n\n\n\n<p class=\"wp-block-paragraph\"><strong>Keyword:</strong> SEO optimizacija cijena<br><strong>KD:</strong> 35</p>\n\n\n\n<p class=\"wp-block-paragraph\">To samo po sebi nije dovoljno.</p>\n\n\n\n<p class=\"wp-block-paragraph\">Zatim gledamo:</p>\n\n\n\n<p class=\"wp-block-paragraph\"><strong>Intent:</strong> commercial<br><strong>Naš page type:</strong> odgovarajući<br><strong>Business value:</strong> vrlo visok<br><strong>Konkurencija:</strong> relevantne hrvatske agencije<br><strong>Postojeći ranking:</strong> blizu prve stranice</p>\n\n\n\n<p class=\"wp-block-paragraph\">Zaključak može biti:</p>\n\n\n\n<p class=\"wp-block-paragraph\"><strong>Vrijedi ulagati.</strong></p>\n\n\n\n<p class=\"wp-block-paragraph\">Čak i ako postoji lakši keyword s KD 5.</p>\n\n\n\n<h2 class=\"wp-block-heading\">Drugi primjer</h2>\n\n\n\n<p class=\"wp-block-paragraph\"><strong>Keyword:</strong> povijest SEO optimizacije<br><strong>KD:</strong> 3<br><strong>Volume:</strong> solidan<br><strong>Business value:</strong> vrlo nizak</p>\n\n\n\n<p class=\"wp-block-paragraph\">Zaključak može biti:</p>\n\n\n\n<p class=\"wp-block-paragraph\"><strong>Niski prioritet.</strong></p>\n\n\n\n<p class=\"wp-block-paragraph\">Čak i ako bismo relativno lako mogli rangirati.</p>\n\n\n\n<p class=\"wp-block-paragraph\">SEO resursi nisu beskonačni.</p>\n\n\n\n<h2 class=\"wp-block-heading\">KD i quick wins</h2>\n\n\n\n<p class=\"wp-block-paragraph\">Keyword difficulty postaje posebno koristan kada ga kombiniramo s trenutnim rankingom.</p>\n\n\n\n<p class=\"wp-block-paragraph\">Primjer:</p>\n\n\n\n<p class=\"wp-block-paragraph\">Keyword A:</p>\n\n\n\n<p class=\"wp-block-paragraph\">KD 20<br>Naša pozicija 11</p>\n\n\n\n<p class=\"wp-block-paragraph\">Keyword B:</p>\n\n\n\n<p class=\"wp-block-paragraph\">KD 18<br>Naša pozicija nema</p>\n\n\n\n<p class=\"wp-block-paragraph\">Ako su business value i intent slični, A je često puno bolji quick win.</p>\n\n\n\n<p class=\"wp-block-paragraph\">Google već vidi našu stranicu kao relevantnu.</p>\n\n\n\n<p class=\"wp-block-paragraph\">Možda treba samo dodatna optimizacija.</p>\n\n\n\n<h2 class=\"wp-block-heading\">Existing rankings su važni</h2>\n\n\n\n<p class=\"wp-block-paragraph\">To je razlog zašto prije masovne izrade novih članaka treba pogledati Search Console i postojeći ranking.</p>\n\n\n\n<p class=\"wp-block-paragraph\">Možda imate mnogo keyworda na:</p>\n\n\n\n<ul class=\"wp-block-list\">\n<li>8</li>\n\n\n\n<li>12</li>\n\n\n\n<li>15</li>\n</ul>\n\n\n\n<p class=\"wp-block-paragraph\">koji se mogu relativno brzo pomaknuti.</p>\n\n\n\n<p class=\"wp-block-paragraph\">Takve prilike mogu dati veći rezultat od novih KD 0 tema.</p>\n\n\n\n<h2 class=\"wp-block-heading\">KD i content gap</h2>\n\n\n\n<p class=\"wp-block-paragraph\">Kod <a href=\"https://legatech.hr/blog/kako-pronaci-content-gap/\" target=\"_blank\" rel=\"noopener noreferrer\">content gap analize</a> možemo pronaći stotine tema koje imaju konkurenti.</p>\n\n\n\n<p class=\"wp-block-paragraph\">KD nam pomaže napraviti početni filter.</p>\n\n\n\n<p class=\"wp-block-paragraph\">Ali zatim trebamo dodati:</p>\n\n\n\n<ul class=\"wp-block-list\">\n<li>business value</li>\n\n\n\n<li>intent</li>\n\n\n\n<li>postojeću relevantnost</li>\n\n\n\n<li>content gap</li>\n</ul>\n\n\n\n<p class=\"wp-block-paragraph\">Tako lista postaje stvarna strategija.</p>\n\n\n\n<h2 class=\"wp-block-heading\">KD i konkurencija</h2>\n\n\n\n<p class=\"wp-block-paragraph\">Kod <a href=\"https://legatech.hr/blog/kako-analizirati-seo-konkurenciju/\" target=\"_blank\" rel=\"noopener noreferrer\">analize SEO konkurencije</a> možemo usporediti za koje teške keyworde konkurenti uspješno rangiraju.</p>\n\n\n\n<p class=\"wp-block-paragraph\">To može otkriti koliko su stvarno jaki.</p>\n\n\n\n<p class=\"wp-block-paragraph\">Ako konkurent redovito pobjeđuje na vrlo konkurentnim SERP-ovima, vjerojatno ima:</p>\n\n\n\n<ul class=\"wp-block-list\">\n<li>snažan autoritet</li>\n\n\n\n<li>dobar sadržaj</li>\n\n\n\n<li>kvalitetnu strukturu</li>\n</ul>\n\n\n\n<p class=\"wp-block-paragraph\">To je važniji signal nego njegov DR sam za sebe.</p>\n\n\n\n<h2 class=\"wp-block-heading\">KD i novi web</h2>\n\n\n\n<p class=\"wp-block-paragraph\">Za novu domenu mogu imati tri grupe targeta.</p>\n\n\n\n<p class=\"wp-block-paragraph\"><strong>Kratkoročno:</strong> niži KD, jasan intent, relevantan long-tail.</p>\n\n\n\n<p class=\"wp-block-paragraph\"><strong>Srednjoročno:</strong> umjereno konkurentne teme koje podržavaju glavne usluge.</p>\n\n\n\n<p class=\"wp-block-paragraph\"><strong>Dugoročno:</strong> najvrjedniji broad i commercial keywordi.</p>\n\n\n\n<p class=\"wp-block-paragraph\">Tako SEO roadmap nije ograničen samo na ono što je danas lako.</p>\n\n\n\n<h2 class=\"wp-block-heading\">Treba li izbjegavati KD 50+?</h2>\n\n\n\n<p class=\"wp-block-paragraph\">Ne postoji univerzalna granica.</p>\n\n\n\n<p class=\"wp-block-paragraph\">Ako imate malu novu domenu i ograničen budžet, možda takvi keywordi nisu prvi prioritet.</p>\n\n\n\n<p class=\"wp-block-paragraph\">Ako imate etabliran web s jakim backlink profilom, KD 50 može biti sasvim realan.</p>\n\n\n\n<p class=\"wp-block-paragraph\">Sve ovisi o kontekstu.</p>\n\n\n\n<p class=\"wp-block-paragraph\">Zato pravilo:</p>\n\n\n\n<p class=\"wp-block-paragraph\"><strong>nikad ne ciljaj KD iznad 30</strong></p>\n\n\n\n<p class=\"wp-block-paragraph\">nema puno smisla.</p>\n\n\n\n<h2 class=\"wp-block-heading\">Kako koristiti KD u praksi?</h2>\n\n\n\n<p class=\"wp-block-paragraph\">Najkorisniji workflow je:</p>\n\n\n\n<ul class=\"wp-block-list\">\n<li>napraviti keyword research</li>\n\n\n\n<li>grupirati keyworde prema intentu</li>\n\n\n\n<li>pogledati business value</li>\n\n\n\n<li>koristiti KD kao početni filter</li>\n\n\n\n<li>ručno analizirati SERP za prioritete</li>\n\n\n\n<li>definirati target URL</li>\n\n\n\n<li>procijeniti potrebne resurse</li>\n\n\n\n<li>staviti temu u SEO roadmap</li>\n</ul>\n\n\n\n<p class=\"wp-block-paragraph\">Tako KD radi ono za što je najbolji:</p>\n\n\n\n<p class=\"wp-block-paragraph\"><strong>pomaže procijeniti resurse i prioritete.</strong></p>\n\n\n\n<h2 class=\"wp-block-heading\">Što ne raditi?</h2>\n\n\n\n<p class=\"wp-block-paragraph\">Najveće greške su vjerovati da KD garantira ranking, odbacivati sve visoke KD keyworde, objavljivati sve KD 0 teme, uspoređivati scoreove različitih alata kao da su ista metrika te ignorirati search intent i stvarni SERP.</p>\n\n\n\n<p class=\"wp-block-paragraph\">Jedan broj nikada ne može zamijeniti cijelu SEO analizu.</p>\n\n\n\n<h2 class=\"wp-block-heading\">Jednostavan model</h2>\n\n\n\n<p class=\"wp-block-paragraph\">Možemo razmišljati ovako:</p>\n\n\n\n<pre class=\"wp-block-code\"><code>Keyword\n↓\nBusiness value\n↓\nSearch intent\n↓\nKD\n↓\nSERP analiza\n↓\nNaša trenutna snaga\n↓\nPotreban sadržaj\n↓\nPotreban authority\n↓\nPrioritet</code></pre>\n\n\n\n<p class=\"wp-block-paragraph\">KD je samo jedan korak.</p>\n\n\n\n<p class=\"wp-block-paragraph\">Ne cijeli proces.</p>\n\n\n\n<h2 class=\"wp-block-heading\">Veza s keyword researchom</h2>\n\n\n\n<p class=\"wp-block-paragraph\">U <a href=\"https://legatech.hr/blog/kako-napraviti-keyword-research/\" target=\"_blank\" rel=\"noopener noreferrer\">keyword researchu</a> KD je koristan za filtriranje velikog broja ideja.</p>\n\n\n\n<p class=\"wp-block-paragraph\">Ali nikada ne treba sam odlučiti koja tema ide u content plan.</p>\n\n\n\n<p class=\"wp-block-paragraph\">Prvo moramo razumjeti korisnika i poslovni cilj.</p>\n\n\n\n<h2 class=\"wp-block-heading\">Veza sa SERP analizom</h2>\n\n\n\n<p class=\"wp-block-paragraph\">KD pokušava cijeli SERP pretvoriti u jedan broj.</p>\n\n\n\n<p class=\"wp-block-paragraph\"><a href=\"https://legatech.hr/blog/kako-analizirati-serp/\" target=\"_blank\" rel=\"noopener noreferrer\">SERP analiza</a> ponovno otvara taj broj i pokazuje što se zapravo nalazi iza njega.</p>\n\n\n\n<p class=\"wp-block-paragraph\">Zato ih treba koristiti zajedno.</p>\n\n\n\n<h2 class=\"wp-block-heading\">Veza s long-tailom</h2>\n\n\n\n<p class=\"wp-block-paragraph\">Niži KD često će vas odvesti prema <a href=\"https://legatech.hr/blog/long-tail-kljucne-rijeci/\" target=\"_blank\" rel=\"noopener noreferrer\">long-tail ključnim riječima</a>.</p>\n\n\n\n<p class=\"wp-block-paragraph\">To je korisno, posebno za novi web.</p>\n\n\n\n<p class=\"wp-block-paragraph\">Ali long-tail treba grupirati prema intentu i uklopiti u postojeću arhitekturu.</p>\n\n\n\n<p class=\"wp-block-paragraph\">Ne stvarati zaseban članak za svaku malu varijaciju.</p>\n\n\n\n<h2 class=\"wp-block-heading\">Zaključak</h2>\n\n\n\n<p class=\"wp-block-paragraph\">Keyword difficulty je koristan SEO pokazatelj.</p>\n\n\n\n<p class=\"wp-block-paragraph\">Ali treba razumjeti što zapravo mjeri.</p>\n\n\n\n<p class=\"wp-block-paragraph\">U Ahrefsu KD prvenstveno procjenjuje backlink konkurenciju među top-ranking stranicama i ne pokušava u isti score uključiti sve on-page i druge ranking čimbenike.</p>\n\n\n\n<p class=\"wp-block-paragraph\">Zato KD treba koristiti kao:</p>\n\n\n\n<p class=\"wp-block-paragraph\"><strong>filter i procjenu resursa.</strong></p>\n\n\n\n<p class=\"wp-block-paragraph\">Ne kao:</p>\n\n\n\n<p class=\"wp-block-paragraph\"><strong>presudu o tome možemo li rangirati.</strong></p>\n\n\n\n<p class=\"wp-block-paragraph\">Prije konačne odluke uvijek treba pogledati:</p>\n\n\n\n<ul class=\"wp-block-list\">\n<li>search intent</li>\n\n\n\n<li>stvarni SERP</li>\n\n\n\n<li>kvalitetu konkurencije</li>\n\n\n\n<li>backlink gap</li>\n\n\n\n<li>topical relevance vlastitog weba</li>\n\n\n\n<li>poslovnu vrijednost keyworda</li>\n</ul>\n\n\n\n<p class=\"wp-block-paragraph\">Nizak KD ne čini keyword dobrim.</p>\n\n\n\n<p class=\"wp-block-paragraph\">Visok KD ne čini keyword lošim.</p>\n\n\n\n<p class=\"wp-block-paragraph\">Dobar keyword je onaj za koji postoji relevantna potražnja, odgovara vašem poslovanju i vrijedi resursa potrebnih da za njega konkurirate.</p>\n\n\n\n<p class=\"wp-block-paragraph\">Ako tek radite istraživanje, krenite od vodiča <a href=\"https://legatech.hr/blog/kako-napraviti-keyword-research/\" target=\"_blank\" rel=\"noopener noreferrer\">kako napraviti keyword research</a>.</p>\n\n\n\n<p class=\"wp-block-paragraph\">Za procjenu stvarne konkurencije zatim napravite <a href=\"https://legatech.hr/blog/kako-analizirati-serp/\" target=\"_blank\" rel=\"noopener noreferrer\">SERP analizu</a> i pogledajte <a href=\"https://legatech.hr/blog/kako-analizirati-seo-konkurenciju/\" target=\"_blank\" rel=\"noopener noreferrer\">kako analizirati SEO konkurenciju</a>.</p>\n\n\n\n<p class=\"wp-block-paragraph\">Ako želite profesionalno istraživanje ključnih riječi i SEO plan temeljen na poslovnom potencijalu, pogledajte <a href=\"https://legatech.hr/seo-optimizacija-cijena/\" target=\"_blank\" rel=\"noopener noreferrer\">SEO optimizacija – cijena i paketi</a>.</p>\n",
     "publishedAt": "2026-10-13T18:35:15",
-    "modifiedAt": "2026-10-13T18:35:21",
+    "modifiedAt": "2026-11-15T15:23:27",
     "categoryLabels": [
-      "Uncategorized"
+      "SEO optimizacija"
     ],
     "featuredImage": null,
     "authorName": "blogger",
@@ -26,7 +26,7 @@
       "SEO optimizacija"
     ],
     "featuredImage": null,
-    "authorName": "marijan",
+    "authorName": "Marijan Malčić",
     "readingMinutes": 19
   },
   {
@@ -41,7 +41,7 @@
       "SEO optimizacija"
     ],
     "featuredImage": null,
-    "authorName": "marijan",
+    "authorName": "Marijan Malčić",
     "readingMinutes": 17
   },
   {
@@ -56,7 +56,7 @@
       "SEO optimizacija"
     ],
     "featuredImage": null,
-    "authorName": "marijan",
+    "authorName": "Marijan Malčić",
     "readingMinutes": 15
   },
   {
@@ -71,7 +71,7 @@
       "SEO optimizacija"
     ],
     "featuredImage": null,
-    "authorName": "marijan",
+    "authorName": "Marijan Malčić",
     "readingMinutes": 15
   },
   {
@@ -86,7 +86,7 @@
       "SEO optimizacija"
     ],
     "featuredImage": null,
-    "authorName": "marijan",
+    "authorName": "Marijan Malčić",
     "readingMinutes": 15
   },
   {
@@ -101,7 +101,7 @@
       "Izrada web stranica"
     ],
     "featuredImage": null,
-    "authorName": "marijan",
+    "authorName": "Marijan Malčić",
     "readingMinutes": 16
   },
   {
@@ -116,7 +116,7 @@
       "SEO optimizacija"
     ],
     "featuredImage": null,
-    "authorName": "marijan",
+    "authorName": "Marijan Malčić",
     "readingMinutes": 20
   },
   {
@@ -131,7 +131,7 @@
       "Izrada web stranica"
     ],
     "featuredImage": null,
-    "authorName": "marijan",
+    "authorName": "Marijan Malčić",
     "readingMinutes": 17
   },
   {
@@ -146,7 +146,7 @@
       "Izrada web stranica"
     ],
     "featuredImage": null,
-    "authorName": "marijan",
+    "authorName": "Marijan Malčić",
     "readingMinutes": 14
   },
   {
@@ -161,7 +161,7 @@
       "Izrada web stranica"
     ],
     "featuredImage": null,
-    "authorName": "marijan",
+    "authorName": "Marijan Malčić",
     "readingMinutes": 14
   },
   {
@@ -176,7 +176,7 @@
       "Izrada web stranica"
     ],
     "featuredImage": null,
-    "authorName": "marijan",
+    "authorName": "Marijan Malčić",
     "readingMinutes": 14
   },
   {
@@ -191,7 +191,7 @@
       "Izrada web stranica"
     ],
     "featuredImage": null,
-    "authorName": "marijan",
+    "authorName": "Marijan Malčić",
     "readingMinutes": 12
   },
   {
@@ -206,7 +206,7 @@
       "Izrada web stranica"
     ],
     "featuredImage": null,
-    "authorName": "marijan",
+    "authorName": "Marijan Malčić",
     "readingMinutes": 12
   },
   {
@@ -221,7 +221,7 @@
       "Izrada web stranica"
     ],
     "featuredImage": null,
-    "authorName": "marijan",
+    "authorName": "Marijan Malčić",
     "readingMinutes": 10
   },
   {
@@ -236,7 +236,7 @@
       "Izrada web stranica"
     ],
     "featuredImage": null,
-    "authorName": "marijan",
+    "authorName": "Marijan Malčić",
     "readingMinutes": 9
   },
   {
@@ -251,7 +251,7 @@
       "SEO optimizacija"
     ],
     "featuredImage": null,
-    "authorName": "marijan",
+    "authorName": "Marijan Malčić",
     "readingMinutes": 16
   },
   {
@@ -266,7 +266,7 @@
       "SEO optimizacija"
     ],
     "featuredImage": null,
-    "authorName": "marijan",
+    "authorName": "Marijan Malčić",
     "readingMinutes": 16
   },
   {
@@ -281,7 +281,7 @@
       "Izrada web stranica"
     ],
     "featuredImage": null,
-    "authorName": "marijan",
+    "authorName": "Marijan Malčić",
     "readingMinutes": 11
   },
   {
@@ -296,7 +296,7 @@
       "Izrada web stranica"
     ],
     "featuredImage": null,
-    "authorName": "marijan",
+    "authorName": "Marijan Malčić",
     "readingMinutes": 10
   },
   {
@@ -311,7 +311,7 @@
       "Izrada web stranica"
     ],
     "featuredImage": null,
-    "authorName": "marijan",
+    "authorName": "Marijan Malčić",
     "readingMinutes": 11
   },
   {
@@ -326,7 +326,7 @@
       "Izrada web stranica"
     ],
     "featuredImage": null,
-    "authorName": "marijan",
+    "authorName": "Marijan Malčić",
     "readingMinutes": 10
   },
   {
@@ -341,7 +341,7 @@
       "Izrada web stranica"
     ],
     "featuredImage": null,
-    "authorName": "marijan",
+    "authorName": "Marijan Malčić",
     "readingMinutes": 11
   },
   {
@@ -356,7 +356,7 @@
       "Izrada web stranica"
     ],
     "featuredImage": null,
-    "authorName": "marijan",
+    "authorName": "Marijan Malčić",
     "readingMinutes": 15
   },
   {
@@ -371,7 +371,7 @@
       "Izrada web stranica"
     ],
     "featuredImage": null,
-    "authorName": "marijan",
+    "authorName": "Marijan Malčić",
     "readingMinutes": 13
   },
   {
@@ -386,7 +386,7 @@
       "SEO optimizacija"
     ],
     "featuredImage": null,
-    "authorName": "marijan",
+    "authorName": "Marijan Malčić",
     "readingMinutes": 14
   },
   {
@@ -401,7 +401,7 @@
       "SEO optimizacija"
     ],
     "featuredImage": null,
-    "authorName": "marijan",
+    "authorName": "Marijan Malčić",
     "readingMinutes": 18
   },
   {
@@ -416,7 +416,7 @@
       "Izrada web stranica"
     ],
     "featuredImage": null,
-    "authorName": "marijan",
+    "authorName": "Marijan Malčić",
     "readingMinutes": 9
   },
   {
@@ -431,7 +431,7 @@
       "SEO optimizacija"
     ],
     "featuredImage": null,
-    "authorName": "marijan",
+    "authorName": "Marijan Malčić",
     "readingMinutes": 13
   },
   {
@@ -446,7 +446,7 @@
       "Izrada web stranica"
     ],
     "featuredImage": null,
-    "authorName": "marijan",
+    "authorName": "Marijan Malčić",
     "readingMinutes": 12
   },
   {
@@ -461,7 +461,7 @@
       "Izrada web stranica"
     ],
     "featuredImage": null,
-    "authorName": "marijan",
+    "authorName": "Marijan Malčić",
     "readingMinutes": 11
   },
   {
@@ -476,7 +476,7 @@
       "Izrada web stranica"
     ],
     "featuredImage": null,
-    "authorName": "marijan",
+    "authorName": "Marijan Malčić",
     "readingMinutes": 9
   },
   {
@@ -491,7 +491,7 @@
       "SEO optimizacija"
     ],
     "featuredImage": null,
-    "authorName": "marijan",
+    "authorName": "Marijan Malčić",
     "readingMinutes": 15
   },
   {
@@ -506,7 +506,7 @@
       "Izrada web stranica"
     ],
     "featuredImage": null,
-    "authorName": "marijan",
+    "authorName": "Marijan Malčić",
     "readingMinutes": 9
   },
   {
@@ -521,7 +521,7 @@
       "Izrada web stranica"
     ],
     "featuredImage": null,
-    "authorName": "marijan",
+    "authorName": "Marijan Malčić",
     "readingMinutes": 12
   },
   {
@@ -536,7 +536,7 @@
       "Izrada web stranica"
     ],
     "featuredImage": null,
-    "authorName": "marijan",
+    "authorName": "Marijan Malčić",
     "readingMinutes": 10
   },
   {
@@ -551,7 +551,7 @@
       "Izrada web stranica"
     ],
     "featuredImage": null,
-    "authorName": "marijan",
+    "authorName": "Marijan Malčić",
     "readingMinutes": 10
   },
   {
@@ -566,7 +566,7 @@
       "Izrada web stranica"
     ],
     "featuredImage": null,
-    "authorName": "marijan",
+    "authorName": "Marijan Malčić",
     "readingMinutes": 9
   },
   {
@@ -581,7 +581,7 @@
       "SEO optimizacija"
     ],
     "featuredImage": null,
-    "authorName": "marijan",
+    "authorName": "Marijan Malčić",
     "readingMinutes": 14
   },
   {
@@ -596,7 +596,7 @@
       "SEO optimizacija"
     ],
     "featuredImage": null,
-    "authorName": "marijan",
+    "authorName": "Marijan Malčić",
     "readingMinutes": 19
   },
   {
@@ -611,7 +611,7 @@
       "Izrada web stranica"
     ],
     "featuredImage": null,
-    "authorName": "marijan",
+    "authorName": "Marijan Malčić",
     "readingMinutes": 10
   },
   {
@@ -626,7 +626,7 @@
       "Izrada web stranica"
     ],
     "featuredImage": null,
-    "authorName": "marijan",
+    "authorName": "Marijan Malčić",
     "readingMinutes": 10
   }
 ]
