@@ -36,8 +36,8 @@
   },
   {
     "path": "o-nama/index.html",
-    "bytes": 10844,
-    "sha256": "b10071f4fe67b7b9143cc77823ca7832878f7c96ac0956f8b5db17d93dead957"
+    "bytes": 10920,
+    "sha256": "4deb21447b019f3198d9fa353d67dfd64e23ef69fa1dd282af6aa971147a268b"
   },
   {
     "path": "kontakt/index.html",
@@ -661,8 +661,8 @@
   },
   {
     "path": "company-expressive.css",
-    "bytes": 7017,
-    "sha256": "e93a1f702599ee013834788ab50dcc916cb883b3f17952ce0bbec2271a000658"
+    "bytes": 9717,
+    "sha256": "88bb3d9d92b042cf84e2ac58e05c7837f93bb912d382f08075f4418f2134e106"
   },
   {
     "path": "pricing-expressive.css",

@@ -58,10 +58,10 @@
   {
     "route": "/o-nama/",
     "title": "O Legatechu - Digitalna agencija Osijek",
-    "h1": "Mala agencija. Izravan pristup. Ozbiljna izvedba.",
+    "h1": "Iza Legatecha stojim ja, Marijan.",
     "description": "Upoznajte Legatech, malu digitalnu agenciju iz Osijeka s osobnim pristupom webu, SEO-u i online prodaji.",
-    "mainHash": "e4ce92cacb42dd3bc8e7e4146769d3ae0f70ef8cc6bdd7bf90aee859cb1ecf75",
-    "stableMainHash": "e4ce92cacb42dd3bc8e7e4146769d3ae0f70ef8cc6bdd7bf90aee859cb1ecf75"
+    "mainHash": "d5afed52430cb8b8edeb7b4671b00759530fc6a4cf10c02710d2dcf59dd952ad",
+    "stableMainHash": "d5afed52430cb8b8edeb7b4671b00759530fc6a4cf10c02710d2dcf59dd952ad"
   },
   {
     "route": "/kontakt/",
