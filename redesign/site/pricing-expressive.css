@@ -139,3 +139,39 @@
   .ep-terms-grid{grid-template-columns:1fr;gap:30px;margin-top:34px}
   .ep-terms-grid h3{font-size:23px;margin-bottom:14px}
 }
+
+/* BEGIN PACKAGE COMPARISON MATRIX */
+.expressive-pricing .ux-package-comparison[data-comparison-version="2"]{--comparison-bg:var(--paper);--comparison-fg:var(--black);--comparison-line:#15151538;--package-count:3}
+.expressive-pricing .section-dark .ux-package-comparison[data-comparison-version="2"]{--comparison-bg:var(--black);--comparison-fg:var(--paper);--comparison-line:#ffffff40}
+.expressive-pricing .ux-package-comparison[data-package-count="4"]{--package-count:4}
+.expressive-pricing .ux-comparison-intro{font-size:16px;line-height:1.75;margin-top:20px;max-width:70ch}
+.expressive-pricing .ux-package-comparison[data-comparison-version="2"] .ux-table-hint{margin-top:8px}
+.expressive-pricing .ux-package-comparison[data-comparison-version="2"] .ux-comparison-scroll{container-type:inline-size;margin-top:22px;border:1px solid var(--comparison-line)}
+.expressive-pricing .ux-package-matrix{table-layout:fixed;min-width:880px;font-size:15px;line-height:1.65;color:var(--comparison-fg);background:var(--comparison-bg)}
+.expressive-pricing [data-package-count="4"] .ux-package-matrix{min-width:1060px}
+.expressive-pricing .ux-matrix-label-col{width:172px}
+.expressive-pricing .ux-package-matrix th,.expressive-pricing .ux-package-matrix td{padding:18px 16px;min-width:0;border-bottom:1px solid var(--comparison-line);overflow-wrap:break-word}
+.expressive-pricing .ux-package-matrix tr>:not(:first-child){border-left:1px solid var(--comparison-line)}
+.expressive-pricing .ux-package-matrix thead th{font-size:19px;line-height:1.5;font-weight:700;color:var(--plum)}
+.expressive-pricing .section-dark .ux-package-matrix thead th{color:var(--pistachio)}
+.expressive-pricing .ux-package-matrix tr>th:first-child{position:sticky;left:0;z-index:1;background:var(--comparison-bg);font-size:14px;font-weight:600;box-shadow:1px 0 var(--comparison-line)}
+.expressive-pricing .ux-package-matrix thead tr>th:first-child{z-index:2;color:var(--comparison-fg)}
+.expressive-pricing .ux-package-matrix .ux-matrix-price td{font-size:19px;font-weight:700}
+.expressive-pricing .ux-package-matrix tfoot a{display:inline-flex;align-items:center;min-height:44px;font-weight:600}
+.expressive-pricing .ux-package-matrix tfoot th,.expressive-pricing .ux-package-matrix tfoot td{border-bottom:0}
+.expressive-pricing .ux-comparison-caption{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip-path:inset(50%);white-space:nowrap}
+@media(max-width:700px){
+ .expressive-pricing .ux-comparison-intro{font-size:15px}
+ .expressive-pricing .ux-package-matrix{font-size:14px}
+ .expressive-pricing .ux-package-matrix th,.expressive-pricing .ux-package-matrix td{padding:16px 12px}
+ .expressive-pricing .ux-package-matrix thead th{font-size:17px}
+ .expressive-pricing .ux-package-matrix .ux-matrix-price td{font-size:17px}
+ .expressive-pricing .ux-package-matrix tr>th:first-child{font-size:13px}
+ @supports(width:1cqw){
+  .expressive-pricing .ux-package-comparison[data-comparison-version="2"] .ux-comparison-scroll{scroll-snap-type:x mandatory;scroll-padding-inline-start:112px}
+  .expressive-pricing .ux-package-matrix thead th:not(:first-child){scroll-snap-align:start}
+  .expressive-pricing .ux-package-matrix,.expressive-pricing [data-package-count="4"] .ux-package-matrix{width:calc(112px + (100cqw - 112px)*var(--package-count));min-width:0}
+  .expressive-pricing .ux-matrix-label-col{width:112px}
+ }
+}
+/* END PACKAGE COMPARISON MATRIX */

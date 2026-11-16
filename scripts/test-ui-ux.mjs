@@ -18,6 +18,38 @@ test('all thirteen package choices retain prices, links and Projects navigation 
  assert.equal($('header nav a[href="/projekti/"],footer nav a[href="/projekti/"]').length,0);
 });
 
+test('pricing comparisons quote each original package without changing cards, prices or billing periods',async()=>{
+ const $=load(await readFile(path.join(repo,'redesign/site/cjenik/index.html'),'utf8'));
+ const cards=$('.ep-package').map((_,e)=>$(e).toString()).get();
+ applyUiUx($,{route:'/cjenik/'});const stable=$.html();applyUiUx($,{route:'/cjenik/'});
+ assert.equal($.html(),stable);assert.deepEqual($('.ep-package').map((_,e)=>$(e).toString()).get(),cards);
+ assert.equal($('.ux-package-matrix').length,4);
+ $('.ux-package-matrix').each((_,node)=>{
+  const table=$(node),sources=table.closest('.ux-package-comparison').next('.ep-package-grid').children('.ep-package').toArray().map(e=>$(e));
+  assert.equal(table.find('thead th[scope="col"]').length,sources.length+1);
+  table.find('tbody tr').each((_,row)=>{
+   assert.equal($(row).find('th[scope="row"]').length,1);
+   $(row).find('td').each((column,cell)=>{
+    const card=sources[column],quote=norm($(cell).text());
+    const originals=card.find('li,.ep-package-head strong,.ep-package-facts dd').map((_,e)=>norm($(e).text())).get();
+    assert.ok(originals.includes(quote),'Comparison claim not present in this package: '+quote);
+    assert.ok(!/^Sve iz/.test(quote),'Inheritance placeholder conceals the difference');
+   });
+  });
+  const prices=table.find('.ux-matrix-price td').map((_,e)=>norm($(e).text())).get();
+  assert.deepEqual(prices,sources.map(card=>norm(card.find('.ep-package-head strong').first().text())));
+ });
+ const seo=$('.ux-package-matrix').eq(2);
+ assert.deepEqual(seo.find('tr').filter((_,e)=>$(e).find('th').first().text()==='Ključne riječi').find('td').map((_,e)=>$(e).text()).get(),['Praćenje 5-10 ključnih riječi','Praćenje 15-30 ključnih riječi','Praćenje 30-60 ključnih riječi']);
+ assert.equal(seo.find('.ux-matrix-price td').filter((_,e)=>$(e).text().includes('mjesečno')).length,3);
+});
+
+test('the pricing-only matrix does not replace service-page comparisons',async()=>{
+ const $=load(await readFile(path.join(repo,'redesign/site/seo-optimizacija-cijena/index.html'),'utf8'));
+ const before=$('.ux-package-comparison').toString();applyUiUx($,{route:'/seo-optimizacija-cijena/'});
+ assert.equal($('.ux-package-comparison').toString(),before);assert.equal($('.ux-package-matrix').length,0);
+});
+
 test('complete article contents and paragraph grouping preserve every word, deep link and code/table',()=>{
  const html='<html><head></head><body><main><aside class="blog-contents"><nav></nav></aside><article class="blog-prose">'+Array.from({length:60},(_,i)=>`<h2 id="part-${i}">Odjeljak ${i}</h2><p>Kratki odlomak ${i}.</p>\n<p><a href="/kontakt/">Još jedna misao.</a></p>`).join('')+'<p id="protected">Odlomak sa sidrom.</p><pre><code>const x = 1;</code></pre><table><tbody><tr><td>Podatak</td></tr></tbody></table></article></main></body></html>';
  const $=load(html),text=readable($('.blog-prose')),code=$('pre').html(),table=$('table').html();

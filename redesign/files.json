@@ -31,8 +31,8 @@
   },
   {
     "path": "cjenik/index.html",
-    "bytes": 47356,
-    "sha256": "71729a156a6e458bfa2693159b08bfe51d0297b352bce90fd9d160bddba9b6fc"
+    "bytes": 53001,
+    "sha256": "855c8d64a6e951b614380ea81a19ce09686f2c4576e7a556a3fd64f3dd58d111"
   },
   {
     "path": "o-nama/index.html",
@@ -666,8 +666,8 @@
   },
   {
     "path": "pricing-expressive.css",
-    "bytes": 10391,
-    "sha256": "907af2cc83869687b20d7f98644e59042cbfc58b341d9c62ccc329f55f9257ca"
+    "bytes": 13835,
+    "sha256": "e626f678c6346d6113b947ce5278ae758052e67cb79c4c3c166eb18a996405de"
   },
   {
     "path": "services-expressive.css",

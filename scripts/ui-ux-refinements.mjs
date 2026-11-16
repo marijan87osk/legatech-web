@@ -1,4 +1,5 @@
 // Shared by the approved static source and future WordPress-driven builds.
+import {improvePricingComparisons} from './package-comparisons.mjs';
 export const serviceLabels={web:'Izrada web stranica',shop:'Izrada web trgovina',seo:'SEO optimizacija',care:'Održavanje web stranica'};
 export const packages=[
  ['web-basic','Web Basic','web'],['web-business','Web Business','web'],['web-premium','Web Premium','web'],
@@ -118,6 +119,7 @@ export function applyUiUx($,{route}={}){
  // Only the destination of contact actions changes; Projects navigation is untouched.
  $('a[href="/kontakt/"]').attr('href','/kontakt/#contact-form');
  addPackageChoices($);improveForm($);improveService($,route);improveArticle($);improveListing($);
+ if(route==='/cjenik/')improvePricingComparisons($,packages,serviceLabels);
  if(route==='/o-nama/'&&!$('.ux-personal-intro').length){
   $('.ea-hero-grid>div').last().prepend('<div class="ux-personal-intro"><p class="eyebrow">Osoba iza Legatecha</p><p class="ux-person-name">Marijan Malčić</p><p>Legatech je moj obrt iz Osijeka. Samostalno izrađujem web stranice i trgovine, radim SEO optimizaciju i održavanje. Sa mnom izravno dogovarate opseg, prolazite kroz izradu i dobivate podršku nakon objave.</p></div>');
   const swaps=[['Web ne promatramo','Web ne promatram'],['Kako želimo','Kako želim'],['svaku uslugu planiramo','svaku uslugu planiram']];
