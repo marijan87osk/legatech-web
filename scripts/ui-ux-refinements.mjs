@@ -100,8 +100,6 @@ function improveListing($){
  rows.attr('id','blog-results');
  if(!$('.ux-blog-search').length){
   const form=$('<form class="ux-blog-search" role="search" hidden><label for="blog-search">Pronađite članak</label><div class="ux-search-line"><input id="blog-search" type="search" placeholder="Upišite naslov ili temu" autocomplete="off" aria-controls="blog-results"><button type="reset">Očisti pretragu</button></div><div class="ux-blog-filters" role="group" aria-label="Filtrirajte po usluzi"></div><p id="blog-search-count" role="status" aria-live="polite"></p></form>');
-  form.find('.ux-blog-filters').append('<button type="button" data-blog-filter="all" aria-pressed="true">Sve teme</button>');
-  for(const [key,label] of Object.entries(serviceLabels))form.find('.ux-blog-filters').append($('<button type="button" aria-pressed="false">').attr('data-blog-filter',key).text(label));
   const feature=$('.blog-feature');
   if(feature.length){form.addClass('container');feature.before(form);}else rows.before(form);
   rows.after('<p id="blog-search-empty" hidden>Nema članaka za taj odabir. Pokušajte drugi pojam ili odaberite „Sve teme”.</p>');
@@ -112,6 +110,14 @@ function improveListing($){
   const key=category.includes('trgovin')?'shop':category.includes('održavan')?'care':category.includes('seo')?'seo':category.includes('izrada')?'web':'other';
   card.attr('data-blog-category',key);
  });
+ // Rebuild from the published cards on every export, including the featured
+ // article exactly once. Counts describe the full category, not a search query.
+ const cards=$('[data-blog-card]'),counts=new Map();
+ cards.each((_,node)=>{const key=$(node).attr('data-blog-category');counts.set(key,(counts.get(key)||0)+1);});
+ const filters=$('.ux-blog-filters').empty();
+ const addFilter=(key,label,count)=>filters.append($('<button type="button">').attr({'data-blog-filter':key,'aria-pressed':String(key==='all')}).text(label+' ('+count+')'));
+ addFilter('all','Sve teme',cards.length);
+ for(const [key,label]of Object.entries(serviceLabels)){const count=counts.get(key)||0;if(count>0)addFilter(key,label,count);}
 }
 export function applyUiUx($,{route}={}){
  if(!$('head link[href="/ux-refinements.css"]').length)$('head').append('<link rel="stylesheet" href="/ux-refinements.css">');

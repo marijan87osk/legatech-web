@@ -50,6 +50,20 @@ test('the pricing-only matrix does not replace service-page comparisons',async()
  assert.equal($('.ux-package-comparison').toString(),before);assert.equal($('.ux-package-matrix').length,0);
 });
 
+test('blog filters count the featured article once and follow populated categories without editing cards',()=>{
+ const card=(title,category)=>'<a href="/blog/'+title+'/"><div class="blog-meta"><span>'+category+'</span></div><h2>'+title+'</h2><p>Izvorni sažetak.</p></a>';
+ const $=load('<html><head></head><body class="blog-listing"><main>'+card('izdvojeni','SEO optimizacija').replace('<a ','<a class="blog-feature" ')+'<div class="blog-rows">'+card('seo-vodic','SEO optimizacija')+card('web-vodic','Izrada web stranica')+'</div></main></body></html>');
+ applyUiUx($,{route:'/blog/'});
+ const signature=()=>$('.ux-blog-filters button').map((_,e)=>({key:$(e).attr('data-blog-filter'),label:$(e).text()})).get();
+ assert.deepEqual(signature(),[{key:'all',label:'Sve teme (3)'},{key:'web',label:'Izrada web stranica (1)'},{key:'seo',label:'SEO optimizacija (2)'}]);
+ const originalCards=$('[data-blog-card]').map((_,e)=>$(e).toString()).get(),stable=$.html();applyUiUx($,{route:'/blog/'});assert.equal($.html(),stable);
+ $('.blog-rows').append(card('odrzavanje-vodic','Održavanje web stranica'));applyUiUx($,{route:'/blog/'});
+ assert.equal($('[data-blog-filter=care]').text(),'Održavanje web stranica (1)');assert.equal($('[data-blog-filter=all]').text(),'Sve teme (4)');
+ assert.deepEqual($('[data-blog-card]').toArray().slice(0,3).map(e=>$(e).toString()),originalCards);
+ $('[data-blog-category=seo]').remove();applyUiUx($,{route:'/blog/'});
+ assert.equal($('[data-blog-filter=seo]').length,0);assert.equal($('[data-blog-filter=all]').text(),'Sve teme (2)');
+});
+
 test('complete article contents and paragraph grouping preserve every word, deep link and code/table',()=>{
  const html='<html><head></head><body><main><aside class="blog-contents"><nav></nav></aside><article class="blog-prose">'+Array.from({length:60},(_,i)=>`<h2 id="part-${i}">Odjeljak ${i}</h2><p>Kratki odlomak ${i}.</p>\n<p><a href="/kontakt/">Još jedna misao.</a></p>`).join('')+'<p id="protected">Odlomak sa sidrom.</p><pre><code>const x = 1;</code></pre><table><tbody><tr><td>Podatak</td></tr></tbody></table></article></main></body></html>';
  const $=load(html),text=readable($('.blog-prose')),code=$('pre').html(),table=$('table').html();
@@ -68,4 +82,7 @@ test('future CMS articles and rebuilt listings retain search, full contents and 
  const listing=load(await readFile(path.join(out,'blog/index.html'),'utf8'));
  assert.equal(listing('.ux-blog-search').length,1);assert.equal(listing('.blog-rows [data-blog-card]').length,42);
  assert.equal(listing('a[href="/blog/'+post.slug+'/"][data-blog-card]').attr('data-blog-category'),'seo');
+ assert.equal(listing('[data-blog-filter=all]').text(),'Sve teme (43)');
+ assert.equal(listing('[data-blog-filter=seo]').text(),'SEO optimizacija (16)');
+ assert.equal(listing('[data-blog-filter=shop],[data-blog-filter=care]').length,0);
 });
